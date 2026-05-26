@@ -270,12 +270,16 @@ def infer_age(db_path):
     return stem
 
 
-def extract_one(db_path, language):
-    """Extract all entities + abilities from a single database file."""
+def extract_one(db_path, loc):
+    """Extract all entities + abilities from a single database file.
+
+    `loc` is a prebuilt {tag: text} map, merged across every input DB. This
+    matters for 1.4.0, where the localized text lives in its own
+    `localization-copy.sqlite`, separate from `gameplay-copy.sqlite`.
+    """
     age = infer_age(db_path)
     con = open_db(db_path)
     try:
-        loc = build_loc_map(con, language)
         traits = fetch_traits(con, loc)
         mod_args = fetch_modifier_args(con)
         mod_types = fetch_modifier_types(con)
@@ -478,13 +482,48 @@ def main():
             inspect(db)
         return
 
+    # 1.4.0 splits localized text into its own DB (localization-copy.sqlite),
+    # so build ONE localization map by merging LocalizedText from every input
+    # file. Entities are then extracted from whichever DB holds the trait data
+    # (gameplay-copy.sqlite); files with no civ/leader/trait tables (colors,
+    # images, frontend) contribute nothing and are skipped automatically.
+    loc = {}
+    for db in db_files:
+        con = open_db(db)
+        try:
+            part = build_loc_map(con, args.language)
+        finally:
+            con.close()
+        for k, v in part.items():
+            loc.setdefault(k, v)
+    if loc:
+        print(f"Localization: {len(loc)} strings loaded across {len(db_files)} file(s).")
+    else:
+        print("Warning: no LocalizedText found; names will appear as raw LOC_ tags.")
+
     per_age = []
     for db in db_files:
+        con = open_db(db)
+        try:
+            is_entity_db = (resolve_table(con, CIV_TABLES) is not None
+                            or resolve_table(con, LEADER_TABLES) is not None
+                            or resolve_table(con, TRAIT_TABLES) is not None)
+        finally:
+            con.close()
+        if not is_entity_db:
+            continue
         print(f"Extracting: {db}")
-        data = extract_one(db, args.language)
+        data = extract_one(db, loc)
+        if not data["civilizations"] and not data["leaders"]:
+            continue
         print(f"  Age '{data['age']}': "
               f"{len(data['civilizations'])} civs, {len(data['leaders'])} leaders")
         per_age.append(data)
+
+    if not per_age:
+        print("No civ/leader tables found in any input DB. "
+              "Run with --inspect to see the actual schema.", file=sys.stderr)
+        sys.exit(1)
 
     merged = merge_ages(per_age)
     json_path, csv_path, n_rows = write_outputs(merged, args.out)
