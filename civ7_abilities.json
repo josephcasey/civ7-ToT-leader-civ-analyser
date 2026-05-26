@@ -2,9 +2,9 @@
   "civilizations": [
     {
       "type": "CIVILIZATION_AKSUM",
-      "name": "LOC_CIVILIZATION_AKSUM_NAME",
-      "description": "LOC_CIVILIZATION_AKSUM_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_AKSUM_ADJECTIVE",
+      "name": "Aksum",
+      "description": "+3 [icon:YIELD_GOLD] Gold on [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resources[/TIP] in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP] adjacent to Coast. +1 [icon:TRADE_ROUTE] [TIP:LOC_PEDIA_CONCEPTS_TRADE_ROUTE_TOOLTIP]Trade Route[/TIP] Limit with other Civilizations, and all Civilizations have +1 [icon:TRADE_ROUTE] Trade Route Limit with you. [icon:TRADE_ROUTE] Trade Routes to or from your Settlements have unlimited [TIP:LOC_PEDIA_CONCEPTS_TRADE_RANGE_TOOLTIP]Range[/TIP].",
+      "adjective": "Aksumite",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -264,8 +264,8 @@
           },
           {
             "trait": "TRAIT_AKSUM_ABILITY",
-            "name": "LOC_TRAIT_AKSUM_ABILITY_NAME",
-            "description": "LOC_TRAIT_AKSUM_ABILITY_DESCRIPTION",
+            "name": "Kingdom of Natural Wealth",
+            "description": "[BLIST][LI]+3 [icon:YIELD_GOLD] Gold on [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resources[/TIP] in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP] adjacent to Coast.[LI]+1 [icon:TRADE_ROUTE] [TIP:LOC_PEDIA_CONCEPTS_TRADE_ROUTE_TOOLTIP]Trade Route[/TIP] Limit with other Civilizations, and all Civilizations have +1 [icon:TRADE_ROUTE] Trade Route Limit with you.[LI][icon:TRADE_ROUTE] Trade Routes to or from your Settlements have unlimited [TIP:LOC_PEDIA_CONCEPTS_TRADE_RANGE_TOOLTIP]Range[/TIP].[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing the Great Stele.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_KINGDOM_OF_NATURAL_WEALTH_RESOURCE",
@@ -376,9 +376,9 @@
     },
     {
       "type": "CIVILIZATION_EGYPT",
-      "name": "LOC_CIVILIZATION_EGYPT_NAME",
-      "description": "LOC_CIVILIZATION_EGYPT_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_EGYPT_ADJECTIVE",
+      "name": "Egypt",
+      "description": "+2 [icon:YIELD_PRODUCTION] Production on [icon:CITY_RURAL] [TIP:LOC_PEDIA_CONCEPTS_IMPROVEMENT_TOOLTIP]Improvements[/TIP] and [icon:CITY_URBAN] [TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Districts[/TIP] on [TIP:LOC_PEDIA_CONCEPTS_NAVIGABLE_RIVER_TOOLTIP]Navigable Rivers[/TIP]. Minor Rivers do not end  Unit [icon:Action_Move] Movement .",
+      "adjective": "Egyptian",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -638,8 +638,8 @@
           },
           {
             "trait": "TRAIT_EGYPT_ABILITY",
-            "name": "LOC_TRAIT_EGYPT_ABILITY_NAME",
-            "description": "LOC_TRAIT_EGYPT_ABILITY_DESCRIPTION",
+            "name": "Gifts of Osiris",
+            "description": "[BLIST][LI]+2 [icon:YIELD_PRODUCTION] Production on [icon:CITY_RURAL] [TIP:LOC_PEDIA_CONCEPTS_IMPROVEMENT_TOOLTIP]Improvements[/TIP] and [icon:CITY_URBAN] [TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Districts[/TIP] on [TIP:LOC_PEDIA_CONCEPTS_NAVIGABLE_RIVER_TOOLTIP]Navigable Rivers[/TIP].[LI][B]Minor Rivers[/B] do not end [B]Unit [icon:Action_Move] Movement[/B].[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing the Pyramids.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_GIFTS_OF_OSIRIS_NAVIGABLE_RIVER",
@@ -722,9 +722,9 @@
     },
     {
       "type": "CIVILIZATION_GREECE",
-      "name": "LOC_CIVILIZATION_GREECE_NAME",
-      "description": "LOC_CIVILIZATION_GREECE_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_GREECE_ADJECTIVE",
+      "name": "Greece",
+      "description": "+3 [icon:YIELD_DIPLOMACY] Influence on the Palace. +2 [icon:YIELD_CULTURE] Culture for active [icon:ENDEAVOR] [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavors[/TIP], [icon:SANCTIONS] [TIP:LOC_PEDIA_CONCEPTS_SANCTION_TOOLTIP]Sanctions[/TIP], and [icon:PROJECT] [TIP:LOC_PEDIA_CONCEPTS_DIPLOMATIC_PROJECTS_TOOLTIP]Diplomatic Projects[/TIP] you started or supported. +3 [icon:CULTURE_VP] [TIP:LOC_PEDIA_CONCEPTS_TOURISTS_TOOLTIP]Tourism[/TIP] for every [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP] you are [TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP] of.",
+      "adjective": "Greek",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -984,8 +984,8 @@
           },
           {
             "trait": "TRAIT_GREECE_ABILITY",
-            "name": "LOC_TRAIT_GREECE_ABILITY_NAME",
-            "description": "LOC_TRAIT_GREECE_ABILITY_DESCRIPTION",
+            "name": "Demokratia",
+            "description": "[BLIST][LI][B]+3 [icon:YIELD_DIPLOMACY] Influence[/B] on the [B]Palace[/B].[LI][B]+2 [icon:YIELD_CULTURE] Culture[/B] for active [icon:ENDEAVOR] [B][TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavors[/TIP][/B], [icon:SANCTIONS] [B][TIP:LOC_PEDIA_CONCEPTS_SANCTION_TOOLTIP]Sanctions[/TIP][/B], and [icon:PROJECT] [B][TIP:LOC_PEDIA_CONCEPTS_DIPLOMATIC_PROJECTS_TOOLTIP]Diplomatic Projects[/TIP][/B] you started or supported.[LI]+3 [icon:CULTURE_VP] [TIP:LOC_PEDIA_CONCEPTS_TOURISTS_TOOLTIP]Tourism[/TIP] for every [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP] you are [TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP] of.[LI][B]+30% [icon:YIELD_PRODUCTION] Production [/B]towards constructing the [B]Oracle[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_DEMOKRATIA_INFLUENCE",
@@ -1150,9 +1150,9 @@
     },
     {
       "type": "CIVILIZATION_HAN",
-      "name": "LOC_CIVILIZATION_HAN_NAME",
-      "description": "LOC_CIVILIZATION_HAN_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_HAN_ADJECTIVE",
+      "name": "Han",
+      "description": "The [icon:NOTIFICATION_SELECT_CAPITAL] Capital and new [icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP] gain an additional [icon:YIELD_POPULATION] Population with their first growth event.",
+      "adjective": "Han",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -1412,8 +1412,8 @@
           },
           {
             "trait": "TRAIT_HAN_ABILITY",
-            "name": "LOC_TRAIT_HAN_ABILITY_NAME",
-            "description": "LOC_TRAIT_HAN_ABILITY_DESCRIPTION",
+            "name": "Nine Provinces",
+            "description": "[BLIST][LI][B]The [icon:NOTIFICATION_SELECT_CAPITAL] Capital[/B] gains [B]a [icon:YIELD_POPULATION] Population[/B] when it completes [B][icon:YIELD_SCIENCE] Science [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP][/B].[LI][B]The [icon:NOTIFICATION_SELECT_CAPITAL] Capital[/B] and new [B][icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP][/B] gain an [B]additional [icon:YIELD_POPULATION] Population[/B] with their first growth event.[LI][B]+30% [icon:YIELD_PRODUCTION] Production[/B] towards constructing [B]Weiyang Palace[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_NINE_PROVINCES_CAPITAL",
@@ -1510,9 +1510,9 @@
     },
     {
       "type": "CIVILIZATION_KHMER",
-      "name": "LOC_CIVILIZATION_KHMER_NAME",
-      "description": "LOC_CIVILIZATION_KHMER_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_KHMER_ADJECTIVE",
+      "name": "Khmer",
+      "description": "[icon:CITY_URBAN] [TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Districts[/TIP] on Rivers do not remove the natural yield of the tile.",
+      "adjective": "Khmer",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -1772,8 +1772,8 @@
           },
           {
             "trait": "TRAIT_KHMER_ABILITY",
-            "name": "LOC_TRAIT_KHMER_ABILITY_NAME",
-            "description": "LOC_TRAIT_KHMER_ABILITY_DESCRIPTION",
+            "name": "Ksekam Chamnon",
+            "description": "[BLIST][LI][B][TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Districts[/TIP][/B] on [B][TIP:LOC_PEDIA_CONCEPTS_RIVER_TOOLTIP]Rivers[/TIP][/B] do not remove the natural yield of the tile.[LI][B]+50% [icon:GROWTH_RATE] [TIP:LOC_PEDIA_CONCEPTS_GROWTH_RATE_TOOLTIP]Growth Rate[/TIP][/B] in the [B][icon:NOTIFICATION_SELECT_CAPITAL] [TIP:LOC_PEDIA_CONCEPTS_CAPITAL_TOOLTIP]Capital[/TIP][/B], but [B]-5 [icon:YIELD_HAPPINESS] Happiness[/B] for [B]every other [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]City[/TIP][/B].[LI][B]+30% [icon:YIELD_PRODUCTION] Production[/B] towards constructing [B]Angkor Wat[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_KSEKAM_CHAMNON_MINOR_RIVER",
@@ -1906,9 +1906,9 @@
     },
     {
       "type": "CIVILIZATION_MAURYA",
-      "name": "LOC_CIVILIZATION_MAURYA_NAME",
-      "description": "LOC_CIVILIZATION_MAURYA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_MAURYA_ADJECTIVE",
+      "name": "Maurya",
+      "description": "+2 [icon:YIELD_HAPPINESS] Happiness on [icon:YIELD_HAPPINESS] Happiness, [icon:MILITARY] Military, and [icon:YIELD_SCIENCE] Science [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP]. Land Units are fully [icon:Action_Heal] Healed when you enter a [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP].",
+      "adjective": "Mauryan",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -2168,8 +2168,8 @@
           },
           {
             "trait": "TRAIT_MAURYA_ABILITY",
-            "name": "LOC_TRAIT_MAURYA_ABILITY_NAME",
-            "description": "LOC_TRAIT_MAURYA_ABILITY_DESCRIPTION",
+            "name": "Dhamma Thambhā",
+            "description": "[BLIST][LI]+2 [icon:YIELD_HAPPINESS] Happiness on [icon:YIELD_HAPPINESS] Happiness, [icon:MILITARY] Military, and [icon:YIELD_SCIENCE] Science [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP].[LI]Land Units are fully [icon:Action_Heal] Healed when you enter a [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP].[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing Sanchi Stupa.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_DHAMMA_THAMBHA_AQ_HAPPINESS_BUILDING_HAPPINESS",
@@ -2306,9 +2306,9 @@
     },
     {
       "type": "CIVILIZATION_MAYA",
-      "name": "LOC_CIVILIZATION_MAYA_NAME",
-      "description": "LOC_CIVILIZATION_MAYA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_MAYA_ADJECTIVE",
+      "name": "Maya",
+      "description": "After researching a [icon:RADIAL_TECH] [TIP:LOC_PEDIA_CONCEPTS_TECH_TOOLTIP]Technology[/TIP], gain [icon:YIELD_CULTURE] Culture equal to 10% of its cost. After studying a [icon:RADIAL_CIVICS] [TIP:LOC_PEDIA_CONCEPTS_CIVIC_TOOLTIP]Civic[/TIP], gain [icon:YIELD_SCIENCE] Science equal to 10% of its cost.",
+      "adjective": "Maya",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -2568,8 +2568,8 @@
           },
           {
             "trait": "TRAIT_MAYA_ABILITY",
-            "name": "LOC_TRAIT_MAYA_ABILITY_NAME",
-            "description": "LOC_TRAIT_MAYA_ABILITY_DESCRIPTION",
+            "name": "Skies of Itzamna",
+            "description": "[BLIST][LI]After researching a [icon:RADIAL_TECH] [TIP:LOC_PEDIA_CONCEPTS_TECH_TOOLTIP]Technology[/TIP], gain [icon:YIELD_CULTURE] Culture equal to 10% of its cost.[LI]After studying a [icon:RADIAL_CIVICS] [TIP:LOC_PEDIA_CONCEPTS_CIVIC_TOOLTIP]Civic[/TIP], gain [icon:YIELD_SCIENCE] Science equal to 10% of its cost.[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing Mundo Perdido.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_SKIES_OF_ITZAMNA_CULTURE_FOR_TECH",
@@ -2668,9 +2668,9 @@
     },
     {
       "type": "CIVILIZATION_MISSISSIPPIAN",
-      "name": "LOC_CIVILIZATION_MISSISSIPPIAN_NAME",
-      "description": "LOC_CIVILIZATION_MISSISSIPPIAN_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_MISSISSIPPIAN_ADJECTIVE",
+      "name": "Mississippian",
+      "description": "All [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] receive a +1 [icon:YIELD_FOOD] Food adjacency for [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resources[/TIP]. +10% [icon:YIELD_PRODUCTION] Production towards constructing [icon:CITY_BUILDING_LIST] Buildings.",
+      "adjective": "Mississippian",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -2930,8 +2930,8 @@
           },
           {
             "trait": "TRAIT_MISSISSIPPIAN_ABILITY",
-            "name": "LOC_TRAIT_MISSISSIPPIAN_ABILITY_NAME",
-            "description": "LOC_TRAIT_MISSISSIPPIAN_ABILITY_DESCRIPTION",
+            "name": "Goose Societies",
+            "description": "[BLIST][LI]All [B][icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP][/B] receive a [B]+1 [icon:YIELD_FOOD] Food Adjacency[/B] for [B][icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resources[/TIP][/B].[LI][B]+10% [icon:YIELD_PRODUCTION] Production[/B] towards constructing [B][icon:CITY_BUILDING_LIST] Buildings[/B].[LI][B]+30% [icon:YIELD_PRODUCTION] Production[/B] towards constructing the [B]Monks Mound[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_GOOSE_SOCIETIES",
@@ -3032,9 +3032,9 @@
     },
     {
       "type": "CIVILIZATION_PERSIA",
-      "name": "LOC_CIVILIZATION_PERSIA_NAME",
-      "description": "LOC_CIVILIZATION_PERSIA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_PERSIA_ADJECTIVE",
+      "name": "Achaemenid Persia",
+      "description": "+3 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for [TIP:LOC_PEDIA_CONCEPTS_INFANTRY_UNITS_TOOLTIP]Infantry Units[/TIP] when attacking. Army Commanders start with a free Promotion.",
+      "adjective": "Achaemenid Persian",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -3294,8 +3294,8 @@
           },
           {
             "trait": "TRAIT_PERSIA_ABILITY",
-            "name": "LOC_TRAIT_PERSIA_ABILITY_NAME",
-            "description": "LOC_TRAIT_PERSIA_ABILITY_DESCRIPTION",
+            "name": "Hamarana Council",
+            "description": "[BLIST][LI][B]+3 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP][/B] for [B][TIP:LOC_PEDIA_CONCEPTS_INFANTRY_UNITS_TOOLTIP]Infantry Units[/TIP][/B] when attacking.[LI][B][icon:UNIT_ARMY_COMMANDER] [TIP:LOC_PEDIA_CONCEPTS_COMMANDER_TOOLTIP]Army Commanders[/TIP][/B] start with a free [B][icon:NAR_REW_PROMOTION] [TIP:LOC_PEDIA_CONCEPTS_PROMOTION_TOOLTIP]Promotion[/TIP][/B].[LI][B]+30% [icon:YIELD_PRODUCTION] Production[/B] towards constructing the [B]Gate of All Nations[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_HAMARANA_COUNCIL",
@@ -3370,9 +3370,9 @@
     },
     {
       "type": "CIVILIZATION_ROME",
-      "name": "LOC_CIVILIZATION_ROME_NAME",
-      "description": "LOC_CIVILIZATION_ROME_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_ROME_ADJECTIVE",
+      "name": "Rome",
+      "description": "+1 [icon:YIELD_CULTURE] Culture on [icon:CITY_URBAN] [TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Districts[/TIP] in the [icon:NOTIFICATION_SELECT_CAPITAL] Capital and City Centers in [icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP]. Gain a free Infantry Unit in new [icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP] that you found.",
+      "adjective": "Roman",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -3632,8 +3632,8 @@
           },
           {
             "trait": "TRAIT_ROME_ABILITY",
-            "name": "LOC_TRAIT_ROME_ABILITY_NAME",
-            "description": "LOC_TRAIT_ROME_ABILITY_DESCRIPTION",
+            "name": "Twelve Tables",
+            "description": "[BLIST][LI]+1 [icon:YIELD_CULTURE] Culture on [icon:CITY_URBAN] [TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Districts[/TIP] in the [icon:NOTIFICATION_SELECT_CAPITAL] Capital and City Centers in [icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP].[LI]Gain a free [B]Infantry Unit[/B] in new [icon:YIELD_TOWNS] [B][TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP][/B] that you found.[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing the Colosseum.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_TWELVE_TABLES_CAPITAL",
@@ -3726,9 +3726,9 @@
     },
     {
       "type": "CIVILIZATION_ABBASID",
-      "name": "LOC_CIVILIZATION_ABBASID_NAME",
-      "description": "LOC_CIVILIZATION_ABBASID_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_ABBASID_ADJECTIVE",
+      "name": "Abbasid",
+      "description": "Receive 30 [icon:YIELD_GOLD] Gold for each [icon:YIELD_POPULATION] Rural Population of the [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]City[/TIP] when you create a [icon:SPECIALIST][TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_TOOLTIP]Specialist[/TIP]. (Scales by Game Speed)",
+      "adjective": "Abbasid",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -3746,8 +3746,8 @@
           },
           {
             "trait": "TRAIT_ABBASID_ABILITY",
-            "name": "LOC_TRAIT_ABBASID_ABILITY_NAME",
-            "description": "LOC_TRAIT_ABBASID_ABILITY_DESCRIPTION",
+            "name": "Madina",
+            "description": "[BLIST][LI]Receive [B]30 [icon:YIELD_GOLD] Gold[/B] for each [B][icon:YIELD_POPULATION] [TIP:LOC_PEDIA_CONCEPTS_IMPROVEMENT_TOOLTIP]Rural Population[/TIP][/B] of the City when you create a [B][icon:SPECIALIST][TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_TOOLTIP]Specialist[/TIP][/B]. (Scales by Game Speed)[LI][B]+20% [icon:YIELD_PRODUCTION] Production[/B] towards constructing [B][icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP][/B] in [B][icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP][/B] with at least [B]5 [icon:SPECIALIST][TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_TOOLTIP]Specialists[/TIP][/B].[LI][B]+30% [icon:YIELD_PRODUCTION] Production[/B] towards constructing the [B]House of Wisdom[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_TOT_AQ_GOLD_SPECIALISTS",
@@ -4084,9 +4084,9 @@
     },
     {
       "type": "CIVILIZATION_CHOLA",
-      "name": "LOC_CIVILIZATION_CHOLA_NAME",
-      "description": "LOC_CIVILIZATION_CHOLA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_CHOLA_ADJECTIVE",
+      "name": "Chola",
+      "description": "+1 [icon:TRADE_ROUTE] [TIP:LOC_PEDIA_CONCEPTS_TRADE_ROUTE_TOOLTIP]Trade Route[/TIP] from the [icon:DIPLOMATIC_ACTION] Improve Trade Relations Action. +3 [icon:YIELD_GOLD] Gold and +2 [icon:YIELD_DIPLOMACY] Influence for every active [icon:TRADE_ROUTE] [TIP:LOC_PEDIA_CONCEPTS_TRADE_ROUTE_TOOLTIP]Trade Route[/TIP]. +1 [icon:Action_Move] Movement for [icon:UNIT_MERCHANT] Merchants. +1 [icon:ECONOMIC_VP] GDP per turn for imported [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resources[/TIP] assigned to [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP].",
+      "adjective": "Chola",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -4104,8 +4104,8 @@
           },
           {
             "trait": "TRAIT_CHOLA_ABILITY",
-            "name": "LOC_TRAIT_CHOLA_ABILITY_NAME",
-            "description": "LOC_TRAIT_CHOLA_ABILITY_DESCRIPTION",
+            "name": "Samayam",
+            "description": "[BLIST][LI][B]+1 [icon:TRADE_ROUTE] Trade Route[/B] from the [icon:DIPLOMATIC_ACTION] [B]Improve Trade Relations[/B] Action.[LI][B]+3 [icon:YIELD_GOLD] Gold[/B] and [B]+2 [icon:YIELD_DIPLOMACY] Influence[/B] for every active [icon:TRADE_ROUTE] [B]Trade Route[/B].[LI][B]+1 [icon:Action_Move] Movement[/B] for [icon:UNIT_MERCHANT] [B]Merchants[/B].[LI][B]+1 [icon:ECONOMIC_VP] GDP per turn[/B] for imported [icon:RADIAL_RESOURCES] [B]Resources[/B] assigned to [icon:YIELD_CITIES] [B]Cities[/B].[LI][B]+30% [icon:YIELD_PRODUCTION] Production[/B] towards constructing the [B]Brihadeeswarar Temple[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "MOD_TOT_CHANGE_TRADE_ROUTE_CAPACITY",
@@ -4466,9 +4466,9 @@
     },
     {
       "type": "CIVILIZATION_HAWAII",
-      "name": "LOC_CIVILIZATION_HAWAII_NAME",
-      "description": "LOC_CIVILIZATION_HAWAII_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_HAWAII_ADJECTIVE",
+      "name": "Hawai'i",
+      "description": "Can work [icon:CITY_UNIMPROVED] Ocean Terrain. +1 [icon:YIELD_HAPPINESS] Happiness and +2 [icon:YIELD_CULTURE] Culture on all [icon:CITY_UNIMPROVED] Marine Terrain.",
+      "adjective": "Hawaiian",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -4492,8 +4492,8 @@
           },
           {
             "trait": "TRAIT_HAWAII_ABILITY",
-            "name": "LOC_TRAIT_HAWAII_ABILITY_NAME",
-            "description": "LOC_TRAIT_HAWAII_ABILITY_DESCRIPTION",
+            "name": "Moananuiākea",
+            "description": "[BLIST][LI]Can work [icon:CITY_UNIMPROVED] Ocean Terrain.[LI]+1 [icon:YIELD_HAPPINESS] Happiness and +2 [icon:YIELD_CULTURE] Culture on all [icon:CITY_UNIMPROVED] Marine Terrain.[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing Hale o Keawe.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_HAWAII_IMPROVE_OCEAN",
@@ -4838,9 +4838,9 @@
     },
     {
       "type": "CIVILIZATION_INCA",
-      "name": "LOC_CIVILIZATION_INCA_NAME",
-      "description": "LOC_CIVILIZATION_INCA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_INCA_ADJECTIVE",
+      "name": "Inca",
+      "description": "Can work [icon:CITY_UNIMPROVED] Mountain Terrain. +2 [icon:YIELD_FOOD] Food and +1 [icon:YIELD_PRODUCTION] Production on [icon:CITY_UNIMPROVED] Mountain Terrain. Can generate [icon:UNIT_TREASURE_FLEET] [TIP:LOC_PEDIA_CONCEPTS_HOMELANDS_TOOLTIP]Homelands[/TIP] [TIP:LOC_PEDIA_CONCEPTS_TREASURE_CONVOY_TOOLTIP]Treasure Convoys[/TIP] in [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] with 3 Worked Mountains after completing the [icon:RADIAL_CIVICS] Qhapaq Ñan Civic.",
+      "adjective": "Incan",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -4864,8 +4864,8 @@
           },
           {
             "trait": "TRAIT_INCA_ABILITY",
-            "name": "LOC_TRAIT_INCA_ABILITY_NAME",
-            "description": "LOC_TRAIT_INCA_ABILITY_DESCRIPTION",
+            "name": "Apus",
+            "description": "[BLIST][LI]Can work [icon:CITY_UNIMPROVED] Mountain Terrain.[LI]+2 [icon:YIELD_FOOD] Food and +1 [icon:YIELD_PRODUCTION] Production on [icon:CITY_UNIMPROVED] Mountain Terrain.[LI]Can generate [icon:UNIT_TREASURE_FLEET] [TIP:LOC_PEDIA_CONCEPTS_HOMELANDS_TOOLTIP]Homelands[/TIP] [TIP:LOC_PEDIA_CONCEPTS_TREASURE_CONVOY_TOOLTIP]Treasure Convoys[/TIP] in [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] with 3 Worked Mountains after completing the [icon:RADIAL_CIVICS] Qhapaq Ñan Civic.[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing Machu Pikchu.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_APUS_IMPROVE_MOUNTAINS",
@@ -5214,9 +5214,9 @@
     },
     {
       "type": "CIVILIZATION_MAJAPAHIT",
-      "name": "LOC_CIVILIZATION_MAJAPAHIT_NAME",
-      "description": "LOC_CIVILIZATION_MAJAPAHIT_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_MAJAPAHIT_ADJECTIVE",
+      "name": "Majapahit",
+      "description": "[icon:YIELD_CULTURE] Culture [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] gain an adjacency for [icon:CITY_UNIMPROVED] Coast. +1 [icon:SPECIALIST] [TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_LIMIT_TOOLTIP]Specialist Limit[/TIP] in [icon:CITY_URBAN] [TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Districts[/TIP] on or adjacent to [icon:CITY_UNIMPROVED] Coast. If you transition away from [B]the Majapahit[/B], the [TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_LIMIT_TOOLTIP]Specialist Limit[/TIP] increase goes away. [icon:SPECIALIST][TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_TOOLTIP]Specialists[/TIP][/B] over the Limit become inactive until you increase the Limit.",
+      "adjective": "Majapahit",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -5234,8 +5234,8 @@
           },
           {
             "trait": "TRAIT_MAJAPAHIT_ABILITY",
-            "name": "LOC_TRAIT_MAJAPAHIT_ABILITY_NAME",
-            "description": "LOC_TRAIT_MAJAPAHIT_ABILITY_DESCRIPTION",
+            "name": "Negara",
+            "description": "[BLIST][LI][B][icon:YIELD_CULTURE] Culture [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP][B] gain an adjacency for [icon:CITY_UNIMPROVED] [B]Coast[/B].[LI][B]+1 [icon:SPECIALIST] [TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_LIMIT_TOOLTIP]Specialist Limit[/TIP][/B] in [icon:CITY_URBAN] [TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Districts[/TIP] on or adjacent to [icon:CITY_UNIMPROVED] [B]Coast[B].[LI]If you transition away from [B]the Majapahit[/B], the [B][icon:SPECIALIST] [TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_LIMIT_TOOLTIP]Specialist Limit[/TIP][/B] increase goes away. [B][icon:SPECIALIST][TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_TOOLTIP]Specialists[/TIP][/B] over the Limit become inactive until you increase the Limit.[LI][B]+30% [icon:YIELD_PRODUCTION] Production[/B] towards constructing [B]Borobudur[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_NEGARA_CULTURE_BUILDING_ADJACENCY",
@@ -5566,9 +5566,9 @@
     },
     {
       "type": "CIVILIZATION_MING",
-      "name": "LOC_CIVILIZATION_MING_NAME",
-      "description": "LOC_CIVILIZATION_MING_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_MING_ADJECTIVE",
+      "name": "Ming",
+      "description": "+50% [icon:YIELD_SCIENCE] Science in the [icon:NOTIFICATION_SELECT_CAPITAL] Capital. -15 [icon:YIELD_SCIENCE] Science per turn for each [icon:SOCIAL_POLICY] [TIP:LOC_PEDIA_CONCEPTS_SOCIAL_POLICY_TOOLTIP]Social Policy[/TIP], but not [icon:TRADITION] [TIP:LOC_PEDIA_CONCEPTS_TRADITION_TOOLTIP]Tradition[/TIP], slotted in the [icon:GOVERNMENT] Government.",
+      "adjective": "Ming",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -5586,8 +5586,8 @@
           },
           {
             "trait": "TRAIT_MING_ABILITY",
-            "name": "LOC_TRAIT_MING_ABILITY_NAME",
-            "description": "LOC_TRAIT_MING_ABILITY_DESCRIPTION",
+            "name": "Great Canon of Yongle",
+            "description": "[BLIST][LI]+50% [icon:YIELD_SCIENCE] Science in the [icon:NOTIFICATION_SELECT_CAPITAL] Capital.[LI]-15 [icon:YIELD_SCIENCE] Science per turn for each [icon:SOCIAL_POLICY] [TIP:LOC_PEDIA_CONCEPTS_SOCIAL_POLICY_TOOLTIP]Social Policy[/TIP], but not [icon:TRADITION] [TIP:LOC_PEDIA_CONCEPTS_TRADITION_TOOLTIP]Tradition[/TIP], slotted in the [icon:GOVERNMENT] Government.[LI]+1 [icon:TRADITION] Tradition Slot.[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing the Forbidden City.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_CAPITAL_EXTRA_SCIENCE",
@@ -5950,9 +5950,9 @@
     },
     {
       "type": "CIVILIZATION_MONGOLIA",
-      "name": "LOC_CIVILIZATION_MONGOLIA_NAME",
-      "description": "LOC_CIVILIZATION_MONGOLIA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_MONGOLIA_ADJECTIVE",
+      "name": "Mongolia",
+      "description": "When you capture an opposing [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlement[/TIP] gain the strongest [TIP:LOC_PEDIA_CONCEPTS_CAVALRY_UNITS_TOOLTIP]Cavalry Unit[/TIP] you can currently train, but -50% [icon:YIELD_PRODUCTION] Production towards training [icon:UNIT_SETTLER] Settlers.",
+      "adjective": "Mongolian",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -5970,8 +5970,8 @@
           },
           {
             "trait": "TRAIT_MONGOLIA_ABILITY",
-            "name": "LOC_TRAIT_MONGOLIA_ABILITY_NAME",
-            "description": "LOC_TRAIT_MONGOLIA_ABILITY_DESCRIPTION",
+            "name": "Bokh",
+            "description": "[BLIST][LI]When you capture an opposing [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlement[/TIP] gain the strongest [TIP:LOC_PEDIA_CONCEPTS_CAVALRY_UNITS_TOOLTIP]Cavalry Unit[/TIP] you can currently train.[LI][B]-50% [icon:YIELD_PRODUCTION] Production[/B] towards training [icon:UNIT_SETTLER] Settlers.[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing Erdene Zuu.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_CONQUER_UNIT",
@@ -6312,9 +6312,9 @@
     },
     {
       "type": "CIVILIZATION_NORMAN",
-      "name": "LOC_CIVILIZATION_NORMAN_NAME",
-      "description": "LOC_CIVILIZATION_NORMAN_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_NORMAN_ADJECTIVE",
+      "name": "Norman",
+      "description": "+5 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for Land Units and [icon:CITY_FORTIFIED] [TIP:LOC_PEDIA_CONCEPTS_FORTIFIED_DISTRICTS_TOOLTIP]Fortified Districts[/TIP] adjacent to Coast. +25 [icon:Action_Heal] HP on [icon:CITY_FORTIFIED] Fortified Districts.",
+      "adjective": "Norman",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -6332,8 +6332,8 @@
           },
           {
             "trait": "TRAIT_NORMAN_ABILITY",
-            "name": "LOC_TRAIT_NORMAN_ABILITY_NAME",
-            "description": "LOC_TRAIT_NORMAN_ABILITY_DESCRIPTION",
+            "name": "Normannitas",
+            "description": "[BLIST][LI][B]+5[/B] [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for [B]Land Units[/B] and [icon:CITY_FORTIFIED] [TIP:LOC_PEDIA_CONCEPTS_FORTIFIED_DISTRICTS_TOOLTIP]Fortified Districts[/TIP] adjacent to Coast.[LI]+25 [icon:Action_Heal] HP on [icon:CITY_FORTIFIED] Fortified Districts.[LI][B]+30% [icon:YIELD_PRODUCTION] Production[/B] towards constructing the [B]White Tower[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_ADJACENT_TO_COAST_COMBAT",
@@ -6672,9 +6672,9 @@
     },
     {
       "type": "CIVILIZATION_SONGHAI",
-      "name": "LOC_CIVILIZATION_SONGHAI_NAME",
-      "description": "LOC_CIVILIZATION_SONGHAI_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_SONGHAI_ADJECTIVE",
+      "name": "Songhai",
+      "description": "+2 [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCE_CAPACITY_TOOLTIP]Resource Capacity[/TIP] in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] on [TIP:LOC_PEDIA_CONCEPTS_NAVIGABLE_RIVER_TOOLTIP]Navigable Rivers[/TIP]. +1 [icon:YIELD_PRODUCTION] Production in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] on [TIP:LOC_PEDIA_CONCEPTS_NAVIGABLE_RIVER_TOOLTIP]Navigable Rivers[/TIP] for every [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resource[/TIP] assigned to them. Can generate [icon:UNIT_TREASURE_FLEET] [TIP:LOC_PEDIA_CONCEPTS_HOMELANDS_TOOLTIP]Homelands[/TIP] [TIP:LOC_PEDIA_CONCEPTS_TREASURE_CONVOY_TOOLTIP]Treasure Convoys[/TIP] on [TIP:LOC_PEDIA_CONCEPTS_NAVIGABLE_RIVER_TOOLTIP]Navigable Rivers[/TIP] after completing the [icon:RADIAL_CIVICS] Kanta Civic.",
+      "adjective": "Songhai",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -6692,8 +6692,8 @@
           },
           {
             "trait": "TRAIT_SONGHAI_ABILITY",
-            "name": "LOC_TRAIT_SONGHAI_ABILITY_NAME",
-            "description": "LOC_TRAIT_SONGHAI_ABILITY_DESCRIPTION",
+            "name": "Tarikh al-Sudan",
+            "description": "[BLIST][LI]+2 [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCE_CAPACITY_TOOLTIP]Resource Capacity[/TIP] in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] on [TIP:LOC_PEDIA_CONCEPTS_NAVIGABLE_RIVER_TOOLTIP]Navigable Rivers[/TIP].[LI]+1 [icon:YIELD_PRODUCTION] Production in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] on [TIP:LOC_PEDIA_CONCEPTS_NAVIGABLE_RIVER_TOOLTIP]Navigable Rivers[/TIP] for every [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resource[/TIP] assigned to them.[LI]Can generate [icon:UNIT_TREASURE_FLEET] [TIP:LOC_PEDIA_CONCEPTS_HOMELANDS_TOOLTIP]Homelands[/TIP] [TIP:LOC_PEDIA_CONCEPTS_TREASURE_CONVOY_TOOLTIP]Treasure Convoys[/TIP] on [TIP:LOC_PEDIA_CONCEPTS_NAVIGABLE_RIVER_TOOLTIP]Navigable Rivers[/TIP] after completing the [icon:RADIAL_CIVICS] Kanta Civic.[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing the Tomb of Askia.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_SONGHAI_TOT_AQ_NAVIGABLE_RIVER_RESOURCE_CAP",
@@ -7018,9 +7018,9 @@
     },
     {
       "type": "CIVILIZATION_SPAIN",
-      "name": "LOC_CIVILIZATION_SPAIN_NAME",
-      "description": "LOC_CIVILIZATION_SPAIN_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_SPAIN_ADJECTIVE",
+      "name": "Spain",
+      "description": "+2 [icon:YIELD_FOOD] Food, [icon:YIELD_GOLD] Gold, and [icon:YIELD_PRODUCTION] Production in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP] adjacent to Coast and in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP] following your own [icon:NAR_REW_RELIGION] Religion, or +4 if it is both. This is doubled in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP] in [TIP:LOC_PEDIA_CONCEPTS_DISTANT_LANDS_TOOLTIP]Distant Lands[/TIP].",
+      "adjective": "Spanish",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -7038,8 +7038,8 @@
           },
           {
             "trait": "TRAIT_SPAIN_ABILITY",
-            "name": "LOC_TRAIT_SPAIN_ABILITY_NAME",
-            "description": "LOC_TRAIT_SPAIN_ABILITY_DESCRIPTION",
+            "name": "Siglo de Oro",
+            "description": "[BLIST][LI][B]+2 [icon:YIELD_FOOD] Food, +2 [icon:YIELD_GOLD] Gold and +2 [icon:YIELD_PRODUCTION] Production[/B] in Settlements adjacent to [B]Coast[/B] and in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP] following your own [B][icon:NAR_REW_RELIGION] [TIP:LOC_PEDIA_CONCEPTS_RELIGION_TOOLTIP]Religion[/TIP][/B], or [B]+4[/B] if it is both. [B]Doubled[/B] in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP] in [B][TIP:LOC_PEDIA_CONCEPTS_DISTANT_LANDS_TOOLTIP]Distant Lands[/TIP][/B].[LI][B]+15% [icon:YIELD_GOLD] Gold[/B] efficiency towards converting a [B][icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Town[/TIP][/B] to a [B][icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]City[/TIP][/B], or [B]+30% [icon:YIELD_GOLD] Gold[/B] in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP] in [B][TIP:LOC_PEDIA_CONCEPTS_DISTANT_LANDS_TOOLTIP]Distant Lands[/TIP][/B].[LI][B]+30% [icon:YIELD_PRODUCTION] Production[/B] towards constructing [B]El Escorial[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_TOT_AQ_COASTAL_SETTLEMENT_YIELDS",
@@ -7368,9 +7368,9 @@
     },
     {
       "type": "CIVILIZATION_AMERICA",
-      "name": "LOC_CIVILIZATION_AMERICA_NAME",
-      "description": "LOC_CIVILIZATION_AMERICA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_AMERICA_ADJECTIVE",
+      "name": "America",
+      "description": "Gain 100 [icon:YIELD_GOLD] Gold every time you improve a [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resource[/TIP]. +1 [icon:YIELD_PRODUCTION] Production on [icon:RADIAL_RESOURCES] Resources.",
+      "adjective": "American",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -7388,8 +7388,8 @@
           },
           {
             "trait": "TRAIT_AMERICA_ABILITY",
-            "name": "LOC_TRAIT_AMERICA_ABILITY_NAME",
-            "description": "LOC_TRAIT_AMERICA_ABILITY_DESCRIPTION",
+            "name": "Frontier Expansion",
+            "description": "[BLIST][LI]Gain [B]150 [icon:YIELD_GOLD] Gold[/B] every time you improve a [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resource[/TIP]. [LI]+1 [icon:YIELD_PRODUCTION] Production on [icon:RADIAL_RESOURCES] [B]Resources.[/B] [LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing the Statue of Liberty.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_FRONTIER_EXPANSION_GOLD_ON_IMPROVED_RESOURCES",
@@ -7722,9 +7722,9 @@
     },
     {
       "type": "CIVILIZATION_BUGANDA",
-      "name": "LOC_CIVILIZATION_BUGANDA_NAME",
-      "description": "LOC_CIVILIZATION_BUGANDA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_BUGANDA_ADJECTIVE",
+      "name": "Buganda",
+      "description": "Land Units gain [icon:YIELD_CULTURE] Culture when [icon:Action_Pillage] Pillaging [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] or [TIP:LOC_PEDIA_CONCEPTS_IMPROVEMENT_TOOLTIP]Improvements[/TIP] equal to the Yield or [icon:Action_Heal] Healing gained. Land [TIP:LOC_PEDIA_CONCEPTS_MILITARY_UNIT_TOOLTIP]Military Units[/TIP] gain the [TIP:LOC_PEDIA_CONCEPTS_AMPHIBIOUS_TOOLTIP]Amphibious[/TIP] ability.",
+      "adjective": "Bugandan",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -7742,8 +7742,8 @@
           },
           {
             "trait": "TRAIT_BUGANDA_ABILITY",
-            "name": "LOC_TRAIT_BUGANDA_ABILITY_NAME",
-            "description": "LOC_TRAIT_BUGANDA_ABILITY_DESCRIPTION",
+            "name": "Omugongo",
+            "description": "[BLIST][LI]Land Units gain [icon:YIELD_CULTURE] [B]Culture[/B] when [icon:Action_Pillage] Pillaging [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] or [TIP:LOC_PEDIA_CONCEPTS_IMPROVEMENT_TOOLTIP]Improvements[/TIP] equal to the Yield or [icon:Action_Heal] Healing gained.[LI]Land [TIP:LOC_PEDIA_CONCEPTS_MILITARY_UNIT_TOOLTIP]Military Units[/TIP] gain the [TIP:LOC_PEDIA_CONCEPTS_AMPHIBIOUS_TOOLTIP]Amphibious[/TIP] ability.[LI][B]+6 [icon:YIELD_CULTURE] Culture[/B] and [B][icon:YIELD_FOOD] Food[/B] on Lakes, and +1 [icon:CULTURE_VP]  [TIP:LOC_PEDIA_CONCEPTS_TOURISTS_TOOLTIP]Tourism[/TIP] from [icon:CITY_URBAN] [TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Districts[/TIP] and [icon:CITY_RURAL] [TIP:LOC_PEDIA_CONCEPTS_IMPROVEMENT_TOOLTIP]Improvements[/TIP] on Lakes.[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing Muzibu Azaala Mpanga.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_AMPHIBIOUS_ABILITY",
@@ -8088,9 +8088,9 @@
     },
     {
       "type": "CIVILIZATION_FRENCH_EMPIRE",
-      "name": "LOC_CIVILIZATION_FRENCH_EMPIRE_NAME",
-      "description": "LOC_CIVILIZATION_FRENCH_EMPIRE_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_FRENCH_EMPIRE_ADJECTIVE",
+      "name": "French Empire",
+      "description": "You can select the [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP] effects of any standard [icon:GOVERNMENT] Government in Modern [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP].",
+      "adjective": "French Imperial",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -8108,8 +8108,8 @@
           },
           {
             "trait": "TRAIT_FRENCH_EMPIRE_ABILITY",
-            "name": "LOC_TRAIT_FRENCH_EMPIRE_ABILITY_NAME",
-            "description": "LOC_TRAIT_FRENCH_EMPIRE_ABILITY_DESCRIPTION",
+            "name": "Liberté, Egalité, Fraternité",
+            "description": "[BLIST][LI]You can select the [B][icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP] effects[/B] of any [B]standard Modern [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] [icon:GOVERNMENT] Government[/B].[LI][B]+30% [icon:YIELD_PRODUCTION] Production[/B] towards constructing the [B]Eiffel Tower[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_LIBERTE_AQ_GOVERNMENT_CHANGE",
@@ -8424,9 +8424,9 @@
     },
     {
       "type": "CIVILIZATION_MEXICO",
-      "name": "LOC_CIVILIZATION_MEXICO_NAME",
-      "description": "LOC_CIVILIZATION_MEXICO_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_MEXICO_ADJECTIVE",
+      "name": "Mexico",
+      "description": "Starts with a unique [icon:GOVERNMENT] [TIP:LOC_PEDIA_CONCEPTS_GOVERNMENT_TOOLTIP]Government[/TIP], Revolución. This Government has one [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP] effect, +30% [icon:YIELD_CULTURE] Culture for 10 Turns. Cannot enter any other Government type. +100% [icon:CULTURE_VP] [TIP:LOC_PEDIA_CONCEPTS_TOURISTS_TOOLTIP]Tourism[/TIP] from [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebrations[/TIP].",
+      "adjective": "Mexican",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -8444,8 +8444,8 @@
           },
           {
             "trait": "TRAIT_MEXICO_ABILITY",
-            "name": "LOC_TRAIT_MEXICO_ABILITY_NAME",
-            "description": "LOC_TRAIT_MEXICO_ABILITY_DESCRIPTION",
+            "name": "Revolución",
+            "description": "[BLIST][LI]Starts with a unique [icon:GOVERNMENT] [TIP:LOC_PEDIA_CONCEPTS_GOVERNMENT_TOOLTIP]Government[/TIP], Revolución. This Government has one [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP] effect, +30% [icon:YIELD_CULTURE] Culture for 10 Turns. Cannot enter any other Government type.[LI]+100% [icon:CULTURE_VP] [TIP:LOC_PEDIA_CONCEPTS_TOURISTS_TOOLTIP]Tourism[/TIP] from [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebrations[/TIP].[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing Palacio de Bellas Artes.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_REVOLUCION_GOVERNMENT_UNIQUE",
@@ -8760,9 +8760,9 @@
     },
     {
       "type": "CIVILIZATION_MUGHAL",
-      "name": "LOC_CIVILIZATION_MUGHAL_NAME",
-      "description": "LOC_CIVILIZATION_MUGHAL_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_MUGHAL_ADJECTIVE",
+      "name": "Mughal",
+      "description": "+100% [icon:YIELD_GOLD] Gold yields. -25% to all other yields.",
+      "adjective": "Mughal",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -8780,8 +8780,8 @@
           },
           {
             "trait": "TRAIT_MUGHAL_ABILITY",
-            "name": "LOC_TRAIT_MUGHAL_ABILITY_NAME",
-            "description": "LOC_TRAIT_MUGHAL_ABILITY_DESCRIPTION",
+            "name": "Paradise of Nations",
+            "description": "[BLIST][LI][B]+100% [icon:YIELD_GOLD] Gold[/B] yields.[LI][B]-25%[/B] to [B]all other[/B] yields [B]except [icon:YIELD_FOOD] Food[/B].[LI]You can purchase [B][icon:WONDER] [TIP:LOC_PEDIA_CONCEPTS_WONDERS_TOOLTIP]Wonders[/TIP][/B] with [B][icon:YIELD_GOLD] Gold[/B], but they are [B]150%[/B] more expensive.[LI][B]+30% [icon:YIELD_PRODUCTION] Production [/B]towards constructing the [B]Red Fort[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_PARADISE_OF_NATIONS_GOLD",
@@ -9156,9 +9156,9 @@
     },
     {
       "type": "CIVILIZATION_MEIJI",
-      "name": "LOC_CIVILIZATION_MEIJI_NAME",
-      "description": "LOC_CIVILIZATION_MEIJI_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_MEIJI_ADJECTIVE",
+      "name": "Meiji Japan",
+      "description": "When you Overbuild a [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Building[/TIP], gain [icon:YIELD_SCIENCE] Science equal to 25% of the new Building's [icon:YIELD_PRODUCTION] Production cost.",
+      "adjective": "Meiji Japanese",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -9176,8 +9176,8 @@
           },
           {
             "trait": "TRAIT_MEIJI_ABILITY",
-            "name": "LOC_TRAIT_MEIJI_ABILITY_NAME",
-            "description": "LOC_TRAIT_MEIJI_ABILITY_DESCRIPTION",
+            "name": "Goisshin",
+            "description": "[BLIST][LI]When you Overbuild a [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Building[/TIP], gain [icon:YIELD_SCIENCE] Science equal to 25% of the Building's [icon:YIELD_PRODUCTION] Production cost.[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing Dogo Onsen.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_GOISSHIN_AQ_SCIENCE_ON_BUILD",
@@ -9488,9 +9488,9 @@
     },
     {
       "type": "CIVILIZATION_PRUSSIA",
-      "name": "LOC_CIVILIZATION_PRUSSIA_NAME",
-      "description": "LOC_CIVILIZATION_PRUSSIA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_PRUSSIA_ADJECTIVE",
+      "name": "Prussia",
+      "description": "+1 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for [TIP:LOC_PEDIA_CONCEPTS_MILITARY_UNIT_TOOLTIP]Military Units[/TIP] for every [icon:PLAYER_RELATIONSHIP_UNFRIENDLY] Unfriendly or [icon:PLAYER_RELATIONSHIP_HOSTILE] Hostile Relationship with another Leader.",
+      "adjective": "Prussian",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -9508,8 +9508,8 @@
           },
           {
             "trait": "TRAIT_PRUSSIA_ABILITY",
-            "name": "LOC_TRAIT_PRUSSIA_ABILITY_NAME",
-            "description": "LOC_TRAIT_PRUSSIA_ABILITY_DESCRIPTION",
+            "name": "Blood and Iron",
+            "description": "[BLIST][LI]+1 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for [TIP:LOC_PEDIA_CONCEPTS_MILITARY_UNIT_TOOLTIP]Military Units[/TIP] for every [icon:PLAYER_RELATIONSHIP_UNFRIENDLY] Unfriendly or [icon:PLAYER_RELATIONSHIP_HOSTILE] Hostile Relationship with another Leader.[LI]You may establish and retain [icon:TRADE_ROUTE] [TIP:LOC_PEDIA_CONCEPTS_TRADE_ROUTE_TOOLTIP]Trade Routes[/TIP] with Civilizations that you are at [icon:WAR] War with.[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing Brandenburg Gate.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_BLOOD_AND_IRON_COMBAT_STRENGTH",
@@ -9838,9 +9838,9 @@
     },
     {
       "type": "CIVILIZATION_QING",
-      "name": "LOC_CIVILIZATION_QING_NAME",
-      "description": "LOC_CIVILIZATION_QING_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_QING_ADJECTIVE",
+      "name": "Qing",
+      "description": "+3 [icon:YIELD_GOLD] Gold and +3 [icon:YIELD_CULTURE] Culture for every imported [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resource[/TIP], but -6 [icon:YIELD_SCIENCE] Science for every [icon:TRADE_ROUTE] [TIP:LOC_PEDIA_CONCEPTS_TRADE_ROUTE_TOOLTIP]Trade Route[/TIP]. +1 [icon:ECONOMIC_VP] GDP per turn for imported [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resources[/TIP] assigned to [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP]. +1 [icon:NAR_REW_COMBAT] Combat Strength for Land Units for every other Civilization you have a [icon:TRADE_ROUTE] [TIP:LOC_PEDIA_CONCEPTS_TRADE_ROUTE_TOOLTIP]Trade Route[/TIP] with.",
+      "adjective": "Qing",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -9858,8 +9858,8 @@
           },
           {
             "trait": "TRAIT_QING_ABILITY",
-            "name": "LOC_TRAIT_QING_ABILITY_NAME",
-            "description": "LOC_TRAIT_QING_ABILITY_DESCRIPTION",
+            "name": "Kang Qian Shengshi",
+            "description": "[BLIST][LI]+3 [icon:YIELD_GOLD] Gold and +3 [icon:YIELD_CULTURE] Culture for every imported [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resource[/TIP], but -6 [icon:YIELD_SCIENCE] Science for every [icon:TRADE_ROUTE] [TIP:LOC_PEDIA_CONCEPTS_TRADE_ROUTE_TOOLTIP]Trade Route[/TIP].[LI]+1 [icon:ECONOMIC_VP] GDP per turn for imported [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resources[/TIP] assigned to [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP].[LI]+1 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for Land Units for every other Civilization you have a [icon:TRADE_ROUTE] [TIP:LOC_PEDIA_CONCEPTS_TRADE_ROUTE_TOOLTIP]Trade Route[/TIP] with.[LI]+30% [icon:YIELD_PRODUCTION] Production towards constructing Chengde Mountain Resort.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_AQ_SHENGSHI_GOLD_PER_IMPORTED_RESOURCE",
@@ -10242,9 +10242,9 @@
     },
     {
       "type": "CIVILIZATION_RUSSIA",
-      "name": "LOC_CIVILIZATION_RUSSIA_NAME",
-      "description": "LOC_CIVILIZATION_RUSSIA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_RUSSIA_ADJECTIVE",
+      "name": "Russia",
+      "description": "+1 [icon:YIELD_CULTURE] Culture on [TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Quarters[/TIP], +1 [icon:YIELD_SCIENCE] Science on [TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Quarters[/TIP] in [icon:CITY_UNIMPROVED] Tundra Terrain.",
+      "adjective": "Russian",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -10262,8 +10262,8 @@
           },
           {
             "trait": "TRAIT_RUSSIA_ABILITY",
-            "name": "LOC_TRAIT_RUSSIA_ABILITY_NAME",
-            "description": "LOC_TRAIT_RUSSIA_ABILITY_DESCRIPTION",
+            "name": "Prosveshchenie",
+            "description": "[BLIST][LI][B]+1 [icon:YIELD_CULTURE] Culture on [icon:CITY_UNIQUE_QUARTER] [TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Quarters[/TIP][/B] in [B][icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP][/B]. [B]+1 [icon:YIELD_SCIENCE] Science on [icon:CITY_UNIQUE_QUARTER] Quarters[/B] in [B][icon:YIELD_CITIES] Cities[/B] in [B]Tundra[/B].[LI][B]+1 [icon:YIELD_FOOD] Food on Farms[/B] in [B][icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP][/B]. [B]+1 [icon:YIELD_PRODUCTION] Production on Farms[/B] in [B][icon:YIELD_TOWNS] Towns[/B] in [B]Tundra[/B], count as [icon:YIELD_WAREHOUSE] Warehouse Bonus.[LI][B]+30% [icon:YIELD_PRODUCTION] Production[/B] towards constructing the [B]Hermitage[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "PROSVESHCHENIE_CITY_YIELDS",
@@ -10594,9 +10594,9 @@
     },
     {
       "type": "CIVILIZATION_SIAM",
-      "name": "LOC_CIVILIZATION_SIAM_NAME",
-      "description": "LOC_CIVILIZATION_SIAM_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_SIAM_ADJECTIVE",
+      "name": "Siam",
+      "description": "Gains a unique [icon:DIPLOMATIC_ACTION] Diplomatic Action to immediately become [TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP] of a [icon:CITYSTATE] [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP] at a higher [icon:YIELD_DIPLOMACY] Influence cost than [icon:PROJECT] Befriend Independent.",
+      "adjective": "Siamese",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -10614,8 +10614,8 @@
           },
           {
             "trait": "TRAIT_SIAM_ABILITY",
-            "name": "LOC_TRAIT_SIAM_ABILITY_NAME",
-            "description": "LOC_TRAIT_SIAM_ABILITY_DESCRIPTION",
+            "name": "Itsaraphab",
+            "description": "[BLIST][LI]Gains a [B]unique [icon:DIPLOMATIC_ACTION] Diplomatic Action[/B] to immediately become [B][TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP][/B] of a [B][icon:CITYSTATE] [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP][/B] at a higher [icon:YIELD_DIPLOMACY] Influence cost than [icon:PROJECT] Befriend Independent.[LI][B]+3 [icon:YIELD_DIPLOMACY] Influence[/B] for every Civilization you are [B][icon:PLAYER_RELATIONSHIP_FRIENDLY] Friendly[/B] or [B][icon:PLAYER_RELATIONSHIP_HELPFUL] Helpful[/B] with.[LI][B]+12 [icon:CULTURE_VP] Tourism[/B] for every [B][TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP][/B] you are [TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP] of.[LI][B]+30% [icon:YIELD_PRODUCTION] Production[/B] towards constructing [B]Doi Suthep[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_ITSARAPHAB",
@@ -10974,9 +10974,9 @@
     },
     {
       "type": "CIVILIZATION_BULGARIA",
-      "name": "LOC_CIVILIZATION_BULGARIA_NAME",
-      "description": "LOC_CIVILIZATION_BULGARIA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_BULGARIA_ADJECTIVE",
+      "name": "Bulgaria",
+      "description": "Receive [icon:YIELD_PRODUCTION] Production in all [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] when [icon:Action_Pillage] Pillaging [TIP:LOC_PEDIA_CONCEPTS_IMPROVEMENT_TOOLTIP]Improvements[/TIP] equal to 50% of the HP or Yields gained. All Combat Units receive -3 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] against [icon:CITY_FORTIFIED] [TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Fortified Districts[/TIP].",
+      "adjective": "Bulgarian",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -10994,8 +10994,8 @@
           },
           {
             "trait": "TRAIT_BULGARIA_ABILITY",
-            "name": "LOC_TRAIT_BULGARIA_ABILITY_NAME",
-            "description": "LOC_TRAIT_BULGARIA_ABILITY_DESCRIPTION",
+            "name": "Krum's Dynasty",
+            "description": "[BLIST][LI]Receive [icon:YIELD_PRODUCTION] Production in all [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] when [icon:Action_Pillage] Pillaging [TIP:LOC_PEDIA_CONCEPTS_IMPROVEMENT_TOOLTIP]Improvements[/TIP] equal to 50% of the HP or Yields gained.[LI]-3 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for all Combat Units against [icon:CITY_FORTIFIED] [TIP:LOC_PEDIA_CONCEPTS_DISTRICT_TOOLTIP]Fortified Districts[/TIP].[LI]+30%[icon:YIELD_PRODUCTION] Production towards constructing Rila Monastery.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "MOD_CIV_PRODUCTION_PILLAGE_IMPROVEMENT",
@@ -11336,9 +11336,9 @@
     },
     {
       "type": "CIVILIZATION_CARTHAGE",
-      "name": "LOC_CIVILIZATION_CARTHAGE_NAME",
-      "description": "LOC_CIVILIZATION_CARTHAGE_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_CARTHAGE_ADJECTIVE",
+      "name": "Carthage",
+      "description": "Can only have 1 [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]City[/TIP]. [icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP] can purchase Water [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] with any [TIP:LOC_PEDIA_CONCEPTS_TOWN_FOCUS_TOOLTIP]Town Focus[/TIP], but cannot use Convert to City. Receive a second [icon:UNIT_MERCHANT] Merchant or [icon:UNIT_COLONIST] Colonist each time you purchase or train one.",
+      "adjective": "Carthaginian",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -11598,8 +11598,8 @@
           },
           {
             "trait": "TRAIT_CARTHAGE_ABILITY",
-            "name": "LOC_TRAIT_CARTHAGE_ABILITY_NAME",
-            "description": "LOC_TRAIT_CARTHAGE_ABILITY_DESCRIPTION",
+            "name": "Phoenician Heritage",
+            "description": "[BLIST][LI]Can only have 1 [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]City[/TIP]. [icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP] can purchase Water [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] with any [TIP:LOC_PEDIA_CONCEPTS_TOWN_FOCUS_TOOLTIP]Town Focus[/TIP], but cannot use [B]Convert to City[/B].[LI]Receive a second [icon:UNIT_MERCHANT] [B]Merchant[/B] or [icon:UNIT_COLONIST] [B]Colonist[/B] each time you purchase or train one.[LI][B]+30%[icon:YIELD_PRODUCTION] Production [/B]towards constructing [B]Byrsa[/B].[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "MOD_CIV_WONDER_PRODUCTION_CARTHAGE",
@@ -11720,9 +11720,9 @@
     },
     {
       "type": "CIVILIZATION_DAI_VIET",
-      "name": "LOC_CIVILIZATION_DAI_VIET_NAME",
-      "description": "LOC_CIVILIZATION_DAI_VIET_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_DAI_VIET_ADJECTIVE",
+      "name": "Đại Việt",
+      "description": "When you create a [icon:CITY_FORTIFIED] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Fortification Building[/TIP] or [TIP:LOC_PEDIA_CONCEPTS_WONDERS_TOOLTIP]Wonder[/TIP], gain 25 [icon:YIELD_CULTURE] Culture for each [icon:YIELD_POPULATION] [TIP:LOC_PEDIA_CONCEPTS_POPULATION_TOOLTIP]Urban Population[/TIP] in the Settlement. +2 [icon:YIELD_CULTURE] Culture and [icon:YIELD_FOOD] Food on [icon:CITY_FORTIFIED] Fortification Constructibles in [icon:CITY_UNIMPROVED] Tropical Terrain.",
+      "adjective": "Vietnamese",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -11740,7 +11740,7 @@
           },
           {
             "trait": "TRAIT_DAI_VIET_ABILITY",
-            "name": "LOC_TRAIT_DAI_VIET_ABILITY_NAME",
+            "name": "Hịch Tướng Sĩ",
             "description": "LOC_TRAIT_DAI_VIET_ABILITY_DESCRIPTION",
             "modifiers": [
               {
@@ -12102,9 +12102,9 @@
     },
     {
       "type": "CIVILIZATION_ICELAND",
-      "name": "LOC_CIVILIZATION_ICELAND_NAME",
-      "description": "LOC_CIVILIZATION_ICELAND_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_ICELAND_ADJECTIVE",
+      "name": "Iceland",
+      "description": "Gain [icon:YIELD_CULTURE] 500 Culture when you discover a [icon:NOTIFICATION_DISCOVER_NATURAL_WONDER] Natural Wonder in Distant Lands. Gain a [icon:NAR_REW_GREATWORK] Relic every time you study a [icon:RADIAL_CIVICS] Civic Mastery after completing the [icon:RADIAL_CIVICS] Landnámabók Civic. -50% [icon:YIELD_PRODUCTION] Production towards training [icon:UNIT_MISSIONARY] Missionaries, and [icon:UNIT_MISSIONARY] Missionaries cost 100% more [icon:YIELD_GOLD] Gold to purchase.",
+      "adjective": "Icelandic",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -12122,8 +12122,8 @@
           },
           {
             "trait": "TRAIT_ICELAND_ABILITY",
-            "name": "LOC_TRAIT_ICELAND_ABILITY_NAME",
-            "description": "LOC_TRAIT_ICELAND_ABILITY_DESCRIPTION",
+            "name": "Kringla Heimsins",
+            "description": "[BLIST][LI][B]+1 [icon:Action_Showall] [TIP:LOC_PEDIA_CONCEPTS_SIGHT_TOOLTIP]Sight[/TIP][/B] for [B][TIP:LOC_PEDIA_CONCEPTS_NAVAL_UNITS_TOOLTIP]Naval Units[/TIP][/B].[LI]Gain [B]500 [icon:YIELD_CULTURE] Culture[/B] when you discover a [icon:NOTIFICATION_DISCOVER_NATURAL_WONDER] [B]Natural Wonder[/B] in [B]Distant Lands[/B] (On Standard Speed). [LI]Gain a [B][icon:NAR_REW_GREATWORK] Relic[/B] every time you study a [B][icon:RADIAL_CIVICS] Civic Mastery[/B].[LI][B]-50% [icon:YIELD_PRODUCTION] Production[/B] towards training [B][icon:UNIT_MISSIONARY] Missionaries[/B], and [icon:UNIT_MISSIONARY] Missionaries cost [B]100% more [icon:YIELD_GOLD] Gold[/B] to purchase.[LI][B]+30%[icon:YIELD_PRODUCTION] Production [/B]towards constructing [B]Reykjaholt[/B].[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "ICELAND_MOD_NAVAL_SIGHT",
@@ -12444,9 +12444,9 @@
     },
     {
       "type": "CIVILIZATION_OTTOMANS",
-      "name": "LOC_CIVILIZATION_OTTOMANS_NAME",
-      "description": "LOC_CIVILIZATION_OTTOMANS_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_OTTOMANS_ADJECTIVE",
+      "name": "Ottomans",
+      "description": "When any Leader [B]Excavates[/B] an [B]Artifact[/B] in the Ottomans’ territory, they generate an additional [icon:NAR_REW_GREATWORK] Artifact. +3 [icon:NAR_REW_COMBAT] Combat Strength for Infantry and Siege Units when attacking.",
+      "adjective": "Ottoman",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -12464,7 +12464,7 @@
           },
           {
             "trait": "TRAIT_OTTOMANS_ABILITY",
-            "name": "LOC_TRAIT_OTTOMANS_ABILITY_NAME",
+            "name": "Devlet-i ʿAlīye-i ʿOsmānīye",
             "description": "LOC_TRAIT_OTTOMANS_ABILITY_DESCRIPTION",
             "modifiers": [
               {
@@ -12792,9 +12792,9 @@
     },
     {
       "type": "CIVILIZATION_PIRATE_REPUBLIC",
-      "name": "LOC_CIVILIZATION_PIRATE_REPUBLIC_NAME",
-      "description": "LOC_CIVILIZATION_PIRATE_REPUBLIC_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_PIRATE_REPUBLIC_ADJECTIVE",
+      "name": "Republic of Pirates",
+      "description": "Naval Units receive [B]+100% [icon:Action_Pillage] Pillage Yields and [icon:Action_Heal] Healing[/B]. [icon:UNIT_SETTLER] Settlers cannot be trained or purchased, but you can capture other Civilizations' [icon:UNIT_SETTLER] Settlers. Naval, Treasure Convoy, and Buccaneer Units can move into other Civilization's borders without being at [icon:WAR] War or having Open Borders. +5 [icon:ECONOMIC_VP] [TIP:LOC_PEDIA_CONCEPTS_GDP_TOOLTIP]GDP[/TIP] from your [TIP:LOC_PEDIA_CONCEPTS_NAVAL_UNITS_TOOLTIP]Naval Units[/TIP] defeating other [B]Units[/B].",
+      "adjective": "Pirate",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -12812,7 +12812,7 @@
           },
           {
             "trait": "TRAIT_PIRATE_REPUBLIC_ABILITY",
-            "name": "LOC_TRAIT_PIRATE_REPUBLIC_ABILITY_NAME",
+            "name": "Flying Gang",
             "description": "LOC_TRAIT_PIRATE_REPUBLIC_ABILITY_DESCRIPTION",
             "modifiers": [
               {
@@ -13162,9 +13162,9 @@
     },
     {
       "type": "CIVILIZATION_SHAWNEE",
-      "name": "LOC_CIVILIZATION_SHAWNEE_NAME",
-      "description": "LOC_CIVILIZATION_SHAWNEE_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_SHAWNEE_ADJECTIVE",
+      "name": "Shawnee",
+      "description": "+2 [icon:YIELD_FOOD] Food on [icon:CITY_UNIMPROVED] Minor and Navigable River Terrain in Settlements adjacent to Navigable Rivers.",
+      "adjective": "Shawnee",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -13182,7 +13182,7 @@
           },
           {
             "trait": "TRAIT_SHAWNEE_ABILITY",
-            "name": "LOC_TRAIT_SHAWNEE_ABILITY_NAME",
+            "name": "Nepekifaki",
             "description": "LOC_TRAIT_SHAWNEE_ABILITY_DESCRIPTION",
             "modifiers": [
               {
@@ -13498,9 +13498,9 @@
     },
     {
       "type": "CIVILIZATION_SILLA",
-      "name": "LOC_CIVILIZATION_SILLA_NAME",
-      "description": "LOC_CIVILIZATION_SILLA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_SILLA_ADJECTIVE",
+      "name": "Silla Korea",
+      "description": "+1 [icon:YIELD_CULTURE] Culture on [icon:RADIAL_RESOURCES] Resources.",
+      "adjective": "Silla",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -13760,7 +13760,7 @@
           },
           {
             "trait": "TRAIT_SILLA_ABILITY",
-            "name": "LOC_TRAIT_SILLA_ABILITY_NAME",
+            "name": "Maripgan",
             "description": "LOC_TRAIT_SILLA_ABILITY_DESCRIPTION",
             "modifiers": [
               {
@@ -13856,9 +13856,9 @@
     },
     {
       "type": "CIVILIZATION_TONGA",
-      "name": "LOC_CIVILIZATION_TONGA_NAME",
-      "description": "LOC_CIVILIZATION_TONGA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_TONGA_ADJECTIVE",
+      "name": "Tonga",
+      "description": "+1 [icon:YIELD_DIPLOMACY] Influence on the Palace and City Halls in Settlements adjacent to Coast. Cannot use the [icon:PROJECT] City-State - Incorporate or the Levy Unit Action.",
+      "adjective": "Tongan",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -14118,8 +14118,8 @@
           },
           {
             "trait": "TRAIT_TONGA_ABILITY",
-            "name": "LOC_TRAIT_TONGA_ABILITY_NAME",
-            "description": "LOC_TRAIT_TONGA_ABILITY_DESCRIPTION",
+            "name": "Lords of the South",
+            "description": "[BLIST][LI][B]+1[icon:YIELD_DIPLOMACY] Influence[/B] on the [B]Palace[/B] and [B]City Halls[/B] in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP] adjacent to [B]Coast[/B].[LI]Receive a free [B][icon:TRADE_ROUTE] [TIP:LOC_PEDIA_CONCEPTS_TRADE_ROUTE_TOOLTIP]Trade Route[/TIP][/B] from a new [B][icon:CITYSTATE] [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP][/B] when you become their [B][TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP][/B].[LI]Cannot use the [icon:PROJECT] [B]City-State - Incorporate[/B] or the [B]Levy Unit Action[/B].[LI][B]+30%[icon:YIELD_PRODUCTION] Production[/B] towards constructing [B]Ha'amonga 'a Maui[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "MOD_TONGA_PALACE_CITY_HALL_INFLUENCE",
@@ -14233,9 +14233,9 @@
     },
     {
       "type": "CIVILIZATION_GREAT_BRITAIN",
-      "name": "LOC_CIVILIZATION_GREAT_BRITAIN_NAME",
-      "description": "LOC_CIVILIZATION_GREAT_BRITAIN_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_GREAT_BRITAIN_ADJECTIVE",
+      "name": "Great Britain",
+      "description": "+25% [icon:YIELD_GOLD] Gold towards purchasing [icon:CITY_BUILDING_LIST] Buildings and +25% [icon:YIELD_PRODUCTION] Production towards constructing [icon:CITY_BUILDING_LIST] Buildings. It costs 50% more to Convert [icon:YIELD_TOWNS] Towns into [icon:YIELD_CITIES] Cities.",
+      "adjective": "British",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -14253,8 +14253,8 @@
           },
           {
             "trait": "TRAIT_GREAT_BRITAIN_ABILITY",
-            "name": "LOC_TRAIT_GREAT_BRITAIN_ABILITY_NAME",
-            "description": "LOC_TRAIT_GREAT_BRITAIN_ABILITY_MO_DESCRIPTION",
+            "name": "Workshop of the World",
+            "description": "[BLIST][LI] [B]+25%[icon:YIELD_GOLD] Gold[/B] towards purchasing [B][icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP][/B] and [B]+25% [icon:YIELD_PRODUCTION] Production[/B] towards constructing [B][icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP][/B].[LI] It costs [B]50% more[/B] to convert [B][icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP][/B] into [B][icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP][/B].[BLIST][LI][B]+3 [icon:YIELD_SCIENCE] Science[/B] on [B]Active [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP][/B] adjacent to Coast.[LI] [B]+30%[icon:YIELD_PRODUCTION] Production[/B] towards constructing [B]Battersea Power Station[/B].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRAIT_MOD_CITY_PROJECT_MORE_EXPENSIVE",
@@ -14617,9 +14617,9 @@
     },
     {
       "type": "CIVILIZATION_NEPAL",
-      "name": "LOC_CIVILIZATION_NEPAL_NAME",
-      "description": "LOC_CIVILIZATION_NEPAL_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_NEPAL_ADJECTIVE",
+      "name": "Nepal",
+      "description": "All [icon:YIELD_WAREHOUSE] Warehouse Buildings apply to [icon:CITY_UNIMPROVED] Mountain Terrain, but they cost +1 [icon:YIELD_GOLD] Gold and [icon:YIELD_HAPPINESS] Happiness Maintenance.",
+      "adjective": "Nepalese",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -14637,7 +14637,7 @@
           },
           {
             "trait": "TRAIT_NEPAL_ABILITY",
-            "name": "LOC_TRAIT_NEPAL_ABILITY_NAME",
+            "name": "Roof of the World",
             "description": "LOC_TRAIT_NEPAL_ABILITY_DESCRIPTION",
             "modifiers": [
               {
@@ -14985,9 +14985,9 @@
     },
     {
       "type": "CIVILIZATION_ASSYRIA",
-      "name": "LOC_CIVILIZATION_ASSYRIA_NAME",
-      "description": "LOC_CIVILIZATION_ASSYRIA_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_ASSYRIA_ADJECTIVE",
+      "name": "Assyria",
+      "description": "Gain a [icon:RADIAL_TECH] [TIP:LOC_PEDIA_CONCEPTS_TECH_TOOLTIP]Technology[/TIP] and a [icon:GREATWORK] [B][TIP:LOC_PEDIA_CONCEPTS_CODEX_TOOLTIP]Codex[/TIP][/B] upon capturing a [B][TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlement[/TIP][/B] for the first time.[icon:NAR_REW_GREATWORK] [TIP:LOC_PEDIA_CONCEPTS_CODEX_TOOLTIP]Codices[/TIP] are not awarded from [TIP:LOC_PEDIA_CONCEPTS_TECH_TOOLTIP]Technologies[/TIP].",
+      "adjective": "Assyrian",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -15247,8 +15247,8 @@
           },
           {
             "trait": "TRAIT_ASSYRIA_ABILITY",
-            "name": "LOC_TRAIT_ASSYRIA_ABILITY_NAME",
-            "description": "LOC_TRAIT_ASSYRIA_ABILITY_DESCRIPTION",
+            "name": "Treasures of Nineveh",
+            "description": "[BLIST][LI]Gain a [icon:RADIAL_TECH] [B][TIP:LOC_PEDIA_CONCEPTS_TECH_TOOLTIP]Technology[/TIP][/B] and a [icon:GREATWORK] [B][TIP:LOC_PEDIA_CONCEPTS_CODEX_TOOLTIP]Codex[/TIP][/B] upon capturing a [B][TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlement[/TIP][/B] for the first time.[LI][icon:NAR_REW_GREATWORK] [B][TIP:LOC_PEDIA_CONCEPTS_CODEX_TOOLTIP]Codices[/TIP][/B] are not awarded from [B][TIP:LOC_PEDIA_CONCEPTS_TECH_TOOLTIP]Technologies[/TIP][/B].[LI]+30%[icon:YIELD_PRODUCTION] Production towards constructing Dur-Sharrukin.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "MOD_CIV_WONDER_PRODUCTION_ASSYRIA",
@@ -15335,9 +15335,9 @@
     },
     {
       "type": "CIVILIZATION_QAJAR",
-      "name": "LOC_CIVILIZATION_QAJAR_NAME",
-      "description": "LOC_CIVILIZATION_QAJAR_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_QAJAR_ADJECTIVE",
+      "name": "Qajar",
+      "description": "+50% [icon:YIELD_DIPLOMACY] Influence toward supporting [icon:DIPLOMATIC_ACTION] Diplomatic Actions.",
+      "adjective": "Qajar",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
@@ -15355,8 +15355,8 @@
           },
           {
             "trait": "TRAIT_QAJAR_ABILITY",
-            "name": "LOC_TRAIT_QAJAR_ABILITY_NAME",
-            "description": "LOC_TRAIT_QAJAR_ABILITY_DESCRIPTION",
+            "name": "Kayānī Crown",
+            "description": "[BLIST][LI][B]+50% [icon:YIELD_DIPLOMACY] Influence[/B] toward supporting [icon:DIPLOMATIC_ACTION] [B]Diplomatic Actions[/B].[LI][B]+10 [icon:YIELD_FOOD] Food[/B] and [B][icon:YIELD_PRODUCTION] Production[/B] in the [B][icon:NOTIFICATION_SELECT_CAPITAL] Capital[/B] for every [B][TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlement[/TIP][/B] under the [B][icon:SETTLEMENT_LIMIT] [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_LIMIT_TOOLTIP]Settlement Limit[/TIP][/B].[LI][B]+30%[icon:YIELD_PRODUCTION] Production [/B]towards constructing [B]Eram Garden[/B].[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "MOD_CIV_QAJAR_DIPLOMACY",
@@ -15711,7 +15711,7 @@
     },
     {
       "type": "CIVILIZATION_PLACEHOLDER_CITYSTATE",
-      "name": "LOC_CIVILIZATION_CITY_STATE_NAME",
+      "name": "City-State",
       "description": null,
       "adjective": "LOC_CIVILIZATION_CITY_STATE_ADJECTIVE",
       "ages": {
@@ -15720,18 +15720,18 @@
     },
     {
       "type": "CIVILIZATION_INDEPENDENT",
-      "name": "LOC_CIVILIZATION_INDEPENDENT_NAME",
+      "name": "Villages",
       "description": "LOC_CIVILIZATION_INDEPENDENT_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_INDEPENDENT_ADJECTIVE",
+      "adjective": "Village",
       "ages": {
         "35994bc7-gameplaycopy": []
       }
     },
     {
       "type": "CIVILIZATION_NONE",
-      "name": "LOC_CIVILIZATION_NONE_NAME",
+      "name": "World",
       "description": "LOC_CIVILIZATION_NONE_DESCRIPTION",
-      "adjective": "LOC_CIVILIZATION_NONE_ADJECTIVE",
+      "adjective": "World",
       "ages": {
         "35994bc7-gameplaycopy": []
       }
@@ -15740,14 +15740,14 @@
   "leaders": [
     {
       "type": "LEADER_AMINA",
-      "name": "LOC_LEADER_AMINA_NAME",
+      "name": "Amina",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_AMINA_ABILITY",
-            "name": "LOC_TRAIT_LEADER_AMINA_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_AMINA_ABILITY_DESCRIPTION",
+            "name": "Warrior-Queen of Zazzau",
+            "description": "[BLIST][LI]+1 [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCE_CAPACITY_TOOLTIP]Resource Capacity[/TIP] in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP].[LI]+1 [icon:YIELD_GOLD] Gold per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] for each [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resource[/TIP] assigned to [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP].[LI]+5 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] on all Units in Plains and Desert.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "AMINA_MOD_RESOURCE_CAPACITY",
@@ -15935,18 +15935,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_AMINA_DESCRIPTION"
+      "description": "+1 [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCE_CAPACITY_TOOLTIP]Resource Capacity[/TIP] in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP]. +1 [icon:YIELD_GOLD] Gold per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] for each [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resource[/TIP] assigned to [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP]. All Units receive +5 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] in Plains and Desert."
     },
     {
       "type": "LEADER_ASHOKA",
-      "name": "LOC_LEADER_ASHOKA_NAME",
+      "name": "Ashoka, World Renouncer",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_ASHOKA_ABILITY",
-            "name": "LOC_TRAIT_LEADER_ASHOKA_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_ASHOKA_ABILITY_DESCRIPTION",
+            "name": "Dhammaraja",
+            "description": "[BLIST][LI]+1 [icon:YIELD_FOOD] Food in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] for every 5 excess [icon:YIELD_HAPPINESS] Happiness.[LI]+10% [icon:YIELD_FOOD] Food in all [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP] during a [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP].[LI][icon:CITY_BUILDING_LIST] Unique [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] gain a +1 [icon:YIELD_HAPPINESS] Happiness adjacency for all [icon:CITY_RURAL] Improvements.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "ASHOKA_MOD_WILDCARD_UNIQUE_BUILDING_ADJACENCY_TO_IMPROVEMENTS",
@@ -16138,18 +16138,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_ASHOKA_DESCRIPTION"
+      "description": "+1 [icon:YIELD_FOOD] Food in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] for every 5 excess [icon:YIELD_HAPPINESS] Happiness. +10% [icon:YIELD_FOOD] Food in all [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP] during a [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP]. [icon:CITY_BUILDING_LIST] Unique [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] gain a +1 [icon:YIELD_HAPPINESS] Happiness adjacency for all [icon:CITY_RURAL] Improvements."
     },
     {
       "type": "LEADER_AUGUSTUS",
-      "name": "LOC_LEADER_AUGUSTUS_NAME",
+      "name": "Augustus",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_AUGUSTUS_ABILITY",
-            "name": "LOC_TRAIT_LEADER_AUGUSTUS_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_AUGUSTUS_ABILITY_DESCRIPTION",
+            "name": "Imperium Maius",
+            "description": "[BLIST][LI]+2 [icon:YIELD_PRODUCTION] Production in the [icon:NOTIFICATION_SELECT_CAPITAL] Capital for every [icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Town[/TIP].[LI]Can purchase [icon:YIELD_CULTURE] Culture [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] in [icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP] with any Focus.[LI]+15% [icon:YIELD_GOLD] Gold towards purchasing [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] in [icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP]. Doubled if that [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Building[/TIP] is present in your [icon:NOTIFICATION_SELECT_CAPITAL] Capital. [/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "AUGUSTUS_MOD_CAPITAL_PRODUCTION_PER_TOWN",
@@ -16363,18 +16363,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_AUGUSTUS_DESCRIPTION"
+      "description": "+2 [icon:YIELD_PRODUCTION] Production in the [icon:NOTIFICATION_SELECT_CAPITAL] Capital for every [icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Town[/TIP]. Can purchase [icon:YIELD_CULTURE] Culture [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] in [icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP] with any Focus. +50% [icon:YIELD_GOLD] Gold towards purchasing [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] in [icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP]."
     },
     {
       "type": "LEADER_BENJAMIN_FRANKLIN",
-      "name": "LOC_LEADER_BENJAMIN_FRANKLIN_NAME",
+      "name": "Benjamin Franklin",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_BENJAMIN_FRANKLIN_ABILITY",
-            "name": "LOC_TRAIT_LEADER_BENJAMIN_FRANKLIN_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_BENJAMIN_FRANKLIN_ABILITY_DESCRIPTION",
+            "name": "The First American",
+            "description": "[BLIST][LI]+1 [icon:YIELD_SCIENCE] Science per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] on [icon:YIELD_PRODUCTION] Production and [icon:YIELD_SCIENCE] Science [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP].[LI]+5% [icon:YIELD_PRODUCTION] Production towards constructing [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] for active [icon:ENDEAVOR] Endeavors you have started or supported.[LI]+2 [icon:YIELD_SCIENCE] Science per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] from active [icon:ENDEAVOR] [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavors[/TIP] you started or supported.[LI]Can have two [icon:ENDEAVOR] [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavors[/TIP] of the same type active at a time.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "FRANKLIN_MOD_PRODUCTION_BUILDING_RATE_PER_NUM_ACTIVE_DIPLOMATIC_ACTIONS",
@@ -16652,18 +16652,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_BENJAMIN_FRANKLIN_DESCRIPTION"
+      "description": "+1 [icon:YIELD_SCIENCE] Science per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] on [icon:YIELD_PRODUCTION] Production and [icon:YIELD_SCIENCE] Science [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP]. +5% [icon:YIELD_PRODUCTION] Production towards constructing [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] for active [icon:ENDEAVOR] Endeavors you have started or supported. +2 [icon:YIELD_SCIENCE] Science per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] from active [icon:ENDEAVOR] [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavors[/TIP] you started or supported. Can have two [icon:ENDEAVOR] [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavors[/TIP] of the same type active at a time."
     },
     {
       "type": "LEADER_CATHERINE",
-      "name": "LOC_LEADER_CATHERINE_NAME",
+      "name": "Catherine the Great",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_CATHERINE_ABILITY",
-            "name": "LOC_TRAIT_LEADER_CATHERINE_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_CATHERINE_ABILITY_DESCRIPTION",
+            "name": "Star of the North",
+            "description": "[BLIST][LI]+2 [icon:YIELD_CULTURE] Culture per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] on displayed [icon:GREATWORK] [TIP:LOC_PEDIA_CONCEPTS_GREAT_WORKS_TOOLTIP]Great Works[/TIP].[LI][TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] and [TIP:LOC_PEDIA_CONCEPTS_WONDERS_TOOLTIP]Wonders[/TIP] with [icon:GREATWORK] Great Work slots gain 1 additional slot.[LI][icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] settled in Tundra gain [icon:YIELD_SCIENCE] Science equal to 25% of their [icon:YIELD_CULTURE] Culture per turn.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "CATHERINE_MOD_GREAT_WORK_CULTURE",
@@ -16855,18 +16855,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_CATHERINE_DESCRIPTION"
+      "description": "+2 [icon:YIELD_CULTURE] Culture per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] on displayed [icon:GREATWORK] [TIP:LOC_PEDIA_CONCEPTS_GREAT_WORKS_TOOLTIP]Great Works[/TIP]. [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] and [TIP:LOC_PEDIA_CONCEPTS_WONDERS_TOOLTIP]Wonders[/TIP] with [icon:GREATWORK] Great Work slots gain 1 additional slot. [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] settled in Tundra gain [icon:YIELD_SCIENCE] Science equal to 25% of their [icon:YIELD_CULTURE] Culture per turn."
     },
     {
       "type": "LEADER_CHARLEMAGNE",
-      "name": "LOC_LEADER_CHARLEMAGNE_NAME",
+      "name": "Charlemagne",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_CHARLEMAGNE_ABILITY",
-            "name": "LOC_TRAIT_LEADER_CHARLEMAGNE_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_CHARLEMAGNE_ABILITY_DESCRIPTION",
+            "name": "Father of Europe",
+            "description": "[BLIST][LI][icon:MILITARY] Military and [icon:YIELD_SCIENCE] Science [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] receive a +1 [icon:YIELD_HAPPINESS] Happiness adjacency for [TIP:LOC_PEDIA_CONCEPTS_DEFENSIVE_FORTIFICATION_TOOLTIP]Fortifications[/TIP].[LI]Gain 2 free [TIP:LOC_PEDIA_CONCEPTS_CAVALRY_UNITS_TOOLTIP]Cavalry Units[/TIP], once unlocked, when entering a [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP].[LI]+5 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for [TIP:LOC_PEDIA_CONCEPTS_CAVALRY_UNITS_TOOLTIP]Cavalry Units[/TIP] during a [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "CHARLEMAGNE_MOD_MILITARY_BUILDING_ADJACENCY",
@@ -17060,18 +17060,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_CHARLEMAGNE_DESCRIPTION"
+      "description": "[icon:MILITARY] Military and [icon:YIELD_SCIENCE] Science [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] receive a +1 [icon:YIELD_HAPPINESS] Happiness adjacency for [TIP:LOC_PEDIA_CONCEPTS_DEFENSIVE_FORTIFICATION_TOOLTIP]Fortifications[/TIP]. Gain 2 free [TIP:LOC_PEDIA_CONCEPTS_CAVALRY_UNITS_TOOLTIP]Cavalry Units[/TIP], once unlocked, when entering a [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP]. +5 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for [TIP:LOC_PEDIA_CONCEPTS_CAVALRY_UNITS_TOOLTIP]Cavalry Units[/TIP] during a [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP]."
     },
     {
       "type": "LEADER_CONFUCIUS",
-      "name": "LOC_LEADER_CONFUCIUS_NAME",
+      "name": "Confucius",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_CONFUCIUS_ABILITY",
-            "name": "LOC_TRAIT_LEADER_CONFUCIUS_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_CONFUCIUS_ABILITY_DESCRIPTION",
+            "name": "Keju",
+            "description": "[BLIST][LI]+25% [icon:GROWTH_RATE] [TIP:LOC_PEDIA_CONCEPTS_GROWTH_RATE_TOOLTIP]Growth Rate[/TIP] in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP].[LI]+2 [icon:YIELD_SCIENCE] Science from [icon:SPECIALIST] [TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_TOOLTIP]Specialists[/TIP].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "CONFUCIUS_MOD_CITY_GROWTH",
@@ -17241,18 +17241,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_CONFUCIUS_DESCRIPTION"
+      "description": "+25% [icon:GROWTH_RATE] [TIP:LOC_PEDIA_CONCEPTS_GROWTH_RATE_TOOLTIP]Growth Rate[/TIP] in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP]. +2 [icon:YIELD_SCIENCE] Science from [icon:SPECIALIST] [TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_TOOLTIP]Specialists[/TIP]."
     },
     {
       "type": "LEADER_FRIEDRICH",
-      "name": "LOC_LEADER_FRIEDRICH_NAME",
+      "name": "Friedrich, Oblique",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_FRIEDRICH_ABILITY",
-            "name": "LOC_TRAIT_LEADER_FRIEDRICH_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_FRIEDRICH_ABILITY_DESCRIPTION",
+            "name": "Berlin Academy",
+            "description": "[BLIST][LI][icon:UNIT_ARMY_COMMANDER] [TIP:LOC_PEDIA_CONCEPTS_COMMANDER_TOOLTIP]Army Commanders[/TIP] start with the Merit [TIP:LOC_PEDIA_CONCEPTS_COMMENDATION_TOOLTIP]Commendation[/TIP], granting them +1 [icon:COMMANDER_RADIUS] [TIP:LOC_PEDIA_CONCEPTS_COMMAND_RADIUS_TOOLTIP]Command Radius[/TIP].[LI]Gain an [TIP:LOC_PEDIA_CONCEPTS_INFANTRY_UNITS_TOOLTIP]Infantry Unit[/TIP] when you complete a [icon:RADIAL_TECH] [TIP:LOC_PEDIA_CONCEPTS_TECH_TOOLTIP]Technology Mastery[/TIP] or construct a [icon:YIELD_SCIENCE] Science [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Building[/TIP].[LI]+2 [icon:YIELD_SCIENCE]Science per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] for each [TIP:LOC_PEDIA_CONCEPTS_COMMENDATION_TOOLTIP]Commendation[/TIP] earned by your [TIP:LOC_PEDIA_CONCEPTS_COMMANDER_TOOLTIP]Commanders[/TIP].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "FRIEDRICH_MOD_COMMANDER_COMMENDATION",
@@ -17466,18 +17466,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_FRIEDRICH_DESCRIPTION"
+      "description": "[icon:UNIT_ARMY_COMMANDER] [TIP:LOC_PEDIA_CONCEPTS_COMMANDER_TOOLTIP]Army Commanders[/TIP] start with the Merit [TIP:LOC_PEDIA_CONCEPTS_COMMENDATION_TOOLTIP]Commendation[/TIP], granting them +1 [icon:COMMANDER_RADIUS] [TIP:LOC_PEDIA_CONCEPTS_COMMAND_RADIUS_TOOLTIP]Command Radius[/TIP]. Gain an [TIP:LOC_PEDIA_CONCEPTS_INFANTRY_UNITS_TOOLTIP]Infantry Unit[/TIP] when you complete a [icon:RADIAL_TECH] [TIP:LOC_PEDIA_CONCEPTS_TECH_TOOLTIP]Technology Mastery[/TIP] or construct a [icon:YIELD_SCIENCE] Science [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Building[/TIP]. +2 [icon:YIELD_SCIENCE]Science per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] for each [TIP:LOC_PEDIA_CONCEPTS_COMMENDATION_TOOLTIP]Commendation[/TIP] earned by your [TIP:LOC_PEDIA_CONCEPTS_COMMANDER_TOOLTIP]Commanders[/TIP]."
     },
     {
       "type": "LEADER_HARRIET_TUBMAN",
-      "name": "LOC_LEADER_HARRIET_TUBMAN_NAME",
+      "name": "Harriet Tubman",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_HARRIET_TUBMAN_ABILITY",
-            "name": "LOC_TRAIT_LEADER_HARRIET_TUBMAN_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_HARRIET_TUBMAN_ABILITY_DESCRIPTION",
+            "name": "Combahee Raid",
+            "description": "[BLIST][LI]+100% [icon:YIELD_DIPLOMACY] Influence towards initiating [icon:ESPIONAGE] [TIP:LOC_PEDIA_CONCEPTS_ESPIONAGE_TOOLTIP]Espionage[/TIP] Actions. Gain a Migrant in the Capital whenever you complete an [TIP:LOC_PEDIA_CONCEPTS_ESPIONAGE_TOOLTIP]Espionage[/TIP] Action without being detected.[LI]Gain 5 [icon:WAR_SUPPORT] [TIP:LOC_PEDIA_CONCEPTS_WAR_SUPPORT_TOOLTIP]War Support[/TIP] on all [icon:WAR] Wars declared against you.[LI][icon:CITY_UNIMPROVED] [TIP:LOC_PEDIA_CONCEPTS_VEGETATED_TERRAIN_TOOLTIP]Vegetated Terrain[/TIP] does not end Unit [icon:Action_Move] Movement.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "HARRIET_TUBMAN_MOD_ADJUST_ESPIONAGE",
@@ -17647,18 +17647,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_HARRIET_TUBMAN_DESCRIPTION"
+      "description": "+100% [icon:YIELD_DIPLOMACY] Influence towards initiating [icon:ESPIONAGE] [TIP:LOC_PEDIA_CONCEPTS_ESPIONAGE_TOOLTIP]Espionage[/TIP] Actions. Gain a Migrant in the Capital whenever you complete an [TIP:LOC_PEDIA_CONCEPTS_ESPIONAGE_TOOLTIP]Espionage[/TIP] Action without being detected. Gain 5 [icon:WAR_SUPPORT] [TIP:LOC_PEDIA_CONCEPTS_WAR_SUPPORT_TOOLTIP]War Support[/TIP] on all [icon:WAR] Wars declared against you. [icon:CITY_UNIMPROVED] [TIP:LOC_PEDIA_CONCEPTS_VEGETATED_TERRAIN_TOOLTIP]Vegetated Terrain[/TIP] does not end Unit [icon:Action_Move] Movement."
     },
     {
       "type": "LEADER_HATSHEPSUT",
-      "name": "LOC_LEADER_HATSHEPSUT_NAME",
+      "name": "Hatshepsut",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_HATSHEPSUT_ABILITY",
-            "name": "LOC_TRAIT_LEADER_HATSHEPSUT_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_HATSHEPSUT_ABILITY_DESCRIPTION",
+            "name": "God's Wife of Amun",
+            "description": "[BLIST][LI]+1 [icon:YIELD_CULTURE] Culture per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] for every unique [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resource[/TIP].[LI]+15% [icon:YIELD_PRODUCTION] Production towards constructing [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] and [icon:WONDER] [TIP:LOC_PEDIA_CONCEPTS_WONDERS_TOOLTIP]Wonders[/TIP] in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] adjacent to [TIP:LOC_PEDIA_CONCEPTS_NAVIGABLE_RIVER_TOOLTIP]Navigable Rivers[/TIP].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "HATSHEPSUT_MOD_CULTURE_FROM_RESOURCES",
@@ -17824,18 +17824,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_HATSHEPSUT_DESCRIPTION"
+      "description": "+1 [icon:YIELD_CULTURE] Culture for every unique [icon:RADIAL_RESOURCES] [TIP:LOC_PEDIA_CONCEPTS_RESOURCES_TOOLTIP]Resource[/TIP]. +15% [icon:YIELD_PRODUCTION] Production towards constructing [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] and [icon:WONDER] [TIP:LOC_PEDIA_CONCEPTS_WONDERS_TOOLTIP]Wonders[/TIP] in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] adjacent to [TIP:LOC_PEDIA_CONCEPTS_NAVIGABLE_RIVER_TOOLTIP]Navigable Rivers[/TIP]."
     },
     {
       "type": "LEADER_HIMIKO",
-      "name": "LOC_LEADER_HIMIKO_NAME",
+      "name": "Himiko, Queen of Wa",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_HIMIKO_ABILITY",
-            "name": "LOC_TRAIT_LEADER_HIMIKO_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_HIMIKO_ABILITY_DESCRIPTION",
+            "name": "Friend of Wei",
+            "description": "[BLIST][LI]Gain a unique [icon:ENDEAVOR] [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavor[/TIP] called Friend of Wei that can be performed in an [icon:PLAYER_RELATIONSHIP_ALLIANCE]  [TIP:LOC_PEDIA_CONCEPTS_ALLIANCE_TOOLTIP]Alliance[/TIP] to grant you and your ally +25% [icon:YIELD_SCIENCE] Science.[LI]+4 [icon:YIELD_SCIENCE] Science per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] for every Leader you are [icon:PLAYER_RELATIONSHIP_FRIENDLY] Friendly or [icon:PLAYER_RELATIONSHIP_HELPFUL] Helpful with.[LI]Can Support [icon:ENDEAVOR] [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavors[/TIP] for free, but Rejecting [icon:DIPLOMATIC_ACTION] Diplomatic Actions costs +100% [icon:YIELD_DIPLOMACY] Influence.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "HIMIKO_MOD_FRIEND_OF_WA",
@@ -18087,18 +18087,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_HIMIKO_DESCRIPTION"
+      "description": "Gain a unique [icon:ENDEAVOR] [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavor[/TIP] called Friend of Wei that can be performed in an [icon:PLAYER_RELATIONSHIP_ALLIANCE]  [TIP:LOC_PEDIA_CONCEPTS_ALLIANCE_TOOLTIP]Alliance[/TIP] to grant you and your ally +25% [icon:YIELD_SCIENCE] Science. +4 [icon:YIELD_SCIENCE] Science per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] for every Leader you are [icon:PLAYER_RELATIONSHIP_FRIENDLY] Friendly or [icon:PLAYER_RELATIONSHIP_HELPFUL] Helpful with. Can Support [icon:ENDEAVOR] [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavors[/TIP] for free, but Rejecting [icon:DIPLOMATIC_ACTION] Diplomatic Actions costs +100% [icon:YIELD_DIPLOMACY] Influence."
     },
     {
       "type": "LEADER_IBN_BATTUTA",
-      "name": "LOC_LEADER_IBN_BATTUTA_NAME",
+      "name": "Ibn Battuta",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_IBN_BATTUTA_ABILITY",
-            "name": "LOC_TRAIT_LEADER_IBN_BATTUTA_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_IBN_BATTUTA_ABILITY_DESCRIPTION",
+            "name": "The Marvels of Traveling",
+            "description": "[BLIST][LI]Gains 2 [icon:ATTRIBUTE_WILDCARD] [TIP:LOC_PEDIA_CONCEPTS_ATTRIBUTE_TOOLTIP]Wildcard Attribute[/TIP] Points after the first [icon:RADIAL_CIVICS] [TIP:LOC_PEDIA_CONCEPTS_CIVIC_TOOLTIP]Civic[/TIP] in every [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP].[LI]+1 [icon:Action_Showall] [TIP:LOC_PEDIA_CONCEPTS_SIGHT_TOOLTIP]Sight[/TIP] for all Units.[LI]Gain a unique [icon:ENDEAVOR] [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavor[/TIP] called Trade Maps that allows you to gradually see other Leaders' claimed territory.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "IBN_BATTUTA_MOD_WILDCARD_ATTRIBUTE",
@@ -18199,18 +18199,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_IBN_BATTUTA_DESCRIPTION"
+      "description": "Gains 2 [icon:ATTRIBUTE_WILDCARD] [TIP:LOC_PEDIA_CONCEPTS_ATTRIBUTE_TOOLTIP]Wildcard Attribute[/TIP] Points after the first [icon:RADIAL_CIVICS] [TIP:LOC_PEDIA_CONCEPTS_CIVIC_TOOLTIP]Civic[/TIP] in every [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP]. +1 [icon:Action_Showall] [TIP:LOC_PEDIA_CONCEPTS_SIGHT_TOOLTIP]Sight[/TIP] for all Units. Gain a unique [icon:ENDEAVOR] [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavor[/TIP] called Trade Maps that allows you to gradually see other Leaders' claimed territory."
     },
     {
       "type": "LEADER_ISABELLA",
-      "name": "LOC_LEADER_ISABELLA_NAME",
+      "name": "Isabella",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_ISABELLA_ABILITY",
-            "name": "LOC_TRAIT_LEADER_ISABELLA_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_ISABELLA_ABILITY_DESCRIPTION",
+            "name": "Seven Cities of Gold",
+            "description": "[BLIST][LI]Gain 100 [icon:YIELD_GOLD] Gold per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] every time you discover a [icon:NOTIFICATION_DISCOVER_NATURAL_WONDER] Natural Wonder. This is doubled if the Natural Wonder is in [TIP:LOC_PEDIA_CONCEPTS_DISTANT_LANDS_TOOLTIP]Distant Lands[/TIP].[LI]+50% tile yields from [icon:NOTIFICATION_DISCOVER_NATURAL_WONDER] Natural Wonders for every Natural Wonder in your Empire.[LI]+50% [icon:YIELD_GOLD] Gold towards purchasing [TIP:LOC_PEDIA_CONCEPTS_NAVAL_UNITS_TOOLTIP]Naval Units[/TIP].[LI]-1 [icon:YIELD_GOLD] Gold [TIP:LOC_PEDIA_CONCEPTS_MAINTENANCE_TOOLTIP]maintenance[/TIP] for [TIP:LOC_PEDIA_CONCEPTS_NAVAL_UNITS_TOOLTIP]Naval Units[/TIP].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "ISABELLA_MOD_NATURAL_WONDER_DISCOVERY",
@@ -18416,18 +18416,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_ISABELLA_DESCRIPTION"
+      "description": "Gain 100 [icon:YIELD_GOLD] Gold every time you discover a [icon:NOTIFICATION_DISCOVER_NATURAL_WONDER] Natural Wonder. This is doubled if the Natural Wonder is in [TIP:LOC_PEDIA_CONCEPTS_DISTANT_LANDS_TOOLTIP]Distant Lands[/TIP]. +50% tile yields from [icon:NOTIFICATION_DISCOVER_NATURAL_WONDER] Natural Wonders for every Natural Wonder in your Empire. +50% [icon:YIELD_GOLD] Gold towards purchasing [TIP:LOC_PEDIA_CONCEPTS_NAVAL_UNITS_TOOLTIP]Naval Units[/TIP]. -1 [icon:YIELD_GOLD] Gold [TIP:LOC_PEDIA_CONCEPTS_MAINTENANCE_TOOLTIP]maintenance[/TIP] for [TIP:LOC_PEDIA_CONCEPTS_NAVAL_UNITS_TOOLTIP]Naval Units[/TIP]."
     },
     {
       "type": "LEADER_JOSE_RIZAL",
-      "name": "LOC_LEADER_JOSE_RIZAL_NAME",
+      "name": "José Rizal",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_JOSE_RIZAL_ABILITY",
-            "name": "LOC_TRAIT_LEADER_JOSE_RIZAL_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_JOSE_RIZAL_ABILITY_DESCRIPTION",
+            "name": "Pambansang Bayani",
+            "description": "[BLIST][LI]When gaining rewards from a [icon:NAR_REW_DEFAULT] Narrative Event, gain an additional 20 [icon:YIELD_CULTURE] Culture, [icon:YIELD_GOLD] Gold and [icon:YIELD_DIPLOMACY] Influence per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP].[LI]Has additional [icon:NAR_REW_DEFAULT] Narrative Events.[LI]+50% [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP] duration.[LI]+50% [icon:YIELD_HAPPINESS] Happiness towards [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebrations[/TIP].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "RIZAL_MOD_NARRATIVE_EVENT_CULTURE",
@@ -18674,18 +18674,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_JOSE_RIZAL_DESCRIPTION"
+      "description": "When gaining rewards from a [icon:NAR_REW_DEFAULT] Narrative Event, gain an additional 20 [icon:YIELD_CULTURE] Culture, [icon:YIELD_GOLD] Gold and [icon:YIELD_DIPLOMACY] Influence per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP]. Has additional [icon:NAR_REW_DEFAULT] Narrative Events. +50% [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebration[/TIP] duration. +50% [icon:YIELD_HAPPINESS] Happiness towards [icon:CELEBRATION] [TIP:LOC_PEDIA_CONCEPTS_CELEBRATIONS_TOOLTIP]Celebrations[/TIP]."
     },
     {
       "type": "LEADER_LAFAYETTE",
-      "name": "LOC_LEADER_LAFAYETTE_NAME",
+      "name": "Lafayette",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_LAFAYETTE_ABILITY",
-            "name": "LOC_TRAIT_LEADER_LAFAYETTE_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_LAFAYETTE_ABILITY_DESCRIPTION",
+            "name": "Hero of Two Worlds",
+            "description": "[BLIST][LI]Gains a unique [icon:ENDEAVOR] [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavor[/TIP] called Reform, which grants an additional [icon:NAR_REW_TRADITION_SLOT] [TIP:LOC_PEDIA_CONCEPTS_TRADITION_TOOLTIP]Tradition[/TIP] slot. Supporting this [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavor[/TIP] also grants the other Leader an additional [TIP:LOC_PEDIA_CONCEPTS_TRADITION_TOOLTIP]Tradition[/TIP] slot, otherwise they are granted a [TIP:LOC_PEDIA_CONCEPTS_SOCIAL_POLICY_TOOLTIP]Social Policy[/TIP] slot.[LI]+1 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for every [icon:TRADITION] [TIP:LOC_PEDIA_CONCEPTS_TRADITION_TOOLTIP]Tradition[/TIP], but not [icon:SOCIAL_POLICY] [TIP:LOC_PEDIA_CONCEPTS_SOCIAL_POLICY_TOOLTIP]Social Policy[/TIP], slotted in the [icon:GOVERNMENT] Government.[LI]+1 [icon:YIELD_CULTURE] Culture and [icon:YIELD_HAPPINESS] Happiness per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP], doubled in [TIP:LOC_PEDIA_CONCEPTS_DISTANT_LANDS_TOOLTIP]Distant Lands[/TIP].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "LAFAYETTE_MOD_TRADITION_SLOT",
@@ -18891,18 +18891,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_LAFAYETTE_DESCRIPTION"
+      "description": "Gains a unique [icon:ENDEAVOR] [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavor[/TIP] called Reform, which grants an additional [icon:NAR_REW_TRADITION_SLOT] [TIP:LOC_PEDIA_CONCEPTS_TRADITION_TOOLTIP]Tradition[/TIP] slot. Supporting this [TIP:LOC_PEDIA_CONCEPTS_ENDEAVOR_TOOLTIP]Endeavor[/TIP] also grants the other Leader an additional [TIP:LOC_PEDIA_CONCEPTS_TRADITION_TOOLTIP]Tradition[/TIP] slot, otherwise they are granted a [TIP:LOC_PEDIA_CONCEPTS_SOCIAL_POLICY_TOOLTIP]Social Policy[/TIP] slot. Reform is usable once with each other Leader. +1 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for every [icon:TRADITION] [TIP:LOC_PEDIA_CONCEPTS_TRADITION_TOOLTIP]Tradition[/TIP], but not [icon:SOCIAL_POLICY] [TIP:LOC_PEDIA_CONCEPTS_SOCIAL_POLICY_TOOLTIP]Social Policy[/TIP], slotted in the [icon:GOVERNMENT] Government. +1 [icon:YIELD_CULTURE] Culture and [icon:YIELD_HAPPINESS] Happiness per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP], doubled in [TIP:LOC_PEDIA_CONCEPTS_DISTANT_LANDS_TOOLTIP]Distant Lands[/TIP]."
     },
     {
       "type": "LEADER_MACHIAVELLI",
-      "name": "LOC_LEADER_MACHIAVELLI_NAME",
+      "name": "Machiavelli",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_MACHIAVELLI_ABILITY",
-            "name": "LOC_TRAIT_LEADER_MACHIAVELLI_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_MACHIAVELLI_ABILITY_DESCRIPTION",
+            "name": "Il Principe",
+            "description": "[BLIST][LI]+3 [icon:YIELD_DIPLOMACY] Influence per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP].[LI]Gains 50 [icon:YIELD_GOLD] Gold per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] when your [icon:DIPLOMATIC_ACTION] Diplomatic Action proposals are accepted, or 100 [icon:YIELD_GOLD] Gold when they are rejected.[LI]Ignores [icon:RELATIONSHIP] Relationship requirements for declaring [icon:WAR] Formal Wars.[LI]Can Levy Troops from [icon:CITYSTATE] [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-States[/TIP] you are not [TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP] of.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "MACHIAVELLI_MOD_INFLUENCE",
@@ -19098,18 +19098,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_MACHIAVELLI_DESCRIPTION"
+      "description": "+3 [icon:YIELD_DIPLOMACY] Influence per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP]. Gains 50 [icon:YIELD_GOLD] Gold per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] when your [icon:DIPLOMATIC_ACTION] Diplomatic Action proposals are accepted, or 100 [icon:YIELD_GOLD] Gold when they are rejected. Ignores [icon:RELATIONSHIP] Relationship requirements for declaring [icon:WAR] Formal Wars. Can Levy Troops from [icon:CITYSTATE] [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-States[/TIP] you are not [TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP] of."
     },
     {
       "type": "LEADER_PACHACUTI",
-      "name": "LOC_LEADER_PACHACUTI_NAME",
+      "name": "Pachacuti",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_PACHACUTI_ABILITY",
-            "name": "LOC_TRAIT_LEADER_PACHACUTI_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_PACHACUTI_ABILITY_DESCRIPTION",
+            "name": "Earth Shaker",
+            "description": "[BLIST][LI]All [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] receive a +1 [icon:YIELD_FOOD] Food Adjacency for Mountains.[LI]-2 [icon:YIELD_HAPPINESS] [TIP:LOC_PEDIA_CONCEPTS_MAINTENANCE_TOOLTIP]Maintenance[/TIP] on [icon:SPECIALIST] [TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_TOOLTIP]Specialists[/TIP] adjacent to Mountains. +1 [icon:YIELD_HAPPINESS] [TIP:LOC_PEDIA_CONCEPTS_MAINTENANCE_TOOLTIP]Maintenance[/TIP] on [icon:SPECIALIST] [TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_TOOLTIP]Specialists[/TIP] not adjacent to Mountains. [LI][icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] gain a bonus to [icon:YIELD_PRODUCTION] Production equal to 10% of that City’s [icon:YIELD_FOOD] Food.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "PACHACUTI_MOD_WILDCARD_ADJACENCY_MOUNTAINS",
@@ -19323,18 +19323,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_PACHACUTI_DESCRIPTION"
+      "description": "All [icon:CITY_BUILDING_LIST] [TIP:LOC_PEDIA_CONCEPTS_BUILDINGS_TOOLTIP]Buildings[/TIP] receive a +1 [icon:YIELD_FOOD] Food Adjacency for Mountains. -2 [icon:YIELD_HAPPINESS] [TIP:LOC_PEDIA_CONCEPTS_MAINTENANCE_TOOLTIP]Maintenance[/TIP] on [icon:SPECIALIST] [TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_TOOLTIP]Specialists[/TIP] adjacent to Mountains. +1 [icon:YIELD_HAPPINESS] [TIP:LOC_PEDIA_CONCEPTS_MAINTENANCE_TOOLTIP]Maintenance[/TIP] on [icon:SPECIALIST] [TIP:LOC_PEDIA_CONCEPTS_SPECIALIST_TOOLTIP]Specialists[/TIP] not adjacent to Mountains. [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] gain a bonus to [icon:YIELD_PRODUCTION] Production equal to 10% of that City’s [icon:YIELD_FOOD] Food."
     },
     {
       "type": "LEADER_TRUNG_TRAC",
-      "name": "LOC_LEADER_TRUNG_TRAC_NAME",
+      "name": "Trung Trac",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_TRUNG_TRAC_ABILITY",
-            "name": "LOC_TRAIT_LEADER_TRUNG_TRAC_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_TRUNG_TRAC_ABILITY_DESCRIPTION",
+            "name": "Hai Bà Trung",
+            "description": "[BLIST][LI]Gain the Unique [icon:UNIT_ARMY_COMMANDER] [TIP:LOC_PEDIA_CONCEPTS_COMMANDER_TOOLTIP]Army Commander[/TIP] Trung Nhi after obtaining your first Land [TIP:LOC_PEDIA_CONCEPTS_MILITARY_UNIT_TOOLTIP]Military Unit[/TIP] of the [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP]. [icon:UNIT_ARMY_COMMANDER] Trung Nhi persists across [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] Transitions, and begins with 2 [icon:NAR_REW_PROMOTION] Promotions in Exploration Advanced Starts or 3 [icon:NAR_REW_PROMOTION] Promotions in Modern Advanced Starts, and has a unique  [TIP:LOC_PEDIA_CONCEPTS_PROMOTION_TOOLTIP]Promotion[/TIP] Tree.[LI]+20% [icon:UNIT_ARMY_COMMANDER] [TIP:LOC_PEDIA_CONCEPTS_EXPERIENCE_TOOLTIP]Commander Experience[/TIP].[LI]+10% [icon:YIELD_SCIENCE] Science in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] in Tropical. This is doubled while in a [icon:WAR] Formal War you declare.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TRUNG_TRAC_MOD_TROPICAL_SCIENCE",
@@ -19554,18 +19554,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_TRUNG_TRAC_DESCRIPTION"
+      "description": "Gain the Unique [icon:UNIT_ARMY_COMMANDER] [TIP:LOC_PEDIA_CONCEPTS_COMMANDER_TOOLTIP]Army Commander[/TIP] Trung Nhi after obtaining your first Land [TIP:LOC_PEDIA_CONCEPTS_MILITARY_UNIT_TOOLTIP]Military Unit[/TIP] of the [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP]. [icon:UNIT_ARMY_COMMANDER] Trung Nhi persists across [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] Transitions, and begins with 2 [icon:NAR_REW_PROMOTION] Promotions in Exploration Advanced Starts or 3 [icon:NAR_REW_PROMOTION] Promotions in Modern Advanced Starts, and has a unique  [TIP:LOC_PEDIA_CONCEPTS_PROMOTION_TOOLTIP]Promotion[/TIP] Tree. +20% [icon:UNIT_ARMY_COMMANDER] [TIP:LOC_PEDIA_CONCEPTS_EXPERIENCE_TOOLTIP]Commander Experience[/TIP]. +10% [icon:YIELD_SCIENCE] Science in [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] in Tropical. This is doubled while in a [icon:WAR] Formal War you declare."
     },
     {
       "type": "LEADER_XERXES",
-      "name": "LOC_LEADER_XERXES_NAME",
+      "name": "Xerxes, King of Kings",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_XERXES_ABILITY",
-            "name": "LOC_TRAIT_LEADER_XERXES_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_XERXES_ABILITY_DESCRIPTION",
+            "name": "Crusher of Rebellions",
+            "description": "[BLIST][LI]+3 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for Units that are attacking in neutral or enemy territory.[LI]Gain 100 [icon:YIELD_CULTURE] Culture and [icon:YIELD_GOLD] Gold per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] when you capture a [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlement[/TIP] for the first time.[LI]+10% [icon:YIELD_GOLD] Gold in all [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP], doubled in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Captured Settlements[/TIP] from any Age.[LI]+1 [icon:SETTLEMENT_LIMIT] [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_LIMIT_TOOLTIP]Settlement Limit[/TIP] each [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP].[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "XERXES_MOD_UNIT_ATTACK_ABILITY",
@@ -19797,18 +19797,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_XERXES_DESCRIPTION"
+      "description": "+3 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for Units that are attacking in neutral or enemy territory. Gain 100 [icon:YIELD_CULTURE] Culture and [icon:YIELD_GOLD] Gold per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] when you capture a [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlement[/TIP] for the first time. +10% [icon:YIELD_GOLD] Gold in all [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP], doubled in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Captured Settlements[/TIP] from any Age. +1 [icon:SETTLEMENT_LIMIT] [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_LIMIT_TOOLTIP]Settlement Limit[/TIP] each [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP]."
     },
     {
       "type": "LEADER_ALEXANDER",
-      "name": "LOC_LEADER_ALEXANDER_NAME",
+      "name": "Alexander",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_ALEXANDER_ABILITY",
-            "name": "LOC_TRAIT_LEADER_ALEXANDER_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_ALEXANDER_ABILITY_DESCRIPTION",
+            "name": "King of the World",
+            "description": "[BLIST][LI][icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] other than your Capital with a [icon:WONDER] [TIP:LOC_PEDIA_CONCEPTS_WONDERS_TOOLTIP]Wonder[/TIP] get [B]+10% [icon:YIELD_PRODUCTION] Production[/B] and [icon:YIELD_CULTURE] [B]Culture[/B], doubled if they are on a different Continent than your [icon:NOTIFICATION_SELECT_CAPITAL] [TIP:LOC_PEDIA_CONCEPTS_CAPITAL_TOOLTIP]Capital[/TIP].\r\n\t\t\t\t  [LI][B]+2[/B] [icon:NAR_REW_COMBAT] [B][TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP][/B] for [B]Land [TIP:LOC_PEDIA_CONCEPTS_MILITARY_UNIT_TOOLTIP]Military Units[/TIP][/B]. [B]+1 [icon:NAR_REW_COMBAT] Combat Strength[/B] for [B]Unique Military Units[/B] for every [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]City[/TIP] with a [icon:WONDER] [TIP:LOC_PEDIA_CONCEPTS_WONDERS_TOOLTIP]Wonder[/TIP] other than your Capital (max 6).\r\n\t\t\t\t  [LI][B]+2 [icon:MILITARY_VP] Dominion[/B] for every [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]City[/TIP] with a [icon:WONDER] [TIP:LOC_PEDIA_CONCEPTS_WONDERS_TOOLTIP]Wonder[/TIP] other than your Capital.\r\n\t\t\t\t  [LI][icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP] converted into [icon:YIELD_CITIES] [B]Cities[/B] are renamed after Alexander.[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "ALEXANDER_YIELD_BONUS_WITH_WONDER_CAPITAL_CONT",
@@ -20100,18 +20100,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_ALEXANDER_DESCRIPTION"
+      "description": "[icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP] other than your Capital with a [icon:WONDER] [TIP:LOC_PEDIA_CONCEPTS_WONDERS_TOOLTIP]Wonder[/TIP] get +10% [icon:YIELD_PRODUCTION] Production and [icon:YIELD_CULTURE] Culture, doubled if they are on a different Continent than your [icon:NOTIFICATION_SELECT_CAPITAL] [icon:NOTIFICATION_SELECT_CAPITAL] [TIP:LOC_PEDIA_CONCEPTS_CAPITAL_TOOLTIP]Capital[/TIP]. +2 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for [TIP:LOC_PEDIA_CONCEPTS_MILITARY_UNIT_TOOLTIP]Land Military Units[/TIP]. +1 [icon:NAR_REW_COMBAT] Combat Strength for Unique Military Units for every [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]City[/TIP] with a [icon:WONDER] [TIP:LOC_PEDIA_CONCEPTS_WONDERS_TOOLTIP]Wonder[/TIP] other than your Capital (max 6). +2 [icon:MILITARY_VP] Dominion for every [icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]City[/TIP] with a [icon:WONDER] [TIP:LOC_PEDIA_CONCEPTS_WONDERS_TOOLTIP]Wonder[/TIP] other than your Capital. [icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP] converted into [icon:YIELD_CITIES] Cities are renamed after Alexander."
     },
     {
       "type": "LEADER_GILGAMESH",
-      "name": "LOC_LEADER_GILGAMESH_NAME",
+      "name": "Gilgamesh",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_GILGAMESH_ABILITY",
-            "name": "LOC_TRAIT_LEADER_GILGAMESH_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_GILGAMESH_ABILITY_DESCRIPTION",
+            "name": "Once Mortal, Twice Divine",
+            "description": "[BLIST][LI]+2 [B][icon:WAR_SUPPORT] War Support[/B] when in only one Alliance.\r\n\t\t\t\t[LI]When one of your Military Units defeats an enemy Unit, gain [B][icon:YIELD_DIPLOMACY] Influence[/B] equal to 50% of the defeated Unit's [icon:NAR_REW_COMBAT] Combat Strength. \r\n\t\t\t\t[LI]All basic Endeavors are automatically unlocked. Endeavors with Allies don’t count against the limit of having one Endeavor of a given type active at a time. Allies can support your Endeavors for free. [/LIST]",
             "modifiers": [
               {
                 "modifier_id": "GILGAMESH_SINGLE_ALLY_WAR_SUPPORT",
@@ -20321,18 +20321,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_GILGAMESH_DESCRIPTION"
+      "description": "+2 [icon:WAR_SUPPORT] War Support when in only one Alliance. When one of your Military Units defeats an enemy Unit, gain [icon:YIELD_DIPLOMACY] Influence equal to 50% of the defeated Unit's [icon:NAR_REW_COMBAT] Combat Strength. All basic Endeavors are automatically unlocked. Endeavors with Allies don’t count against the limit of having one Endeavor of a given type active at a time. Allies can support your Endeavors for free."
     },
     {
       "type": "LEADER_ADA_LOVELACE",
-      "name": "LOC_LEADER_ADA_LOVELACE_NAME",
+      "name": "Ada Lovelace",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_ADA_LOVELACE_ABILITY",
-            "name": "LOC_TRAIT_LEADER_ADA_LOVELACE_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_ADA_LOVELACE_ABILITY_DESCRIPTION",
+            "name": "Enchantress of Number",
+            "description": "[BLIST][LI][icon:YIELD_CITIES] [B]Cities [/B]receive [B]+2[icon:YIELD_SCIENCE] Science [/B]per Age when you complete a [icon:RADIAL_CIVICS] [B]Civic Mastery[/B]. This resets at the start of each Age. [LI]Gain [B][icon:YIELD_CULTURE] Culture [/B]equal to 100% of your total [B][icon:YIELD_SCIENCE] Science [/B]per turn when you complete a [icon:RADIAL_TECH] [B]Technology Mastery[/B].[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "ADA_LOVELACE_MOD_TECH_MASTERY",
@@ -20514,18 +20514,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_ADA_LOVELACE_DESCRIPTION"
+      "description": "[icon:YIELD_CITIES] Cities receive +2 [icon:YIELD_SCIENCE] Science per Age when you complete a [icon:RADIAL_CIVICS] Civic Mastery. This resets at the start of each Age. Gain [icon:YIELD_CULTURE] Culture equal to 100% of your total [icon:YIELD_SCIENCE] Science per turn when you complete a [icon:RADIAL_TECH] Technology Mastery."
     },
     {
       "type": "LEADER_ASHOKA_ALT",
-      "name": "LOC_LEADER_ASHOKA_ALT_NAME",
+      "name": "Ashoka, World Conqueror",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_ASHOKA_ALT_ABILITY",
-            "name": "LOC_TRAIT_LEADER_ASHOKA_ALT_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_ASHOKA_ALT_ABILITY_DESCRIPTION",
+            "name": "Devaraja",
+            "description": "[BLIST][LI][B]+1[icon:YIELD_PRODUCTION] Production [/B]for every [B]5 [/B]excess [icon:YIELD_HAPPINESS] [B]Happiness [/B]in [icon:YIELD_CITIES] [B]Cities[/B].[LI][B]+10% [icon:YIELD_PRODUCTION] Production [/B]in Settlements not founded by you.[LI]Declaring a [icon:WAR] [B]Formal War [/B]grants a [icon:CELEBRATION] [B]Celebration[/B].[LI][B]+5 [icon:NAR_REW_COMBAT] Combat Strength[/B] against [icon:CITY_FORTIFIED] [B]Fortified Districts[/B] for all Units during a [icon:CELEBRATION] [B]Celebration[/B].[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "ASHOKA_ALT_MOD_HAPPINESS_PRODUCTION",
@@ -20718,18 +20718,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_ASHOKA_ALT_DESCRIPTION"
+      "description": "+1[icon:YIELD_PRODUCTION] Production for every 5 excess [icon:YIELD_HAPPINESS] Happiness in [icon:YIELD_CITIES] Cities. +10% [icon:YIELD_PRODUCTION] Production in Settlements not founded by you. Declaring a [icon:WAR] Formal War grants a [icon:CELEBRATION] Celebration. +5 [icon:NAR_REW_COMBAT] Combat Strength against [icon:CITY_FORTIFIED] Fortified Districts for all Units during a [icon:CELEBRATION] Celebration."
     },
     {
       "type": "LEADER_HIMIKO_ALT",
-      "name": "LOC_LEADER_HIMIKO_ALT_NAME",
+      "name": "Himiko, High Shaman",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_HIMIKO_ALT_ABILITY",
-            "name": "LOC_TRAIT_LEADER_HIMIKO_ALT_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_HIMIKO_ALT_ABILITY_DESCRIPTION",
+            "name": "Miko of Amaterasu",
+            "description": "[BLIST][LI][B]+2 [icon:YIELD_HAPPINESS] Happiness [/B]per Age on [icon:YIELD_HAPPINESS] [B]Happiness [/B]and [icon:YIELD_DIPLOMACY] [B]Diplomacy Buildings[/B], doubled if a [B]Building[/B] is both.[LI][B]+50% [icon:YIELD_PRODUCTION] Production [/B]towards constructing [icon:YIELD_HAPPINESS] [B]Happiness[/B] and [icon:YIELD_DIPLOMACY] [B]Diplomacy Buildings[/B], doubled if a [B]Building[/B] is both.[LI][B]+15% [icon:YIELD_CULTURE] Culture [/B]but [B]-15% [icon:YIELD_SCIENCE] Science[/B], and these effects are [B]doubled [/B]while in a [icon:CELEBRATION] [B]Celebration[/B].[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "HIMIKO_ALT_MOD_HAPPINESS_BUILDING_HAPPINESS",
@@ -21035,18 +21035,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_HIMIKO_ALT_DESCRIPTION"
+      "description": "+2 [icon:YIELD_HAPPINESS] Happiness per Age on [icon:YIELD_HAPPINESS] Happiness and [icon:YIELD_DIPLOMACY] Diplomacy Buildings, doubled if a Building is both. +50% [icon:YIELD_PRODUCTION] Production towards constructing [icon:YIELD_HAPPINESS] Happiness and [icon:YIELD_DIPLOMACY] Diplomacy Buildings, doubled if a Building is both. +15% [icon:YIELD_CULTURE] Culture but -15% [icon:YIELD_SCIENCE] Science, and these effects are doubled while in a [icon:CELEBRATION] Celebration."
     },
     {
       "type": "LEADER_BOLIVAR",
-      "name": "LOC_LEADER_BOLIVAR_NAME",
+      "name": "Simón Bolívar",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_BOLIVAR_ABILITY",
-            "name": "LOC_TRAIT_LEADER_BOLIVAR_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_BOLIVAR_ABILITY_DESCRIPTION",
+            "name": "El Libertador",
+            "description": "[BLIST][LI]Gain [B]2 [icon:WAR_SUPPORT] War Support [/B]on [icon:WAR] [B]Wars[/B] you declare.[LI]When you conquer a Settlement for the first time the Settlement can [B]purchase 1 [icon:CITY_BUILDING_LIST] Building or [icon:CITY_RURAL] Improvement for free[/B].[LI][icon:YIELD_ANGRY] [B]Unrest [/B]does not prevent Purchasing.[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "BOLIVAR_MOD_WAR_SUPPORT_AGGRO",
@@ -21219,18 +21219,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_BOLIVAR_DESCRIPTION"
+      "description": "Gain 2 [icon:WAR_SUPPORT] War Support on [icon:WAR] Wars you declare. When you conquer a Settlement for the first time it can purchase 1 [icon:CITY_BUILDING_LIST] Building or [icon:CITY_RURAL] Improvement for free. [icon:YIELD_ANGRY] Unrest does not prevent Purchasing."
     },
     {
       "type": "LEADER_EDWARD_TEACH",
-      "name": "LOC_LEADER_EDWARD_TEACH_NAME",
+      "name": "Edward Teach",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_EDWARD_TEACH_ABILITY",
-            "name": "LOC_TRAIT_LEADER_EDWARD_TEACH_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_EDWARD_TEACH_ABILITY_DESCRIPTION",
+            "name": "Blackbeard",
+            "description": "[BLIST][LI]All Naval Units gain the [icon:UNIT_CAUTION] [B]Pirate Ability[/B], allowing them to cross borders of other Civilizations, [icon:Action_Pillage] [B]Plunder Trade Routes[/B] from non-Allied Civilizations, and attack Units of non-Allied Civilizations [B]without declaring [icon:WAR] War[/B].[LI]Defeating any Naval Unit with your own Naval Units provides [B][icon:YIELD_GOLD] Gold[/B] equal to 50% of its [icon:NAR_REW_COMBAT] [B]Combat Strength[/B] and captures that Unit under your control. [LI][B]+1 [icon:YIELD_GOLD] Gold [/B]Maintenance for [B]Naval Units[/B].[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "EDWARD_TEACH_MOD_ALL_NAVAL_UNITS_PIRATES",
@@ -21440,18 +21440,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_EDWARD_TEACH_DESCRIPTION"
+      "description": "All Naval Units gain the [icon:UNIT_CAUTION] Pirate Ability, allowing them to cross borders of other Civilizations, [icon:Action_Pillage] Plunder Trade Routes from non-Allied Civilizations, and attack Units of non-Allied Civilizations without declaring [icon:WAR] War. Defeating any Naval Unit with your own Naval Units provides [icon:YIELD_GOLD] Gold equal to 50% of its [icon:NAR_REW_COMBAT] Combat Strength and captures that Unit under your control. +1 Gold Maintenance for Naval Units."
     },
     {
       "type": "LEADER_FRIEDRICH_ALT",
-      "name": "LOC_LEADER_FRIEDRICH_ALT_NAME",
+      "name": "Friedrich, Baroque",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_FRIEDRICH_ALT_ABILITY",
-            "name": "LOC_TRAIT_LEADER_FRIEDRICH_ALT_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_FRIEDRICH_ALT_ABILITY_DESCRIPTION",
+            "name": "Hohenfriedberger Marsch",
+            "description": "[BLIST][LI]Gain a [icon:NAR_REW_GREATWORK] [B]Great Work [/B]when you capture a Settlement for the first time.[LI][B]+1 [icon:YIELD_CULTURE] Culture [/B]per Age on displayed [icon:NAR_REW_GREATWORK] [B]Great Works[/B].[LI]Gain an [B]Infantry Unit [/B]when you complete a [icon:RADIAL_CIVICS] [B]Civic Mastery[/B] or construct a [icon:YIELD_CULTURE] [B]Culture Building[/B].[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "FRIEDRICH_ALT_MOD_GREATWORK",
@@ -21665,18 +21665,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_FRIEDRICH_ALT_DESCRIPTION"
+      "description": "Gain a [icon:NAR_REW_GREATWORK] Great Work when you capture a Settlement for the first time. +1 [icon:YIELD_CULTURE] Culture per Age on displayed [icon:NAR_REW_GREATWORK] Great Works. Gain an Infantry Unit when you complete a [icon:RADIAL_CIVICS] Civic Mastery or construct a [icon:YIELD_CULTURE] Culture Building."
     },
     {
       "type": "LEADER_XERXES_ALT",
-      "name": "LOC_LEADER_XERXES_ALT_NAME",
+      "name": "Xerxes, the Achaemenid",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_XERXES_ALT_ABILITY",
-            "name": "LOC_TRAIT_LEADER_XERXES_ALT_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_XERXES_ALT_ABILITY_DESCRIPTION",
+            "name": "Silk Road",
+            "description": "[BLIST][LI][B]+1 [icon:TRADE_ROUTE] Trade Route Limit[/B] with all other Leaders.[LI][B]+10 [/B]Trade Range.[LI]Gain [B]50 [icon:YIELD_CULTURE] Culture [/B]and [B]100 [icon:YIELD_GOLD] Gold [/B]per Age when you create a [icon:TRADE_ROUTE] [B]Trade Route [/B]or [B]Road[/B].[LI][B]+1 [icon:YIELD_CULTURE] Culture [/B]and [icon:YIELD_GOLD] [B]Gold [/B]per Age on [B]Unique Buildings [/B]and [B]Improvements[/B].[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "XERXES_ALT_MOD_TRADE_ROUTE_CAP",
@@ -21988,18 +21988,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_XERXES_ALT_DESCRIPTION"
+      "description": "+1 [icon:TRADE_ROUTE] Trade Route Limit with all other Leaders. +10 Trade Range. Gain 50 [icon:YIELD_CULTURE] Culture and 100 [icon:YIELD_GOLD] Gold per Age when you create a [icon:TRADE_ROUTE] Trade Route or Road. +1 [icon:YIELD_CULTURE] Culture and[icon:YIELD_GOLD] Gold per Age on Unique Buildings and Improvements."
     },
     {
       "type": "LEADER_NAPOLEON",
-      "name": "LOC_LEADER_NAPOLEON_NAME",
+      "name": "Napoleon, Emperor",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_NAPOLEON_ABILITY",
-            "name": "LOC_TRAIT_LEADER_NAPOLEON_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_NAPOLEON_ABILITY_DESCRIPTION",
+            "name": "Continental System",
+            "description": "[BLIST][LI]All basic [icon:SANCTIONS] [B]Sanctions [/B]are automatically unlocked.[LI][B]+50% [icon:DIPLOMACY]Influence [/B]towards initiating [icon:SANCTIONS][B] Sanctions[/B]. [LI][B]+5 [icon:YIELD_CULTURE] Culture and [icon:YIELD_GOLD] Gold per Age [/B]for each Leader you have an active [B][icon:SANCTIONS] Sanction [/B]on, except [B] Denouncement [/B].[LI][B]+1 [icon:NAR_REW_COMBAT] Combat Strength [/B]for [B]Land Units [/B]for every [icon:SANCTIONS][B] Sanction [/B]you have active, except [B]Denouncement[/B].[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "NAPOLEON_MOD_AGENDA_NAPOLEONIC_CODE",
@@ -22211,18 +22211,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_NAPOLEON_DESCRIPTION"
+      "description": "All basic [icon:SANCTIONS] Sanctions are automatically unlocked. +50% [icon:DIPLOMACY]Influence towards initiating [icon:SANCTIONS] Sanctions. +5 [icon:YIELD_CULTURE] Culture and [icon:YIELD_GOLD] Gold per Age for each Leader you have an active [icon:SANCTIONS] Sanction on, except Denouncement. +1 [icon:NAR_REW_COMBAT] Combat Strength for Land Units for every [icon:SANCTIONS] Sanction you have active, except Denouncement."
     },
     {
       "type": "LEADER_NAPOLEON_ALT",
-      "name": "LOC_LEADER_NAPOLEON_ALT_NAME",
+      "name": "Napoleon, Revolutionary",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_NAPOLEON_ALT_ABILITY",
-            "name": "LOC_TRAIT_LEADER_NAPOLEON_ALT_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_NAPOLEON_ALT_ABILITY_DESCRIPTION",
+            "name": "Enemy of the Coalitions",
+            "description": "[BLIST][LI][B]+1 [icon:Action_Move] Movement [/B]for all [B]Land Units[/B].[LI]Defeating an enemy Unit provides [icon:YIELD_CULTURE] [B]Culture [/B]equal to [B]100% [/B]of its [icon:NAR_REW_COMBAT] [B]Combat Strength[/B].[LI]The first time each Age that a [icon:WAR] [B]War[/B] is declared against you, gain an [icon:UNIT_ARMY_COMMANDER] [B]Army Commander[/B] in your [icon:NOTIFICATION_SELECT_CAPITAL] [B] Capital[/B] packed with [B]1 Infantry Unit, 1 Cavalry Unit, 1 Ranged Unit, and 1 Siege Unit[/B], even if those Units have not been unlocked.[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "NAPOLEON_ALT_MOD_LAND_UNIT_MOVEMENT",
@@ -22402,18 +22402,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_NAPOLEON_ALT_DESCRIPTION"
+      "description": "+1 [icon:Action_Move] Movement for all Land Units. Defeating an enemy Unit provides [icon:YIELD_CULTURE] Culture equal to 100% of its [icon:NAR_REW_COMBAT] Combat Strength. The first time each Age that a [icon:WAR] War is declared against you, gain an [icon:UNIT_ARMY_COMMANDER]Army Commander in your [icon:NOTIFICATION_SELECT_CAPITAL] Capital packed with 1 Infantry Unit, 1 Cavalry Unit, 1 Ranged Unit, and 1 Siege Unit, even if those Units have not been unlocked."
     },
     {
       "type": "LEADER_SAYYIDA_AL_HURRA",
-      "name": "LOC_LEADER_SAYYIDA_AL_HURRA_NAME",
+      "name": "Sayyida al Hurra",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_SAYYIDA_AL_HURRA_ABILITY",
-            "name": "LOC_TRAIT_LEADER_SAYYIDA_AL_HURRA_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_SAYYIDA_AL_HURRA_ABILITY_DESCRIPTION",
+            "name": "Hakima Tatwan",
+            "description": "[BLIST][LI]Receive the strongest [B]Naval Unit [/B]every time you succeed in an [B][icon:ESPIONAGE] Espionage Action[/B], if you can place a Naval Unit.[LI][B]+2 [icon:YIELD_CULTURE] Culture[/B] and [B]+1 [icon:YIELD_DIPLOMACY] Influence[/B] per Age for every [B]Naval Unit[/B] stationed on a [icon:CITY_URBAN] [B]District [/B]. [LI]No [B][icon:YIELD_DIPLOMACY] Influence[/B] penalty for your [B][icon:ESPIONAGE] Espionage[/B] being revealed. [LI]Opponents cannot use [B]Counter Spy[/B] against you.[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "SAYYIDA_MOD_FREE_NAVAL_UNIT",
@@ -22580,18 +22580,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_SAYYIDA_AL_HURRA_DESCRIPTION"
+      "description": "Receive the strongest Naval Unit every time you succeed in an [icon:ESPIONAGE] Espionage Action, if you can place a Naval Unit. +2 [icon:YIELD_CULTURE] Culture and +1 [icon:YIELD_DIPLOMACY] Influence per Age for every Naval Unit stationed on a [icon:CITY_URBAN] District. No [icon:YIELD_DIPLOMACY] Influence penalty for your [icon:ESPIONAGE] Espionage being revealed. Opponents cannot use Counter Spy against you."
     },
     {
       "type": "LEADER_TECUMSEH",
-      "name": "LOC_LEADER_TECUMSEH_NAME",
+      "name": "Tecumseh",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_TECUMSEH_ABILITY",
-            "name": "LOC_TRAIT_LEADER_TECUMSEH_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_TECUMSEH_ABILITY_DESCRIPTION",
+            "name": "Nicaakiyakoolaakwe",
+            "description": "[BLIST][LI][B]+1 [icon:YIELD_FOOD] Food[/B] per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] in [B][icon:YIELD_TOWNS] [TIP:LOC_PEDIA_CONCEPTS_TOWN_TOOLTIP]Towns[/TIP][/B] and [B]+1 [icon:YIELD_PRODUCTION] Production[/B] per Age in [B][icon:YIELD_CITIES] [TIP:LOC_PEDIA_CONCEPTS_CITIES_TOOLTIP]Cities[/TIP][/B] for every [B][icon:CITYSTATE] [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP][/B] you are [B][TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP][/B] of.[LI][B]+1 [icon:NAR_REW_COMBAT] Combat Strength[/B] for all [B][TIP:LOC_PEDIA_CONCEPTS_INFANTRY_UNITS_TOOLTIP]Infantry[/TIP][/B] and [B][TIP:LOC_PEDIA_CONCEPTS_RANGED_UNITS_TOOLTIP]Ranged units[/TIP][/B] for every [B][icon:CITYSTATE] [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP][/B] you are [B][TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP][/B] of.[LI][B]+2 [icon:MILITARY_VP] [TIP:LOC_PEDIA_CONCEPTS_DOMINION_TOOLTIP]Dominion[/TIP][/B] for every [B][icon:CITYSTATE] [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP][/B] you are [B][TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP][/B] of.[LI]All [B][icon:INDEPENDENT_POWER] [TIP:LOC_PEDIA_CONCEPTS_INDEPENDENT_POWER_TOOLTIP]Independent Powers[/TIP][/B] start [B][icon:PLAYER_RELATIONSHIP_FRIENDLY] Friendly[/B] with you.[/BLIST]",
             "modifiers": [
               {
                 "modifier_id": "TECUMSEH_MOD_SUZERAIN_FOOD",
@@ -22809,18 +22809,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_TECUMSEH_DESCRIPTION"
+      "description": "+1 [icon:YIELD_FOOD] Food and [icon:YIELD_PRODUCTION] Production per [TIP:LOC_PEDIA_CONCEPTS_AGE_TOOLTIP]Age[/TIP] in [TIP:LOC_PEDIA_CONCEPTS_SETTLEMENT_TOOLTIP]Settlements[/TIP] for every [icon:CITYSTATE] [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP] you are [TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP] of. +1 [icon:NAR_REW_COMBAT] [TIP:LOC_PEDIA_CONCEPTS_COMBAT_STRENGTH_TOOLTIP]Combat Strength[/TIP] for all Units for every [icon:CITYSTATE] [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP] you are [TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP] of. +2 [icon:MILITARY_VP] Dominion for every [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP] you are [TIP:LOC_PEDIA_CONCEPTS_SUZERAIN_TOOLTIP]Suzerain[/TIP] of."
     },
     {
       "type": "LEADER_GENGHIS_KHAN",
-      "name": "LOC_LEADER_GENGHIS_KHAN_NAME",
+      "name": "Genghis Khan",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_GENGHIS_KHAN_ABILITY",
-            "name": "LOC_TRAIT_LEADER_GENGHIS_KHAN_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_GENGHIS_KHAN_ABILITY_DESCRIPTION",
+            "name": "Chosen of Tengri",
+            "description": "[BLIST][LI][B]+3 [icon:NAR_REW_COMBAT] Combat Strength [/B]for [B]Cavalry Units[/B], or [B]+5[/B] when in an [B]Army [icon:COMMANDER_RADIUS] Command Radius[/B].[LI][icon:UNIT_ARMY_COMMANDER] [B]Army Commanders [/B]have [B]+1 [icon:Action_Move] Movement [/B]even when no Units are packed into them.[LI]Once per Age, [icon:UNIT_ARMY_COMMANDER] [B]Army Commanders [/B]can use the [B]Convert Independents Action[/B] to convert adjacent [icon:INDEPENDENT_POWER] [B]Independent Military Units [/B]to your control.[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "GENGHIS_KHAN_ARMY_COMMANDER_ABILITY",
@@ -22988,18 +22988,18 @@
           }
         ]
       },
-      "description": "LOC_LEADER_GENGHIS_KHAN_DESCRIPTION"
+      "description": "+3 [icon:NAR_REW_COMBAT] Combat Strength for Cavalry Units, or +5 when in an Army [icon:COMMANDER_RADIUS] Command Radius. [icon:UNIT_ARMY_COMMANDER]Army Commanders have +1 [icon:Action_Move] Movement even when no Units are packed into them. Once per Age, [icon:UNIT_ARMY_COMMANDER] Army Commanders can use the Convert Independents Action to convert adjacent [icon:INDEPENDENT_POWER] Independent Military Units to your control."
     },
     {
       "type": "LEADER_LAKSHMIBAI",
-      "name": "LOC_LEADER_LAKSHMIBAI_NAME",
+      "name": "Lakshmibai",
       "ages": {
         "8d4c8700-frontendcopy": [],
         "35994bc7-gameplaycopy": [
           {
             "trait": "TRAIT_LEADER_LAKSHMIBAI_ABILITY",
-            "name": "LOC_TRAIT_LEADER_LAKSHMIBAI_ABILITY_NAME",
-            "description": "LOC_TRAIT_LEADER_LAKSHMIBAI_ABILITY_DESCRIPTION",
+            "name": "Rani of Jhansi",
+            "description": "[BLIST][LI][B]+50% [icon:YIELD_DIPLOMACY] Influence [/B]towards initiating the [icon:PROJECT] [B]City-State - Incorporate[/B] Action.[LI]When you incorporate a [icon:CITYSTATE] [B][TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP] [/B], you gain all of their Units.[LI]When one of your [B]Land Military Units [/B]defeats an enemy Unit, gain [icon:YIELD_DIPLOMACY] [B]Influence [/B]equal to [B]100% [/B]of the defeated Unit's [icon:NAR_REW_COMBAT] [B]Combat Strength[/B].[/LIST]",
             "modifiers": [
               {
                 "modifier_id": "LAKSHMIBAI_MOD_CS_INCORPORATE",
@@ -23170,11 +23170,11 @@
           }
         ]
       },
-      "description": "LOC_LEADER_LAKSHMIBAI_DESCRIPTION"
+      "description": "+50% [icon:YIELD_DIPLOMACY] Influence towards initiating the [icon:PROJECT] City-State - Incorporate Action. When you incorporate a [icon:CITYSTATE] [TIP:LOC_PEDIA_CONCEPTS_CITY_STATE_TOOLTIP]City-State[/TIP], you gain all of their Units. When one of your Land Military Units defeats an enemy Unit, gain [icon:YIELD_DIPLOMACY] Influence equal to 100% of the defeated Unit's [icon:NAR_REW_COMBAT] Combat Strength."
     },
     {
       "type": "LEADER_DEFAULT",
-      "name": "LOC_EMPTY",
+      "name": null,
       "ages": {
         "35994bc7-gameplaycopy": [
           {
@@ -23407,7 +23407,7 @@
     },
     {
       "type": "LEADER_INDEPENDENT",
-      "name": "LOC_CIVILIZATION_INDEPENDENT_NAME",
+      "name": "Villages",
       "ages": {
         "35994bc7-gameplaycopy": [
           {
@@ -23421,7 +23421,7 @@
     },
     {
       "type": "LEADER_MINOR_CIV_DEFAULT",
-      "name": "LOC_CIVILIZATION_INDEPENDENT_NAME",
+      "name": "Villages",
       "ages": {
         "35994bc7-gameplaycopy": [
           {
