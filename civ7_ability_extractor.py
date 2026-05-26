@@ -362,6 +362,127 @@ def merge_ages(per_age):
 
 
 # ----------------------------------------------------------------------------
+# markup cleaning
+# ----------------------------------------------------------------------------
+
+ICON_LABELS = {
+    # Yields
+    "YIELD_CULTURE":     "Culture",
+    "YIELD_GOLD":        "Gold",
+    "YIELD_PRODUCTION":  "Production",
+    "YIELD_SCIENCE":     "Science",
+    "YIELD_FOOD":        "Food",
+    "YIELD_HAPPINESS":   "Happiness",
+    "YIELD_DIPLOMACY":   "Influence",
+    "YIELD_POPULATION":  "Population",
+    "YIELD_WAREHOUSE":   "Warehouse",
+    "YIELD_ANGRY":       "Unhappiness",
+    "YIELD_CITIES":      "Cities",
+    "YIELD_TOWNS":       "Towns",
+    # Resources / slots
+    "RADIAL_RESOURCES":  "Resource Capacity",
+    "RADIAL_TECH":       "Technology",
+    "RADIAL_CIVICS":     "Civics",
+    "SPECIALIST":        "Specialist",
+    "SETTLEMENT_LIMIT":  "Settlement Limit",
+    "SOCIAL_POLICY":     "Social Policy",
+    "TRADITION":         "Tradition",
+    "GOVERNMENT":        "Government",
+    # City / district
+    "CITY_URBAN":         "Urban District",
+    "CITY_RURAL":         "Rural District",
+    "CITY_BUILDING_LIST": "Building",
+    "CITY_FORTIFIED":     "Fortified City",
+    "CITY_UNIMPROVED":    "Unimproved Plot",
+    "CITY_UNIQUE_QUARTER":"Unique Quarter",
+    # Units
+    "UNIT_SETTLER":        "Settler",
+    "UNIT_COLONIST":       "Colonist",
+    "UNIT_MERCHANT":       "Merchant",
+    "UNIT_MISSIONARY":     "Missionary",
+    "UNIT_ARMY_COMMANDER": "Army Commander",
+    "UNIT_TREASURE_FLEET": "Treasure Fleet",
+    "UNIT_CAUTION":        "Caution",
+    # Military / combat
+    "MILITARY":          "Military",
+    "WAR":               "War",
+    "WAR_SUPPORT":       "War Support",
+    "COMMANDER_RADIUS":  "Command Radius",
+    # Diplomacy / relations
+    "DIPLOMACY":                    "Diplomacy",
+    "DIPLOMATIC_ACTION":            "Diplomatic Action",
+    "RELATIONSHIP":                 "Relationship",
+    "PLAYER_RELATIONSHIP_ALLIANCE": "Alliance",
+    "PLAYER_RELATIONSHIP_FRIENDLY": "Friendly",
+    "PLAYER_RELATIONSHIP_HELPFUL":  "Helpful",
+    "PLAYER_RELATIONSHIP_HOSTILE":  "Hostile",
+    "PLAYER_RELATIONSHIP_UNFRIENDLY":"Unfriendly",
+    "SANCTIONS":                    "Sanctions",
+    "CITYSTATE":                    "City-State",
+    "INDEPENDENT_POWER":            "Independent Power",
+    # Other gameplay
+    "TRADE_ROUTE":        "Trade Route",
+    "GROWTH_RATE":        "Growth Rate",
+    "GREATWORK":          "Great Work",
+    "WONDER":             "Wonder",
+    "PROJECT":            "Project",
+    "CELEBRATION":        "Celebration",
+    "ENDEAVOR":           "Endeavor",
+    "ESPIONAGE":          "Espionage",
+    "ATTRIBUTE_WILDCARD": "Attribute",
+    # Victory points
+    "CULTURE_VP":    "Culture Victory Point",
+    "MILITARY_VP":   "Military Victory Point",
+    "ECONOMIC_VP":   "Economic Victory Point",
+    # Narrative rewards (drop silently — they're UI chrome)
+    "NAR_REW_COMBAT":        "",
+    "NAR_REW_DEFAULT":       "",
+    "NAR_REW_GREATWORK":     "",
+    "NAR_REW_PROMOTION":     "",
+    "NAR_REW_RELIGION":      "",
+    "NAR_REW_TRADITION_SLOT":"",
+    # Notifications (drop)
+    "NOTIFICATION_DISCOVER_NATURAL_WONDER": "",
+    "NOTIFICATION_SELECT_CAPITAL":          "",
+    # Actions (drop — these are button icons)
+    "Action_Heal":    "",
+    "Action_Move":    "",
+    "Action_Pillage": "",
+    "Action_Showall": "",
+}
+
+# TIP tooltips: strip the tag wrapper, keep the visible label text
+_TIP_RE = re.compile(r'\[TIP:[^\]]+\](.*?)\[/TIP\]', re.DOTALL)
+_ICON_RE = re.compile(r'\[icon:([^\]]+)\]')
+_TAG_RE  = re.compile(r'\[[^\]]+\]')
+
+
+def clean_description(text):
+    """Return a plain-English version of a game markup description string."""
+    if not text:
+        return text
+    # [TIP:...]label[/TIP] -> keep the visible label
+    text = _TIP_RE.sub(r'\1', text)
+    # Icons always precede their text label in the UI, so the surrounding text
+    # is already self-describing — drop all icons to avoid "(Culture) Culture".
+    text = _ICON_RE.sub("", text)
+    # [BLIST]/[LIST] -> nothing; [LI] -> bullet
+    text = text.replace("[BLIST]", "").replace("[/BLIST]", "")
+    text = text.replace("[LIST]", "").replace("[/LIST]", "")
+    text = text.replace("[LI]", "\n• ")
+    # Bold tags
+    text = text.replace("[B]", "").replace("[/B]", "")
+    # Any remaining bracketed tags
+    text = _TAG_RE.sub("", text)
+    # Collapse runs of spaces left behind by removed tags
+    text = re.sub(r' {2,}', ' ', text)
+    # Normalise whitespace, tidy bullet lines
+    lines = [l.strip() for l in text.splitlines()]
+    lines = [l for l in lines if l]
+    return "\n".join(lines)
+
+
+# ----------------------------------------------------------------------------
 # output
 # ----------------------------------------------------------------------------
 
@@ -392,20 +513,32 @@ def flatten_for_csv(merged):
                         "age": age, "ability_name": ab.get("name"),
                         "ability_trait": ab.get("trait"),
                         "ability_description": ab.get("description"),
+                        "ability_description_clean": clean_description(ab.get("description")),
                         "modifier_type": mod_types or None,
                         "modifier_args": mod_args or None,
                     })
     return rows
 
 
+def enrich_with_clean(merged):
+    """Add clean_description fields to every ability in the merged dataset."""
+    for key in ("civilizations", "leaders"):
+        for ent in merged[key]:
+            for abilities in ent["ages"].values():
+                for ab in abilities:
+                    ab["description_clean"] = clean_description(ab.get("description"))
+
+
 def write_outputs(merged, out_base):
+    enrich_with_clean(merged)
     json_path = f"{out_base}.json"
     csv_path = f"{out_base}.csv"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(merged, f, indent=2, ensure_ascii=False)
     rows = flatten_for_csv(merged)
     fields = ["kind", "type", "name", "age", "ability_name", "ability_trait",
-              "ability_description", "modifier_type", "modifier_args"]
+              "ability_description", "ability_description_clean",
+              "modifier_type", "modifier_args"]
     with open(csv_path, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()

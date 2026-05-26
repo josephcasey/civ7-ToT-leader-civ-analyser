@@ -254,13 +254,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AKSUM",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AKSUM_ABILITY",
@@ -333,43 +335,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +3 Gold on Resources in Settlements adjacent to Coast.\n• +1 Trade Route Limit with other Civilizations, and all Civilizations have +1 Trade Route Limit with you.\n• Trade Routes to or from your Settlements have unlimited Range.\n• +30% Production towards constructing the Great Stele."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -628,13 +637,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EGYPT",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EGYPT_ABILITY",
@@ -679,43 +690,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +2 Production on Improvements and Districts on Navigable Rivers.\n• Minor Rivers do not end Unit Movement.\n• +30% Production towards constructing the Pyramids."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -974,13 +992,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_GREECE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_GREECE_ABILITY",
@@ -1095,55 +1115,64 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +3 Influence on the Palace.\n• +2 Culture for active Endeavors, Sanctions, and Diplomatic Projects you started or supported.\n• +3 Tourism for every City-State you are Suzerain of.\n• +30% Production towards constructing the Oracle."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -1402,13 +1431,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_HAN",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_HAN_ABILITY",
@@ -1455,55 +1486,64 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• The Capital gains a Population when it completes Science Buildings.\n• The Capital and new Towns gain an additional Population with their first growth event.\n• +30% Production towards constructing Weiyang Palace."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX_HAPPINESS",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO_HAPPINESS",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -1762,13 +1802,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_KHMER",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_KHMER_ABILITY",
@@ -1845,61 +1887,71 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Districts on Rivers do not remove the natural yield of the tile.\n• +50% Growth Rate in the Capital, but -5 Happiness for every other City.\n• +30% Production towards constructing Angkor Wat."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_EX_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -2158,13 +2210,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MAURYA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MAURYA_ABILITY",
@@ -2263,43 +2317,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +2 Happiness on Happiness, Military, and Science Buildings.\n• Land Units are fully Healed when you enter a Celebration.\n• +30% Production towards constructing Sanchi Stupa."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -2558,13 +2619,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MAYA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MAYA_ABILITY",
@@ -2625,43 +2688,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• After researching a Technology, gain Culture equal to 10% of its cost.\n• After studying a Civic, gain Science equal to 10% of its cost.\n• +30% Production towards constructing Mundo Perdido."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -2920,13 +2990,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MISSISSIPPIAN",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MISSISSIPPIAN_ABILITY",
@@ -2971,61 +3043,71 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• All Buildings receive a +1 Food Adjacency for Resources.\n• +10% Production towards constructing Buildings.\n• +30% Production towards constructing the Monks Mound."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_EX_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -3284,13 +3366,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_PERSIA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_PERSIA_ABILITY",
@@ -3327,43 +3411,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +3 Combat Strength for Infantry Units when attacking.\n• Army Commanders start with a free Promotion.\n• +30% Production towards constructing the Gate of All Nations."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -3622,13 +3713,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ROME",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ROME_ABILITY",
@@ -3683,43 +3776,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Culture on Districts in the Capital and City Centers in Towns.\n• Gain a free Infantry Unit in new Towns that you found.\n• +30% Production towards constructing the Colosseum."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -3736,13 +3836,15 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ABBASID",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ABBASID_ABILITY",
@@ -3775,61 +3877,71 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Receive 30 Gold for each Rural Population of the City when you create a Specialist. (Scales by Game Speed)\n• +20% Production towards constructing Buildings in Cities with at least 5 Specialists.\n• +30% Production towards constructing the House of Wisdom."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -4077,7 +4189,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -4094,13 +4207,15 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_CHOLA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_CHOLA_ABILITY",
@@ -4163,55 +4278,64 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Trade Route from the Improve Trade Relations Action.\n• +3 Gold and +2 Influence for every active Trade Route.\n• +1 Movement for Merchants.\n• +1 GDP per turn for imported Resources assigned to Cities.\n• +30% Production towards constructing the Brihadeeswarar Temple."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -4459,7 +4583,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -4476,19 +4601,22 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_HAWAII",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_HAWAII_2",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_HAWAII_ABILITY",
@@ -4529,61 +4657,71 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Can work Ocean Terrain.\n• +1 Happiness and +2 Culture on all Marine Terrain.\n• +30% Production towards constructing Hale o Keawe."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -4831,7 +4969,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -4848,19 +4987,22 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_INCA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_INCA_2",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_INCA_ABILITY",
@@ -4905,61 +5047,71 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Can work Mountain Terrain.\n• +2 Food and +1 Production on Mountain Terrain.\n• Can generate Homelands Treasure Convoys in Cities with 3 Worked Mountains after completing the Qhapaq Ñan Civic.\n• +30% Production towards constructing Machu Pikchu."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -5207,7 +5359,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -5224,13 +5377,15 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MAJAPAHIT",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MAJAPAHIT_ABILITY",
@@ -5257,61 +5412,71 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Culture Buildings gain an adjacency for Coast.\n• +1 Specialist Limit in Districts on or adjacent to Coast.\n• If you transition away from the Majapahit, the Specialist Limit increase goes away. Specialists over the Limit become inactive until you increase the Limit.\n• +30% Production towards constructing Borobudur."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -5559,7 +5724,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -5576,13 +5742,15 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MING",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MING_ABILITY",
@@ -5659,43 +5827,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +50% Science in the Capital.\n• -15 Science per turn for each Social Policy, but not Tradition, slotted in the Government.\n• +1 Tradition Slot.\n• +30% Production towards constructing the Forbidden City."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -5943,7 +6118,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -5960,13 +6136,15 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MONGOLIA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MONGOLIA_ABILITY",
@@ -5997,67 +6175,78 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• When you capture an opposing Settlement gain the strongest Cavalry Unit you can currently train.\n• -50% Production towards training Settlers.\n• +30% Production towards constructing Erdene Zuu."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -6305,7 +6494,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -6322,13 +6512,15 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_NORMAN",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_NORMAN_ABILITY",
@@ -6369,55 +6561,64 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +5 Combat Strength for Land Units and Fortified Districts adjacent to Coast.\n• +25 HP on Fortified Districts.\n• +30% Production towards constructing the White Tower."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ_HAPPINESS",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO_HAPPINESS",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -6665,7 +6866,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -6682,13 +6884,15 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_SONGHAI",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_SONGHAI_ABILITY",
@@ -6727,43 +6931,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +2 Resource Capacity in Cities on Navigable Rivers.\n• +1 Production in Cities on Navigable Rivers for every Resource assigned to them.\n• Can generate Homelands Treasure Convoys on Navigable Rivers after completing the Kanta Civic.\n• +30% Production towards constructing the Tomb of Askia."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -7011,7 +7222,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -7028,13 +7240,15 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_SPAIN",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_SPAIN_ABILITY",
@@ -7077,43 +7291,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +2 Food, +2 Gold and +2 Production in Settlements adjacent to Coast and in Settlements following your own Religion, or +4 if it is both. Doubled in Settlements in Distant Lands.\n• +15% Gold efficiency towards converting a Town to a City, or +30% Gold in Settlements in Distant Lands.\n• +30% Production towards constructing El Escorial."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -7361,7 +7582,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -7378,13 +7600,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AMERICA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AMERICA_ABILITY",
@@ -7419,55 +7643,64 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Gain 150 Gold every time you improve a Resource.\n• +1 Production on Resources.\n• +30% Production towards constructing the Statue of Liberty."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -7715,7 +7948,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -7732,13 +7966,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_BUGANDA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_BUGANDA_ABILITY",
@@ -7779,61 +8015,71 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Land Units gain Culture when Pillaging Buildings or Improvements equal to the Yield or Healing gained.\n• Land Military Units gain the Amphibious ability.\n• +6 Culture and Food on Lakes, and +1 Tourism from Districts and Improvements on Lakes.\n• +30% Production towards constructing Muzibu Azaala Mpanga."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_EX_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -8081,7 +8327,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -8098,13 +8345,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_FRENCH_EMPIRE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_FRENCH_EMPIRE_ABILITY",
@@ -8121,55 +8370,64 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• You can select the Celebration effects of any standard Modern Age Government.\n• +30% Production towards constructing the Eiffel Tower."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ_HAPPINESS",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX_HAPPINESS",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -8417,7 +8675,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -8434,13 +8693,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MEXICO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MEXICO_ABILITY",
@@ -8457,55 +8718,64 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Starts with a unique Government, Revolución. This Government has one Celebration effect, +30% Culture for 10 Turns. Cannot enter any other Government type.\n• +100% Tourism from Celebrations.\n• +30% Production towards constructing Palacio de Bellas Artes."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ_HAPPINESS",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX_HAPPINESS",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -8753,7 +9023,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -8770,13 +9041,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MUGHAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MUGHAL_ABILITY",
@@ -8847,61 +9120,71 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +100% Gold yields.\n• -25% to all other yields except Food.\n• You can purchase Wonders with Gold, but they are 150% more expensive.\n• +30% Production towards constructing the Red Fort."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_EX_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -9149,7 +9432,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -9166,13 +9450,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MEIJI",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MEIJI_ABILITY",
@@ -9197,43 +9483,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• When you Overbuild a Building, gain Science equal to 25% of the Building's Production cost.\n• +30% Production towards constructing Dogo Onsen."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -9481,7 +9774,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -9498,13 +9792,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_PRUSSIA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_PRUSSIA_ABILITY",
@@ -9535,55 +9831,64 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Combat Strength for Military Units for every Unfriendly or Hostile Relationship with another Leader.\n• You may establish and retain Trade Routes with Civilizations that you are at War with.\n• +30% Production towards constructing Brandenburg Gate."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -9831,7 +10136,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -9848,13 +10154,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_QING",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_QING_ABILITY",
@@ -9933,61 +10241,71 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +3 Gold and +3 Culture for every imported Resource, but -6 Science for every Trade Route.\n• +1 GDP per turn for imported Resources assigned to Cities.\n• +1 Combat Strength for Land Units for every other Civilization you have a Trade Route with.\n• +30% Production towards constructing Chengde Mountain Resort."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_EX_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -10235,7 +10553,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -10252,13 +10571,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_RUSSIA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_RUSSIA_ABILITY",
@@ -10303,43 +10624,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Culture on Quarters in Cities. +1 Science on Quarters in Cities in Tundra.\n• +1 Food on Farms in Towns. +1 Production on Farms in Towns in Tundra, count as Warehouse Bonus.\n• +30% Production towards constructing the Hermitage."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -10587,7 +10915,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -10604,13 +10933,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_SIAM",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_SIAM_ABILITY",
@@ -10671,55 +11002,64 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Gains a unique Diplomatic Action to immediately become Suzerain of a City-State at a higher Influence cost than Befriend Independent.\n• +3 Influence for every Civilization you are Friendly or Helpful with.\n• +12 Tourism for every City-State you are Suzerain of.\n• +30% Production towards constructing Doi Suthep."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -10967,7 +11307,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -10984,13 +11325,15 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_BULGARIA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_BULGARIA_ABILITY",
@@ -11021,67 +11364,78 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Receive Production in all Cities when Pillaging Improvements equal to 50% of the HP or Yields gained.\n• -3 Combat Strength for all Combat Units against Fortified Districts.\n• +30% Production towards constructing Rila Monastery."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -11329,7 +11683,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -11588,13 +11943,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_CARTHAGE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_CARTHAGE_ABILITY",
@@ -11677,43 +12034,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Can only have 1 City. Towns can purchase Water Buildings with any Town Focus, but cannot use Convert to City.\n• Receive a second Merchant or Colonist each time you purchase or train one.\n• +30% Production towards constructing Byrsa."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -11730,13 +12094,15 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_DAI_VIET",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_DAI_VIET_ABILITY",
@@ -11793,61 +12159,71 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "LOC_TRAIT_DAI_VIET_ABILITY_DESCRIPTION"
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_MO_WIDE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -12095,7 +12471,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -12112,13 +12489,15 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ICELAND",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ICELAND_ABILITY",
@@ -12153,43 +12532,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Sight for Naval Units.\n• Gain 500 Culture when you discover a Natural Wonder in Distant Lands (On Standard Speed).\n• Gain a Relic every time you study a Civic Mastery.\n• -50% Production towards training Missionaries, and Missionaries cost 100% more Gold to purchase.\n• +30% Production towards constructing Reykjaholt."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -12437,7 +12823,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -12454,13 +12841,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_OTTOMANS",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_OTTOMANS_ABILITY",
@@ -12501,43 +12890,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "LOC_TRAIT_OTTOMANS_ABILITY_DESCRIPTION"
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -12785,7 +13181,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -12802,13 +13199,15 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_PIRATE_REPUBLIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_PIRATE_REPUBLIC_ABILITY",
@@ -12871,43 +13270,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "LOC_TRAIT_PIRATE_REPUBLIC_ABILITY_DESCRIPTION"
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -13155,7 +13561,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -13172,13 +13579,15 @@
             "trait": "TRAIT_EXPLORATION_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_SHAWNEE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_SHAWNEE_ABILITY",
@@ -13195,55 +13604,64 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "LOC_TRAIT_SHAWNEE_ABILITY_DESCRIPTION"
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -13491,7 +13909,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -13750,13 +14169,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_SILLA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_SILLA_ABILITY",
@@ -13801,55 +14222,64 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "LOC_TRAIT_SILLA_ABILITY_DESCRIPTION"
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -14108,13 +14538,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_TONGA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_TONGA_ABILITY",
@@ -14178,55 +14610,64 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Influence on the Palace and City Halls in Settlements adjacent to Coast.\n• Receive a free Trade Route from a new City-State when you become their Suzerain.\n• Cannot use the City-State - Incorporate or the Levy Unit Action.\n• +30% Production towards constructing Ha'amonga 'a Maui."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_MO_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -14243,13 +14684,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_GREAT_BRITAIN",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_GREAT_BRITAIN_ABILITY",
@@ -14326,43 +14769,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +25% Gold towards purchasing Buildings and +25% Production towards constructing Buildings.\n• It costs 50% more to convert Towns into Cities.\n• +3 Science on Active Buildings adjacent to Coast.\n• +30% Production towards constructing Battersea Power Station."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -14610,7 +15060,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -14627,13 +15078,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_NEPAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_NEPAL_ABILITY",
@@ -14682,55 +15135,64 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "LOC_TRAIT_NEPAL_ABILITY_DESCRIPTION"
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -14978,7 +15440,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -15237,13 +15700,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ASSYRIA",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ASSYRIA_ABILITY",
@@ -15292,43 +15757,50 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Gain a Technology and a Codex upon capturing a Settlement for the first time.\n• Codices are not awarded from Technologies.\n• +30% Production towards constructing Dur-Sharrukin."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC_TOT_MO",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -15345,13 +15817,15 @@
             "trait": "TRAIT_MODERN_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_QAJAR",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_QAJAR_ABILITY",
@@ -15390,73 +15864,85 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +50% Influence toward supporting Diplomatic Actions.\n• +10 Food and Production in the Capital for every Settlement under the Settlement Limit.\n• +30% Production towards constructing Eram Garden."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_AQ_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL_TOT_EX_INFLUENCE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_AQ_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_EX",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST_TOT_EX_TALL",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_ANACHRONISTIC_CIV",
@@ -15704,7 +16190,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -15849,7 +16336,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Resource Capacity in Cities.\n• +1 Gold per Age for each Resource assigned to Cities.\n• +5 Combat Strength on all Units in Plains and Desert."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_ECONOMIC",
@@ -15881,7 +16369,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -15913,25 +16402,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -16052,7 +16545,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Food in Cities for every 5 excess Happiness.\n• +10% Food in all Settlements during a Celebration.\n• Unique Buildings gain a +1 Happiness adjacency for all Improvements."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -16084,7 +16578,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_EXPANSIONIST",
@@ -16116,25 +16611,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -16277,7 +16776,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +2 Production in the Capital for every Town.\n• Can purchase Culture Buildings in Towns with any Focus.\n• +15% Gold towards purchasing Buildings in Towns. Doubled if that Building is present in your Capital."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_CULTURAL",
@@ -16309,7 +16809,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_EXPANSIONIST",
@@ -16341,25 +16842,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -16566,7 +17071,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Science per Age on Production and Science Buildings in Cities.\n• +5% Production towards constructing Buildings for active Endeavors you have started or supported.\n• +2 Science per Age from active Endeavors you started or supported.\n• Can have two Endeavors of the same type active at a time."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -16598,7 +17104,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_SCIENTIFIC",
@@ -16630,25 +17137,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -16769,7 +17280,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +2 Culture per Age on displayed Great Works.\n• Buildings and Wonders with Great Work slots gain 1 additional slot.\n• Cities settled in Tundra gain Science equal to 25% of their Culture per turn."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_CULTURAL",
@@ -16801,7 +17313,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_SCIENTIFIC",
@@ -16833,25 +17346,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -16974,7 +17491,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Military and Science Buildings receive a +1 Happiness adjacency for Fortifications.\n• Gain 2 free Cavalry Units, once unlocked, when entering a Celebration.\n• +5 Combat Strength for Cavalry Units during a Celebration."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -17006,7 +17524,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_SCIENTIFIC",
@@ -17038,25 +17557,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -17155,7 +17678,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +25% Growth Rate in Cities.\n• +2 Science from Specialists."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_EXPANSIONIST",
@@ -17187,7 +17711,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_SCIENTIFIC",
@@ -17219,25 +17744,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -17380,7 +17909,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Army Commanders start with the Merit Commendation, granting them +1 Command Radius.\n• Gain an Infantry Unit when you complete a Technology Mastery or construct a Science Building.\n• +2 Science per Age for each Commendation earned by your Commanders."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -17412,7 +17942,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_SCIENTIFIC",
@@ -17444,25 +17975,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -17561,7 +18096,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +100% Influence towards initiating Espionage Actions. Gain a Migrant in the Capital whenever you complete an Espionage Action without being detected.\n• Gain 5 War Support on all Wars declared against you.\n• Vegetated Terrain does not end Unit Movement."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -17593,7 +18129,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -17625,25 +18162,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -17738,7 +18279,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Culture per Age for every unique Resource.\n• +15% Production towards constructing Buildings and Wonders in Cities adjacent to Navigable Rivers."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_CULTURAL",
@@ -17770,7 +18312,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_ECONOMIC",
@@ -17802,25 +18345,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -18001,7 +18548,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Gain a unique Endeavor called Friend of Wei that can be performed in an Alliance to grant you and your ally +25% Science.\n• +4 Science per Age for every Leader you are Friendly or Helpful with.\n• Can Support Endeavors for free, but Rejecting Diplomatic Actions costs +100% Influence."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -18033,7 +18581,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_SCIENTIFIC",
@@ -18065,25 +18614,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -18195,7 +18748,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Gains 2 Wildcard Attribute Points after the first Civic in every Age.\n• +1 Sight for all Units.\n• Gain a unique Endeavor called Trade Maps that allows you to gradually see other Leaders' claimed territory."
           }
         ]
       },
@@ -18330,7 +18884,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Gain 100 Gold per Age every time you discover a Natural Wonder. This is doubled if the Natural Wonder is in Distant Lands.\n• +50% tile yields from Natural Wonders for every Natural Wonder in your Empire.\n• +50% Gold towards purchasing Naval Units.\n• -1 Gold maintenance for Naval Units."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_ECONOMIC",
@@ -18362,7 +18917,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_EXPANSIONIST",
@@ -18394,25 +18950,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -18588,7 +19148,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• When gaining rewards from a Narrative Event, gain an additional 20 Culture, Gold and Influence per Age.\n• Has additional Narrative Events.\n• +50% Celebration duration.\n• +50% Happiness towards Celebrations."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_CULTURAL",
@@ -18620,7 +19181,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -18652,25 +19214,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -18805,7 +19371,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Gains a unique Endeavor called Reform, which grants an additional Tradition slot. Supporting this Endeavor also grants the other Leader an additional Tradition slot, otherwise they are granted a Social Policy slot.\n• +1 Combat Strength for every Tradition, but not Social Policy, slotted in the Government.\n• +1 Culture and Happiness per Age in Settlements, doubled in Distant Lands."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_CULTURAL",
@@ -18837,7 +19404,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -18869,25 +19437,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -19012,7 +19584,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +3 Influence per Age.\n• Gains 50 Gold per Age when your Diplomatic Action proposals are accepted, or 100 Gold when they are rejected.\n• Ignores Relationship requirements for declaring Formal Wars.\n• Can Levy Troops from City-States you are not Suzerain of."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -19044,7 +19617,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_ECONOMIC",
@@ -19076,25 +19650,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -19237,7 +19815,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• All Buildings receive a +1 Food Adjacency for Mountains.\n• -2 Maintenance on Specialists adjacent to Mountains. +1 Maintenance on Specialists not adjacent to Mountains.\n• Cities gain a bonus to Production equal to 10% of that City’s Food."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_ECONOMIC",
@@ -19269,7 +19848,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_EXPANSIONIST",
@@ -19301,25 +19881,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -19462,13 +20046,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Gain the Unique Army Commander Trung Nhi after obtaining your first Land Military Unit of the Age. Trung Nhi persists across Age Transitions, and begins with 2 Promotions in Exploration Advanced Starts or 3 Promotions in Modern Advanced Starts, and has a unique Promotion Tree.\n• +20% Commander Experience.\n• +10% Science in Cities in Tropical. This is doubled while in a Formal War you declare."
           },
           {
             "trait": "TRAIT_LEADER_AGGRESSIVE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -19500,7 +20086,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_SCIENTIFIC",
@@ -19532,25 +20119,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -19705,13 +20296,15 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +3 Combat Strength for Units that are attacking in neutral or enemy territory.\n• Gain 100 Culture and Gold per Age when you capture a Settlement for the first time.\n• +10% Gold in all Settlements, doubled in Captured Settlements from any Age.\n• +1 Settlement Limit each Age."
           },
           {
             "trait": "TRAIT_LEADER_AGGRESSIVE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_ECONOMIC",
@@ -19743,7 +20336,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -19775,25 +20369,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -19990,7 +20588,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Cities other than your Capital with a Wonder get +10% Production and Culture, doubled if they are on a different Continent than your Capital.\n• +2 Combat Strength for Land Military Units. +1 Combat Strength for Unique Military Units for every City with a Wonder other than your Capital (max 6).\n• +2 Dominion for every City with a Wonder other than your Capital.\n• Towns converted into Cities are renamed after Alexander."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -20022,7 +20621,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_CULTURAL",
@@ -20054,49 +20654,57 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_AGGRESSIVE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -20229,7 +20837,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +2 War Support when in only one Alliance.\n• When one of your Military Units defeats an enemy Unit, gain Influence equal to 50% of the defeated Unit's Combat Strength.\n• All basic Endeavors are automatically unlocked. Endeavors with Allies don’t count against the limit of having one Endeavor of a given type active at a time. Allies can support your Endeavors for free."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -20261,7 +20870,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -20293,31 +20903,36 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_AGGRESSIVE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -20428,7 +21043,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Cities receive +2 Science per Age when you complete a Civic Mastery. This resets at the start of each Age.\n• Gain Culture equal to 100% of your total Science per turn when you complete a Technology Mastery."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_CULTURAL",
@@ -20460,7 +21076,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_SCIENTIFIC",
@@ -20492,25 +21109,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -20632,7 +21253,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Production for every 5 excess Happiness in Cities.\n• +10% Production in Settlements not founded by you.\n• Declaring a Formal War grants a Celebration.\n• +5 Combat Strength against Fortified Districts for all Units during a Celebration."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -20664,7 +21286,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -20696,25 +21319,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -20949,7 +21576,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +2 Happiness per Age on Happiness and Diplomacy Buildings, doubled if a Building is both.\n• +50% Production towards constructing Happiness and Diplomacy Buildings, doubled if a Building is both.\n• +15% Culture but -15% Science, and these effects are doubled while in a Celebration."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -20981,7 +21609,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_CULTURAL",
@@ -21013,25 +21642,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -21127,7 +21760,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Gain 2 War Support on Wars you declare.\n• When you conquer a Settlement for the first time the Settlement can purchase 1 Building or Improvement for free.\n• Unrest does not prevent Purchasing."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_EXPANSIONIST",
@@ -21159,7 +21793,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -21191,31 +21826,36 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_AGGRESSIVE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -21354,7 +21994,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• All Naval Units gain the Pirate Ability, allowing them to cross borders of other Civilizations, Plunder Trade Routes from non-Allied Civilizations, and attack Units of non-Allied Civilizations without declaring War.\n• Defeating any Naval Unit with your own Naval Units provides Gold equal to 50% of its Combat Strength and captures that Unit under your control.\n• +1 Gold Maintenance for Naval Units."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_ECONOMIC",
@@ -21386,7 +22027,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -21418,25 +22060,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -21579,7 +22225,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Gain a Great Work when you capture a Settlement for the first time.\n• +1 Culture per Age on displayed Great Works.\n• Gain an Infantry Unit when you complete a Civic Mastery or construct a Culture Building."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_CULTURAL",
@@ -21611,7 +22258,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -21643,25 +22291,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -21902,7 +22554,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Trade Route Limit with all other Leaders.\n• +10 Trade Range.\n• Gain 50 Culture and 100 Gold per Age when you create a Trade Route or Road.\n• +1 Culture and Gold per Age on Unique Buildings and Improvements."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_ECONOMIC",
@@ -21934,7 +22587,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_CULTURAL",
@@ -21966,25 +22620,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -22125,7 +22783,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• All basic Sanctions are automatically unlocked.\n• +50% Influence towards initiating Sanctions.\n• +5 Culture and Gold per Age for each Leader you have an active Sanction on, except Denouncement .\n• +1 Combat Strength for Land Units for every Sanction you have active, except Denouncement."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -22157,7 +22816,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_ECONOMIC",
@@ -22189,25 +22849,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_SCIENCE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_ECONOMIC_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -22316,7 +22980,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Movement for all Land Units.\n• Defeating an enemy Unit provides Culture equal to 100% of its Combat Strength.\n• The first time each Age that a War is declared against you, gain an Army Commander in your Capital packed with 1 Infantry Unit, 1 Cavalry Unit, 1 Ranged Unit, and 1 Siege Unit, even if those Units have not been unlocked."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_CULTURAL",
@@ -22348,7 +23013,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -22380,25 +23046,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -22494,7 +23164,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• Receive the strongest Naval Unit every time you succeed in an Espionage Action, if you can place a Naval Unit.\n• +2 Culture and +1 Influence per Age for every Naval Unit stationed on a District .\n• No Influence penalty for your Espionage being revealed.\n• Opponents cannot use Counter Spy against you."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -22526,7 +23197,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -22558,25 +23230,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -22723,7 +23399,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +1 Food per Age in Towns and +1 Production per Age in Cities for every City-State you are Suzerain of.\n• +1 Combat Strength for all Infantry and Ranged units for every City-State you are Suzerain of.\n• +2 Dominion for every City-State you are Suzerain of.\n• All Independent Powers start Friendly with you."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -22755,7 +23432,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -22787,25 +23465,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -22896,7 +23578,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +3 Combat Strength for Cavalry Units, or +5 when in an Army Command Radius.\n• Army Commanders have +1 Movement even when no Units are packed into them.\n• Once per Age, Army Commanders can use the Convert Independents Action to convert adjacent Independent Military Units to your control."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_EXPANSIONIST",
@@ -22928,7 +23611,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -22960,31 +23644,36 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_AGGRESSIVE",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -23084,7 +23773,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": "• +50% Influence towards initiating the City-State - Incorporate Action.\n• When you incorporate a City-State , you gain all of their Units.\n• When one of your Land Military Units defeats an enemy Unit, gain Influence equal to 100% of the defeated Unit's Combat Strength."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -23116,7 +23806,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -23148,25 +23839,29 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_AQ_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_EX_MILITARY_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           },
           {
             "trait": "TRAIT_MO_CULTURE_VICTORY",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       },
@@ -23400,7 +24095,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "description_clean": null
           }
         ]
       }
@@ -23414,7 +24110,8 @@
             "trait": "TRAIT_LEADER_INDEPENDENT",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
@@ -23428,7 +24125,8 @@
             "trait": "TRAIT_LEADER_MINOR_CIV",
             "name": null,
             "description": null,
-            "modifiers": []
+            "modifiers": [],
+            "description_clean": null
           }
         ]
       }
