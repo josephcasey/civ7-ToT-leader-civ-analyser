@@ -8,59 +8,49 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    /* ─── Reset & Base ──────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg-deep:    #0f1320;
-      --bg-panel:   #1a1f2e;
-      --bg-card:    #212840;
+      --bg-deep:       #0f1320;
+      --bg-panel:      #1a1f2e;
+      --bg-card:       #212840;
       --bg-card-hover: #2a3255;
-      --border:     #2e3554;
-      --border-light: #3d4a6e;
-      --text:       #e8ecf4;
-      --text-muted: #8892b0;
-      --text-dim:   #5a6380;
-
-      --gold:       #c9a84c;
-      --gold-light: #e2c577;
-      --gold-bg:    rgba(201,168,76,0.12);
-      --teal:       #4ca89a;
-      --teal-light: #6ec8bb;
-      --teal-bg:    rgba(76,168,154,0.12);
-      --purple:     #8b5cf6;
-      --purple-light: #a78bfa;
-      --purple-bg:  rgba(139,92,246,0.12);
-
-      --selected-ring: #c9a84c;
-      --radius-sm: 6px;
-      --radius-md: 10px;
-      --radius-lg: 16px;
+      --border:        #2e3554;
+      --border-light:  #3d4a6e;
+      --text:          #e8ecf4;
+      --text-muted:    #8892b0;
+      --text-dim:      #5a6380;
+      --gold:          #c9a84c;
+      --gold-light:    #e2c577;
+      --gold-bg:       rgba(201,168,76,0.12);
+      --teal:          #4ca89a;
+      --teal-light:    #6ec8bb;
+      --teal-bg:       rgba(76,168,154,0.12);
+      --purple:        #8b5cf6;
+      --purple-light:  #a78bfa;
+      --purple-bg:     rgba(139,92,246,0.12);
+      --radius-sm:   6px;
+      --radius-md:   10px;
+      --radius-lg:   16px;
       --radius-full: 9999px;
       --shadow-card: 0 4px 20px rgba(0,0,0,0.4);
-      --transition: 0.18s ease;
+      --transition:  0.15s ease;
     }
 
-    html { scroll-behavior: smooth; }
-
-    body {
+    html, body {
+      height: 100%;
+      overflow: hidden;
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: var(--bg-deep);
       color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
+    body { display: flex; flex-direction: column; }
 
-    /* ─── Loading ───────────────────────────────────────────────── */
+    /* ─── Loading ───────────────────────────────────────────── */
     #loading {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      gap: 20px;
-      color: var(--text-muted);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      height: 100vh; gap: 20px; color: var(--text-muted);
     }
     .spinner {
       width: 44px; height: 44px;
@@ -71,600 +61,404 @@
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ─── App Shell ─────────────────────────────────────────────── */
-    #app { display: none; flex-direction: column; flex: 1; }
+    /* ─── Error ─────────────────────────────────────────────── */
+    #error-msg {
+      display: none;
+      color: #f87171; background: rgba(248,113,113,0.08);
+      border: 1px solid rgba(248,113,113,0.2);
+      border-radius: var(--radius-md);
+      padding: 16px 20px; font-size: 0.82rem; margin: 20px;
+    }
 
-    /* ─── Header ────────────────────────────────────────────────── */
+    /* ─── App Shell ─────────────────────────────────────────── */
+    #app { display: none; flex-direction: column; flex: 1; overflow: hidden; }
+
+    /* ─── Header ────────────────────────────────────────────── */
     .site-header {
       background: linear-gradient(135deg, #12172a 0%, #1a1f2e 60%, #16213a 100%);
       border-bottom: 1px solid var(--border);
-      padding: 22px 32px 18px;
-      position: sticky; top: 0; z-index: 100;
-      backdrop-filter: blur(8px);
+      padding: 14px 22px;
+      flex-shrink: 0;
     }
     .site-header h1 {
-      font-size: clamp(1.1rem, 3vw, 1.5rem);
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: var(--gold-light);
+      font-size: 1.05rem; font-weight: 700;
+      letter-spacing: 0.04em; color: var(--gold-light);
       display: flex; align-items: center; gap: 10px;
     }
-    .site-header h1 span.subtitle {
-      font-size: 0.75rem;
-      font-weight: 400;
-      color: var(--text-muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-left: 4px;
-    }
-    .breadcrumb {
-      display: flex; align-items: center; gap: 6px;
-      margin-top: 8px;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      flex-wrap: wrap;
-    }
-    .breadcrumb .crumb {
-      color: var(--text-muted);
-    }
-    .breadcrumb .crumb.active {
-      color: var(--gold);
-      font-weight: 600;
-    }
-    .breadcrumb .sep { color: var(--text-dim); }
-
-    /* ─── Main ──────────────────────────────────────────────────── */
-    main {
-      flex: 1;
-      padding: 28px 32px 48px;
-      max-width: 1400px;
-      width: 100%;
-      margin: 0 auto;
+    .site-header h1 .subtitle {
+      font-size: 0.7rem; font-weight: 400;
+      color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase;
     }
 
-    /* ─── Section Heading ───────────────────────────────────────── */
-    .section-heading {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .section-heading::after {
-      content: '';
-      flex: 1; height: 1px;
-      background: var(--border);
-    }
+    /* ─── Layout ────────────────────────────────────────────── */
+    .layout { display: flex; flex: 1; min-height: 0; overflow: hidden; }
 
-    /* ─── Step Indicator ────────────────────────────────────────── */
-    .step-label {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 18px;
+    /* ─── Left Pane ─────────────────────────────────────────── */
+    .left-pane {
+      width: 288px; flex-shrink: 0;
+      overflow-y: auto;
+      border-right: 1px solid var(--border);
+      background: var(--bg-panel);
+      padding: 14px 11px;
+      display: flex; flex-direction: column; gap: 18px;
+    }
+    .left-pane::-webkit-scrollbar { width: 4px; }
+    .left-pane::-webkit-scrollbar-track { background: transparent; }
+    .left-pane::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
+
+    .pane-section-header {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--text-dim); margin-bottom: 10px;
     }
     .step-num {
-      width: 22px; height: 22px;
-      border-radius: 50%;
-      background: var(--gold);
-      color: #0f1320;
-      font-size: 0.7rem;
-      font-weight: 700;
+      width: 17px; height: 17px; border-radius: 50%;
+      background: var(--gold); color: #0f1320;
+      font-size: 0.6rem; font-weight: 700;
       display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
     }
     .step-num.teal { background: var(--teal); }
 
-    /* ─── Leader Grid ───────────────────────────────────────────── */
-    #leader-section { margin-bottom: 40px; }
-
+    /* ─── Leader Grid (sidebar, 2-col) ──────────────────────── */
     .leader-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
     }
 
     .leader-card {
       background: var(--bg-card);
       border: 1.5px solid var(--border);
       border-radius: var(--radius-md);
-      padding: 16px 10px 12px;
-      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      padding: 9px 6px 7px;
+      display: flex; flex-direction: column; align-items: center; gap: 5px;
       cursor: pointer;
       transition: transform var(--transition), border-color var(--transition),
                   background var(--transition), box-shadow var(--transition);
-      position: relative;
-      user-select: none;
+      position: relative; user-select: none;
     }
     .leader-card:hover {
       background: var(--bg-card-hover);
       border-color: var(--border-light);
-      transform: translateY(-2px);
+      transform: translateY(-1px);
       box-shadow: var(--shadow-card);
     }
     .leader-card.selected {
-      border-color: var(--selected-ring);
+      border-color: var(--gold);
       background: rgba(201,168,76,0.08);
-      box-shadow: 0 0 0 1px var(--selected-ring), var(--shadow-card);
+      box-shadow: 0 0 0 1px var(--gold);
     }
 
     .portrait-wrap {
-      position: relative;
-      width: 80px; height: 80px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2.5px solid var(--border-light);
+      width: 50px; height: 50px;
+      border-radius: 50%; overflow: hidden;
+      border: 2px solid var(--border-light);
       transition: border-color var(--transition), box-shadow var(--transition);
       flex-shrink: 0;
     }
     .leader-card:hover .portrait-wrap,
     .leader-card.selected .portrait-wrap {
       border-color: var(--gold);
-      box-shadow: 0 0 12px rgba(201,168,76,0.35);
+      box-shadow: 0 0 10px rgba(201,168,76,0.3);
     }
     .portrait-wrap img {
       width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: top center;
-      transition: transform var(--transition);
+      object-fit: cover; object-position: top center;
     }
-    .leader-card:hover .portrait-wrap img { transform: scale(1.06); }
-
     .portrait-fallback {
       width: 100%; height: 100%;
       display: flex; align-items: center; justify-content: center;
       background: linear-gradient(135deg, var(--bg-card-hover), var(--border));
-      font-size: 1.6rem;
-      color: var(--gold);
-      font-weight: 700;
+      font-size: 1.1rem; color: var(--gold); font-weight: 700;
     }
 
     .leader-name {
-      font-size: 0.72rem;
-      font-weight: 600;
-      text-align: center;
-      color: var(--text);
-      line-height: 1.3;
+      font-size: 0.58rem; font-weight: 600;
+      text-align: center; color: var(--text); line-height: 1.3;
     }
     .selected-check {
-      position: absolute; top: 7px; right: 7px;
-      width: 18px; height: 18px;
-      border-radius: 50%;
+      position: absolute; top: 5px; right: 5px;
+      width: 14px; height: 14px; border-radius: 50%;
       background: var(--gold);
-      display: none;
-      align-items: center; justify-content: center;
+      display: none; align-items: center; justify-content: center;
     }
     .leader-card.selected .selected-check { display: flex; }
-    .selected-check svg { width: 10px; height: 10px; fill: #0f1320; }
+    .selected-check svg { width: 8px; height: 8px; fill: #0f1320; }
 
-    /* ─── Civ Section ───────────────────────────────────────────── */
-    #civ-section {
-      margin-bottom: 40px;
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      pointer-events: none;
-    }
-    #civ-section.visible {
-      opacity: 1;
-      transform: none;
-      pointer-events: auto;
-    }
+    /* ─── Civ Pane ──────────────────────────────────────────── */
+    #civ-pane-section { display: none; }
 
-    .civ-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 10px;
+    .civ-legend {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 7px;
+      font-size: 0.59rem; color: var(--text-muted); flex-wrap: wrap;
+    }
+    .civ-legend-item { display: flex; align-items: center; gap: 4px; }
+    .civ-legend-swatch {
+      width: 8px; height: 8px; border-radius: 2px;
+      border: 1px solid var(--gold); background: transparent;
     }
 
-    .civ-card {
-      background: var(--bg-card);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 12px 14px;
+    .civ-list { display: flex; flex-direction: column; gap: 2px; }
+
+    .civ-item {
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      padding: 5px 8px;
       cursor: pointer;
-      display: flex; flex-direction: column; gap: 6px;
-      transition: transform var(--transition), border-color var(--transition),
-                  background var(--transition), box-shadow var(--transition);
+      display: flex; align-items: center; gap: 6px;
+      transition: background var(--transition), border-color var(--transition);
       user-select: none;
-      position: relative;
     }
-    .civ-card:hover {
+    .civ-item:hover {
       background: var(--bg-card-hover);
       border-color: var(--border-light);
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-card);
     }
-    .civ-card.selected {
-      border-color: var(--teal);
+    .civ-item.selected {
       background: rgba(76,168,154,0.08);
-      box-shadow: 0 0 0 1px var(--teal), var(--shadow-card);
-    }
-    .civ-card.has-syncretism {
-      border-color: var(--gold);
-    }
-    .civ-card.has-syncretism:hover {
-      border-color: var(--gold-light);
-    }
-    .civ-card.has-syncretism.selected {
       border-color: var(--teal);
     }
+    .civ-item.has-syncretism { border-color: rgba(201,168,76,0.25); }
+    .civ-item.has-syncretism:hover { border-color: var(--gold); }
+    .civ-item.has-syncretism.selected { border-color: var(--teal); }
 
-    .civ-card-top {
-      display: flex; align-items: flex-start;
-      justify-content: space-between;
-      gap: 4px;
+    .civ-item-name {
+      font-size: 0.72rem; font-weight: 500; color: var(--text); flex: 1;
     }
-    .civ-name {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.3;
-      flex: 1;
+    .civ-item-right {
+      display: flex; align-items: center; gap: 4px; flex-shrink: 0;
     }
-    .sync-star {
-      font-size: 0.8rem;
-      color: var(--gold);
-      flex-shrink: 0;
-      line-height: 1;
-    }
+    .sync-star-sm { font-size: 0.62rem; color: var(--gold); line-height: 1; }
 
-    /* ─── Age Badge ─────────────────────────────────────────────── */
+    /* ─── Age Badge ─────────────────────────────────────────── */
     .age-badge {
       display: inline-flex; align-items: center;
-      padding: 2px 8px;
+      padding: 1px 5px; border-radius: var(--radius-full);
+      font-size: 0.56rem; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap;
+    }
+    .age-badge.antiquity  { background: var(--gold-bg);   color: var(--gold-light);   border: 1px solid rgba(201,168,76,0.3); }
+    .age-badge.exploration{ background: var(--teal-bg);   color: var(--teal-light);   border: 1px solid rgba(76,168,154,0.3); }
+    .age-badge.modern     { background: var(--purple-bg); color: var(--purple-light); border: 1px solid rgba(139,92,246,0.3); }
+
+    /* ─── Right Pane ────────────────────────────────────────── */
+    .right-pane {
+      flex: 1; overflow-y: auto;
+      padding: 24px 28px 52px; min-width: 0;
+    }
+    .right-pane::-webkit-scrollbar { width: 5px; }
+    .right-pane::-webkit-scrollbar-track { background: transparent; }
+    .right-pane::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 3px; }
+
+    /* ─── Empty State ───────────────────────────────────────── */
+    .right-empty {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      min-height: 55vh; gap: 10px; text-align: center;
+    }
+    .right-empty-icon { font-size: 2.4rem; opacity: 0.25; }
+    .right-empty-title { font-size: 0.86rem; font-weight: 600; color: var(--text-muted); }
+    .right-empty-sub { font-size: 0.71rem; color: var(--text-dim); }
+
+    /* ─── Preview Badge ─────────────────────────────────────── */
+    .preview-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 3px 12px;
+      background: rgba(139,92,246,0.1);
+      border: 1px solid rgba(139,92,246,0.25);
       border-radius: var(--radius-full);
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      width: fit-content;
-    }
-    .age-badge.antiquity {
-      background: var(--gold-bg);
-      color: var(--gold-light);
-      border: 1px solid rgba(201,168,76,0.3);
-    }
-    .age-badge.exploration {
-      background: var(--teal-bg);
-      color: var(--teal-light);
-      border: 1px solid rgba(76,168,154,0.3);
-    }
-    .age-badge.modern {
-      background: var(--purple-bg);
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--purple-light);
-      border: 1px solid rgba(139,92,246,0.3);
-    }
-
-    /* ─── Legend ────────────────────────────────────────────────── */
-    .legend {
-      display: flex; align-items: center; gap: 14px;
       margin-bottom: 14px;
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      flex-wrap: wrap;
-    }
-    .legend-item { display: flex; align-items: center; gap: 5px; }
-    .legend-star { color: var(--gold); font-size: 0.75rem; }
-    .legend-border {
-      width: 12px; height: 12px;
-      border-radius: 2px;
-      border: 1.5px solid var(--gold);
-      background: transparent;
     }
 
-    /* ─── Detail Pane ───────────────────────────────────────────── */
-    #detail-section {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.35s ease, transform 0.35s ease;
-      pointer-events: none;
-    }
-    #detail-section.visible {
-      opacity: 1;
-      transform: none;
-      pointer-events: auto;
-    }
+    /* ─── Detail Content ────────────────────────────────────── */
+    .detail-content { max-width: 700px; }
 
-    .detail-panel {
+    .detail-block {
+      padding: 18px 22px;
       background: var(--bg-panel);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
-    }
-
-    /* Detail sub-section */
-    .detail-block {
-      padding: 22px 28px;
-      border-bottom: 1px solid var(--border);
-    }
-    .detail-block:last-child { border-bottom: none; }
-
-    .detail-block-header {
-      display: flex; align-items: center; gap: 16px;
-      margin-bottom: 14px;
-    }
-    .detail-block-label {
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-dim);
       margin-bottom: 10px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .detail-block.is-preview {
+      border-color: rgba(139,92,246,0.35);
+      background: rgba(139,92,246,0.04);
     }
 
-    /* Leader detail header */
-    .leader-detail-header {
-      display: flex; align-items: center; gap: 20px;
+    .detail-block-label {
+      font-size: 0.59rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--text-dim); margin-bottom: 12px;
     }
+
+    /* Leader detail */
+    .leader-detail-header { display: flex; align-items: center; gap: 16px; }
     .leader-detail-portrait {
-      width: 80px; height: 80px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2.5px solid var(--gold);
-      box-shadow: 0 0 16px rgba(201,168,76,0.3);
-      flex-shrink: 0;
+      width: 70px; height: 70px; border-radius: 50%;
+      overflow: hidden; border: 2.5px solid var(--gold);
+      box-shadow: 0 0 14px rgba(201,168,76,0.25); flex-shrink: 0;
     }
     .leader-detail-portrait img {
       width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: top center;
+      object-fit: cover; object-position: top center;
     }
-    .leader-detail-info { flex: 1; }
     .leader-detail-name {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 2px;
+      font-size: 1.18rem; font-weight: 700; color: var(--text); margin-bottom: 2px;
     }
     .ability-name-row {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--gold);
-      margin-bottom: 8px;
+      font-size: 0.76rem; font-weight: 600; color: var(--gold); margin-bottom: 7px;
+    }
+    .ability-desc {
+      font-size: 0.79rem; color: var(--text-muted);
+      line-height: 1.65; white-space: pre-line;
     }
 
-    /* Civ detail header */
-    .civ-detail-header {
-      display: flex; align-items: center; gap: 14px;
-    }
+    /* Civ detail */
+    .civ-detail-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
     .civ-detail-icon {
-      width: 48px; height: 48px;
-      border-radius: var(--radius-md);
+      width: 42px; height: 42px; border-radius: var(--radius-md);
       background: linear-gradient(135deg, var(--bg-card-hover), var(--border));
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.3rem;
-      border: 1px solid var(--border-light);
-      flex-shrink: 0;
+      font-size: 1.15rem; border: 1px solid var(--border-light); flex-shrink: 0;
     }
-    .civ-detail-name {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
+    .civ-detail-name { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
 
-    /* Ability description */
-    .ability-desc {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-      white-space: pre-line;
-    }
-    .ability-desc ul { padding-left: 0; list-style: none; }
-    .ability-desc li { margin-bottom: 4px; }
-
-    /* Tradition row */
+    /* Traditions */
     .tradition-row {
-      display: flex; align-items: flex-start; gap: 12px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 9px 0; border-bottom: 1px solid var(--border);
     }
     .tradition-row:last-child { border-bottom: none; }
     .tradition-content { flex: 1; }
-    .tradition-name {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
-    .tradition-desc {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      white-space: pre-line;
-    }
+    .tradition-name { font-size: 0.79rem; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+    .tradition-desc { font-size: 0.74rem; color: var(--text-muted); line-height: 1.6; white-space: pre-line; }
 
-    /* Syncretism pills */
-    .sync-pills {
-      display: flex; flex-wrap: wrap; gap: 7px;
-      margin-top: 4px;
-    }
+    /* Syncretism */
+    .sync-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
     .sync-pill {
-      padding: 4px 12px;
-      border-radius: var(--radius-full);
-      font-size: 0.72rem;
-      font-weight: 600;
-      background: rgba(76,168,154,0.12);
-      color: var(--teal-light);
+      padding: 3px 10px; border-radius: var(--radius-full);
+      font-size: 0.69rem; font-weight: 600;
+      background: var(--teal-bg); color: var(--teal-light);
       border: 1px solid rgba(76,168,154,0.3);
-      letter-spacing: 0.02em;
     }
-    .sync-pill.from-leader {
-      background: rgba(201,168,76,0.1);
-      color: var(--gold-light);
-      border-color: rgba(201,168,76,0.3);
-    }
+    .sync-pill.from-leader { background: rgba(201,168,76,0.1); color: var(--gold-light); border-color: rgba(201,168,76,0.3); }
     .sync-pill.from-both {
       background: linear-gradient(90deg, rgba(201,168,76,0.12), rgba(76,168,154,0.12));
-      color: #d4c07a;
-      border-color: rgba(201,168,76,0.4);
+      color: #d4c07a; border-color: rgba(201,168,76,0.4);
     }
-    .sync-source-note {
-      font-size: 0.68rem;
-      color: var(--text-dim);
-      margin-top: 8px;
+    .sync-source-note { font-size: 0.64rem; color: var(--text-dim); margin-top: 8px; }
+
+    .empty-state { font-size: 0.75rem; color: var(--text-dim); font-style: italic; }
+
+    /* Civ prompt */
+    .civ-prompt {
+      text-align: center; padding: 18px 0 4px;
+      font-size: 0.74rem; color: var(--text-dim); font-style: italic;
     }
 
-    .empty-state {
-      font-size: 0.78rem;
-      color: var(--text-dim);
-      font-style: italic;
-    }
-
-    /* Start over button */
-    .btn-start-over {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 22px;
+    /* Reset */
+    .btn-reset {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 16px;
       background: transparent;
       border: 1.5px solid var(--border-light);
       border-radius: var(--radius-full);
       color: var(--text-muted);
-      font-family: inherit;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
+      font-family: inherit; font-size: 0.7rem; font-weight: 600;
       cursor: pointer;
-      transition: border-color var(--transition), color var(--transition),
-                  background var(--transition);
+      transition: border-color var(--transition), color var(--transition), background var(--transition);
+      margin-top: 6px;
     }
-    .btn-start-over:hover {
-      border-color: var(--gold);
-      color: var(--gold-light);
-      background: var(--gold-bg);
-    }
-    .btn-start-over svg { width: 14px; height: 14px; }
+    .btn-reset:hover { border-color: var(--gold); color: var(--gold-light); background: var(--gold-bg); }
 
-    /* ─── Footer ────────────────────────────────────────────────── */
+    /* ─── Footer ────────────────────────────────────────────── */
     footer {
       border-top: 1px solid var(--border);
-      padding: 16px 32px;
-      text-align: center;
-      font-size: 0.68rem;
-      color: var(--text-dim);
-      line-height: 1.6;
+      padding: 9px 24px;
+      text-align: center; font-size: 0.62rem;
+      color: var(--text-dim); flex-shrink: 0;
     }
 
-    /* ─── Error ─────────────────────────────────────────────────── */
-    #error-msg {
-      display: none;
-      color: #f87171;
-      background: rgba(248,113,113,0.08);
-      border: 1px solid rgba(248,113,113,0.2);
-      border-radius: var(--radius-md);
-      padding: 16px 20px;
-      font-size: 0.82rem;
-      margin: 20px 32px;
-    }
-
-    /* ─── Responsive ────────────────────────────────────────────── */
-    @media (max-width: 640px) {
-      .site-header { padding: 16px 16px 12px; }
-      main { padding: 18px 14px 40px; }
-      .leader-grid { grid-template-columns: repeat(auto-fill, minmax(95px, 1fr)); gap: 10px; }
-      .civ-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; }
-      .detail-block { padding: 16px 16px; }
-      .leader-detail-portrait { width: 64px; height: 64px; }
-      .leader-detail-name { font-size: 1.05rem; }
-      footer { padding: 16px; }
-    }
-    @media (max-width: 400px) {
+    /* ─── Responsive ────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      html, body { height: auto; overflow: visible; }
+      #app { overflow: visible; height: auto; }
+      .layout { flex-direction: column; overflow: visible; }
+      .left-pane { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
       .leader-grid { grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); }
-      .portrait-wrap { width: 60px; height: 60px; }
+      .right-pane { padding: 16px 14px 40px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Loading screen -->
   <div id="loading">
     <div class="spinner"></div>
     <span>Loading data…</span>
   </div>
 
-  <!-- Error -->
   <div id="error-msg"></div>
 
-  <!-- Main App -->
   <div id="app">
-    <!-- Header -->
     <header class="site-header">
-      <h1>
-        ⚔ Civilization VII
-        <span class="subtitle">— Leader &amp; Civ Ability Browser</span>
-      </h1>
-      <nav class="breadcrumb" id="breadcrumb">
-        <span class="crumb active" id="bc-leader">1. Choose Leader</span>
-        <span class="sep">›</span>
-        <span class="crumb" id="bc-civ">2. Choose Civilization</span>
-        <span class="sep">›</span>
-        <span class="crumb" id="bc-detail">3. View Abilities</span>
-      </nav>
+      <h1>⚔ Civilization VII <span class="subtitle">— Leader &amp; Civ Ability Browser</span></h1>
     </header>
 
-    <!-- Content -->
-    <main>
-      <!-- Step 1: Leader Grid -->
-      <section id="leader-section">
-        <div class="step-label">
-          <span class="step-num">1</span>
-          Select a Leader
+    <div class="layout">
+      <!-- ── Left Pane ── -->
+      <aside class="left-pane">
+        <div id="leader-pane-section">
+          <div class="pane-section-header">
+            <span class="step-num">1</span> Leaders
+          </div>
+          <div class="leader-grid" id="leader-grid"></div>
         </div>
-        <div class="leader-grid" id="leader-grid"></div>
-      </section>
 
-      <!-- Step 2: Civ Grid -->
-      <section id="civ-section">
-        <div class="step-label">
-          <span class="step-num teal">2</span>
-          Select a Civilization
+        <div id="civ-pane-section">
+          <div class="pane-section-header">
+            <span class="step-num teal">2</span> Civilizations
+          </div>
+          <div class="civ-legend">
+            <span class="civ-legend-item">
+              <span class="civ-legend-swatch"></span> Syncretism available
+            </span>
+            <span class="civ-legend-item">
+              <span class="sync-star-sm">✦</span> Leader can sync
+            </span>
+          </div>
+          <div class="civ-list" id="civ-grid"></div>
         </div>
-        <div class="legend">
-          <span class="legend-item"><span class="legend-border"></span> Syncretism available</span>
-          <span class="legend-item"><span class="legend-star">✦</span> Leader can syncretise with this civ</span>
-          <span class="legend-item"><span class="age-badge antiquity">Antiquity</span></span>
-          <span class="legend-item"><span class="age-badge exploration">Exploration</span></span>
-          <span class="legend-item"><span class="age-badge modern">Modern</span></span>
-        </div>
-        <div class="civ-grid" id="civ-grid"></div>
-      </section>
+      </aside>
 
-      <!-- Step 3: Detail -->
-      <section id="detail-section">
-        <div class="detail-panel" id="detail-panel">
-          <!-- injected by JS -->
-        </div>
-        <div style="margin-top: 20px;">
-          <button class="btn-start-over" id="btn-reset">
-            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.418A6 6 0 1 1 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/></svg>
-            Start Over
-          </button>
-        </div>
-      </section>
-    </main>
+      <!-- ── Right Pane ── -->
+      <div class="right-pane">
+        <div id="detail-area"></div>
+      </div>
+    </div>
 
-    <!-- Footer -->
     <footer>
       Data extracted from Civ VII 1.4.0 (Test of Time) game database · Images © 2K Games via Civilization Wiki
     </footer>
   </div>
 
   <script>
-  // ─── Embedded Data ──────────────────────────────────────────────────────────
+  // ─── Embedded Data ───────────────────────────────────────────────────────────
 
   const PORTRAIT_URLS = {"Amina":"https://static.wikia.nocookie.net/civilization/images/1/14/Amina_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20251218081610","Ada Lovelace":"https://static.wikia.nocookie.net/civilization/images/7/72/Ada_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124234454","Alexander":"https://static.wikia.nocookie.net/civilization/images/b/bb/Alexander_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124234829","Ashoka, World Conqueror":"https://static.wikia.nocookie.net/civilization/images/8/8e/Ashoka%2C_World_Conqueror_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124235355","Ashoka, World Renouncer":"https://static.wikia.nocookie.net/civilization/images/b/b7/Ashoka%2C_World_Renouncer_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124235357","Augustus":"https://static.wikia.nocookie.net/civilization/images/9/97/Augustus_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124235737","Benjamin Franklin":"https://static.wikia.nocookie.net/civilization/images/7/79/Benjamin_Franklin_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124235945","Catherine the Great":"https://static.wikia.nocookie.net/civilization/images/6/61/Catherine_head_portrait_%28neutral%29_%28Civ7%29.png/revision/latest?cb=20250125000358","Charlemagne":"https://static.wikia.nocookie.net/civilization/images/f/fc/Charlemagne_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125000706","Confucius":"https://static.wikia.nocookie.net/civilization/images/b/b1/Confucius_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125001043","Edward Teach":"https://static.wikia.nocookie.net/civilization/images/a/a0/Edward_Teach_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125001406","Friedrich, Baroque":"https://static.wikia.nocookie.net/civilization/images/9/93/Friedrich_%28Baroque%29_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125002110","Friedrich, Oblique":"https://static.wikia.nocookie.net/civilization/images/1/18/Friedrich_%28Oblique%29_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125002114","Genghis Khan":"https://static.wikia.nocookie.net/civilization/images/3/37/Genghis_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125002636","Gilgamesh":"https://static.wikia.nocookie.net/civilization/images/3/3d/Gilgamesh_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125002831","Harriet Tubman":"https://static.wikia.nocookie.net/civilization/images/4/45/Harriet_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125003054","Hatshepsut":"https://static.wikia.nocookie.net/civilization/images/a/ab/Hatshepsut_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125003422","Himiko, High Shaman":"https://static.wikia.nocookie.net/civilization/images/a/af/Himiko_Shaman_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125003754","Himiko, Queen of Wa":"https://static.wikia.nocookie.net/civilization/images/3/3f/Himiko_Queen_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125003757","Ibn Battuta":"https://static.wikia.nocookie.net/civilization/images/b/be/Ibn_Battuta_round_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125004025","Isabella":"https://static.wikia.nocookie.net/civilization/images/2/29/Isabella_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125004238","José Rizal":"https://static.wikia.nocookie.net/civilization/images/a/a3/Jos%C3%A9_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125004642","Lafayette":"https://static.wikia.nocookie.net/civilization/images/9/92/Lafayette_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125004939","Lakshmibai":"https://static.wikia.nocookie.net/civilization/images/a/a3/Lakshmibai_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125005252","Machiavelli":"https://static.wikia.nocookie.net/civilization/images/f/f9/Machiavelli_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125005611","Napoleon, Emperor":"https://static.wikia.nocookie.net/civilization/images/d/dc/Napoleon_Emperor_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010139","Napoleon, Revolutionary":"https://static.wikia.nocookie.net/civilization/images/9/9c/Napoleon_Revolutionary_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010145","Pachacuti":"https://static.wikia.nocookie.net/civilization/images/e/e2/Pachacuti_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010500","Sayyida al Hurra":"https://static.wikia.nocookie.net/civilization/images/d/d7/Sayyida_al_Hurra_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010809","Tecumseh":"https://static.wikia.nocookie.net/civilization/images/d/d6/Tecumseh_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125011044","Trung Trac":"https://static.wikia.nocookie.net/civilization/images/8/8f/Trung_Trac_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125011440","Simón Bolívar":"https://static.wikia.nocookie.net/civilization/images/6/68/Sim%C3%B3n_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010944","Xerxes, King of Kings":"https://static.wikia.nocookie.net/civilization/images/1/1a/Xerxes_King_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125011719","Xerxes, the Achaemenid":"https://static.wikia.nocookie.net/civilization/images/4/43/Xerxes_Achaemenid_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125011726"};
 
   const APEX_AGES = {"Abbasid":"Exploration","Aksum":"Antiquity","America":"Modern","Assyria":"Antiquity","Buganda":"Modern","Bulgaria":"Exploration","Carthage":"Antiquity","Chola":"Exploration","Đại Việt":"Exploration","Egypt":"Antiquity","French Empire":"Modern","Great Britain":"Modern","Greece":"Antiquity","Han":"Antiquity","Hawai'i":"Exploration","Iceland":"Exploration","Inca":"Exploration","Khmer":"Antiquity","Majapahit":"Exploration","Maurya":"Antiquity","Maya":"Antiquity","Meiji Japan":"Modern","Mexico":"Modern","Ming":"Exploration","Mississippian":"Antiquity","Mongolia":"Exploration","Mughal":"Modern","Nepal":"Modern","Norman":"Exploration","Ottomans":"Modern","Achaemenid Persia":"Antiquity","Republic of Pirates":"Exploration","Prussia":"Modern","Qajar":"Modern","Qing":"Modern","Rome":"Antiquity","Russia":"Modern","Shawnee":"Exploration","Siam":"Modern","Silla Korea":"Antiquity","Songhai":"Exploration","Spain":"Exploration","Tonga":"Antiquity"};
 
-  // ─── CSV Parser ─────────────────────────────────────────────────────────────
+  // ─── CSV Parser ──────────────────────────────────────────────────────────────
 
   function parseCSV(text) {
-    const lines = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n');
+    const lines = text.replace(/\r\n/g,'\n').replace(/\r/g,'\n').split('\n');
     if (!lines.length) return [];
     const headers = parseCSVRow(lines[0]);
     const result = [];
@@ -680,9 +474,7 @@
   }
 
   function parseCSVRow(line) {
-    const result = [];
-    let cur = '';
-    let inQuote = false;
+    const result = []; let cur = ''; let inQuote = false;
     for (let i = 0; i < line.length; i++) {
       const ch = line[i];
       if (ch === '"') {
@@ -703,9 +495,9 @@
   function ageClass(age) {
     if (!age) return '';
     const a = age.toLowerCase();
-    if (a === 'antiquity') return 'antiquity';
+    if (a === 'antiquity')  return 'antiquity';
     if (a === 'exploration') return 'exploration';
-    if (a === 'modern') return 'modern';
+    if (a === 'modern')     return 'modern';
     return '';
   }
 
@@ -716,10 +508,8 @@
 
   function escHtml(s) {
     return String(s)
-      .replace(/&/g,'&amp;')
-      .replace(/</g,'&lt;')
-      .replace(/>/g,'&gt;')
-      .replace(/"/g,'&quot;');
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
   function splitList(str) {
@@ -733,16 +523,12 @@
 
   // ─── State ───────────────────────────────────────────────────────────────────
 
-  let allRows = [];           // from civ7_unified.csv
-  let leaderSyncRows = [];    // from civ7_leader_syncretism.csv
-  let leaders = {};           // name -> {abilityName, desc, syncretismOptions}
-  let civs = {};              // name -> {abilityName, apexDesc, apexAge, traditions:[], civSyncOptions:[]}
-  let leaderSyncMap = {};     // leaderName -> [civNames]
+  let allRows = [], leaderSyncRows = [];
+  let leaders = {}, civs = {}, leaderSyncMap = {};
+  let selectedLeader = null, selectedCiv = null;
+  let hoveredLeader  = null, hoveredCiv  = null;
 
-  let selectedLeader = null;
-  let selectedCiv = null;
-
-  // ─── Main ────────────────────────────────────────────────────────────────────
+  // ─── Load & Process ──────────────────────────────────────────────────────────
 
   async function loadData() {
     const [unifiedText, syncText] = await Promise.all([
@@ -754,7 +540,6 @@
   }
 
   function processData() {
-    // Build leaders map
     for (const row of allRows) {
       if (row.kind !== 'leader') continue;
       if (row.row_type === 'Unique Ability') {
@@ -766,38 +551,33 @@
       }
     }
 
-    // Build civs map
     for (const row of allRows) {
       if (row.kind !== 'civilization') continue;
       if (!civs[row.name]) {
         civs[row.name] = {
-          abilityName: '',
-          apexDesc: '',
+          abilityName: '', apexDesc: '',
           apexAge: APEX_AGES[row.name] || '',
-          traditions: [],
-          civSyncOptions: [],
+          traditions: [], civSyncOptions: [],
         };
       }
       if (row.row_type === 'Unique Ability') {
-        civs[row.name].abilityName = row.ability_or_tradition_name;
-        civs[row.name].apexDesc = row.description_clean;
+        civs[row.name].abilityName    = row.ability_or_tradition_name;
+        civs[row.name].apexDesc       = row.description_clean;
         civs[row.name].civSyncOptions = splitList(row.syncretism_options);
       } else if (row.row_type === 'Self-Syncretism Tradition') {
         civs[row.name].traditions.push({
           name: row.ability_or_tradition_name,
-          age: row.age,
+          age:  row.age,
           desc: row.description_clean,
         });
       }
     }
 
-    // Sort traditions by age order
-    const AGE_ORDER = { 'Antiquity': 0, 'Exploration': 1, 'Apex': 2, 'Modern': 3 };
+    const AGE_ORDER = { Antiquity: 0, Exploration: 1, Apex: 2, Modern: 3 };
     for (const civ of Object.values(civs)) {
       civ.traditions.sort((a, b) => (AGE_ORDER[a.age] ?? 99) - (AGE_ORDER[b.age] ?? 99));
     }
 
-    // Build leader syncretism map
     for (const row of leaderSyncRows) {
       const ln = row.leader_name;
       if (!leaderSyncMap[ln]) leaderSyncMap[ln] = [];
@@ -805,243 +585,241 @@
     }
   }
 
-  // ─── Render Leaders ───────────────────────────────────────────────────────────
+  // ─── Render Right Pane ───────────────────────────────────────────────────────
+
+  function renderRightPane() {
+    const detail = document.getElementById('detail-area');
+
+    const activeLeader = hoveredLeader ?? selectedLeader;
+    const activeCiv    = hoveredCiv    ?? selectedCiv;
+    const leaderIsPreview = !!hoveredLeader && hoveredLeader !== selectedLeader;
+    const civIsPreview    = !!hoveredCiv    && hoveredCiv    !== selectedCiv;
+
+    if (!activeLeader) {
+      detail.innerHTML = `
+        <div class="right-empty">
+          <div class="right-empty-icon">⚔</div>
+          <div class="right-empty-title">Select or hover a leader to begin</div>
+          <div class="right-empty-sub">Click to lock in a selection · Hover to preview abilities</div>
+        </div>`;
+      return;
+    }
+
+    let html = '';
+
+    if (leaderIsPreview || civIsPreview) {
+      const who = leaderIsPreview && civIsPreview ? 'Leader &amp; Civilization'
+                : leaderIsPreview ? 'Leader' : 'Civilization';
+      html += `<div class="preview-badge">Previewing ${who} — click to select</div>`;
+    }
+
+    html += `<div class="detail-content">`;
+
+    // ── Leader block ──
+    const leader = leaders[activeLeader];
+    if (leader) {
+      const portraitUrl = PORTRAIT_URLS[activeLeader];
+      const portraitInner = portraitUrl
+        ? `<img src="${escHtml(portraitUrl)}" alt="${escHtml(activeLeader)}" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+           <div class="portrait-fallback" style="display:none">${escHtml(initials(activeLeader))}</div>`
+        : `<div class="portrait-fallback">${escHtml(initials(activeLeader))}</div>`;
+
+      html += `
+        <div class="detail-block${leaderIsPreview ? ' is-preview' : ''}">
+          <div class="detail-block-label">Leader</div>
+          <div class="leader-detail-header">
+            <div class="leader-detail-portrait">${portraitInner}</div>
+            <div>
+              <div class="leader-detail-name">${escHtml(activeLeader)}</div>
+              <div class="ability-name-row">⚡ ${escHtml(leader.abilityName)}</div>
+              <div class="ability-desc">${escHtml(leader.desc)}</div>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    // ── Civ block ──
+    if (activeCiv) {
+      const civ = civs[activeCiv];
+
+      html += `
+        <div class="detail-block${civIsPreview ? ' is-preview' : ''}">
+          <div class="detail-block-label">Civilization</div>
+          <div class="civ-detail-header">
+            <div class="civ-detail-icon">🏛</div>
+            <div>
+              <div class="civ-detail-name">${escHtml(activeCiv)}</div>
+              ${ageBadge(civ.apexAge)}
+            </div>
+          </div>
+          <div class="ability-name-row">⚡ ${escHtml(civ.abilityName)}</div>
+          <div class="ability-desc">${escHtml(civ.apexDesc)}</div>
+        </div>`;
+
+      // Traditions
+      const traditions = civ.traditions.filter(t => {
+        const a = (t.age || '').toLowerCase();
+        return a !== 'apex' && t.desc && t.desc.trim();
+      });
+      if (traditions.length) {
+        html += `
+          <div class="detail-block${civIsPreview ? ' is-preview' : ''}">
+            <div class="detail-block-label">Cross-Age Abilities (Self-Syncretism Traditions)</div>
+            ${traditions.map(t => `
+              <div class="tradition-row">
+                <div style="padding-top:2px">${ageBadge(t.age)}</div>
+                <div class="tradition-content">
+                  <div class="tradition-name">${escHtml(t.name)}</div>
+                  <div class="tradition-desc">${escHtml(t.desc)}</div>
+                </div>
+              </div>`).join('')}
+          </div>`;
+      }
+
+      // Syncretism — only when both firmly selected (not a hover preview)
+      if (!leaderIsPreview && !civIsPreview && selectedLeader && selectedCiv) {
+        const leaderSyncSet = new Set(leaderSyncMap[selectedLeader] || []);
+        const civSyncSet    = new Set(civ.civSyncOptions);
+        const allSync = new Set([...leaderSyncSet, ...civSyncSet]);
+        allSync.delete(selectedCiv);
+
+        const pills = [...allSync].sort().map(n => {
+          const fl = leaderSyncSet.has(n), fc = civSyncSet.has(n);
+          const cls = fl && fc ? 'sync-pill from-both' : fl ? 'sync-pill from-leader' : 'sync-pill';
+          return `<span class="${cls}">${escHtml(n)}</span>`;
+        }).join('');
+
+        const syncContent = allSync.size > 0
+          ? `<div class="sync-pills">${pills}</div>
+             <div class="sync-source-note">
+               <span style="color:var(--gold-light)">Gold</span> = from leader &nbsp;|&nbsp;
+               <span style="color:var(--teal-light)">Teal</span> = from civilization &nbsp;|&nbsp;
+               <span style="color:#d4c07a">Mixed</span> = from both
+             </div>`
+          : `<div class="empty-state">No syncretism options for this combination.</div>`;
+
+        html += `
+          <div class="detail-block">
+            <div class="detail-block-label">Syncretism Options</div>
+            ${syncContent}
+          </div>`;
+
+        html += `
+          <button class="btn-reset" id="btn-reset">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.418A6 6 0 1 1 8 2v1z"/>
+              <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+            </svg>
+            Start Over
+          </button>`;
+      }
+    } else if (selectedLeader && !hoveredLeader) {
+      html += `<div class="civ-prompt">Select or hover a civilization to see its abilities</div>`;
+    }
+
+    html += `</div>`;
+    detail.innerHTML = html;
+
+    const resetBtn = document.getElementById('btn-reset');
+    if (resetBtn) resetBtn.addEventListener('click', resetAll);
+  }
+
+  // ─── Render Leaders ──────────────────────────────────────────────────────────
 
   function renderLeaders() {
     const grid = document.getElementById('leader-grid');
     grid.innerHTML = '';
-    const sortedLeaders = Object.keys(leaders).sort();
-    for (const name of sortedLeaders) {
+    for (const name of Object.keys(leaders).sort()) {
       const card = document.createElement('div');
       card.className = 'leader-card' + (selectedLeader === name ? ' selected' : '');
       card.dataset.leader = name;
 
-      const portraitUrl = PORTRAIT_URLS[name];
-      const portraitHtml = portraitUrl
-        ? `<img src="${escHtml(portraitUrl)}" alt="${escHtml(name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" /><div class="portrait-fallback" style="display:none">${escHtml(initials(name))}</div>`
+      const url = PORTRAIT_URLS[name];
+      const portraitInner = url
+        ? `<img src="${escHtml(url)}" alt="${escHtml(name)}" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+           <div class="portrait-fallback" style="display:none">${escHtml(initials(name))}</div>`
         : `<div class="portrait-fallback">${escHtml(initials(name))}</div>`;
 
       card.innerHTML = `
-        <div class="portrait-wrap">${portraitHtml}</div>
+        <div class="portrait-wrap">${portraitInner}</div>
         <div class="leader-name">${escHtml(name)}</div>
         <div class="selected-check">
-          <svg viewBox="0 0 12 10"><polyline points="1,5 4.5,8.5 11,1" stroke="#0f1320" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-      `;
+          <svg viewBox="0 0 12 10">
+            <polyline points="1,5 4.5,8.5 11,1" stroke="#0f1320" stroke-width="2"
+                      fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>`;
+
       card.addEventListener('click', () => selectLeader(name));
+      card.addEventListener('mouseenter', () => { hoveredLeader = name; renderRightPane(); });
+      card.addEventListener('mouseleave', () => { hoveredLeader = null; renderRightPane(); });
       grid.appendChild(card);
     }
   }
 
-  // ─── Render Civs ──────────────────────────────────────────────────────────────
+  // ─── Render Civs ─────────────────────────────────────────────────────────────
 
   function renderCivs() {
-    const grid = document.getElementById('civ-grid');
-    grid.innerHTML = '';
-
+    const list = document.getElementById('civ-grid');
+    list.innerHTML = '';
     const leaderSyncCivs = new Set(leaderSyncMap[selectedLeader] || []);
-    const sortedCivs = Object.keys(civs).sort();
 
-    for (const name of sortedCivs) {
+    for (const name of Object.keys(civs).sort()) {
       const civ = civs[name];
-      const hasSync = leaderSyncCivs.has(name);
+      const hasSync  = leaderSyncCivs.has(name);
       const isSelected = selectedCiv === name;
 
-      const card = document.createElement('div');
-      card.className = 'civ-card'
+      const item = document.createElement('div');
+      item.className = 'civ-item'
         + (isSelected ? ' selected' : '')
-        + (hasSync ? ' has-syncretism' : '');
-      card.dataset.civ = name;
+        + (hasSync    ? ' has-syncretism' : '');
+      item.dataset.civ = name;
 
-      const apexAge = civ.apexAge || 'Unknown';
+      item.innerHTML = `
+        <span class="civ-item-name">${escHtml(name)}</span>
+        <span class="civ-item-right">
+          ${hasSync ? `<span class="sync-star-sm" title="Leader can syncretise with this civ">✦</span>` : ''}
+          ${ageBadge(civ.apexAge || 'Unknown')}
+        </span>`;
 
-      card.innerHTML = `
-        <div class="civ-card-top">
-          <div class="civ-name">${escHtml(name)}</div>
-          ${hasSync ? '<div class="sync-star" title="Leader can syncretise with this civilization">✦</div>' : ''}
-        </div>
-        ${ageBadge(apexAge)}
-      `;
-      card.addEventListener('click', () => selectCiv(name));
-      grid.appendChild(card);
+      item.addEventListener('click', () => selectCiv(name));
+      item.addEventListener('mouseenter', () => { hoveredCiv = name; renderRightPane(); });
+      item.addEventListener('mouseleave', () => { hoveredCiv = null; renderRightPane(); });
+      list.appendChild(item);
     }
+
+    document.getElementById('civ-pane-section').style.display = '';
   }
 
-  // ─── Render Detail ────────────────────────────────────────────────────────────
-
-  function renderDetail() {
-    const panel = document.getElementById('detail-panel');
-    const leader = leaders[selectedLeader];
-    const civ = civs[selectedCiv];
-    if (!leader || !civ) return;
-
-    // Combine syncretism options
-    const leaderSyncSet = new Set(leaderSyncMap[selectedLeader] || []);
-    const civSyncSet = new Set(civ.civSyncOptions);
-
-    // deduplicate, categorise
-    const allSync = new Set([...leaderSyncSet, ...civSyncSet]);
-    allSync.delete(selectedCiv); // remove self
-
-    const syncPills = [...allSync].sort().map(civName => {
-      const fromLeader = leaderSyncSet.has(civName);
-      const fromCiv = civSyncSet.has(civName);
-      let cls = 'sync-pill';
-      if (fromLeader && fromCiv) cls += ' from-both';
-      else if (fromLeader) cls += ' from-leader';
-      return `<span class="${cls}" title="${fromLeader && fromCiv ? 'From both leader & civ' : fromLeader ? 'From leader' : 'From civ'}">${escHtml(civName)}</span>`;
-    }).join('');
-
-    // Traditions (non-apex)
-    const nonApexTraditions = civ.traditions.filter(t => {
-      const tAge = (t.age || '').toLowerCase();
-      return tAge !== 'apex' && t.desc && t.desc.trim();
-    });
-
-    const traditionsHtml = nonApexTraditions.length
-      ? nonApexTraditions.map(t => `
-          <div class="tradition-row">
-            <div style="padding-top:2px">${ageBadge(t.age)}</div>
-            <div class="tradition-content">
-              <div class="tradition-name">${escHtml(t.name)}</div>
-              <div class="tradition-desc">${escHtml(t.desc)}</div>
-            </div>
-          </div>
-        `).join('')
-      : `<div class="empty-state">No cross-age traditions available for this civilization.</div>`;
-
-    const syncHtml = allSync.size > 0
-      ? `<div class="sync-pills">${syncPills}</div>
-         <div class="sync-source-note">
-           <span style="color:var(--gold-light)">Gold</span> = from leader &nbsp;|&nbsp;
-           <span style="color:var(--teal-light)">Teal</span> = from civilization &nbsp;|&nbsp;
-           <span style="color:#d4c07a">Mixed</span> = from both
-         </div>`
-      : `<div class="empty-state">No syncretism options available for this combination.</div>`;
-
-    const portraitUrl = PORTRAIT_URLS[selectedLeader];
-    const portraitImgHtml = portraitUrl
-      ? `<img src="${escHtml(portraitUrl)}" alt="${escHtml(selectedLeader)}" loading="lazy" />`
-      : `<div class="portrait-fallback" style="width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--bg-card-hover);font-size:1.4rem;color:var(--gold)">${escHtml(initials(selectedLeader))}</div>`;
-
-    panel.innerHTML = `
-      <!-- Leader Block -->
-      <div class="detail-block">
-        <div class="detail-block-label">Leader</div>
-        <div class="leader-detail-header">
-          <div class="leader-detail-portrait">${portraitImgHtml}</div>
-          <div class="leader-detail-info">
-            <div class="leader-detail-name">${escHtml(selectedLeader)}</div>
-            <div class="ability-name-row">⚡ ${escHtml(leader.abilityName)}</div>
-            <div class="ability-desc">${escHtml(leader.desc)}</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Civ Block -->
-      <div class="detail-block">
-        <div class="detail-block-label">Civilization</div>
-        <div class="civ-detail-header">
-          <div class="civ-detail-icon">🏛</div>
-          <div>
-            <div class="civ-detail-name">${escHtml(selectedCiv)}</div>
-            ${ageBadge(civ.apexAge)}
-          </div>
-        </div>
-      </div>
-
-      <!-- Unique Ability Block -->
-      <div class="detail-block">
-        <div class="detail-block-label">Unique Ability</div>
-        <div class="ability-name-row" style="margin-bottom:8px">⚡ ${escHtml(civ.abilityName)}</div>
-        <div class="ability-desc">${escHtml(civ.apexDesc)}</div>
-      </div>
-
-      <!-- Cross-Age Traditions Block -->
-      <div class="detail-block">
-        <div class="detail-block-label">Cross-Age Abilities (Self-Syncretism Traditions)</div>
-        ${traditionsHtml}
-      </div>
-
-      <!-- Syncretism Block -->
-      <div class="detail-block">
-        <div class="detail-block-label">Syncretism Options</div>
-        ${syncHtml}
-      </div>
-    `;
-  }
-
-  // ─── Selection Logic ──────────────────────────────────────────────────────────
+  // ─── Selection ───────────────────────────────────────────────────────────────
 
   function selectLeader(name) {
     selectedLeader = name;
-    selectedCiv = null;
-
-    // Update leader cards
-    document.querySelectorAll('.leader-card').forEach(c => {
-      c.classList.toggle('selected', c.dataset.leader === name);
-    });
-
-    // Show civ section with animation
-    const civSection = document.getElementById('civ-section');
-    civSection.classList.add('visible');
+    selectedCiv    = null;
+    hoveredLeader  = null;
+    hoveredCiv     = null;
+    renderLeaders();
     renderCivs();
-
-    // Hide detail
-    const detailSection = document.getElementById('detail-section');
-    detailSection.classList.remove('visible');
-
-    // Update breadcrumb
-    updateBreadcrumb();
-
-    // Smooth scroll to civ section on mobile
-    if (window.innerWidth < 768) {
-      setTimeout(() => civSection.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
-    }
+    renderRightPane();
   }
 
   function selectCiv(name) {
     selectedCiv = name;
-
-    // Update civ cards
-    document.querySelectorAll('.civ-card').forEach(c => {
+    hoveredCiv  = null;
+    document.querySelectorAll('.civ-item').forEach(c => {
       c.classList.toggle('selected', c.dataset.civ === name);
     });
-
-    // Render and show detail
-    renderDetail();
-    const detailSection = document.getElementById('detail-section');
-    detailSection.classList.add('visible');
-
-    // Update breadcrumb
-    updateBreadcrumb();
-
-    // Smooth scroll to detail
-    setTimeout(() => detailSection.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+    renderRightPane();
   }
 
   function resetAll() {
-    selectedLeader = null;
-    selectedCiv = null;
-
-    document.querySelectorAll('.leader-card').forEach(c => c.classList.remove('selected'));
-    document.getElementById('civ-section').classList.remove('visible');
-    document.getElementById('detail-section').classList.remove('visible');
-
-    updateBreadcrumb();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  function updateBreadcrumb() {
-    const bcLeader = document.getElementById('bc-leader');
-    const bcCiv = document.getElementById('bc-civ');
-    const bcDetail = document.getElementById('bc-detail');
-
-    bcLeader.classList.toggle('active', !selectedLeader);
-    bcLeader.textContent = selectedLeader ? `✓ ${selectedLeader}` : '1. Choose Leader';
-    bcCiv.classList.toggle('active', !!selectedLeader && !selectedCiv);
-    bcCiv.textContent = selectedCiv ? `✓ ${selectedCiv}` : '2. Choose Civilization';
-    bcDetail.classList.toggle('active', !!selectedLeader && !!selectedCiv);
+    selectedLeader = null; selectedCiv = null;
+    hoveredLeader  = null; hoveredCiv  = null;
+    document.getElementById('civ-pane-section').style.display = 'none';
+    renderLeaders();
+    renderRightPane();
   }
 
   // ─── Init ─────────────────────────────────────────────────────────────────────
@@ -1050,20 +828,16 @@
     try {
       await loadData();
       processData();
-
       document.getElementById('loading').style.display = 'none';
-      const app = document.getElementById('app');
-      app.style.display = 'flex';
-
+      document.getElementById('app').style.display = 'flex';
+      document.getElementById('civ-pane-section').style.display = 'none';
       renderLeaders();
-
-      document.getElementById('btn-reset').addEventListener('click', resetAll);
-
+      renderRightPane();
     } catch (err) {
       document.getElementById('loading').style.display = 'none';
       const errEl = document.getElementById('error-msg');
       errEl.style.display = 'block';
-      errEl.textContent = `Failed to load data: ${err.message}. Make sure civ7_unified.csv and civ7_leader_syncretism.csv are in the same directory as this file.`;
+      errEl.textContent = `Failed to load data: ${err.message}. Make sure civ7_unified.csv and civ7_leader_syncretism.csv are alongside this file.`;
     }
   }
 
