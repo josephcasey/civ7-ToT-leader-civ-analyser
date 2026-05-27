@@ -40,8 +40,7 @@
     html, body { height: 100%; overflow: hidden; }
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: var(--bg-deep);
-      color: var(--text);
+      background: var(--bg-deep); color: var(--text);
       display: flex; flex-direction: column;
     }
 
@@ -68,193 +67,87 @@
     }
 
     /* ─── App Shell ─────────────────────────────────────────── */
-    #app { display: none; flex-direction: column; flex: 1; overflow: hidden; }
+    #app { display: none; flex-direction: column; flex: 1; min-height: 0; overflow: hidden; }
 
     /* ─── Header ────────────────────────────────────────────── */
     .site-header {
       background: linear-gradient(135deg, #12172a 0%, #1a1f2e 60%, #16213a 100%);
       border-bottom: 1px solid var(--border);
-      padding: 10px 18px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 10px 16px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
     }
     .site-header h1 {
-      font-size: 0.95rem; font-weight: 700;
+      font-size: 0.92rem; font-weight: 700;
       letter-spacing: 0.03em; color: var(--gold-light);
-      display: flex; align-items: center; gap: 8px; white-space: nowrap;
+      display: flex; align-items: center; gap: 8px; white-space: nowrap; flex: 1; min-width: 0;
     }
     .site-header h1 .subtitle {
-      font-size: 0.66rem; font-weight: 400;
+      font-size: 0.64rem; font-weight: 400;
       color: var(--text-muted); letter-spacing: 0.07em; text-transform: uppercase;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     }
     .btn-reset {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 5px 12px; background: transparent;
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 5px 11px; background: transparent;
       border: 1px solid var(--border-light); border-radius: var(--radius-full);
       color: var(--text-muted); font-family: inherit;
-      font-size: 0.66rem; font-weight: 600; cursor: pointer; white-space: nowrap;
+      font-size: 0.64rem; font-weight: 600; cursor: pointer; white-space: nowrap;
       transition: border-color var(--transition), color var(--transition), background var(--transition);
+      flex-shrink: 0;
     }
     .btn-reset:hover { border-color: var(--gold); color: var(--gold-light); background: var(--gold-bg); }
     .btn-reset svg { width: 10px; height: 10px; }
 
-    /* ─── Ability Pane (top strip) ──────────────────────────── */
-    .ability-pane {
+    /* ─── Tab Bar ────────────────────────────────────────────── */
+    .tab-bar {
       display: flex; flex-shrink: 0;
-      border-bottom: 2px solid var(--border);
-      /* height is content-driven, but clamped */
-      max-height: 38vh;
-      overflow: hidden;
-    }
-
-    .ability-half {
-      flex: 1; min-width: 0;
-      overflow-y: auto; padding: 12px 14px;
-    }
-    .ability-half::-webkit-scrollbar { width: 3px; }
-    .ability-half::-webkit-scrollbar-track { background: transparent; }
-    .ability-half::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
-
-    .ability-half + .ability-half { border-left: 1px solid var(--border); }
-
-    /* empty state inside a half */
-    .half-empty {
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      height: 100%; min-height: 80px;
-      gap: 5px; text-align: center; color: var(--text-dim);
-    }
-    .half-empty-icon { font-size: 1.4rem; opacity: 0.2; }
-    .half-empty-label { font-size: 0.66rem; }
-
-    /* ─── Preview badge ─────────────────────────────────────── */
-    .preview-badge {
-      display: inline-flex; align-items: center; gap: 4px;
-      padding: 2px 8px;
-      background: rgba(139,92,246,0.1);
-      border: 1px solid rgba(139,92,246,0.25);
-      border-radius: var(--radius-full);
-      font-size: 0.56rem; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--purple-light); margin-bottom: 7px;
-    }
-
-    /* ─── Leader detail content ─────────────────────────────── */
-    .detail-header { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }
-    .detail-portrait {
-      width: 46px; height: 46px; border-radius: 50%;
-      overflow: hidden; border: 2px solid var(--gold);
-      box-shadow: 0 0 10px rgba(201,168,76,0.2); flex-shrink: 0;
-    }
-    .detail-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
-    .detail-portrait-fallback {
-      width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
-      background: linear-gradient(135deg, var(--bg-card-hover), var(--border));
-      font-size: 0.95rem; color: var(--gold); font-weight: 700;
-    }
-
-    /* civ portrait in detail pane — rounded square */
-    .detail-portrait.civ-portrait { border-radius: var(--radius-md); border-color: var(--teal); box-shadow: 0 0 10px rgba(76,168,154,0.2); }
-
-    .detail-name { font-size: 0.88rem; font-weight: 700; color: var(--text); margin-bottom: 1px; }
-    .ability-name-row { font-size: 0.68rem; font-weight: 600; color: var(--gold); margin-bottom: 5px; }
-    .ability-name-row.teal { color: var(--teal-light); }
-    .ability-desc { font-size: 0.72rem; color: var(--text-muted); line-height: 1.6; white-space: pre-line; }
-
-    /* ─── Age Badge ─────────────────────────────────────────── */
-    .age-badge {
-      display: inline-flex; align-items: center;
-      padding: 1px 5px; border-radius: var(--radius-full);
-      font-size: 0.54rem; font-weight: 700;
-      letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap;
-    }
-    .age-badge.antiquity  { background: var(--gold-bg);   color: var(--gold-light);   border: 1px solid rgba(201,168,76,0.3); }
-    .age-badge.exploration{ background: var(--teal-bg);   color: var(--teal-light);   border: 1px solid rgba(76,168,154,0.3); }
-    .age-badge.modern     { background: var(--purple-bg); color: var(--purple-light); border: 1px solid rgba(139,92,246,0.3); }
-
-    /* Traditions (compact, in civ half) */
-    .section-sublabel {
-      font-size: 0.54rem; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--text-dim); margin: 8px 0 4px;
-    }
-    .tradition-row {
-      display: flex; align-items: flex-start; gap: 6px;
-      padding: 5px 0; border-bottom: 1px solid var(--border);
-    }
-    .tradition-row:last-child { border-bottom: none; }
-    .tradition-name { font-size: 0.68rem; font-weight: 600; color: var(--text); margin-bottom: 2px; }
-    .tradition-desc { font-size: 0.64rem; color: var(--text-muted); line-height: 1.55; white-space: pre-line; }
-
-    /* Syncretism */
-    .sync-pills { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
-    .sync-pill {
-      padding: 2px 7px; border-radius: var(--radius-full);
-      font-size: 0.62rem; font-weight: 600;
-      background: var(--teal-bg); color: var(--teal-light);
-      border: 1px solid rgba(76,168,154,0.3);
-    }
-    .sync-pill.from-leader { background: rgba(201,168,76,0.1); color: var(--gold-light); border-color: rgba(201,168,76,0.3); }
-    .sync-pill.from-both {
-      background: linear-gradient(90deg, rgba(201,168,76,0.12), rgba(76,168,154,0.12));
-      color: #d4c07a; border-color: rgba(201,168,76,0.4);
-    }
-    .sync-source-note { font-size: 0.58rem; color: var(--text-dim); margin-top: 5px; }
-    .empty-state { font-size: 0.66rem; color: var(--text-dim); font-style: italic; }
-
-    /* ─── Selection Area (below ability pane) ───────────────── */
-    .selection-area {
-      flex: 1; display: flex; min-height: 0; overflow: hidden;
-    }
-
-    .panel {
-      flex: 1; min-width: 0;
-      display: flex; flex-direction: column;
-      overflow: hidden;
-    }
-    .panel + .panel { border-left: 1px solid var(--border); }
-
-    .panel-header {
-      display: flex; align-items: center; gap: 7px;
-      padding: 8px 10px 6px;
       border-bottom: 1px solid var(--border);
-      flex-shrink: 0;
+      background: var(--bg-panel);
     }
-    .panel-header-label {
-      font-size: 0.58rem; font-weight: 700;
-      letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-dim);
+    .tab-btn {
+      flex: 1; padding: 11px 4px 9px;
+      background: transparent; border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--text-muted);
+      font-family: inherit; font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.03em; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      transition: color var(--transition), border-color var(--transition), background var(--transition);
     }
-    .step-num {
-      width: 15px; height: 15px; border-radius: 50%;
-      background: var(--gold); color: #0f1320;
-      font-size: 0.56rem; font-weight: 700;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-    }
-    .step-num.teal { background: var(--teal); }
+    .tab-btn:hover { color: var(--text); background: rgba(255,255,255,0.03); }
+    .tab-btn.active { color: var(--gold-light); border-bottom-color: var(--gold); }
+    .tab-btn.active.teal-tab { color: var(--teal-light); border-bottom-color: var(--teal); }
+    .tab-btn.active.abilities-tab { color: var(--purple-light); border-bottom-color: var(--purple); }
 
-    /* civ legend inline in header */
-    .civ-legend {
-      display: flex; align-items: center; gap: 6px;
-      font-size: 0.54rem; color: var(--text-dim); margin-left: auto;
+    /* selection dot badge on tab */
+    .tab-dot {
+      width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
     }
-    .civ-legend-item { display: flex; align-items: center; gap: 3px; }
-    .legend-swatch { width: 6px; height: 6px; border-radius: 1px; border: 1px solid var(--gold); }
-    .sync-star-sm { font-size: 0.58rem; color: var(--gold); }
+    .tab-dot.gold { background: var(--gold); }
+    .tab-dot.teal { background: var(--teal); }
+
+    /* ─── Tab Panels ─────────────────────────────────────────── */
+    .tab-panel {
+      display: none; flex: 1; min-height: 0;
+      flex-direction: column; overflow: hidden;
+    }
+    .tab-panel.active { display: flex; }
 
     .panel-scroll {
-      flex: 1; overflow-y: auto; padding: 8px;
+      flex: 1; overflow-y: auto; padding: 10px;
     }
     .panel-scroll::-webkit-scrollbar { width: 4px; }
     .panel-scroll::-webkit-scrollbar-track { background: transparent; }
     .panel-scroll::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
 
-    /* ─── Tile Grid (leaders & civs share same style) ───────── */
+    /* ─── Tile Grid ──────────────────────────────────────────── */
     .tile-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
       gap: 5px;
     }
 
-    /* ─── Tile Card ─────────────────────────────────────────── */
+    /* ─── Tile Card (leaders & civs) ─────────────────────────── */
     .tile-card {
       background: var(--bg-card);
       border: 1.5px solid var(--border);
@@ -265,12 +158,14 @@
       transition: transform var(--transition), border-color var(--transition),
                   background var(--transition), box-shadow var(--transition);
       position: relative; user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .tile-card:active {
+      transform: scale(0.96);
     }
     .tile-card:hover {
       background: var(--bg-card-hover);
       border-color: var(--border-light);
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-card);
     }
     .tile-card.leader-selected {
       border-color: var(--gold);
@@ -283,10 +178,9 @@
       box-shadow: 0 0 0 1px var(--teal), var(--shadow-card);
     }
     .tile-card.has-syncretism { border-color: rgba(201,168,76,0.35); }
-    .tile-card.has-syncretism:hover { border-color: var(--gold); }
     .tile-card.has-syncretism.civ-selected { border-color: var(--teal); }
 
-    /* tile portrait — circle for leaders, rounded-square for civs */
+    /* portrait */
     .tile-portrait {
       width: 52px; height: 52px;
       border-radius: 50%;
@@ -295,26 +189,19 @@
       transition: border-color var(--transition), box-shadow var(--transition);
       flex-shrink: 0; position: relative;
     }
-    .tile-card.civ-card .tile-portrait { border-radius: var(--radius-md); }
-
-    .tile-card:hover .tile-portrait { border-color: var(--border-light); }
+    .civ-card .tile-portrait { border-radius: var(--radius-md); }
     .tile-card.leader-selected .tile-portrait { border-color: var(--gold); box-shadow: 0 0 10px rgba(201,168,76,0.3); }
-    .tile-card.civ-selected .tile-portrait    { border-color: var(--teal); box-shadow: 0 0 10px rgba(76,168,154,0.25); }
+    .tile-card.civ-selected    .tile-portrait { border-color: var(--teal); box-shadow: 0 0 10px rgba(76,168,154,0.25); }
 
-    .tile-portrait img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: top center;
-      display: block;
-    }
-    .tile-card.civ-card .tile-portrait img { object-position: center center; }
-
+    .tile-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+    .civ-card .tile-portrait img { object-position: center; }
     .tile-fallback {
       width: 100%; height: 100%;
       display: flex; align-items: center; justify-content: center;
       background: linear-gradient(135deg, var(--bg-card-hover), var(--border));
       font-size: 1rem; color: var(--gold); font-weight: 700;
     }
-    .tile-card.civ-card .tile-fallback { color: var(--teal); }
+    .civ-card .tile-fallback { color: var(--teal); }
 
     .tile-name {
       font-size: 0.57rem; font-weight: 600;
@@ -322,41 +209,146 @@
       word-break: break-word; hyphens: auto;
     }
 
-    /* sync star badge on civ tile */
+    /* syncretism badge on civ tile */
     .tile-sync-star {
       position: absolute; top: -3px; right: -3px;
       width: 12px; height: 12px; border-radius: 50%;
       background: var(--gold); color: #0f1320;
-      font-size: 0.45rem; font-weight: 900;
+      font-size: 0.44rem; font-weight: 900;
       display: flex; align-items: center; justify-content: center;
-      border: 1px solid var(--bg-card);
+      border: 1.5px solid var(--bg-card);
     }
 
-    /* selection checkmark */
+    /* selected checkmark */
     .tile-check {
       position: absolute; top: 4px; right: 4px;
       width: 13px; height: 13px; border-radius: 50%;
       background: var(--gold); display: none;
       align-items: center; justify-content: center;
     }
-    .tile-card.civ-selected .tile-check { background: var(--teal); }
+    .civ-card .tile-check { background: var(--teal); }
     .tile-card.leader-selected .tile-check,
-    .tile-card.civ-selected .tile-check { display: flex; }
+    .tile-card.civ-selected    .tile-check { display: flex; }
     .tile-check svg { width: 7px; height: 7px; fill: #0f1320; }
+
+    /* ─── Abilities Tab Content ───────────────────────────────── */
+    .abilities-content { padding: 12px 14px 32px; max-width: 680px; }
+
+    .ability-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 14px 16px;
+      margin-bottom: 10px;
+    }
+    .ability-card.leader-card-ability { border-left: 3px solid var(--gold); }
+    .ability-card.civ-card-ability    { border-left: 3px solid var(--teal); }
+
+    .ability-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .ability-portrait {
+      width: 44px; height: 44px; border-radius: 50%;
+      overflow: hidden; border: 2px solid var(--gold);
+      box-shadow: 0 0 8px rgba(201,168,76,0.2); flex-shrink: 0;
+    }
+    .ability-portrait.civ { border-radius: var(--radius-md); border-color: var(--teal); box-shadow: 0 0 8px rgba(76,168,154,0.2); }
+    .ability-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .ability-portrait.civ img { object-position: center; }
+    .ability-portrait-fallback {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--bg-card-hover), var(--border));
+      font-size: 0.9rem; font-weight: 700; color: var(--gold);
+    }
+    .ability-portrait.civ .ability-portrait-fallback { color: var(--teal); }
+
+    .ability-entity-name { font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 1px; }
+    .ability-name {
+      font-size: 0.68rem; font-weight: 600; color: var(--gold);
+    }
+    .ability-name.teal { color: var(--teal-light); }
+    .ability-desc { font-size: 0.74rem; color: var(--text-muted); line-height: 1.65; white-space: pre-line; margin-top: 4px; }
+
+    /* Age badge */
+    .age-badge {
+      display: inline-flex; align-items: center;
+      padding: 1px 5px; border-radius: var(--radius-full);
+      font-size: 0.54rem; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap;
+    }
+    .age-badge.antiquity  { background: var(--gold-bg);   color: var(--gold-light);   border: 1px solid rgba(201,168,76,0.3); }
+    .age-badge.exploration{ background: var(--teal-bg);   color: var(--teal-light);   border: 1px solid rgba(76,168,154,0.3); }
+    .age-badge.modern     { background: var(--purple-bg); color: var(--purple-light); border: 1px solid rgba(139,92,246,0.3); }
+
+    /* Traditions */
+    .section-sublabel {
+      font-size: 0.56rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--text-dim); margin: 10px 0 5px;
+    }
+    .tradition-row {
+      display: flex; align-items: flex-start; gap: 7px;
+      padding: 6px 0; border-bottom: 1px solid var(--border);
+    }
+    .tradition-row:last-child { border-bottom: none; }
+    .tradition-name { font-size: 0.7rem; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+    .tradition-desc { font-size: 0.65rem; color: var(--text-muted); line-height: 1.55; white-space: pre-line; }
+
+    /* Syncretism */
+    .sync-pills { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+    .sync-pill {
+      padding: 2px 8px; border-radius: var(--radius-full);
+      font-size: 0.64rem; font-weight: 600;
+      background: var(--teal-bg); color: var(--teal-light);
+      border: 1px solid rgba(76,168,154,0.3);
+    }
+    .sync-pill.from-leader { background: rgba(201,168,76,0.1); color: var(--gold-light); border-color: rgba(201,168,76,0.3); }
+    .sync-pill.from-both {
+      background: linear-gradient(90deg, rgba(201,168,76,0.12), rgba(76,168,154,0.12));
+      color: #d4c07a; border-color: rgba(201,168,76,0.4);
+    }
+    .sync-source-note { font-size: 0.6rem; color: var(--text-dim); margin-top: 5px; }
+    .empty-state { font-size: 0.68rem; color: var(--text-dim); font-style: italic; }
+
+    /* empty state in abilities tab */
+    .abilities-empty {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 48px 24px; gap: 10px; text-align: center;
+    }
+    .abilities-empty-icon { font-size: 2rem; opacity: 0.2; }
+    .abilities-empty-title { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); }
+    .abilities-empty-sub { font-size: 0.68rem; color: var(--text-dim); }
+    .abilities-empty-action {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 7px 14px; margin-top: 4px;
+      background: var(--gold-bg); border: 1px solid rgba(201,168,76,0.3);
+      border-radius: var(--radius-full);
+      color: var(--gold-light); font-size: 0.68rem; font-weight: 600;
+      cursor: pointer; font-family: inherit;
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .abilities-empty-action:hover { background: rgba(201,168,76,0.2); border-color: var(--gold); }
+    .abilities-empty-action.teal {
+      background: var(--teal-bg); border-color: rgba(76,168,154,0.3); color: var(--teal-light);
+    }
+    .abilities-empty-action.teal:hover { background: rgba(76,168,154,0.2); border-color: var(--teal); }
+
+    /* ─── Civ panel legend ───────────────────────────────────── */
+    .panel-legend {
+      display: flex; align-items: center; gap: 8px;
+      padding: 5px 10px 4px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.56rem; color: var(--text-dim);
+      flex-shrink: 0; flex-wrap: wrap;
+    }
+    .legend-item { display: flex; align-items: center; gap: 3px; }
+    .legend-swatch { width: 6px; height: 6px; border-radius: 1px; border: 1px solid var(--gold); }
+    .sync-star-sm { font-size: 0.58rem; color: var(--gold); }
 
     /* ─── Footer ────────────────────────────────────────────── */
     footer {
       border-top: 1px solid var(--border);
-      padding: 6px 18px; text-align: center;
+      padding: 6px 16px; text-align: center;
       font-size: 0.58rem; color: var(--text-dim); flex-shrink: 0;
-    }
-
-    /* ─── Responsive ─────────────────────────────────────────── */
-    @media (max-width: 600px) {
-      .ability-pane { flex-direction: column; max-height: 50vh; }
-      .ability-half + .ability-half { border-left: none; border-top: 1px solid var(--border); }
-      .site-header h1 .subtitle { display: none; }
-      .civ-legend { display: none; }
     }
   </style>
 </head>
@@ -369,7 +361,7 @@
 
     <!-- ── Header ── -->
     <header class="site-header">
-      <h1>⚔ Civilization VII <span class="subtitle">— Leader &amp; Civ Ability Browser</span></h1>
+      <h1>⚔ Civ VII <span class="subtitle">— Leader &amp; Civ Ability Browser</span></h1>
       <button class="btn-reset" id="btn-reset">
         <svg viewBox="0 0 16 16" fill="currentColor">
           <path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.418A6 6 0 1 1 8 2v1z"/>
@@ -379,51 +371,44 @@
       </button>
     </header>
 
-    <!-- ── Ability Pane (top) ── -->
-    <div class="ability-pane">
-      <div class="ability-half" id="leader-detail-area">
-        <div class="half-empty">
-          <div class="half-empty-icon">👑</div>
-          <div class="half-empty-label">Hover or select a leader</div>
-        </div>
-      </div>
-      <div class="ability-half" id="civ-detail-area">
-        <div class="half-empty">
-          <div class="half-empty-icon">🏛</div>
-          <div class="half-empty-label">Hover or select a civilization</div>
-        </div>
+    <!-- ── Tab Bar ── -->
+    <div class="tab-bar">
+      <button class="tab-btn active" id="tab-leaders" data-tab="leaders">
+        <span>Leaders</span>
+        <span class="tab-dot gold" id="dot-leader" style="display:none"></span>
+      </button>
+      <button class="tab-btn teal-tab" id="tab-civs" data-tab="civs">
+        <span>Civilizations</span>
+        <span class="tab-dot teal" id="dot-civ" style="display:none"></span>
+      </button>
+      <button class="tab-btn abilities-tab" id="tab-abilities" data-tab="abilities">
+        <span>Abilities</span>
+      </button>
+    </div>
+
+    <!-- ── Leaders Panel ── -->
+    <div class="tab-panel active" id="panel-leaders">
+      <div class="panel-scroll">
+        <div class="tile-grid" id="leader-grid"></div>
       </div>
     </div>
 
-    <!-- ── Selection Area (bottom) ── -->
-    <div class="selection-area">
-
-      <!-- Leaders panel -->
-      <div class="panel">
-        <div class="panel-header">
-          <span class="step-num">1</span>
-          <span class="panel-header-label">Leaders</span>
-        </div>
-        <div class="panel-scroll">
-          <div class="tile-grid" id="leader-grid"></div>
-        </div>
+    <!-- ── Civs Panel ── -->
+    <div class="tab-panel" id="panel-civs">
+      <div class="panel-legend">
+        <span class="legend-item"><span class="legend-swatch"></span> Syncretism available</span>
+        <span class="legend-item"><span class="sync-star-sm">✦</span> Leader can sync</span>
       </div>
-
-      <!-- Civs panel -->
-      <div class="panel" id="civ-panel">
-        <div class="panel-header">
-          <span class="step-num teal">2</span>
-          <span class="panel-header-label">Civilizations</span>
-          <div class="civ-legend">
-            <span class="civ-legend-item"><span class="legend-swatch"></span> Syncretism</span>
-            <span class="civ-legend-item"><span class="sync-star-sm">✦</span> Leader sync</span>
-          </div>
-        </div>
-        <div class="panel-scroll">
-          <div class="tile-grid" id="civ-grid"></div>
-        </div>
+      <div class="panel-scroll">
+        <div class="tile-grid" id="civ-grid"></div>
       </div>
+    </div>
 
+    <!-- ── Abilities Panel ── -->
+    <div class="tab-panel" id="panel-abilities">
+      <div class="panel-scroll">
+        <div id="abilities-content"></div>
+      </div>
     </div>
 
     <footer>
@@ -435,51 +420,51 @@
   // ─── Leader Portrait URLs ────────────────────────────────────────────────────
   const PORTRAIT_URLS = {"Amina":"https://static.wikia.nocookie.net/civilization/images/1/14/Amina_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20251218081610","Ada Lovelace":"https://static.wikia.nocookie.net/civilization/images/7/72/Ada_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124234454","Alexander":"https://static.wikia.nocookie.net/civilization/images/b/bb/Alexander_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124234829","Ashoka, World Conqueror":"https://static.wikia.nocookie.net/civilization/images/8/8e/Ashoka%2C_World_Conqueror_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124235355","Ashoka, World Renouncer":"https://static.wikia.nocookie.net/civilization/images/b/b7/Ashoka%2C_World_Renouncer_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124235357","Augustus":"https://static.wikia.nocookie.net/civilization/images/9/97/Augustus_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124235737","Benjamin Franklin":"https://static.wikia.nocookie.net/civilization/images/7/79/Benjamin_Franklin_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124235945","Catherine the Great":"https://static.wikia.nocookie.net/civilization/images/6/61/Catherine_head_portrait_%28neutral%29_%28Civ7%29.png/revision/latest?cb=20250125000358","Charlemagne":"https://static.wikia.nocookie.net/civilization/images/f/fc/Charlemagne_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125000706","Confucius":"https://static.wikia.nocookie.net/civilization/images/b/b1/Confucius_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125001043","Edward Teach":"https://static.wikia.nocookie.net/civilization/images/a/a0/Edward_Teach_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125001406","Friedrich, Baroque":"https://static.wikia.nocookie.net/civilization/images/9/93/Friedrich_%28Baroque%29_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125002110","Friedrich, Oblique":"https://static.wikia.nocookie.net/civilization/images/1/18/Friedrich_%28Oblique%29_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125002114","Genghis Khan":"https://static.wikia.nocookie.net/civilization/images/3/37/Genghis_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125002636","Gilgamesh":"https://static.wikia.nocookie.net/civilization/images/3/3d/Gilgamesh_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125002831","Harriet Tubman":"https://static.wikia.nocookie.net/civilization/images/4/45/Harriet_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125003054","Hatshepsut":"https://static.wikia.nocookie.net/civilization/images/a/ab/Hatshepsut_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125003422","Himiko, High Shaman":"https://static.wikia.nocookie.net/civilization/images/a/af/Himiko_Shaman_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125003754","Himiko, Queen of Wa":"https://static.wikia.nocookie.net/civilization/images/3/3f/Himiko_Queen_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125003757","Ibn Battuta":"https://static.wikia.nocookie.net/civilization/images/b/be/Ibn_Battuta_round_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125004025","Isabella":"https://static.wikia.nocookie.net/civilization/images/2/29/Isabella_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125004238","José Rizal":"https://static.wikia.nocookie.net/civilization/images/a/a3/Jos%C3%A9_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125004642","Lafayette":"https://static.wikia.nocookie.net/civilization/images/9/92/Lafayette_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125004939","Lakshmibai":"https://static.wikia.nocookie.net/civilization/images/a/a3/Lakshmibai_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125005252","Machiavelli":"https://static.wikia.nocookie.net/civilization/images/f/f9/Machiavelli_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125005611","Napoleon, Emperor":"https://static.wikia.nocookie.net/civilization/images/d/dc/Napoleon_Emperor_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010139","Napoleon, Revolutionary":"https://static.wikia.nocookie.net/civilization/images/9/9c/Napoleon_Revolutionary_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010145","Pachacuti":"https://static.wikia.nocookie.net/civilization/images/e/e2/Pachacuti_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010500","Sayyida al Hurra":"https://static.wikia.nocookie.net/civilization/images/d/d7/Sayyida_al_Hurra_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010809","Tecumseh":"https://static.wikia.nocookie.net/civilization/images/d/d6/Tecumseh_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125011044","Trung Trac":"https://static.wikia.nocookie.net/civilization/images/8/8f/Trung_Trac_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125011440","Simón Bolívar":"https://static.wikia.nocookie.net/civilization/images/6/68/Sim%C3%B3n_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010944","Xerxes, King of Kings":"https://static.wikia.nocookie.net/civilization/images/1/1a/Xerxes_King_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125011719","Xerxes, the Achaemenid":"https://static.wikia.nocookie.net/civilization/images/4/43/Xerxes_Achaemenid_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125011726"};
 
-  // ─── Civ Icon URLs (emblem/flag icons from Civilization Wiki) ───────────────
+  // ─── Civ Icon URLs ───────────────────────────────────────────────────────────
   const CIV_PORTRAIT_URLS = {
-    "Abbasid":           "https://static.wikia.nocookie.net/civilization/images/9/9c/Abbasid_%28Civ7%29.png/revision/latest?cb=20250215074957",
-    "Aksum":             "https://static.wikia.nocookie.net/civilization/images/8/8f/Aksumite_%28Civ7%29.png/revision/latest?cb=20250215075101",
-    "America":           "https://static.wikia.nocookie.net/civilization/images/d/d6/American_%28Civ7%29.png/revision/latest?cb=20250215074738",
-    "Assyria":           "https://static.wikia.nocookie.net/civilization/images/f/f3/Assyrian_%28Civ7%29.png/revision/latest?cb=20250723054922",
-    "Buganda":           "https://static.wikia.nocookie.net/civilization/images/1/13/Bugandan_%28Civ7%29.png/revision/latest?cb=20250215074727",
-    "Bulgaria":          "https://static.wikia.nocookie.net/civilization/images/e/ea/Bulgarian_%28Civ7%29.png/revision/latest?cb=20250308060723",
-    "Carthage":          "https://static.wikia.nocookie.net/civilization/images/e/e6/Carthaginian_%28Civ7%29.png/revision/latest?cb=20250304203934",
-    "Chola":             "https://static.wikia.nocookie.net/civilization/images/6/61/Chola_%28Civ7%29.png/revision/latest?cb=20250215075135",
-    "Đại Việt":          "https://static.wikia.nocookie.net/civilization/images/c/cc/Vietnamese_%28Civ7%29.png/revision/latest?cb=20250723055014",
-    "Egypt":             "https://static.wikia.nocookie.net/civilization/images/1/19/Egyptian_%28Civ7%29.png/revision/latest?cb=20250215075050",
-    "French Empire":     "https://static.wikia.nocookie.net/civilization/images/a/a9/French_Imperial_%28Civ7%29.png/revision/latest?cb=20250215074717",
-    "Great Britain":     "https://static.wikia.nocookie.net/civilization/images/9/95/British_%28Civ7%29.png/revision/latest?cb=20250304203916",
-    "Greece":            "https://static.wikia.nocookie.net/civilization/images/0/02/Greek_%28Civ7%29.png/revision/latest?cb=20250215074007",
-    "Han":               "https://static.wikia.nocookie.net/civilization/images/6/69/Han_%28Civ7%29.png/revision/latest?cb=20250215074308",
-    "Hawai'i":           "https://static.wikia.nocookie.net/civilization/images/d/d9/Hawaiian_%28Civ7%29.png/revision/latest?cb=20250215074936",
-    "Iceland":           "https://static.wikia.nocookie.net/civilization/images/8/8d/Icelandic_%28Civ7%29.png/revision/latest?cb=20251210061731",
-    "Inca":              "https://static.wikia.nocookie.net/civilization/images/9/91/Incan_%28Civ7%29.png/revision/latest?cb=20250215074926",
-    "Khmer":             "https://static.wikia.nocookie.net/civilization/images/3/3e/Khmer_%28Civ7%29.png/revision/latest?cb=20250215075038",
-    "Majapahit":         "https://static.wikia.nocookie.net/civilization/images/7/71/Majapahit_%28Civ7%29.png/revision/latest?cb=20250215074916",
-    "Maurya":            "https://static.wikia.nocookie.net/civilization/images/6/60/Mauryan_%28Civ7%29.png/revision/latest?cb=20250215075028",
-    "Maya":              "https://static.wikia.nocookie.net/civilization/images/c/c2/Maya_%28Civ7%29.png/revision/latest?cb=20250215074318",
-    "Meiji Japan":       "https://static.wikia.nocookie.net/civilization/images/2/2e/Meiji_Japanese_%28Civ7%29.png/revision/latest?cb=20250215074708",
-    "Mexico":            "https://static.wikia.nocookie.net/civilization/images/f/f6/Mexican_%28Civ7%29.png/revision/latest?cb=20250215074658",
-    "Ming":              "https://static.wikia.nocookie.net/civilization/images/0/09/Ming_%28Civ7%29.png/revision/latest?cb=20250215074907",
-    "Mississippian":     "https://static.wikia.nocookie.net/civilization/images/5/52/Mississippian_%28Civ7%29.png/revision/latest?cb=20250215074258",
-    "Mongolia":          "https://static.wikia.nocookie.net/civilization/images/1/19/Mongolian_%28Civ7%29.png/revision/latest?cb=20250215074851",
-    "Mughal":            "https://static.wikia.nocookie.net/civilization/images/5/5b/Mughal_%28Civ7%29.png/revision/latest?cb=20250215074646",
-    "Nepal":             "https://static.wikia.nocookie.net/civilization/images/2/27/Nepalese_%28Civ7%29.png/revision/latest?cb=20250308060634",
-    "Norman":            "https://static.wikia.nocookie.net/civilization/images/0/02/Norman_%28Civ7%29.png/revision/latest?cb=20250215074827",
-    "Ottomans":          "https://static.wikia.nocookie.net/civilization/images/f/f4/Ottoman_%28Civ7%29.png/revision/latest?cb=20251210061706",
-    "Achaemenid Persia": "https://static.wikia.nocookie.net/civilization/images/f/f6/Achaemenid_Persian_%28Civ7%29.png/revision/latest?cb=20250215075017",
+    "Abbasid":            "https://static.wikia.nocookie.net/civilization/images/9/9c/Abbasid_%28Civ7%29.png/revision/latest?cb=20250215074957",
+    "Aksum":              "https://static.wikia.nocookie.net/civilization/images/8/8f/Aksumite_%28Civ7%29.png/revision/latest?cb=20250215075101",
+    "America":            "https://static.wikia.nocookie.net/civilization/images/d/d6/American_%28Civ7%29.png/revision/latest?cb=20250215074738",
+    "Assyria":            "https://static.wikia.nocookie.net/civilization/images/f/f3/Assyrian_%28Civ7%29.png/revision/latest?cb=20250723054922",
+    "Buganda":            "https://static.wikia.nocookie.net/civilization/images/1/13/Bugandan_%28Civ7%29.png/revision/latest?cb=20250215074727",
+    "Bulgaria":           "https://static.wikia.nocookie.net/civilization/images/e/ea/Bulgarian_%28Civ7%29.png/revision/latest?cb=20250308060723",
+    "Carthage":           "https://static.wikia.nocookie.net/civilization/images/e/e6/Carthaginian_%28Civ7%29.png/revision/latest?cb=20250304203934",
+    "Chola":              "https://static.wikia.nocookie.net/civilization/images/6/61/Chola_%28Civ7%29.png/revision/latest?cb=20250215075135",
+    "Đại Việt":           "https://static.wikia.nocookie.net/civilization/images/c/cc/Vietnamese_%28Civ7%29.png/revision/latest?cb=20250723055014",
+    "Egypt":              "https://static.wikia.nocookie.net/civilization/images/1/19/Egyptian_%28Civ7%29.png/revision/latest?cb=20250215075050",
+    "French Empire":      "https://static.wikia.nocookie.net/civilization/images/a/a9/French_Imperial_%28Civ7%29.png/revision/latest?cb=20250215074717",
+    "Great Britain":      "https://static.wikia.nocookie.net/civilization/images/9/95/British_%28Civ7%29.png/revision/latest?cb=20250304203916",
+    "Greece":             "https://static.wikia.nocookie.net/civilization/images/0/02/Greek_%28Civ7%29.png/revision/latest?cb=20250215074007",
+    "Han":                "https://static.wikia.nocookie.net/civilization/images/6/69/Han_%28Civ7%29.png/revision/latest?cb=20250215074308",
+    "Hawai'i":            "https://static.wikia.nocookie.net/civilization/images/d/d9/Hawaiian_%28Civ7%29.png/revision/latest?cb=20250215074936",
+    "Iceland":            "https://static.wikia.nocookie.net/civilization/images/8/8d/Icelandic_%28Civ7%29.png/revision/latest?cb=20251210061731",
+    "Inca":               "https://static.wikia.nocookie.net/civilization/images/9/91/Incan_%28Civ7%29.png/revision/latest?cb=20250215074926",
+    "Khmer":              "https://static.wikia.nocookie.net/civilization/images/3/3e/Khmer_%28Civ7%29.png/revision/latest?cb=20250215075038",
+    "Majapahit":          "https://static.wikia.nocookie.net/civilization/images/7/71/Majapahit_%28Civ7%29.png/revision/latest?cb=20250215074916",
+    "Maurya":             "https://static.wikia.nocookie.net/civilization/images/6/60/Mauryan_%28Civ7%29.png/revision/latest?cb=20250215075028",
+    "Maya":               "https://static.wikia.nocookie.net/civilization/images/c/c2/Maya_%28Civ7%29.png/revision/latest?cb=20250215074318",
+    "Meiji Japan":        "https://static.wikia.nocookie.net/civilization/images/2/2e/Meiji_Japanese_%28Civ7%29.png/revision/latest?cb=20250215074708",
+    "Mexico":             "https://static.wikia.nocookie.net/civilization/images/f/f6/Mexican_%28Civ7%29.png/revision/latest?cb=20250215074658",
+    "Ming":               "https://static.wikia.nocookie.net/civilization/images/0/09/Ming_%28Civ7%29.png/revision/latest?cb=20250215074907",
+    "Mississippian":      "https://static.wikia.nocookie.net/civilization/images/5/52/Mississippian_%28Civ7%29.png/revision/latest?cb=20250215074258",
+    "Mongolia":           "https://static.wikia.nocookie.net/civilization/images/1/19/Mongolian_%28Civ7%29.png/revision/latest?cb=20250215074851",
+    "Mughal":             "https://static.wikia.nocookie.net/civilization/images/5/5b/Mughal_%28Civ7%29.png/revision/latest?cb=20250215074646",
+    "Nepal":              "https://static.wikia.nocookie.net/civilization/images/2/27/Nepalese_%28Civ7%29.png/revision/latest?cb=20250308060634",
+    "Norman":             "https://static.wikia.nocookie.net/civilization/images/0/02/Norman_%28Civ7%29.png/revision/latest?cb=20250215074827",
+    "Ottomans":           "https://static.wikia.nocookie.net/civilization/images/f/f4/Ottoman_%28Civ7%29.png/revision/latest?cb=20251210061706",
+    "Achaemenid Persia":  "https://static.wikia.nocookie.net/civilization/images/f/f6/Achaemenid_Persian_%28Civ7%29.png/revision/latest?cb=20250215075017",
     "Republic of Pirates":"https://static.wikia.nocookie.net/civilization/images/0/0f/Pirate_%28Civ7%29.png/revision/latest?cb=20251105025639",
-    "Prussia":           "https://static.wikia.nocookie.net/civilization/images/0/07/Prussian_%28Civ7%29.png/revision/latest?cb=20250215074632",
-    "Qajar":             "https://static.wikia.nocookie.net/civilization/images/8/86/Qajar_%28Civ7%29.png/revision/latest?cb=20250930022423",
-    "Qing":              "https://static.wikia.nocookie.net/civilization/images/6/69/Qing_%28Civ7%29.png/revision/latest?cb=20250215074622",
-    "Rome":              "https://static.wikia.nocookie.net/civilization/images/9/9f/Roman_%28Civ7%29.png/revision/latest?cb=20250215075008",
-    "Russia":            "https://static.wikia.nocookie.net/civilization/images/a/a2/Russian_%28Civ7%29.png/revision/latest?cb=20250215074614",
-    "Shawnee":           "https://static.wikia.nocookie.net/civilization/images/e/eb/Shawnee_%28Civ7%29.png/revision/latest?cb=20250215074751",
-    "Siam":              "https://static.wikia.nocookie.net/civilization/images/e/e1/Siamese_%28Civ7%29.png/revision/latest?cb=20250215074605",
-    "Silla Korea":       "https://static.wikia.nocookie.net/civilization/images/3/3b/Silla_Korean_%28Civ7%29.png/revision/latest?cb=20250930022525",
-    "Songhai":           "https://static.wikia.nocookie.net/civilization/images/0/02/Songhai_%28Civ7%29.png/revision/latest?cb=20250215074815",
-    "Spain":             "https://static.wikia.nocookie.net/civilization/images/6/65/Spanish_%28Civ7%29.png/revision/latest?cb=20250215074800",
-    "Tonga":             "https://static.wikia.nocookie.net/civilization/images/d/db/Tongan_%28Civ7%29.png/revision/latest?cb=20251105030050"
+    "Prussia":            "https://static.wikia.nocookie.net/civilization/images/0/07/Prussian_%28Civ7%29.png/revision/latest?cb=20250215074632",
+    "Qajar":              "https://static.wikia.nocookie.net/civilization/images/8/86/Qajar_%28Civ7%29.png/revision/latest?cb=20250930022423",
+    "Qing":               "https://static.wikia.nocookie.net/civilization/images/6/69/Qing_%28Civ7%29.png/revision/latest?cb=20250215074622",
+    "Rome":               "https://static.wikia.nocookie.net/civilization/images/9/9f/Roman_%28Civ7%29.png/revision/latest?cb=20250215075008",
+    "Russia":             "https://static.wikia.nocookie.net/civilization/images/a/a2/Russian_%28Civ7%29.png/revision/latest?cb=20250215074614",
+    "Shawnee":            "https://static.wikia.nocookie.net/civilization/images/e/eb/Shawnee_%28Civ7%29.png/revision/latest?cb=20250215074751",
+    "Siam":               "https://static.wikia.nocookie.net/civilization/images/e/e1/Siamese_%28Civ7%29.png/revision/latest?cb=20250215074605",
+    "Silla Korea":        "https://static.wikia.nocookie.net/civilization/images/3/3b/Silla_Korean_%28Civ7%29.png/revision/latest?cb=20250930022525",
+    "Songhai":            "https://static.wikia.nocookie.net/civilization/images/0/02/Songhai_%28Civ7%29.png/revision/latest?cb=20250215074815",
+    "Spain":              "https://static.wikia.nocookie.net/civilization/images/6/65/Spanish_%28Civ7%29.png/revision/latest?cb=20250215074800",
+    "Tonga":              "https://static.wikia.nocookie.net/civilization/images/d/db/Tongan_%28Civ7%29.png/revision/latest?cb=20251105030050"
   };
 
   const APEX_AGES = {"Abbasid":"Exploration","Aksum":"Antiquity","America":"Modern","Assyria":"Antiquity","Buganda":"Modern","Bulgaria":"Exploration","Carthage":"Antiquity","Chola":"Exploration","Đại Việt":"Exploration","Egypt":"Antiquity","French Empire":"Modern","Great Britain":"Modern","Greece":"Antiquity","Han":"Antiquity","Hawai'i":"Exploration","Iceland":"Exploration","Inca":"Exploration","Khmer":"Antiquity","Majapahit":"Exploration","Maurya":"Antiquity","Maya":"Antiquity","Meiji Japan":"Modern","Mexico":"Modern","Ming":"Exploration","Mississippian":"Antiquity","Mongolia":"Exploration","Mughal":"Modern","Nepal":"Modern","Norman":"Exploration","Ottomans":"Modern","Achaemenid Persia":"Antiquity","Republic of Pirates":"Exploration","Prussia":"Modern","Qajar":"Modern","Qing":"Modern","Rome":"Antiquity","Russia":"Modern","Shawnee":"Exploration","Siam":"Modern","Silla Korea":"Antiquity","Songhai":"Exploration","Spain":"Exploration","Tonga":"Antiquity"};
@@ -517,7 +502,7 @@
   // ─── Helpers ─────────────────────────────────────────────────────────────────
   function ageClass(age) {
     const a = (age||'').toLowerCase();
-    return a === 'antiquity' ? 'antiquity' : a === 'exploration' ? 'exploration' : a === 'modern' ? 'modern' : '';
+    return a==='antiquity'?'antiquity':a==='exploration'?'exploration':a==='modern'?'modern':'';
   }
   function ageBadge(age) {
     if (!age) return '';
@@ -538,7 +523,7 @@
   let allRows=[], leaderSyncRows=[];
   let leaders={}, civs={}, leaderSyncMap={};
   let selectedLeader=null, selectedCiv=null;
-  let hoveredLeader=null,  hoveredCiv=null;
+  let activeTab='leaders';
 
   // ─── Load & Process ──────────────────────────────────────────────────────────
   async function loadData() {
@@ -572,112 +557,15 @@
     }
   }
 
-  // ─── Render: Leader Detail (top-left half) ───────────────────────────────────
-  function renderLeaderDetail() {
-    const area = document.getElementById('leader-detail-area');
-    const active    = hoveredLeader ?? selectedLeader;
-    const isPreview = !!hoveredLeader && hoveredLeader !== selectedLeader;
-
-    if (!active) {
-      area.innerHTML = `<div class="half-empty"><div class="half-empty-icon">👑</div><div class="half-empty-label">Hover or select a leader</div></div>`;
-      return;
-    }
-
-    const leader = leaders[active];
-    const url    = PORTRAIT_URLS[active];
-    const portraitInner = url
-      ? `<img src="${escHtml(url)}" alt="${escHtml(active)}" loading="lazy"
-           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-         <div class="detail-portrait-fallback" style="display:none">${escHtml(initials(active))}</div>`
-      : `<div class="detail-portrait-fallback">${escHtml(initials(active))}</div>`;
-
-    area.innerHTML = `
-      ${isPreview ? `<div class="preview-badge">Preview — click to select</div>` : ''}
-      <div class="detail-header">
-        <div class="detail-portrait">${portraitInner}</div>
-        <div>
-          <div class="detail-name">${escHtml(active)}</div>
-          <div class="ability-name-row">⚡ ${escHtml(leader.abilityName)}</div>
-        </div>
-      </div>
-      <div class="ability-desc">${escHtml(leader.desc)}</div>`;
-  }
-
-  // ─── Render: Civ Detail (top-right half) ─────────────────────────────────────
-  function renderCivDetail() {
-    const area = document.getElementById('civ-detail-area');
-    const active    = hoveredCiv ?? selectedCiv;
-    const isPreview = !!hoveredCiv && hoveredCiv !== selectedCiv;
-
-    if (!active) {
-      area.innerHTML = `<div class="half-empty"><div class="half-empty-icon">🏛</div><div class="half-empty-label">Hover or select a civilization</div></div>`;
-      return;
-    }
-
-    const civ = civs[active];
-    const url = CIV_PORTRAIT_URLS[active];
-    const portraitInner = url
-      ? `<img src="${escHtml(url)}" alt="${escHtml(active)}" loading="lazy"
-           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-         <div class="detail-portrait-fallback" style="display:none">${escHtml(initials(active))}</div>`
-      : `<div class="detail-portrait-fallback" style="color:var(--teal)">${escHtml(initials(active))}</div>`;
-
-    const traditions = civ.traditions.filter(t => {
-      const a=(t.age||'').toLowerCase();
-      return a!=='apex' && t.desc && t.desc.trim();
-    });
-
-    // Syncretism — only when both firmly selected and no hover active
-    let syncHtml = '';
-    const firmBoth = !isPreview && !(!!hoveredLeader && hoveredLeader!==selectedLeader) && selectedLeader && selectedCiv;
-    if (firmBoth) {
-      const leaderSyncSet = new Set(leaderSyncMap[selectedLeader]||[]);
-      const civSyncSet    = new Set(civ.civSyncOptions);
-      const allSync = new Set([...leaderSyncSet,...civSyncSet]);
-      allSync.delete(selectedCiv);
-      const pills = [...allSync].sort().map(n=>{
-        const fl=leaderSyncSet.has(n), fc=civSyncSet.has(n);
-        const cls=fl&&fc?'sync-pill from-both':fl?'sync-pill from-leader':'sync-pill';
-        return `<span class="${cls}">${escHtml(n)}</span>`;
-      }).join('');
-      syncHtml = `
-        <div class="section-sublabel">Syncretism</div>
-        ${allSync.size>0
-          ? `<div class="sync-pills">${pills}</div>
-             <div class="sync-source-note">
-               <span style="color:var(--gold-light)">Gold</span> = leader &nbsp;|&nbsp;
-               <span style="color:var(--teal-light)">Teal</span> = civ &nbsp;|&nbsp;
-               <span style="color:#d4c07a">Mixed</span> = both
-             </div>`
-          : `<div class="empty-state">No syncretism for this combination.</div>`}`;
-    }
-
-    area.innerHTML = `
-      ${isPreview ? `<div class="preview-badge">Preview — click to select</div>` : ''}
-      <div class="detail-header">
-        <div class="detail-portrait civ-portrait">${portraitInner}</div>
-        <div>
-          <div class="detail-name">${escHtml(active)}</div>
-          <div style="display:flex;align-items:center;gap:5px;margin-bottom:3px">${ageBadge(civ.apexAge)}</div>
-          <div class="ability-name-row teal">⚡ ${escHtml(civ.abilityName)}</div>
-        </div>
-      </div>
-      <div class="ability-desc">${escHtml(civ.apexDesc)}</div>
-      ${traditions.length ? `
-        <div class="section-sublabel">Cross-Age Traditions</div>
-        ${traditions.map(t=>`
-          <div class="tradition-row">
-            <div style="padding-top:1px;flex-shrink:0">${ageBadge(t.age)}</div>
-            <div>
-              <div class="tradition-name">${escHtml(t.name)}</div>
-              <div class="tradition-desc">${escHtml(t.desc)}</div>
-            </div>
-          </div>`).join('')}` : ''}
-      ${syncHtml}`;
+  // ─── Tab Switching ───────────────────────────────────────────────────────────
+  function setTab(name) {
+    activeTab = name;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab===name));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id===`panel-${name}`));
   }
 
   // ─── Render: Leader Grid ─────────────────────────────────────────────────────
-  function renderLeaders() {
+  function renderLeaderGrid() {
     const grid = document.getElementById('leader-grid');
     grid.innerHTML = '';
     for (const name of Object.keys(leaders).sort()) {
@@ -686,37 +574,33 @@
       card.dataset.leader = name;
 
       const url = PORTRAIT_URLS[name];
-      const portraitInner = url
+      const inner = url
         ? `<img src="${escHtml(url)}" alt="${escHtml(name)}" loading="lazy"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
            <div class="tile-fallback" style="display:none">${escHtml(initials(name))}</div>`
         : `<div class="tile-fallback">${escHtml(initials(name))}</div>`;
 
       card.innerHTML = `
-        <div class="tile-portrait">${portraitInner}</div>
+        <div class="tile-portrait">${inner}</div>
         <div class="tile-name">${escHtml(name)}</div>
         <div class="tile-check">
-          <svg viewBox="0 0 12 10">
-            <polyline points="1,5 4.5,8.5 11,1" stroke="#0f1320" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <svg viewBox="0 0 12 10"><polyline points="1,5 4.5,8.5 11,1" stroke="#0f1320" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>`;
 
-      card.addEventListener('click',      () => selectLeader(name));
-      card.addEventListener('mouseenter', () => { hoveredLeader=name; renderLeaderDetail(); });
-      card.addEventListener('mouseleave', () => { hoveredLeader=null; renderLeaderDetail(); });
+      card.addEventListener('click', () => selectLeader(name));
       grid.appendChild(card);
     }
   }
 
   // ─── Render: Civ Grid ────────────────────────────────────────────────────────
-  function renderCivs() {
+  function renderCivGrid() {
     const grid = document.getElementById('civ-grid');
     grid.innerHTML = '';
-    const leaderSyncCivs = new Set(leaderSyncMap[selectedLeader]||[]);
+    const syncCivs = new Set(leaderSyncMap[selectedLeader]||[]);
 
     for (const name of Object.keys(civs).sort()) {
       const civ = civs[name];
-      const hasSync    = leaderSyncCivs.has(name);
+      const hasSync    = syncCivs.has(name);
       const isSelected = selectedCiv === name;
 
       const card = document.createElement('div');
@@ -726,7 +610,7 @@
       card.dataset.civ = name;
 
       const url = CIV_PORTRAIT_URLS[name];
-      const portraitInner = url
+      const inner = url
         ? `<img src="${escHtml(url)}" alt="${escHtml(name)}" loading="lazy"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
            <div class="tile-fallback" style="display:none;color:var(--teal)">${escHtml(initials(name))}</div>`
@@ -734,36 +618,178 @@
 
       card.innerHTML = `
         <div class="tile-portrait" style="position:relative">
-          ${portraitInner}
-          ${hasSync ? `<div class="tile-sync-star" title="Leader can syncretise with this civ">✦</div>` : ''}
+          ${inner}
+          ${hasSync ? `<div class="tile-sync-star">✦</div>` : ''}
         </div>
         <div class="tile-name">${escHtml(name)}</div>
         <div class="tile-check">
-          <svg viewBox="0 0 12 10">
-            <polyline points="1,5 4.5,8.5 11,1" stroke="#0f1320" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <svg viewBox="0 0 12 10"><polyline points="1,5 4.5,8.5 11,1" stroke="#0f1320" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>`;
 
-      card.addEventListener('click',      () => selectCiv(name));
-      card.addEventListener('mouseenter', () => { hoveredCiv=name; renderCivDetail(); });
-      card.addEventListener('mouseleave', () => { hoveredCiv=null; renderCivDetail(); });
+      card.addEventListener('click', () => selectCiv(name));
       grid.appendChild(card);
     }
   }
 
+  // ─── Render: Abilities Tab ────────────────────────────────────────────────────
+  function renderAbilitiesTab() {
+    const area = document.getElementById('abilities-content');
+
+    if (!selectedLeader && !selectedCiv) {
+      area.innerHTML = `
+        <div class="abilities-empty">
+          <div class="abilities-empty-icon">⚔</div>
+          <div class="abilities-empty-title">Nothing selected yet</div>
+          <div class="abilities-empty-sub">Choose a leader and civilization to see their combined abilities here.</div>
+          <button class="abilities-empty-action" onclick="setTab('leaders')">Go to Leaders →</button>
+        </div>`;
+      return;
+    }
+
+    let html = '<div class="abilities-content">';
+
+    // ── Leader card ──
+    if (selectedLeader) {
+      const leader = leaders[selectedLeader];
+      const url = PORTRAIT_URLS[selectedLeader];
+      const portraitInner = url
+        ? `<img src="${escHtml(url)}" alt="${escHtml(selectedLeader)}" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+           <div class="ability-portrait-fallback" style="display:none">${escHtml(initials(selectedLeader))}</div>`
+        : `<div class="ability-portrait-fallback">${escHtml(initials(selectedLeader))}</div>`;
+
+      html += `
+        <div class="ability-card leader-card-ability">
+          <div class="ability-card-header">
+            <div class="ability-portrait">${portraitInner}</div>
+            <div>
+              <div class="ability-entity-name">${escHtml(selectedLeader)}</div>
+              <div class="ability-name">⚡ ${escHtml(leader.abilityName)}</div>
+            </div>
+          </div>
+          <div class="ability-desc">${escHtml(leader.desc)}</div>
+        </div>`;
+    } else {
+      html += `
+        <div class="abilities-empty" style="padding:20px 0 10px">
+          <div class="abilities-empty-sub">No leader selected.</div>
+          <button class="abilities-empty-action" onclick="setTab('leaders')">Choose a Leader →</button>
+        </div>`;
+    }
+
+    // ── Civ card ──
+    if (selectedCiv) {
+      const civ = civs[selectedCiv];
+      const url = CIV_PORTRAIT_URLS[selectedCiv];
+      const portraitInner = url
+        ? `<img src="${escHtml(url)}" alt="${escHtml(selectedCiv)}" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+           <div class="ability-portrait-fallback" style="display:none">${escHtml(initials(selectedCiv))}</div>`
+        : `<div class="ability-portrait-fallback">${escHtml(initials(selectedCiv))}</div>`;
+
+      const traditions = civ.traditions.filter(t => {
+        const a=(t.age||'').toLowerCase();
+        return a!=='apex' && t.desc && t.desc.trim();
+      });
+
+      html += `
+        <div class="ability-card civ-card-ability">
+          <div class="ability-card-header">
+            <div class="ability-portrait civ">${portraitInner}</div>
+            <div>
+              <div class="ability-entity-name">${escHtml(selectedCiv)}</div>
+              <div style="margin-bottom:3px">${ageBadge(civ.apexAge)}</div>
+              <div class="ability-name teal">⚡ ${escHtml(civ.abilityName)}</div>
+            </div>
+          </div>
+          <div class="ability-desc">${escHtml(civ.apexDesc)}</div>
+          ${traditions.length ? `
+            <div class="section-sublabel">Cross-Age Traditions</div>
+            ${traditions.map(t=>`
+              <div class="tradition-row">
+                <div style="padding-top:1px;flex-shrink:0">${ageBadge(t.age)}</div>
+                <div>
+                  <div class="tradition-name">${escHtml(t.name)}</div>
+                  <div class="tradition-desc">${escHtml(t.desc)}</div>
+                </div>
+              </div>`).join('')}` : ''}
+        </div>`;
+    } else {
+      html += `
+        <div class="abilities-empty" style="padding:20px 0 10px">
+          <div class="abilities-empty-sub">No civilization selected.</div>
+          <button class="abilities-empty-action teal" onclick="setTab('civs')">Choose a Civilization →</button>
+        </div>`;
+    }
+
+    // ── Syncretism (both selected) ──
+    if (selectedLeader && selectedCiv) {
+      const civ = civs[selectedCiv];
+      const leaderSyncSet = new Set(leaderSyncMap[selectedLeader]||[]);
+      const civSyncSet    = new Set(civ.civSyncOptions);
+      const allSync = new Set([...leaderSyncSet,...civSyncSet]);
+      allSync.delete(selectedCiv);
+
+      const pills = [...allSync].sort().map(n => {
+        const fl=leaderSyncSet.has(n), fc=civSyncSet.has(n);
+        const cls=fl&&fc?'sync-pill from-both':fl?'sync-pill from-leader':'sync-pill';
+        return `<span class="${cls}">${escHtml(n)}</span>`;
+      }).join('');
+
+      html += `
+        <div class="ability-card">
+          <div class="section-sublabel" style="margin-top:0">Syncretism Options</div>
+          ${allSync.size>0
+            ? `<div class="sync-pills">${pills}</div>
+               <div class="sync-source-note">
+                 <span style="color:var(--gold-light)">Gold</span> = from leader &nbsp;|&nbsp;
+                 <span style="color:var(--teal-light)">Teal</span> = from civilization &nbsp;|&nbsp;
+                 <span style="color:#d4c07a">Mixed</span> = both
+               </div>`
+            : `<div class="empty-state">No syncretism options for this combination.</div>`}
+        </div>`;
+    }
+
+    html += '</div>';
+    area.innerHTML = html;
+  }
+
+  // ─── Update Tab Dots ─────────────────────────────────────────────────────────
+  function updateDots() {
+    document.getElementById('dot-leader').style.display = selectedLeader ? '' : 'none';
+    document.getElementById('dot-civ').style.display    = selectedCiv    ? '' : 'none';
+  }
+
   // ─── Selection ───────────────────────────────────────────────────────────────
   function selectLeader(name) {
-    selectedLeader=name; selectedCiv=null; hoveredLeader=null; hoveredCiv=null;
-    renderLeaders(); renderCivs(); renderLeaderDetail(); renderCivDetail();
+    selectedLeader = name;
+    selectedCiv    = null;
+    // Update leader tile states
+    document.querySelectorAll('.tile-card[data-leader]').forEach(c =>
+      c.classList.toggle('leader-selected', c.dataset.leader===name));
+    // Rebuild civ grid (syncretism stars depend on leader)
+    renderCivGrid();
+    renderAbilitiesTab();
+    updateDots();
+    setTab('civs');
   }
+
   function selectCiv(name) {
-    selectedCiv=name; hoveredCiv=null;
-    document.querySelectorAll('.civ-card').forEach(c => c.classList.toggle('civ-selected', c.dataset.civ===name));
-    renderCivDetail();
+    selectedCiv = name;
+    document.querySelectorAll('.tile-card[data-civ]').forEach(c =>
+      c.classList.toggle('civ-selected', c.dataset.civ===name));
+    renderAbilitiesTab();
+    updateDots();
+    setTab('abilities');
   }
+
   function resetAll() {
-    selectedLeader=null; selectedCiv=null; hoveredLeader=null; hoveredCiv=null;
-    renderLeaders(); renderCivs(); renderLeaderDetail(); renderCivDetail();
+    selectedLeader=null; selectedCiv=null;
+    document.querySelectorAll('.tile-card').forEach(c => c.classList.remove('leader-selected','civ-selected'));
+    renderCivGrid();
+    renderAbilitiesTab();
+    updateDots();
+    setTab('leaders');
   }
 
   // ─── Init ─────────────────────────────────────────────────────────────────────
@@ -773,9 +799,14 @@
       processData();
       document.getElementById('loading').style.display='none';
       document.getElementById('app').style.display='flex';
+
+      document.querySelectorAll('.tab-btn').forEach(btn =>
+        btn.addEventListener('click', () => setTab(btn.dataset.tab)));
       document.getElementById('btn-reset').addEventListener('click', resetAll);
-      renderLeaders();
-      renderCivs();
+
+      renderLeaderGrid();
+      renderCivGrid();
+      renderAbilitiesTab();
     } catch(err) {
       document.getElementById('loading').style.display='none';
       const el=document.getElementById('error-msg');
