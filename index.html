@@ -498,14 +498,32 @@
 
   // ─── CSV Parser ──────────────────────────────────────────────────────────────
   function parseCSV(text) {
-    const lines = text.replace(/\r\n/g,'\n').replace(/\r/g,'\n').split('\n');
-    if (!lines.length) return [];
-    const headers = parseCSVRow(lines[0]);
+    const normalized = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+
+    // Walk the raw text char-by-char so newlines inside quoted fields
+    // don't get treated as record separators.
+    const records = [];
+    let cur = '';
+    let inQuote = false;
+    for (let i = 0; i < normalized.length; i++) {
+      const ch = normalized[i];
+      if (ch === '"') {
+        if (inQuote && normalized[i + 1] === '"') { cur += '"'; i++; }
+        else { inQuote = !inQuote; cur += ch; }
+      } else if (ch === '\n' && !inQuote) {
+        records.push(cur); cur = '';
+      } else {
+        cur += ch;
+      }
+    }
+    if (cur) records.push(cur);
+
+    if (!records.length) return [];
+    const headers = parseCSVRow(records[0]);
     const result = [];
-    for (let i = 1; i < lines.length; i++) {
-      const line = lines[i].trim();
-      if (!line) continue;
-      const values = parseCSVRow(line);
+    for (let i = 1; i < records.length; i++) {
+      if (!records[i].trim()) continue;
+      const values = parseCSVRow(records[i]);
       const row = {};
       headers.forEach((h, idx) => { row[h] = values[idx] !== undefined ? values[idx] : ''; });
       result.push(row);
