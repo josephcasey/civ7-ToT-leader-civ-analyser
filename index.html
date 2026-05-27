@@ -231,6 +231,27 @@
     .tile-card.civ-selected    .tile-check { display: flex; }
     .tile-check svg { width: 7px; height: 7px; fill: #0f1320; }
 
+    /* ─── Mini Ability Strip (top of Leaders & Civs tabs) ──────── */
+    .mini-ability {
+      flex-shrink: 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-panel);
+      overflow-y: auto;
+      max-height: 36vh;
+    }
+    .mini-ability::-webkit-scrollbar { width: 3px; }
+    .mini-ability::-webkit-scrollbar-track { background: transparent; }
+    .mini-ability::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
+
+    .mini-ability-inner { padding: 10px 14px 12px; }
+
+    .mini-empty {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 14px;
+      color: var(--text-dim); font-size: 0.66rem; font-style: italic;
+    }
+    .mini-empty-icon { font-size: 1rem; opacity: 0.3; }
+
     /* ─── Abilities Tab Content ───────────────────────────────── */
     .abilities-content { padding: 12px 14px 32px; max-width: 680px; }
 
@@ -388,6 +409,9 @@
 
     <!-- ── Leaders Panel ── -->
     <div class="tab-panel active" id="panel-leaders">
+      <div class="mini-ability" id="leader-ability-strip">
+        <div class="mini-empty"><span class="mini-empty-icon">👑</span> Select a leader to preview their ability here</div>
+      </div>
       <div class="panel-scroll">
         <div class="tile-grid" id="leader-grid"></div>
       </div>
@@ -395,6 +419,9 @@
 
     <!-- ── Civs Panel ── -->
     <div class="tab-panel" id="panel-civs">
+      <div class="mini-ability" id="civ-ability-strip">
+        <div class="mini-empty"><span class="mini-empty-icon">🏛</span> Select a civilization to preview their ability here</div>
+      </div>
       <div class="panel-legend">
         <span class="legend-item"><span class="legend-swatch"></span> Syncretism available</span>
         <span class="legend-item"><span class="sync-star-sm">✦</span> Leader can sync</span>
@@ -562,6 +589,72 @@
     activeTab = name;
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab===name));
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id===`panel-${name}`));
+  }
+
+  // ─── Render: Mini Ability Strips ─────────────────────────────────────────────
+  function renderLeaderStrip() {
+    const strip = document.getElementById('leader-ability-strip');
+    if (!selectedLeader) {
+      strip.innerHTML = `<div class="mini-empty"><span class="mini-empty-icon">👑</span> Select a leader to preview their ability here</div>`;
+      return;
+    }
+    const leader = leaders[selectedLeader];
+    const url    = PORTRAIT_URLS[selectedLeader];
+    const portraitInner = url
+      ? `<img src="${escHtml(url)}" alt="${escHtml(selectedLeader)}" loading="lazy"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+         <div class="ability-portrait-fallback" style="display:none">${escHtml(initials(selectedLeader))}</div>`
+      : `<div class="ability-portrait-fallback">${escHtml(initials(selectedLeader))}</div>`;
+    strip.innerHTML = `<div class="mini-ability-inner">
+      <div class="ability-card-header">
+        <div class="ability-portrait">${portraitInner}</div>
+        <div>
+          <div class="ability-entity-name">${escHtml(selectedLeader)}</div>
+          <div class="ability-name">⚡ ${escHtml(leader.abilityName)}</div>
+        </div>
+      </div>
+      <div class="ability-desc">${escHtml(leader.desc)}</div>
+    </div>`;
+  }
+
+  function renderCivStrip() {
+    const strip = document.getElementById('civ-ability-strip');
+    if (!selectedCiv) {
+      strip.innerHTML = `<div class="mini-empty"><span class="mini-empty-icon">🏛</span> Select a civilization to preview their ability here</div>`;
+      return;
+    }
+    const civ = civs[selectedCiv];
+    const url = CIV_PORTRAIT_URLS[selectedCiv];
+    const portraitInner = url
+      ? `<img src="${escHtml(url)}" alt="${escHtml(selectedCiv)}" loading="lazy"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+         <div class="ability-portrait-fallback" style="display:none">${escHtml(initials(selectedCiv))}</div>`
+      : `<div class="ability-portrait-fallback">${escHtml(initials(selectedCiv))}</div>`;
+    const traditions = civ.traditions.filter(t => {
+      const a=(t.age||'').toLowerCase();
+      return a!=='apex' && t.desc && t.desc.trim();
+    });
+    strip.innerHTML = `<div class="mini-ability-inner">
+      <div class="ability-card-header">
+        <div class="ability-portrait civ">${portraitInner}</div>
+        <div>
+          <div class="ability-entity-name">${escHtml(selectedCiv)}</div>
+          <div style="margin-bottom:3px">${ageBadge(civ.apexAge)}</div>
+          <div class="ability-name teal">⚡ ${escHtml(civ.abilityName)}</div>
+        </div>
+      </div>
+      <div class="ability-desc">${escHtml(civ.apexDesc)}</div>
+      ${traditions.length ? `
+        <div class="section-sublabel">Cross-Age Traditions</div>
+        ${traditions.map(t=>`
+          <div class="tradition-row">
+            <div style="padding-top:1px;flex-shrink:0">${ageBadge(t.age)}</div>
+            <div>
+              <div class="tradition-name">${escHtml(t.name)}</div>
+              <div class="tradition-desc">${escHtml(t.desc)}</div>
+            </div>
+          </div>`).join('')}` : ''}
+    </div>`;
   }
 
   // ─── Render: Leader Grid ─────────────────────────────────────────────────────
@@ -764,11 +857,11 @@
   function selectLeader(name) {
     selectedLeader = name;
     selectedCiv    = null;
-    // Update leader tile states
     document.querySelectorAll('.tile-card[data-leader]').forEach(c =>
       c.classList.toggle('leader-selected', c.dataset.leader===name));
-    // Rebuild civ grid (syncretism stars depend on leader)
     renderCivGrid();
+    renderLeaderStrip();
+    renderCivStrip();
     renderAbilitiesTab();
     updateDots();
     setTab('civs');
@@ -778,6 +871,7 @@
     selectedCiv = name;
     document.querySelectorAll('.tile-card[data-civ]').forEach(c =>
       c.classList.toggle('civ-selected', c.dataset.civ===name));
+    renderCivStrip();
     renderAbilitiesTab();
     updateDots();
     setTab('abilities');
@@ -787,6 +881,8 @@
     selectedLeader=null; selectedCiv=null;
     document.querySelectorAll('.tile-card').forEach(c => c.classList.remove('leader-selected','civ-selected'));
     renderCivGrid();
+    renderLeaderStrip();
+    renderCivStrip();
     renderAbilitiesTab();
     updateDots();
     setTab('leaders');
