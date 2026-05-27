@@ -31,7 +31,7 @@
       --purple-bg:     rgba(139,92,246,0.12);
       --radius-sm:   6px;
       --radius-md:   10px;
-      --radius-lg:   16px;
+      --radius-lg:   14px;
       --radius-full: 9999px;
       --shadow-card: 0 4px 20px rgba(0,0,0,0.4);
       --transition:  0.15s ease;
@@ -42,8 +42,7 @@
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: var(--bg-deep);
       color: var(--text);
-      display: flex;
-      flex-direction: column;
+      display: flex; flex-direction: column;
     }
 
     /* ─── Loading ───────────────────────────────────────────── */
@@ -53,11 +52,9 @@
       height: 100vh; gap: 20px; color: var(--text-muted);
     }
     .spinner {
-      width: 44px; height: 44px;
-      border: 3px solid var(--border);
-      border-top-color: var(--gold);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+      width: 40px; height: 40px;
+      border: 3px solid var(--border); border-top-color: var(--gold);
+      border-radius: 50%; animation: spin 0.8s linear infinite;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
@@ -67,7 +64,7 @@
       background: rgba(248,113,113,0.08);
       border: 1px solid rgba(248,113,113,0.2);
       border-radius: var(--radius-md);
-      padding: 16px 20px; font-size: 0.82rem; margin: 20px;
+      padding: 14px 18px; font-size: 0.8rem; margin: 16px;
     }
 
     /* ─── App Shell ─────────────────────────────────────────── */
@@ -77,272 +74,122 @@
     .site-header {
       background: linear-gradient(135deg, #12172a 0%, #1a1f2e 60%, #16213a 100%);
       border-bottom: 1px solid var(--border);
-      padding: 13px 22px; flex-shrink: 0;
+      padding: 10px 18px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
     }
     .site-header h1 {
-      font-size: 1.05rem; font-weight: 700;
-      letter-spacing: 0.04em; color: var(--gold-light);
-      display: flex; align-items: center; gap: 10px;
+      font-size: 0.95rem; font-weight: 700;
+      letter-spacing: 0.03em; color: var(--gold-light);
+      display: flex; align-items: center; gap: 8px; white-space: nowrap;
     }
     .site-header h1 .subtitle {
-      font-size: 0.7rem; font-weight: 400;
-      color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase;
+      font-size: 0.66rem; font-weight: 400;
+      color: var(--text-muted); letter-spacing: 0.07em; text-transform: uppercase;
     }
+    .btn-reset {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 5px 12px; background: transparent;
+      border: 1px solid var(--border-light); border-radius: var(--radius-full);
+      color: var(--text-muted); font-family: inherit;
+      font-size: 0.66rem; font-weight: 600; cursor: pointer; white-space: nowrap;
+      transition: border-color var(--transition), color var(--transition), background var(--transition);
+    }
+    .btn-reset:hover { border-color: var(--gold); color: var(--gold-light); background: var(--gold-bg); }
+    .btn-reset svg { width: 10px; height: 10px; }
 
-    /* ─── Root Layout ───────────────────────────────────────── */
-    .layout {
-      display: flex; flex: 1; min-height: 0; overflow: hidden;
-    }
-
-    /* ─── Left Section — Leader Grid (2/3) ──────────────────── */
-    .left-section {
-      flex: 2;
-      overflow-y: auto;
-      padding: 18px 16px 32px;
-      border-right: 1px solid var(--border);
-    }
-    .left-section::-webkit-scrollbar { width: 5px; }
-    .left-section::-webkit-scrollbar-track { background: transparent; }
-    .left-section::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 3px; }
-
-    .section-label {
-      display: flex; align-items: center; gap: 7px;
-      font-size: 0.6rem; font-weight: 700;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--text-dim); margin-bottom: 14px;
-    }
-    .step-num {
-      width: 17px; height: 17px; border-radius: 50%;
-      background: var(--gold); color: #0f1320;
-      font-size: 0.6rem; font-weight: 700;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .step-num.teal { background: var(--teal); }
-
-    /* Leader grid — fills the left 2/3 generously */
-    .leader-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-      gap: 10px;
-    }
-
-    .leader-card {
-      background: var(--bg-card);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 14px 8px 10px;
-      display: flex; flex-direction: column; align-items: center; gap: 8px;
-      cursor: pointer;
-      transition: transform var(--transition), border-color var(--transition),
-                  background var(--transition), box-shadow var(--transition);
-      position: relative; user-select: none;
-    }
-    .leader-card:hover {
-      background: var(--bg-card-hover);
-      border-color: var(--border-light);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-card);
-    }
-    .leader-card.selected {
-      border-color: var(--gold);
-      background: rgba(201,168,76,0.08);
-      box-shadow: 0 0 0 1px var(--gold), var(--shadow-card);
-    }
-
-    .portrait-wrap {
-      width: 70px; height: 70px;
-      border-radius: 50%; overflow: hidden;
-      border: 2.5px solid var(--border-light);
-      transition: border-color var(--transition), box-shadow var(--transition);
-      flex-shrink: 0;
-    }
-    .leader-card:hover .portrait-wrap,
-    .leader-card.selected .portrait-wrap {
-      border-color: var(--gold);
-      box-shadow: 0 0 12px rgba(201,168,76,0.35);
-    }
-    .portrait-wrap img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: top center;
-    }
-    .portrait-fallback {
-      width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
-      background: linear-gradient(135deg, var(--bg-card-hover), var(--border));
-      font-size: 1.4rem; color: var(--gold); font-weight: 700;
-    }
-
-    .leader-name {
-      font-size: 0.67rem; font-weight: 600;
-      text-align: center; color: var(--text); line-height: 1.3;
-    }
-    .selected-check {
-      position: absolute; top: 6px; right: 6px;
-      width: 16px; height: 16px; border-radius: 50%;
-      background: var(--gold);
-      display: none; align-items: center; justify-content: center;
-    }
-    .leader-card.selected .selected-check { display: flex; }
-    .selected-check svg { width: 9px; height: 9px; fill: #0f1320; }
-
-    /* ─── Right Pane — Ability Column (1/3) ─────────────────── */
-    .right-pane {
-      flex: 1;
-      display: flex; flex-direction: column;
+    /* ─── Ability Pane (top strip) ──────────────────────────── */
+    .ability-pane {
+      display: flex; flex-shrink: 0;
+      border-bottom: 2px solid var(--border);
+      /* height is content-driven, but clamped */
+      max-height: 38vh;
       overflow: hidden;
-      min-width: 260px; max-width: 440px;
-      background: var(--bg-panel);
     }
 
-    /* Top half: Leader detail */
-    .ability-leader {
-      flex: 1; min-height: 0;
-      overflow-y: auto;
-      padding: 16px 16px 12px;
-      border-bottom: 1px solid var(--border);
+    .ability-half {
+      flex: 1; min-width: 0;
+      overflow-y: auto; padding: 12px 14px;
     }
-    .ability-leader::-webkit-scrollbar { width: 4px; }
-    .ability-leader::-webkit-scrollbar-track { background: transparent; }
-    .ability-leader::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
+    .ability-half::-webkit-scrollbar { width: 3px; }
+    .ability-half::-webkit-scrollbar-track { background: transparent; }
+    .ability-half::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
 
-    /* Bottom half: Civ section */
-    .ability-civ {
-      flex: 1; min-height: 0;
-      overflow-y: auto;
-      padding: 14px 16px 16px;
-      display: flex; flex-direction: column; gap: 0;
-    }
-    .ability-civ::-webkit-scrollbar { width: 4px; }
-    .ability-civ::-webkit-scrollbar-track { background: transparent; }
-    .ability-civ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
+    .ability-half + .ability-half { border-left: 1px solid var(--border); }
 
-    /* ─── Empty states in pane halves ───────────────────────── */
-    .pane-empty {
+    /* empty state inside a half */
+    .half-empty {
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
-      height: 100%; gap: 8px; text-align: center;
-      color: var(--text-dim);
+      height: 100%; min-height: 80px;
+      gap: 5px; text-align: center; color: var(--text-dim);
     }
-    .pane-empty-icon { font-size: 1.6rem; opacity: 0.25; }
-    .pane-empty-title { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); }
-    .pane-empty-sub   { font-size: 0.66rem; }
+    .half-empty-icon { font-size: 1.4rem; opacity: 0.2; }
+    .half-empty-label { font-size: 0.66rem; }
 
     /* ─── Preview badge ─────────────────────────────────────── */
     .preview-badge {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 2px 10px;
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 2px 8px;
       background: rgba(139,92,246,0.1);
       border: 1px solid rgba(139,92,246,0.25);
       border-radius: var(--radius-full);
-      font-size: 0.58rem; font-weight: 700;
+      font-size: 0.56rem; font-weight: 700;
       letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--purple-light); margin-bottom: 10px;
+      color: var(--purple-light); margin-bottom: 7px;
     }
 
-    /* ─── Leader detail (in top-right) ──────────────────────── */
-    .leader-detail-header { display: flex; align-items: center; gap: 12px; }
-    .leader-detail-portrait {
-      width: 56px; height: 56px; border-radius: 50%;
+    /* ─── Leader detail content ─────────────────────────────── */
+    .detail-header { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }
+    .detail-portrait {
+      width: 46px; height: 46px; border-radius: 50%;
       overflow: hidden; border: 2px solid var(--gold);
-      box-shadow: 0 0 12px rgba(201,168,76,0.2); flex-shrink: 0;
+      box-shadow: 0 0 10px rgba(201,168,76,0.2); flex-shrink: 0;
     }
-    .leader-detail-portrait img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: top center;
-    }
-    .leader-portrait-fallback {
+    .detail-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .detail-portrait-fallback {
       width: 100%; height: 100%;
       display: flex; align-items: center; justify-content: center;
       background: linear-gradient(135deg, var(--bg-card-hover), var(--border));
-      font-size: 1.1rem; color: var(--gold); font-weight: 700;
+      font-size: 0.95rem; color: var(--gold); font-weight: 700;
     }
-    .leader-detail-name {
-      font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 1px;
-    }
-    .ability-name-row {
-      font-size: 0.72rem; font-weight: 600; color: var(--gold); margin-bottom: 6px;
-    }
-    .ability-desc {
-      font-size: 0.76rem; color: var(--text-muted);
-      line-height: 1.65; white-space: pre-line;
-    }
+
+    /* civ portrait in detail pane — rounded square */
+    .detail-portrait.civ-portrait { border-radius: var(--radius-md); border-color: var(--teal); box-shadow: 0 0 10px rgba(76,168,154,0.2); }
+
+    .detail-name { font-size: 0.88rem; font-weight: 700; color: var(--text); margin-bottom: 1px; }
+    .ability-name-row { font-size: 0.68rem; font-weight: 600; color: var(--gold); margin-bottom: 5px; }
+    .ability-name-row.teal { color: var(--teal-light); }
+    .ability-desc { font-size: 0.72rem; color: var(--text-muted); line-height: 1.6; white-space: pre-line; }
 
     /* ─── Age Badge ─────────────────────────────────────────── */
     .age-badge {
       display: inline-flex; align-items: center;
-      padding: 1px 6px; border-radius: var(--radius-full);
-      font-size: 0.57rem; font-weight: 700;
+      padding: 1px 5px; border-radius: var(--radius-full);
+      font-size: 0.54rem; font-weight: 700;
       letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap;
     }
     .age-badge.antiquity  { background: var(--gold-bg);   color: var(--gold-light);   border: 1px solid rgba(201,168,76,0.3); }
     .age-badge.exploration{ background: var(--teal-bg);   color: var(--teal-light);   border: 1px solid rgba(76,168,154,0.3); }
     .age-badge.modern     { background: var(--purple-bg); color: var(--purple-light); border: 1px solid rgba(139,92,246,0.3); }
 
-    /* ─── Civ list (in bottom-right) ────────────────────────── */
-    .civ-legend {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 0.58rem; color: var(--text-muted);
-      margin-bottom: 8px; flex-wrap: wrap;
-    }
-    .civ-legend-item { display: flex; align-items: center; gap: 3px; }
-    .civ-legend-swatch {
-      width: 7px; height: 7px; border-radius: 2px;
-      border: 1px solid var(--gold);
-    }
-    .sync-star-sm { font-size: 0.6rem; color: var(--gold); }
-
-    .civ-list { display: flex; flex-direction: column; gap: 2px; margin-bottom: 14px; }
-
-    .civ-item {
-      background: transparent; border: 1px solid transparent;
-      border-radius: var(--radius-sm); padding: 4px 8px;
-      cursor: pointer; display: flex; align-items: center; gap: 6px;
-      transition: background var(--transition), border-color var(--transition);
-      user-select: none;
-    }
-    .civ-item:hover { background: var(--bg-card-hover); border-color: var(--border-light); }
-    .civ-item.selected { background: rgba(76,168,154,0.08); border-color: var(--teal); }
-    .civ-item.has-syncretism { border-color: rgba(201,168,76,0.25); }
-    .civ-item.has-syncretism:hover { border-color: var(--gold); }
-    .civ-item.has-syncretism.selected { border-color: var(--teal); }
-
-    .civ-item-name { font-size: 0.71rem; font-weight: 500; color: var(--text); flex: 1; }
-    .civ-item-right { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
-
-    /* ─── Civ detail (below civ list) ───────────────────────── */
-    .civ-detail-divider {
-      height: 1px; background: var(--border); margin-bottom: 12px;
-    }
-
-    .civ-detail-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-    .civ-detail-icon {
-      width: 36px; height: 36px; border-radius: var(--radius-md);
-      background: linear-gradient(135deg, var(--bg-card-hover), var(--border));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1rem; border: 1px solid var(--border-light); flex-shrink: 0;
-    }
-    .civ-detail-name { font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 3px; }
-
-    /* Traditions */
+    /* Traditions (compact, in civ half) */
     .section-sublabel {
-      font-size: 0.57rem; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--text-dim); margin: 10px 0 6px;
+      font-size: 0.54rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--text-dim); margin: 8px 0 4px;
     }
     .tradition-row {
-      display: flex; align-items: flex-start; gap: 8px;
-      padding: 7px 0; border-bottom: 1px solid var(--border);
+      display: flex; align-items: flex-start; gap: 6px;
+      padding: 5px 0; border-bottom: 1px solid var(--border);
     }
     .tradition-row:last-child { border-bottom: none; }
-    .tradition-content { flex: 1; }
-    .tradition-name { font-size: 0.74rem; font-weight: 600; color: var(--text); margin-bottom: 3px; }
-    .tradition-desc { font-size: 0.7rem; color: var(--text-muted); line-height: 1.6; white-space: pre-line; }
+    .tradition-name { font-size: 0.68rem; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+    .tradition-desc { font-size: 0.64rem; color: var(--text-muted); line-height: 1.55; white-space: pre-line; }
 
     /* Syncretism */
-    .sync-pills { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px; }
+    .sync-pills { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
     .sync-pill {
-      padding: 2px 9px; border-radius: var(--radius-full);
-      font-size: 0.66rem; font-weight: 600;
+      padding: 2px 7px; border-radius: var(--radius-full);
+      font-size: 0.62rem; font-weight: 600;
       background: var(--teal-bg); color: var(--teal-light);
       border: 1px solid rgba(76,168,154,0.3);
     }
@@ -351,102 +198,249 @@
       background: linear-gradient(90deg, rgba(201,168,76,0.12), rgba(76,168,154,0.12));
       color: #d4c07a; border-color: rgba(201,168,76,0.4);
     }
-    .sync-source-note { font-size: 0.62rem; color: var(--text-dim); margin-top: 7px; }
+    .sync-source-note { font-size: 0.58rem; color: var(--text-dim); margin-top: 5px; }
+    .empty-state { font-size: 0.66rem; color: var(--text-dim); font-style: italic; }
 
-    .empty-state { font-size: 0.72rem; color: var(--text-dim); font-style: italic; }
-
-    /* Reset */
-    .btn-reset {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 6px 14px; background: transparent;
-      border: 1.5px solid var(--border-light); border-radius: var(--radius-full);
-      color: var(--text-muted); font-family: inherit;
-      font-size: 0.68rem; font-weight: 600; cursor: pointer;
-      transition: border-color var(--transition), color var(--transition), background var(--transition);
-      margin-top: 12px;
+    /* ─── Selection Area (below ability pane) ───────────────── */
+    .selection-area {
+      flex: 1; display: flex; min-height: 0; overflow: hidden;
     }
-    .btn-reset:hover { border-color: var(--gold); color: var(--gold-light); background: var(--gold-bg); }
+
+    .panel {
+      flex: 1; min-width: 0;
+      display: flex; flex-direction: column;
+      overflow: hidden;
+    }
+    .panel + .panel { border-left: 1px solid var(--border); }
+
+    .panel-header {
+      display: flex; align-items: center; gap: 7px;
+      padding: 8px 10px 6px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .panel-header-label {
+      font-size: 0.58rem; font-weight: 700;
+      letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-dim);
+    }
+    .step-num {
+      width: 15px; height: 15px; border-radius: 50%;
+      background: var(--gold); color: #0f1320;
+      font-size: 0.56rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .step-num.teal { background: var(--teal); }
+
+    /* civ legend inline in header */
+    .civ-legend {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.54rem; color: var(--text-dim); margin-left: auto;
+    }
+    .civ-legend-item { display: flex; align-items: center; gap: 3px; }
+    .legend-swatch { width: 6px; height: 6px; border-radius: 1px; border: 1px solid var(--gold); }
+    .sync-star-sm { font-size: 0.58rem; color: var(--gold); }
+
+    .panel-scroll {
+      flex: 1; overflow-y: auto; padding: 8px;
+    }
+    .panel-scroll::-webkit-scrollbar { width: 4px; }
+    .panel-scroll::-webkit-scrollbar-track { background: transparent; }
+    .panel-scroll::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
+
+    /* ─── Tile Grid (leaders & civs share same style) ───────── */
+    .tile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+      gap: 5px;
+    }
+
+    /* ─── Tile Card ─────────────────────────────────────────── */
+    .tile-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 6px 4px 5px;
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+      cursor: pointer;
+      transition: transform var(--transition), border-color var(--transition),
+                  background var(--transition), box-shadow var(--transition);
+      position: relative; user-select: none;
+    }
+    .tile-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-light);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-card);
+    }
+    .tile-card.leader-selected {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.08);
+      box-shadow: 0 0 0 1px var(--gold), var(--shadow-card);
+    }
+    .tile-card.civ-selected {
+      border-color: var(--teal);
+      background: rgba(76,168,154,0.08);
+      box-shadow: 0 0 0 1px var(--teal), var(--shadow-card);
+    }
+    .tile-card.has-syncretism { border-color: rgba(201,168,76,0.35); }
+    .tile-card.has-syncretism:hover { border-color: var(--gold); }
+    .tile-card.has-syncretism.civ-selected { border-color: var(--teal); }
+
+    /* tile portrait — circle for leaders, rounded-square for civs */
+    .tile-portrait {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--border-light);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      flex-shrink: 0; position: relative;
+    }
+    .tile-card.civ-card .tile-portrait { border-radius: var(--radius-md); }
+
+    .tile-card:hover .tile-portrait { border-color: var(--border-light); }
+    .tile-card.leader-selected .tile-portrait { border-color: var(--gold); box-shadow: 0 0 10px rgba(201,168,76,0.3); }
+    .tile-card.civ-selected .tile-portrait    { border-color: var(--teal); box-shadow: 0 0 10px rgba(76,168,154,0.25); }
+
+    .tile-portrait img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center;
+      display: block;
+    }
+    .tile-card.civ-card .tile-portrait img { object-position: center center; }
+
+    .tile-fallback {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--bg-card-hover), var(--border));
+      font-size: 1rem; color: var(--gold); font-weight: 700;
+    }
+    .tile-card.civ-card .tile-fallback { color: var(--teal); }
+
+    .tile-name {
+      font-size: 0.57rem; font-weight: 600;
+      text-align: center; color: var(--text); line-height: 1.25;
+      word-break: break-word; hyphens: auto;
+    }
+
+    /* sync star badge on civ tile */
+    .tile-sync-star {
+      position: absolute; top: -3px; right: -3px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--gold); color: #0f1320;
+      font-size: 0.45rem; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px solid var(--bg-card);
+    }
+
+    /* selection checkmark */
+    .tile-check {
+      position: absolute; top: 4px; right: 4px;
+      width: 13px; height: 13px; border-radius: 50%;
+      background: var(--gold); display: none;
+      align-items: center; justify-content: center;
+    }
+    .tile-card.civ-selected .tile-check { background: var(--teal); }
+    .tile-card.leader-selected .tile-check,
+    .tile-card.civ-selected .tile-check { display: flex; }
+    .tile-check svg { width: 7px; height: 7px; fill: #0f1320; }
 
     /* ─── Footer ────────────────────────────────────────────── */
     footer {
       border-top: 1px solid var(--border);
-      padding: 8px 22px; text-align: center;
-      font-size: 0.61rem; color: var(--text-dim); flex-shrink: 0;
+      padding: 6px 18px; text-align: center;
+      font-size: 0.58rem; color: var(--text-dim); flex-shrink: 0;
     }
 
-    /* ─── Responsive ────────────────────────────────────────── */
-    @media (max-width: 900px) {
-      html, body { height: auto; overflow: visible; }
-      #app { overflow: visible; height: auto; }
-      .layout { flex-direction: column; overflow: visible; }
-      .left-section { flex: none; border-right: none; border-bottom: 1px solid var(--border); }
-      .right-pane { flex: none; max-width: 100%; min-height: 600px; }
-      .ability-leader, .ability-civ { overflow: visible; }
-      .leader-grid { grid-template-columns: repeat(auto-fill, minmax(95px, 1fr)); }
+    /* ─── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .ability-pane { flex-direction: column; max-height: 50vh; }
+      .ability-half + .ability-half { border-left: none; border-top: 1px solid var(--border); }
+      .site-header h1 .subtitle { display: none; }
+      .civ-legend { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <div id="loading">
-    <div class="spinner"></div>
-    <span>Loading data…</span>
-  </div>
+  <div id="loading"><div class="spinner"></div><span>Loading data…</span></div>
   <div id="error-msg"></div>
 
   <div id="app">
+
+    <!-- ── Header ── -->
     <header class="site-header">
       <h1>⚔ Civilization VII <span class="subtitle">— Leader &amp; Civ Ability Browser</span></h1>
+      <button class="btn-reset" id="btn-reset">
+        <svg viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.418A6 6 0 1 1 8 2v1z"/>
+          <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+        </svg>
+        Reset
+      </button>
     </header>
 
-    <div class="layout">
-
-      <!-- ── Left: Leader Grid (2/3) ── -->
-      <div class="left-section">
-        <div class="section-label">
-          <span class="step-num">1</span> Leaders
+    <!-- ── Ability Pane (top) ── -->
+    <div class="ability-pane">
+      <div class="ability-half" id="leader-detail-area">
+        <div class="half-empty">
+          <div class="half-empty-icon">👑</div>
+          <div class="half-empty-label">Hover or select a leader</div>
         </div>
-        <div class="leader-grid" id="leader-grid"></div>
       </div>
-
-      <!-- ── Right: Ability Pane (1/3), split top/bottom ── -->
-      <div class="right-pane">
-
-        <!-- Top half: leader detail -->
-        <div class="ability-leader" id="leader-detail-area">
-          <div class="pane-empty">
-            <div class="pane-empty-icon">👑</div>
-            <div class="pane-empty-title">No leader selected</div>
-            <div class="pane-empty-sub">Hover or click a leader</div>
-          </div>
+      <div class="ability-half" id="civ-detail-area">
+        <div class="half-empty">
+          <div class="half-empty-icon">🏛</div>
+          <div class="half-empty-label">Hover or select a civilization</div>
         </div>
-
-        <!-- Bottom half: civ section -->
-        <div class="ability-civ" id="civ-area">
-          <div class="pane-empty">
-            <div class="pane-empty-icon">🏛</div>
-            <div class="pane-empty-title">No leader selected yet</div>
-            <div class="pane-empty-sub">Pick a leader first</div>
-          </div>
-        </div>
-
       </div>
     </div>
 
+    <!-- ── Selection Area (bottom) ── -->
+    <div class="selection-area">
+
+      <!-- Leaders panel -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="step-num">1</span>
+          <span class="panel-header-label">Leaders</span>
+        </div>
+        <div class="panel-scroll">
+          <div class="tile-grid" id="leader-grid"></div>
+        </div>
+      </div>
+
+      <!-- Civs panel -->
+      <div class="panel" id="civ-panel">
+        <div class="panel-header">
+          <span class="step-num teal">2</span>
+          <span class="panel-header-label">Civilizations</span>
+          <div class="civ-legend">
+            <span class="civ-legend-item"><span class="legend-swatch"></span> Syncretism</span>
+            <span class="civ-legend-item"><span class="sync-star-sm">✦</span> Leader sync</span>
+          </div>
+        </div>
+        <div class="panel-scroll">
+          <div class="tile-grid" id="civ-grid"></div>
+        </div>
+      </div>
+
+    </div>
+
     <footer>
-      Data extracted from Civ VII 1.4.0 (Test of Time) game database · Images © 2K Games via Civilization Wiki
+      Data extracted from Civ VII 1.4.0 (Test of Time) · Images © 2K Games via Civilization Wiki
     </footer>
   </div>
 
   <script>
-  // ─── Embedded Data ───────────────────────────────────────────────────────────
-
+  // ─── Leader Portrait URLs ────────────────────────────────────────────────────
   const PORTRAIT_URLS = {"Amina":"https://static.wikia.nocookie.net/civilization/images/1/14/Amina_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20251218081610","Ada Lovelace":"https://static.wikia.nocookie.net/civilization/images/7/72/Ada_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124234454","Alexander":"https://static.wikia.nocookie.net/civilization/images/b/bb/Alexander_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124234829","Ashoka, World Conqueror":"https://static.wikia.nocookie.net/civilization/images/8/8e/Ashoka%2C_World_Conqueror_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124235355","Ashoka, World Renouncer":"https://static.wikia.nocookie.net/civilization/images/b/b7/Ashoka%2C_World_Renouncer_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124235357","Augustus":"https://static.wikia.nocookie.net/civilization/images/9/97/Augustus_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124235737","Benjamin Franklin":"https://static.wikia.nocookie.net/civilization/images/7/79/Benjamin_Franklin_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250124235945","Catherine the Great":"https://static.wikia.nocookie.net/civilization/images/6/61/Catherine_head_portrait_%28neutral%29_%28Civ7%29.png/revision/latest?cb=20250125000358","Charlemagne":"https://static.wikia.nocookie.net/civilization/images/f/fc/Charlemagne_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125000706","Confucius":"https://static.wikia.nocookie.net/civilization/images/b/b1/Confucius_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125001043","Edward Teach":"https://static.wikia.nocookie.net/civilization/images/a/a0/Edward_Teach_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125001406","Friedrich, Baroque":"https://static.wikia.nocookie.net/civilization/images/9/93/Friedrich_%28Baroque%29_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125002110","Friedrich, Oblique":"https://static.wikia.nocookie.net/civilization/images/1/18/Friedrich_%28Oblique%29_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125002114","Genghis Khan":"https://static.wikia.nocookie.net/civilization/images/3/37/Genghis_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125002636","Gilgamesh":"https://static.wikia.nocookie.net/civilization/images/3/3d/Gilgamesh_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125002831","Harriet Tubman":"https://static.wikia.nocookie.net/civilization/images/4/45/Harriet_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125003054","Hatshepsut":"https://static.wikia.nocookie.net/civilization/images/a/ab/Hatshepsut_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125003422","Himiko, High Shaman":"https://static.wikia.nocookie.net/civilization/images/a/af/Himiko_Shaman_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125003754","Himiko, Queen of Wa":"https://static.wikia.nocookie.net/civilization/images/3/3f/Himiko_Queen_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125003757","Ibn Battuta":"https://static.wikia.nocookie.net/civilization/images/b/be/Ibn_Battuta_round_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125004025","Isabella":"https://static.wikia.nocookie.net/civilization/images/2/29/Isabella_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125004238","José Rizal":"https://static.wikia.nocookie.net/civilization/images/a/a3/Jos%C3%A9_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125004642","Lafayette":"https://static.wikia.nocookie.net/civilization/images/9/92/Lafayette_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125004939","Lakshmibai":"https://static.wikia.nocookie.net/civilization/images/a/a3/Lakshmibai_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125005252","Machiavelli":"https://static.wikia.nocookie.net/civilization/images/f/f9/Machiavelli_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125005611","Napoleon, Emperor":"https://static.wikia.nocookie.net/civilization/images/d/dc/Napoleon_Emperor_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010139","Napoleon, Revolutionary":"https://static.wikia.nocookie.net/civilization/images/9/9c/Napoleon_Revolutionary_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010145","Pachacuti":"https://static.wikia.nocookie.net/civilization/images/e/e2/Pachacuti_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010500","Sayyida al Hurra":"https://static.wikia.nocookie.net/civilization/images/d/d7/Sayyida_al_Hurra_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010809","Tecumseh":"https://static.wikia.nocookie.net/civilization/images/d/d6/Tecumseh_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125011044","Trung Trac":"https://static.wikia.nocookie.net/civilization/images/8/8f/Trung_Trac_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125011440","Simón Bolívar":"https://static.wikia.nocookie.net/civilization/images/6/68/Sim%C3%B3n_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125010944","Xerxes, King of Kings":"https://static.wikia.nocookie.net/civilization/images/1/1a/Xerxes_King_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125011719","Xerxes, the Achaemenid":"https://static.wikia.nocookie.net/civilization/images/4/43/Xerxes_Achaemenid_portrait_neutral_%28Civ7%29.png/revision/latest?cb=20250125011726"};
+
+  // ─── Civ Portrait URLs (filled in once wiki URLs are confirmed) ──────────────
+  const CIV_PORTRAIT_URLS = {};
 
   const APEX_AGES = {"Abbasid":"Exploration","Aksum":"Antiquity","America":"Modern","Assyria":"Antiquity","Buganda":"Modern","Bulgaria":"Exploration","Carthage":"Antiquity","Chola":"Exploration","Đại Việt":"Exploration","Egypt":"Antiquity","French Empire":"Modern","Great Britain":"Modern","Greece":"Antiquity","Han":"Antiquity","Hawai'i":"Exploration","Iceland":"Exploration","Inca":"Exploration","Khmer":"Antiquity","Majapahit":"Exploration","Maurya":"Antiquity","Maya":"Antiquity","Meiji Japan":"Modern","Mexico":"Modern","Ming":"Exploration","Mississippian":"Antiquity","Mongolia":"Exploration","Mughal":"Modern","Nepal":"Modern","Norman":"Exploration","Ottomans":"Modern","Achaemenid Persia":"Antiquity","Republic of Pirates":"Exploration","Prussia":"Modern","Qajar":"Modern","Qing":"Modern","Rome":"Antiquity","Russia":"Modern","Shawnee":"Exploration","Siam":"Modern","Silla Korea":"Antiquity","Songhai":"Exploration","Spain":"Exploration","Tonga":"Antiquity"};
 
   // ─── CSV Parser ──────────────────────────────────────────────────────────────
-
   function parseCSV(text) {
     const lines = text.replace(/\r\n/g,'\n').replace(/\r/g,'\n').split('\n');
     if (!lines.length) return [];
@@ -462,7 +456,6 @@
     }
     return result;
   }
-
   function parseCSVRow(line) {
     const result = []; let cur = ''; let inQuote = false;
     for (let i = 0; i < line.length; i++) {
@@ -470,23 +463,17 @@
       if (ch === '"') {
         if (inQuote && line[i+1] === '"') { cur += '"'; i++; }
         else { inQuote = !inQuote; }
-      } else if (ch === ',' && !inQuote) {
-        result.push(cur); cur = '';
-      } else { cur += ch; }
+      } else if (ch === ',' && !inQuote) { result.push(cur); cur = ''; }
+      else { cur += ch; }
     }
     result.push(cur);
     return result;
   }
 
   // ─── Helpers ─────────────────────────────────────────────────────────────────
-
   function ageClass(age) {
-    if (!age) return '';
-    const a = age.toLowerCase();
-    if (a === 'antiquity')   return 'antiquity';
-    if (a === 'exploration') return 'exploration';
-    if (a === 'modern')      return 'modern';
-    return '';
+    const a = (age||'').toLowerCase();
+    return a === 'antiquity' ? 'antiquity' : a === 'exploration' ? 'exploration' : a === 'modern' ? 'modern' : '';
   }
   function ageBadge(age) {
     if (!age) return '';
@@ -496,310 +483,260 @@
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
   function splitList(str) {
-    if (!str || !str.trim()) return [];
-    return str.split(',').map(s => s.trim()).filter(Boolean);
+    if (!str||!str.trim()) return [];
+    return str.split(',').map(s=>s.trim()).filter(Boolean);
   }
   function initials(name) {
-    return name.split(/\s+/).map(w => w[0]).join('').slice(0,2).toUpperCase();
+    return name.split(/\s+/).map(w=>w[0]).join('').slice(0,2).toUpperCase();
   }
 
   // ─── State ───────────────────────────────────────────────────────────────────
-
-  let allRows = [], leaderSyncRows = [];
-  let leaders = {}, civs = {}, leaderSyncMap = {};
-  let selectedLeader = null, selectedCiv = null;
-  let hoveredLeader  = null, hoveredCiv  = null;
+  let allRows=[], leaderSyncRows=[];
+  let leaders={}, civs={}, leaderSyncMap={};
+  let selectedLeader=null, selectedCiv=null;
+  let hoveredLeader=null,  hoveredCiv=null;
 
   // ─── Load & Process ──────────────────────────────────────────────────────────
-
   async function loadData() {
-    const [unifiedText, syncText] = await Promise.all([
-      fetch('civ7_unified.csv').then(r => { if (!r.ok) throw new Error(r.statusText); return r.text(); }),
-      fetch('civ7_leader_syncretism.csv').then(r => { if (!r.ok) throw new Error(r.statusText); return r.text(); }),
+    const [u, s] = await Promise.all([
+      fetch('civ7_unified.csv').then(r=>{ if(!r.ok) throw new Error(r.statusText); return r.text(); }),
+      fetch('civ7_leader_syncretism.csv').then(r=>{ if(!r.ok) throw new Error(r.statusText); return r.text(); }),
     ]);
-    allRows = parseCSV(unifiedText);
-    leaderSyncRows = parseCSV(syncText);
+    allRows=parseCSV(u); leaderSyncRows=parseCSV(s);
   }
-
   function processData() {
     for (const row of allRows) {
-      if (row.kind !== 'leader' || row.row_type !== 'Unique Ability') continue;
-      leaders[row.name] = {
-        abilityName: row.ability_or_tradition_name,
-        desc: row.description_clean,
-        syncretismOptions: splitList(row.syncretism_options),
-      };
+      if (row.kind!=='leader'||row.row_type!=='Unique Ability') continue;
+      leaders[row.name]={ abilityName:row.ability_or_tradition_name, desc:row.description_clean, syncretismOptions:splitList(row.syncretism_options) };
     }
     for (const row of allRows) {
-      if (row.kind !== 'civilization') continue;
-      if (!civs[row.name]) {
-        civs[row.name] = { abilityName:'', apexDesc:'', apexAge: APEX_AGES[row.name]||'', traditions:[], civSyncOptions:[] };
-      }
-      if (row.row_type === 'Unique Ability') {
-        civs[row.name].abilityName    = row.ability_or_tradition_name;
-        civs[row.name].apexDesc       = row.description_clean;
-        civs[row.name].civSyncOptions = splitList(row.syncretism_options);
-      } else if (row.row_type === 'Self-Syncretism Tradition') {
-        civs[row.name].traditions.push({ name: row.ability_or_tradition_name, age: row.age, desc: row.description_clean });
+      if (row.kind!=='civilization') continue;
+      if (!civs[row.name]) civs[row.name]={ abilityName:'', apexDesc:'', apexAge:APEX_AGES[row.name]||'', traditions:[], civSyncOptions:[] };
+      if (row.row_type==='Unique Ability') {
+        civs[row.name].abilityName=row.ability_or_tradition_name;
+        civs[row.name].apexDesc=row.description_clean;
+        civs[row.name].civSyncOptions=splitList(row.syncretism_options);
+      } else if (row.row_type==='Self-Syncretism Tradition') {
+        civs[row.name].traditions.push({ name:row.ability_or_tradition_name, age:row.age, desc:row.description_clean });
       }
     }
-    const AGE_ORDER = { Antiquity:0, Exploration:1, Apex:2, Modern:3 };
-    for (const civ of Object.values(civs)) {
-      civ.traditions.sort((a,b) => (AGE_ORDER[a.age]??99) - (AGE_ORDER[b.age]??99));
-    }
+    const AGE_ORDER={Antiquity:0,Exploration:1,Apex:2,Modern:3};
+    for (const civ of Object.values(civs)) civ.traditions.sort((a,b)=>(AGE_ORDER[a.age]??99)-(AGE_ORDER[b.age]??99));
     for (const row of leaderSyncRows) {
-      if (!leaderSyncMap[row.leader_name]) leaderSyncMap[row.leader_name] = [];
+      if (!leaderSyncMap[row.leader_name]) leaderSyncMap[row.leader_name]=[];
       leaderSyncMap[row.leader_name].push(row.syncretism_civ_name);
     }
   }
 
-  // ─── Render: Leader Detail (top-right) ───────────────────────────────────────
-
+  // ─── Render: Leader Detail (top-left half) ───────────────────────────────────
   function renderLeaderDetail() {
     const area = document.getElementById('leader-detail-area');
     const active    = hoveredLeader ?? selectedLeader;
     const isPreview = !!hoveredLeader && hoveredLeader !== selectedLeader;
 
     if (!active) {
-      area.innerHTML = `<div class="pane-empty">
-        <div class="pane-empty-icon">👑</div>
-        <div class="pane-empty-title">No leader selected</div>
-        <div class="pane-empty-sub">Hover or click a leader</div>
-      </div>`;
+      area.innerHTML = `<div class="half-empty"><div class="half-empty-icon">👑</div><div class="half-empty-label">Hover or select a leader</div></div>`;
       return;
     }
 
     const leader = leaders[active];
     const url    = PORTRAIT_URLS[active];
-    const portrait = url
+    const portraitInner = url
       ? `<img src="${escHtml(url)}" alt="${escHtml(active)}" loading="lazy"
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-         <div class="leader-portrait-fallback" style="display:none">${escHtml(initials(active))}</div>`
-      : `<div class="leader-portrait-fallback">${escHtml(initials(active))}</div>`;
+         <div class="detail-portrait-fallback" style="display:none">${escHtml(initials(active))}</div>`
+      : `<div class="detail-portrait-fallback">${escHtml(initials(active))}</div>`;
 
     area.innerHTML = `
-      ${isPreview ? `<div class="preview-badge">Previewing — click to select</div>` : ''}
-      <div class="leader-detail-header">
-        <div class="leader-detail-portrait">${portrait}</div>
+      ${isPreview ? `<div class="preview-badge">Preview — click to select</div>` : ''}
+      <div class="detail-header">
+        <div class="detail-portrait">${portraitInner}</div>
         <div>
-          <div class="leader-detail-name">${escHtml(active)}</div>
+          <div class="detail-name">${escHtml(active)}</div>
           <div class="ability-name-row">⚡ ${escHtml(leader.abilityName)}</div>
         </div>
       </div>
-      <div class="ability-desc" style="margin-top:10px">${escHtml(leader.desc)}</div>`;
+      <div class="ability-desc">${escHtml(leader.desc)}</div>`;
   }
 
-  // ─── Render: Civ Area (bottom-right) ─────────────────────────────────────────
+  // ─── Render: Civ Detail (top-right half) ─────────────────────────────────────
+  function renderCivDetail() {
+    const area = document.getElementById('civ-detail-area');
+    const active    = hoveredCiv ?? selectedCiv;
+    const isPreview = !!hoveredCiv && hoveredCiv !== selectedCiv;
 
-  function renderCivArea() {
-    const area = document.getElementById('civ-area');
-
-    if (!selectedLeader && !hoveredLeader) {
-      area.innerHTML = `<div class="pane-empty">
-        <div class="pane-empty-icon">🏛</div>
-        <div class="pane-empty-title">No leader selected yet</div>
-        <div class="pane-empty-sub">Pick a leader first</div>
-      </div>`;
+    if (!active) {
+      area.innerHTML = `<div class="half-empty"><div class="half-empty-icon">🏛</div><div class="half-empty-label">Hover or select a civilization</div></div>`;
       return;
     }
 
-    // Rebuild only if the leader selection changed (not just civ hover)
-    // We always rebuild so syncretism star highlights stay accurate
-    const refLeader = hoveredLeader ?? selectedLeader;
-    const leaderSyncCivs = new Set(leaderSyncMap[refLeader] || []);
-    const activeCiv  = hoveredCiv ?? selectedCiv;
-    const isPreview  = !!hoveredCiv && hoveredCiv !== selectedCiv;
+    const civ = civs[active];
+    const url = CIV_PORTRAIT_URLS[active];
+    const portraitInner = url
+      ? `<img src="${escHtml(url)}" alt="${escHtml(active)}" loading="lazy"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+         <div class="detail-portrait-fallback" style="display:none">${escHtml(initials(active))}</div>`
+      : `<div class="detail-portrait-fallback" style="color:var(--teal)">${escHtml(initials(active))}</div>`;
 
-    // ── Civ list ──
-    let listHtml = `
-      <div class="section-label" style="margin-bottom:8px">
-        <span class="step-num teal">2</span> Civilizations
-      </div>
-      <div class="civ-legend">
-        <span class="civ-legend-item"><span class="civ-legend-swatch"></span> Syncretism</span>
-        <span class="civ-legend-item"><span class="sync-star-sm">✦</span> Leader sync</span>
-      </div>
-      <div class="civ-list" id="civ-grid"></div>`;
+    const traditions = civ.traditions.filter(t => {
+      const a=(t.age||'').toLowerCase();
+      return a!=='apex' && t.desc && t.desc.trim();
+    });
 
-    // ── Civ detail ──
-    let detailHtml = '';
-    if (activeCiv) {
-      const civ = civs[activeCiv];
-      const traditions = civ.traditions.filter(t => {
-        const a = (t.age||'').toLowerCase();
-        return a !== 'apex' && t.desc && t.desc.trim();
-      });
-
-      detailHtml += `<div class="civ-detail-divider"></div>`;
-      detailHtml += isPreview ? `<div class="preview-badge">Previewing — click to select</div>` : '';
-      detailHtml += `
-        <div class="civ-detail-header">
-          <div class="civ-detail-icon">🏛</div>
-          <div>
-            <div class="civ-detail-name">${escHtml(activeCiv)}</div>
-            ${ageBadge(civ.apexAge)}
-          </div>
-        </div>
-        <div class="ability-name-row">⚡ ${escHtml(civ.abilityName)}</div>
-        <div class="ability-desc">${escHtml(civ.apexDesc)}</div>`;
-
-      if (traditions.length) {
-        detailHtml += `<div class="section-sublabel">Cross-Age Traditions</div>`;
-        detailHtml += traditions.map(t => `
-          <div class="tradition-row">
-            <div style="padding-top:2px">${ageBadge(t.age)}</div>
-            <div class="tradition-content">
-              <div class="tradition-name">${escHtml(t.name)}</div>
-              <div class="tradition-desc">${escHtml(t.desc)}</div>
-            </div>
-          </div>`).join('');
-      }
-
-      // Syncretism only when both firmly selected
-      if (!isPreview && !(!!hoveredLeader && hoveredLeader !== selectedLeader) && selectedLeader && selectedCiv) {
-        const leaderSyncSet = new Set(leaderSyncMap[selectedLeader] || []);
-        const civSyncSet    = new Set(civ.civSyncOptions);
-        const allSync = new Set([...leaderSyncSet, ...civSyncSet]);
-        allSync.delete(selectedCiv);
-
-        const pills = [...allSync].sort().map(n => {
-          const fl = leaderSyncSet.has(n), fc = civSyncSet.has(n);
-          const cls = fl && fc ? 'sync-pill from-both' : fl ? 'sync-pill from-leader' : 'sync-pill';
-          return `<span class="${cls}">${escHtml(n)}</span>`;
-        }).join('');
-
-        detailHtml += `<div class="section-sublabel">Syncretism Options</div>`;
-        detailHtml += allSync.size > 0
+    // Syncretism — only when both firmly selected and no hover active
+    let syncHtml = '';
+    const firmBoth = !isPreview && !(!!hoveredLeader && hoveredLeader!==selectedLeader) && selectedLeader && selectedCiv;
+    if (firmBoth) {
+      const leaderSyncSet = new Set(leaderSyncMap[selectedLeader]||[]);
+      const civSyncSet    = new Set(civ.civSyncOptions);
+      const allSync = new Set([...leaderSyncSet,...civSyncSet]);
+      allSync.delete(selectedCiv);
+      const pills = [...allSync].sort().map(n=>{
+        const fl=leaderSyncSet.has(n), fc=civSyncSet.has(n);
+        const cls=fl&&fc?'sync-pill from-both':fl?'sync-pill from-leader':'sync-pill';
+        return `<span class="${cls}">${escHtml(n)}</span>`;
+      }).join('');
+      syncHtml = `
+        <div class="section-sublabel">Syncretism</div>
+        ${allSync.size>0
           ? `<div class="sync-pills">${pills}</div>
              <div class="sync-source-note">
                <span style="color:var(--gold-light)">Gold</span> = leader &nbsp;|&nbsp;
                <span style="color:var(--teal-light)">Teal</span> = civ &nbsp;|&nbsp;
                <span style="color:#d4c07a">Mixed</span> = both
              </div>`
-          : `<div class="empty-state">No syncretism for this combination.</div>`;
-
-        detailHtml += `
-          <button class="btn-reset" id="btn-reset">
-            <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor">
-              <path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.418A6 6 0 1 1 8 2v1z"/>
-              <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
-            </svg>
-            Start Over
-          </button>`;
-      }
+          : `<div class="empty-state">No syncretism for this combination.</div>`}`;
     }
 
-    area.innerHTML = listHtml + detailHtml;
-
-    // Wire reset
-    const rb = document.getElementById('btn-reset');
-    if (rb) rb.addEventListener('click', resetAll);
-
-    // Populate civ list
-    const civList = document.getElementById('civ-grid');
-    if (!civList) return;
-
-    for (const name of Object.keys(civs).sort()) {
-      const civ = civs[name];
-      const hasSync   = leaderSyncCivs.has(name);
-      const isSelected = selectedCiv === name;
-
-      const item = document.createElement('div');
-      item.className = 'civ-item'
-        + (isSelected ? ' selected' : '')
-        + (hasSync    ? ' has-syncretism' : '');
-      item.dataset.civ = name;
-
-      item.innerHTML = `
-        <span class="civ-item-name">${escHtml(name)}</span>
-        <span class="civ-item-right">
-          ${hasSync ? `<span class="sync-star-sm" title="Leader can syncretise">✦</span>` : ''}
-          ${ageBadge(civ.apexAge || 'Unknown')}
-        </span>`;
-
-      item.addEventListener('click', () => selectCiv(name));
-      item.addEventListener('mouseenter', () => { hoveredCiv = name; renderCivArea(); });
-      item.addEventListener('mouseleave', () => { hoveredCiv = null; renderCivArea(); });
-      civList.appendChild(item);
-    }
+    area.innerHTML = `
+      ${isPreview ? `<div class="preview-badge">Preview — click to select</div>` : ''}
+      <div class="detail-header">
+        <div class="detail-portrait civ-portrait">${portraitInner}</div>
+        <div>
+          <div class="detail-name">${escHtml(active)}</div>
+          <div style="display:flex;align-items:center;gap:5px;margin-bottom:3px">${ageBadge(civ.apexAge)}</div>
+          <div class="ability-name-row teal">⚡ ${escHtml(civ.abilityName)}</div>
+        </div>
+      </div>
+      <div class="ability-desc">${escHtml(civ.apexDesc)}</div>
+      ${traditions.length ? `
+        <div class="section-sublabel">Cross-Age Traditions</div>
+        ${traditions.map(t=>`
+          <div class="tradition-row">
+            <div style="padding-top:1px;flex-shrink:0">${ageBadge(t.age)}</div>
+            <div>
+              <div class="tradition-name">${escHtml(t.name)}</div>
+              <div class="tradition-desc">${escHtml(t.desc)}</div>
+            </div>
+          </div>`).join('')}` : ''}
+      ${syncHtml}`;
   }
 
   // ─── Render: Leader Grid ─────────────────────────────────────────────────────
-
   function renderLeaders() {
     const grid = document.getElementById('leader-grid');
     grid.innerHTML = '';
     for (const name of Object.keys(leaders).sort()) {
       const card = document.createElement('div');
-      card.className = 'leader-card' + (selectedLeader === name ? ' selected' : '');
+      card.className = 'tile-card' + (selectedLeader===name ? ' leader-selected' : '');
       card.dataset.leader = name;
 
       const url = PORTRAIT_URLS[name];
       const portraitInner = url
         ? `<img src="${escHtml(url)}" alt="${escHtml(name)}" loading="lazy"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-           <div class="portrait-fallback" style="display:none">${escHtml(initials(name))}</div>`
-        : `<div class="portrait-fallback">${escHtml(initials(name))}</div>`;
+           <div class="tile-fallback" style="display:none">${escHtml(initials(name))}</div>`
+        : `<div class="tile-fallback">${escHtml(initials(name))}</div>`;
 
       card.innerHTML = `
-        <div class="portrait-wrap">${portraitInner}</div>
-        <div class="leader-name">${escHtml(name)}</div>
-        <div class="selected-check">
+        <div class="tile-portrait">${portraitInner}</div>
+        <div class="tile-name">${escHtml(name)}</div>
+        <div class="tile-check">
           <svg viewBox="0 0 12 10">
-            <polyline points="1,5 4.5,8.5 11,1" stroke="#0f1320" stroke-width="2"
-                      fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="1,5 4.5,8.5 11,1" stroke="#0f1320" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>`;
 
       card.addEventListener('click',      () => selectLeader(name));
-      card.addEventListener('mouseenter', () => { hoveredLeader = name; renderLeaderDetail(); });
-      card.addEventListener('mouseleave', () => { hoveredLeader = null; renderLeaderDetail(); });
+      card.addEventListener('mouseenter', () => { hoveredLeader=name; renderLeaderDetail(); });
+      card.addEventListener('mouseleave', () => { hoveredLeader=null; renderLeaderDetail(); });
+      grid.appendChild(card);
+    }
+  }
+
+  // ─── Render: Civ Grid ────────────────────────────────────────────────────────
+  function renderCivs() {
+    const grid = document.getElementById('civ-grid');
+    grid.innerHTML = '';
+    const leaderSyncCivs = new Set(leaderSyncMap[selectedLeader]||[]);
+
+    for (const name of Object.keys(civs).sort()) {
+      const civ = civs[name];
+      const hasSync    = leaderSyncCivs.has(name);
+      const isSelected = selectedCiv === name;
+
+      const card = document.createElement('div');
+      card.className = 'tile-card civ-card'
+        + (isSelected ? ' civ-selected' : '')
+        + (hasSync    ? ' has-syncretism' : '');
+      card.dataset.civ = name;
+
+      const url = CIV_PORTRAIT_URLS[name];
+      const portraitInner = url
+        ? `<img src="${escHtml(url)}" alt="${escHtml(name)}" loading="lazy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+           <div class="tile-fallback" style="display:none;color:var(--teal)">${escHtml(initials(name))}</div>`
+        : `<div class="tile-fallback" style="color:var(--teal)">${escHtml(initials(name))}</div>`;
+
+      card.innerHTML = `
+        <div class="tile-portrait" style="position:relative">
+          ${portraitInner}
+          ${hasSync ? `<div class="tile-sync-star" title="Leader can syncretise with this civ">✦</div>` : ''}
+        </div>
+        <div class="tile-name">${escHtml(name)}</div>
+        <div class="tile-check">
+          <svg viewBox="0 0 12 10">
+            <polyline points="1,5 4.5,8.5 11,1" stroke="#0f1320" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>`;
+
+      card.addEventListener('click',      () => selectCiv(name));
+      card.addEventListener('mouseenter', () => { hoveredCiv=name; renderCivDetail(); });
+      card.addEventListener('mouseleave', () => { hoveredCiv=null; renderCivDetail(); });
       grid.appendChild(card);
     }
   }
 
   // ─── Selection ───────────────────────────────────────────────────────────────
-
   function selectLeader(name) {
-    selectedLeader = name;
-    selectedCiv    = null;
-    hoveredLeader  = null;
-    hoveredCiv     = null;
-    renderLeaders();
-    renderLeaderDetail();
-    renderCivArea();
+    selectedLeader=name; selectedCiv=null; hoveredLeader=null; hoveredCiv=null;
+    renderLeaders(); renderCivs(); renderLeaderDetail(); renderCivDetail();
   }
-
   function selectCiv(name) {
-    selectedCiv = name;
-    hoveredCiv  = null;
-    renderCivArea();
+    selectedCiv=name; hoveredCiv=null;
+    document.querySelectorAll('.civ-card').forEach(c => c.classList.toggle('civ-selected', c.dataset.civ===name));
+    renderCivDetail();
   }
-
   function resetAll() {
-    selectedLeader = null; selectedCiv   = null;
-    hoveredLeader  = null; hoveredCiv    = null;
-    renderLeaders();
-    renderLeaderDetail();
-    renderCivArea();
+    selectedLeader=null; selectedCiv=null; hoveredLeader=null; hoveredCiv=null;
+    renderLeaders(); renderCivs(); renderLeaderDetail(); renderCivDetail();
   }
 
   // ─── Init ─────────────────────────────────────────────────────────────────────
-
   async function init() {
     try {
       await loadData();
       processData();
-      document.getElementById('loading').style.display = 'none';
-      document.getElementById('app').style.display = 'flex';
+      document.getElementById('loading').style.display='none';
+      document.getElementById('app').style.display='flex';
+      document.getElementById('btn-reset').addEventListener('click', resetAll);
       renderLeaders();
-      renderLeaderDetail();
-      renderCivArea();
-    } catch (err) {
-      document.getElementById('loading').style.display = 'none';
-      const el = document.getElementById('error-msg');
-      el.style.display = 'block';
-      el.textContent = `Failed to load data: ${err.message}. Make sure civ7_unified.csv and civ7_leader_syncretism.csv are alongside this file.`;
+      renderCivs();
+    } catch(err) {
+      document.getElementById('loading').style.display='none';
+      const el=document.getElementById('error-msg');
+      el.style.display='block';
+      el.textContent=`Failed to load data: ${err.message}. Make sure civ7_unified.csv and civ7_leader_syncretism.csv are alongside this file.`;
     }
   }
 
