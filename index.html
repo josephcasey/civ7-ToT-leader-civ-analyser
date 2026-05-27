@@ -81,11 +81,6 @@
       letter-spacing: 0.03em; color: var(--gold-light);
       display: flex; align-items: center; gap: 8px; white-space: nowrap; flex: 1; min-width: 0;
     }
-    .site-header h1 .subtitle {
-      font-size: 0.64rem; font-weight: 400;
-      color: var(--text-muted); letter-spacing: 0.07em; text-transform: uppercase;
-      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-    }
     .btn-reset {
       display: inline-flex; align-items: center; gap: 4px;
       padding: 5px 11px; background: transparent;
@@ -366,10 +361,10 @@
     .sync-star-sm { font-size: 0.58rem; color: var(--gold); }
 
     /* ─── Footer ────────────────────────────────────────────── */
-    footer {
+    .scroll-footer {
       border-top: 1px solid var(--border);
-      padding: 6px 16px; text-align: center;
-      font-size: 0.58rem; color: var(--text-dim); flex-shrink: 0;
+      margin-top: 12px; padding: 8px 16px;
+      text-align: center; font-size: 0.58rem; color: var(--text-dim);
     }
   </style>
 </head>
@@ -414,6 +409,7 @@
       </div>
       <div class="panel-scroll">
         <div class="tile-grid" id="leader-grid"></div>
+        <div class="scroll-footer">Data extracted from Civ VII 1.4.0 (Test of Time) · Images © 2K Games via Civilization Wiki</div>
       </div>
     </div>
 
@@ -428,6 +424,7 @@
       </div>
       <div class="panel-scroll">
         <div class="tile-grid" id="civ-grid"></div>
+        <div class="scroll-footer">Data extracted from Civ VII 1.4.0 (Test of Time) · Images © 2K Games via Civilization Wiki</div>
       </div>
     </div>
 
@@ -435,12 +432,10 @@
     <div class="tab-panel" id="panel-abilities">
       <div class="panel-scroll">
         <div id="abilities-content"></div>
+        <div class="scroll-footer">Data extracted from Civ VII 1.4.0 (Test of Time) · Images © 2K Games via Civilization Wiki</div>
       </div>
     </div>
 
-    <footer>
-      Data extracted from Civ VII 1.4.0 (Test of Time) · Images © 2K Games via Civilization Wiki
-    </footer>
   </div>
 
   <script>
