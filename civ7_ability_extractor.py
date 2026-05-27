@@ -451,31 +451,72 @@ ICON_LABELS = {
     "Action_Showall": "",
 }
 
+# Icons that carry meaning and must be replaced with their label word.
+# Icons not in this set are purely decorative and get dropped silently.
+MEANINGFUL_ICONS = {
+    # Yields — these ARE the noun when not followed by their own label
+    "YIELD_CULTURE":     "Culture",
+    "YIELD_GOLD":        "Gold",
+    "YIELD_PRODUCTION":  "Production",
+    "YIELD_SCIENCE":     "Science",
+    "YIELD_FOOD":        "Food",
+    "YIELD_HAPPINESS":   "Happiness",
+    "YIELD_DIPLOMACY":   "Influence",
+    "YIELD_POPULATION":  "Population",
+    "YIELD_WAREHOUSE":   "Warehouse",
+    "YIELD_ANGRY":       "Unhappiness",
+    # Non-yield icons whose label is not always provided by surrounding TIP text.
+    # These icons are always accompanied by a TIP tag or a literal word that
+    # already provides the noun — drop them silently and let the surrounding
+    # text carry the meaning:
+    # RADIAL_RESOURCES, SETTLEMENT_LIMIT, GROWTH_RATE, SOCIAL_POLICY
+    "WAR_SUPPORT":       "War Support",
+    "COMMANDER_RADIUS":  "Command Radius",
+    "TRADE_ROUTE":       "Trade Route",
+    "ESPIONAGE":         "Espionage",
+    "CELEBRATION":       "Celebration",
+    "ENDEAVOR":          "Endeavor",
+}
+
 # TIP tooltips: strip the tag wrapper, keep the visible label text
 _TIP_RE = re.compile(r'\[TIP:[^\]]+\](.*?)\[/TIP\]', re.DOTALL)
 _ICON_RE = re.compile(r'\[icon:([^\]]+)\]')
 _TAG_RE  = re.compile(r'\[[^\]]+\]')
+# Collapse adjacent duplicate words produced when icon label == following word
+# e.g. "Culture Culture" -> "Culture", "Trade Route Trade Route" -> "Trade Route"
+_DEDUP_RE = re.compile(r'\b([\w][\w\- ]*[\w]|[\w])\s+\1\b', re.IGNORECASE)
 
 
 def clean_description(text):
     """Return a plain-English version of a game markup description string."""
     if not text:
         return text
-    # [TIP:...]label[/TIP] -> keep the visible label
+    # [TIP:...]label[/TIP] -> keep the visible label (handles Combat Strength,
+    # Settlements, Districts etc. — the TIP text IS the noun)
     text = _TIP_RE.sub(r'\1', text)
-    # Icons always precede their text label in the UI, so the surrounding text
-    # is already self-describing — drop all icons to avoid "(Culture) Culture".
-    text = _ICON_RE.sub("", text)
+    # Replace meaningful icons with their label; drop decorative ones entirely.
+    def _icon_sub(m):
+        return MEANINGFUL_ICONS.get(m.group(1), "")
+    text = _ICON_RE.sub(_icon_sub, text)
     # [BLIST]/[LIST] -> nothing; [LI] -> bullet
     text = text.replace("[BLIST]", "").replace("[/BLIST]", "")
     text = text.replace("[LIST]", "").replace("[/LIST]", "")
     text = text.replace("[LI]", "\n• ")
-    # Bold tags
+    # Bold/remaining tags
     text = text.replace("[B]", "").replace("[/B]", "")
-    # Any remaining bracketed tags
     text = _TAG_RE.sub("", text)
-    # Collapse runs of spaces left behind by removed tags
+    # Collapse runs of spaces left by removed tags
     text = re.sub(r' {2,}', ' ', text)
+    # Remove duplicate adjacent words from icon-label + literal-label pairs
+    # (e.g. "Culture Culture" -> "Culture"). Run twice for multi-word labels.
+    text = _DEDUP_RE.sub(r'\1', text)
+    text = _DEDUP_RE.sub(r'\1', text)
+    # Handle singular/plural pairs produced by the same substitution
+    # (e.g. "Trade Route Trade Routes" -> "Trade Routes")
+    for label in MEANINGFUL_ICONS.values():
+        if label:
+            text = re.sub(rf'\b{re.escape(label)}\s+{re.escape(label)}s\b',
+                          f'{label}s', text, flags=re.IGNORECASE)
     # Normalise whitespace, tidy bullet lines
     lines = [l.strip() for l in text.splitlines()]
     lines = [l for l in lines if l]
