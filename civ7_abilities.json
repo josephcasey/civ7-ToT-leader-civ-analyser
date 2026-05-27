@@ -3878,7 +3878,7 @@
                 ]
               }
             ],
-            "description_clean": "• Receive 30 Gold for each Rural Population of the City when you create a Specialist. (Scales by Game Speed)\n• +20% Production towards constructing Buildings in Cities with at least 5 Specialists.\n• +30% Production towards constructing the House of Wisdom."
+            "description_clean": "• Receive 30 Gold for each Population Rural Population of the City when you create a Specialist. (Scales by Game Speed)\n• +20% Production towards constructing Buildings in Cities with at least 5 Specialists.\n• +30% Production towards constructing the House of Wisdom."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_EXPANSIONIST",
@@ -11365,7 +11365,7 @@
                 ]
               }
             ],
-            "description_clean": "• Receive Production in all Cities when Pillaging Improvements equal to 50% of the HP or Yields gained.\n• -3 Combat Strength for all Combat Units against Fortified Districts.\n• +30% Production towards constructing Rila Monastery."
+            "description_clean": "• Receive Production in all Cities when Pillaging Improvements equal to 50% of the HP or Yields gained.\n• -3 Combat Strength for all Combat Units against Fortified Districts.\n• +30%Production towards constructing Rila Monastery."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_MILITARISTIC",
@@ -12035,7 +12035,7 @@
                 ]
               }
             ],
-            "description_clean": "• Can only have 1 City. Towns can purchase Water Buildings with any Town Focus, but cannot use Convert to City.\n• Receive a second Merchant or Colonist each time you purchase or train one.\n• +30% Production towards constructing Byrsa."
+            "description_clean": "• Can only have 1 City. Towns can purchase Water Buildings with any Town Focus, but cannot use Convert to City.\n• Receive a second Merchant or Colonist each time you purchase or train one.\n• +30%Production towards constructing Byrsa."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
@@ -12533,7 +12533,7 @@
                 ]
               }
             ],
-            "description_clean": "• +1 Sight for Naval Units.\n• Gain 500 Culture when you discover a Natural Wonder in Distant Lands (On Standard Speed).\n• Gain a Relic every time you study a Civic Mastery.\n• -50% Production towards training Missionaries, and Missionaries cost 100% more Gold to purchase.\n• +30% Production towards constructing Reykjaholt."
+            "description_clean": "• +1 Sight for Naval Units.\n• Gain 500 Culture when you discover a Natural Wonder in Distant Lands (On Standard Speed).\n• Gain a Relic every time you study a Civic Mastery.\n• -50% Production towards training Missionaries, and Missionaries cost 100% more Gold to purchase.\n• +30%Production towards constructing Reykjaholt."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_CULTURAL",
@@ -14611,7 +14611,7 @@
                 ]
               }
             ],
-            "description_clean": "• +1 Influence on the Palace and City Halls in Settlements adjacent to Coast.\n• Receive a free Trade Route from a new City-State when you become their Suzerain.\n• Cannot use the City-State - Incorporate or the Levy Unit Action.\n• +30% Production towards constructing Ha'amonga 'a Maui."
+            "description_clean": "• +1Influence Influence on the Palace and City Halls in Settlements adjacent to Coast.\n• Receive a free Trade Route from a new City-State when you become their Suzerain.\n• Cannot use the City-State - Incorporate or the Levy Unit Action.\n• +30%Production towards constructing Ha'amonga 'a Maui."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
@@ -14770,7 +14770,7 @@
                 ]
               }
             ],
-            "description_clean": "• +25% Gold towards purchasing Buildings and +25% Production towards constructing Buildings.\n• It costs 50% more to convert Towns into Cities.\n• +3 Science on Active Buildings adjacent to Coast.\n• +30% Production towards constructing Battersea Power Station."
+            "description_clean": "• +25%Gold towards purchasing Buildings and +25% Production towards constructing Buildings.\n• It costs 50% more to convert Towns into Cities.\n• +3 Science on Active Buildings adjacent to Coast.\n• +30%Production towards constructing Battersea Power Station."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_ECONOMIC",
@@ -15758,7 +15758,7 @@
                 ]
               }
             ],
-            "description_clean": "• Gain a Technology and a Codex upon capturing a Settlement for the first time.\n• Codices are not awarded from Technologies.\n• +30% Production towards constructing Dur-Sharrukin."
+            "description_clean": "• Gain a Technology and a Codex upon capturing a Settlement for the first time.\n• Codices are not awarded from Technologies.\n• +30%Production towards constructing Dur-Sharrukin."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_SCIENTIFIC",
@@ -15865,7 +15865,7 @@
                 ]
               }
             ],
-            "description_clean": "• +50% Influence toward supporting Diplomatic Actions.\n• +10 Food and Production in the Capital for every Settlement under the Settlement Limit.\n• +30% Production towards constructing Eram Garden."
+            "description_clean": "• +50% Influence toward supporting Diplomatic Actions.\n• +10 Food and Production in the Capital for every Settlement under the Settlement Limit.\n• +30%Production towards constructing Eram Garden."
           },
           {
             "trait": "TRAIT_ATTRIBUTE_POLITICAL",
@@ -17910,7 +17910,7 @@
                 ]
               }
             ],
-            "description_clean": "• Army Commanders start with the Merit Commendation, granting them +1 Command Radius.\n• Gain an Infantry Unit when you complete a Technology Mastery or construct a Science Building.\n• +2 Science per Age for each Commendation earned by your Commanders."
+            "description_clean": "• Army Commanders start with the Merit Commendation, granting them +1 Command Radius.\n• Gain an Infantry Unit when you complete a Technology Mastery or construct a Science Building.\n• +2 ScienceScience per Age for each Commendation earned by your Commanders."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_MILITARISTIC",
@@ -19816,7 +19816,7 @@
                 ]
               }
             ],
-            "description_clean": "• All Buildings receive a +1 Food Adjacency for Mountains.\n• -2 Maintenance on Specialists adjacent to Mountains. +1 Maintenance on Specialists not adjacent to Mountains.\n• Cities gain a bonus to Production equal to 10% of that City’s Food."
+            "description_clean": "• All Buildings receive a +1 Food Adjacency for Mountains.\n• -2 Happiness Maintenance on Specialists adjacent to Mountains. +1 Happiness Maintenance on Specialists not adjacent to Mountains.\n• Cities gain a bonus to Production equal to 10% of that City’s Food."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_ECONOMIC",
@@ -21044,7 +21044,7 @@
                 ]
               }
             ],
-            "description_clean": "• Cities receive +2 Science per Age when you complete a Civic Mastery. This resets at the start of each Age.\n• Gain Culture equal to 100% of your total Science per turn when you complete a Technology Mastery."
+            "description_clean": "• Cities receive +2Science Science per Age when you complete a Civic Mastery. This resets at the start of each Age.\n• Gain Culture equal to 100% of your total Science per turn when you complete a Technology Mastery."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_CULTURAL",
@@ -21254,7 +21254,7 @@
                 ]
               }
             ],
-            "description_clean": "• +1 Production for every 5 excess Happiness in Cities.\n• +10% Production in Settlements not founded by you.\n• Declaring a Formal War grants a Celebration.\n• +5 Combat Strength against Fortified Districts for all Units during a Celebration."
+            "description_clean": "• +1Production Production for every 5 excess Happiness in Cities.\n• +10% Production in Settlements not founded by you.\n• Declaring a Formal War grants a Celebration.\n• +5 Combat Strength against Fortified Districts for all Units during a Celebration."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -21577,7 +21577,7 @@
                 ]
               }
             ],
-            "description_clean": "• +2 Happiness per Age on Happiness and Diplomacy Buildings, doubled if a Building is both.\n• +50% Production towards constructing Happiness and Diplomacy Buildings, doubled if a Building is both.\n• +15% Culture but -15% Science, and these effects are doubled while in a Celebration."
+            "description_clean": "• +2 Happiness per Age on Happiness and Influence Diplomacy Buildings, doubled if a Building is both.\n• +50% Production towards constructing Happiness and Influence Diplomacy Buildings, doubled if a Building is both.\n• +15% Culture but -15% Science, and these effects are doubled while in a Celebration."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_POLITICAL",
@@ -21761,7 +21761,7 @@
                 ]
               }
             ],
-            "description_clean": "• Gain 2 War Support on Wars you declare.\n• When you conquer a Settlement for the first time the Settlement can purchase 1 Building or Improvement for free.\n• Unrest does not prevent Purchasing."
+            "description_clean": "• Gain 2 War Support on Wars you declare.\n• When you conquer a Settlement for the first time the Settlement can purchase 1 Building or Improvement for free.\n• Unhappiness Unrest does not prevent Purchasing."
           },
           {
             "trait": "TRAIT_LEADER_ATTRIBUTE_EXPANSIONIST",
