@@ -383,21 +383,22 @@
     .triumph-set-btn.active,
     .triumph-set-btn:hover { border-color: var(--teal); color: var(--teal-light); background: var(--teal-bg); }
 
+    #panel-triumphs .panel-scroll { padding-top: 0; }
     .triumph-age-sticky {
       position: sticky; top: 0; z-index: 10;
       background: var(--bg-panel);
-      margin: 0 -10px; padding: 5px 10px 3px;
+      margin: 0 -10px; padding: 6px 10px 5px;
       border-bottom: 1px solid var(--border);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
     }
     .triumph-section-header {
-      position: sticky; top: 26px; z-index: 9;
+      position: sticky; top: var(--triumph-age-h, 30px); z-index: 9;
       background: var(--bg-panel);
       font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
       text-transform: uppercase; color: var(--gold);
-      padding: 7px 0 4px; margin: 0 -10px; padding-left: 10px; padding-right: 10px;
+      margin: 0 -10px; padding: 6px 10px 5px;
       border-bottom: 1px solid var(--border);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.28);
     }
     .triumph-filter-btn:disabled, .triumph-set-btn:disabled {
       opacity: 0.35; cursor: not-allowed; pointer-events: none;
@@ -1012,6 +1013,14 @@
                </div>`;
     }
     area.innerHTML = html || `<div class="triumph-empty"><div class="triumph-empty-sub">No triumphs for this filter.</div></div>`;
+    // Measure the actual rendered age sticky height and expose as CSS var
+    requestAnimationFrame(() => {
+      const sticky = area.querySelector('.triumph-age-sticky');
+      if (sticky) {
+        const h = sticky.getBoundingClientRect().height;
+        area.style.setProperty('--triumph-age-h', h + 'px');
+      }
+    });
   }
 
   // ─── Update Tab Dots ─────────────────────────────────────────────────────────
