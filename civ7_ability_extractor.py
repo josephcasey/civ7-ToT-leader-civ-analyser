@@ -63,6 +63,16 @@ MODIFIER_TABLES = ["Modifiers", "Modifier"]
 MOD_ARG_TABLES = ["ModifierArguments", "ModifierArgument"]
 LOC_TABLES = ["LocalizedText", "BaseGameText", "Localization"]
 
+# Triumph / Legacy Path table candidates (Civ VII uses LegacyPaths terminology)
+LEGACY_PATH_TABLES    = ["LegacyPaths", "LegacyPath", "Triumphs", "Triumph",
+                         "VictoryConditions", "VictoryCondition"]
+LEGACY_ACTION_TABLES  = ["LegacyPathActions", "LegacyPathAction",
+                         "LegacyMilestones", "LegacyMilestone",
+                         "TriumphActions", "TriumphConditions"]
+LEGACY_SCORE_TABLES   = ["LegacyPathScores", "LegacyPathScore",
+                         "LegacyScores", "LegacyScore",
+                         "TriumphScores", "TriumphScore"]
+
 
 # ----------------------------------------------------------------------------
 # schema introspection
@@ -259,6 +269,90 @@ def fetch_modifier_types(con):
     for r in con.execute(f'SELECT "{idcol}" AS mid, "{tcol}" AS mt FROM "{table}"').fetchall():
         out[r["mid"]] = r["mt"]
     return out
+
+
+def fetch_legacy_paths(con, loc):
+    """Return {path_type: {name, description, legacy_path_type}} for all legacy paths.
+
+    Civ VII organises per-age scoring into "Legacy Paths" (Military, Culture,
+    Economic, Science).  The table name and column layout vary across patches,
+    so we try several candidates and discover columns at runtime.
+    """
+    table = resolve_table(con, LEGACY_PATH_TABLES)
+    if not table:
+        return {}
+    cols = columns(con, table)
+    type_col  = pick_column(cols, "LegacyPathType", "PathType", "TriumphType", "Type")
+    name_col  = pick_column(cols, "Name")
+    desc_col  = pick_column(cols, "Description")
+    ltype_col = pick_column(cols, "LegacyType", "VictoryType", "PathCategory", "Category")
+    if not type_col:
+        return {}
+    out = {}
+    for r in con.execute(f'SELECT * FROM "{table}"').fetchall():
+        pt = r[type_col]
+        if pt is None:
+            continue
+        out[pt] = {
+            "path_type":        pt,
+            "name":             localize(loc, r[name_col])  if name_col  else None,
+            "description":      localize(loc, r[desc_col])  if desc_col  else None,
+            "legacy_path_type": r[ltype_col]                if ltype_col else None,
+        }
+    return out
+
+
+def fetch_legacy_actions(con, loc):
+    """Return [{path_type, action_type, name, description_raw, score}] for all triumph actions.
+
+    Each action is one scorable condition within a legacy path, e.g.
+    "Found 3 Cities" or "Build a Wonder".  We preserve the raw description
+    (with [icon:...] markup) alongside the clean version so the app can render
+    inline icons later.
+    """
+    # Try actions table first, fall back to scores table
+    table = resolve_table(con, LEGACY_ACTION_TABLES)
+    if not table:
+        table = resolve_table(con, LEGACY_SCORE_TABLES)
+    if not table:
+        return []
+    cols = columns(con, table)
+    path_col   = pick_column(cols, "LegacyPathType", "PathType", "TriumphType", "LegacyType")
+    action_col = pick_column(cols, "LegacyPathActionType", "ActionType", "MilestoneType",
+                             "ScoreType", "Type")
+    name_col   = pick_column(cols, "Name")
+    desc_col   = pick_column(cols, "Description")
+    score_col  = pick_column(cols, "Score", "Points", "Value", "Threshold")
+    sort_col   = pick_column(cols, "SortIndex", "SortOrder", "DisplayOrder", "OrderIndex")
+    if not (path_col and action_col):
+        return []
+    out = []
+    for r in con.execute(f'SELECT * FROM "{table}"').fetchall():
+        raw_desc = localize(loc, r[desc_col]) if desc_col else None
+        out.append({
+            "path_type":       r[path_col],
+            "action_type":     r[action_col],
+            "name":            localize(loc, r[name_col]) if name_col else None,
+            "description_raw": raw_desc,
+            "description_clean": clean_description(raw_desc),
+            "score":           r[score_col] if score_col else None,
+            "sort_index":      r[sort_col]  if sort_col  else None,
+        })
+    # stable display order
+    out.sort(key=lambda x: (x["path_type"] or "", x["sort_index"] or 0, x["action_type"] or ""))
+    return out
+
+
+def extract_triumphs(db_path, loc):
+    """Extract all legacy path (triumph) data from one database file."""
+    age = infer_age(db_path)
+    con = open_db(db_path)
+    try:
+        paths   = fetch_legacy_paths(con, loc)
+        actions = fetch_legacy_actions(con, loc)
+        return {"age": age, "legacy_paths": paths, "actions": actions}
+    finally:
+        con.close()
 
 
 def infer_age(db_path):
@@ -587,6 +681,65 @@ def write_outputs(merged, out_base):
     return json_path, csv_path, len(rows)
 
 
+def write_triumphs_csv(triumph_data_by_age, out_path):
+    """Write civ7_triumphs.csv from per-age triumph extractions.
+
+    Columns
+    -------
+    age               : Antiquity / Exploration / Modern
+    legacy_path_type  : raw DB type key, e.g. LEGACY_PATH_MILITARY
+    legacy_path_name  : localised name, e.g. "Military Legacy"
+    victory_category  : cleaned category (Military/Culture/Economic/Science/Diplomatic)
+    action_type       : raw DB action key
+    name              : localised action name
+    description_raw   : description with [icon:...] tags intact (for future graphic substitution)
+    description_clean : plain-text description (tags replaced with text labels)
+    score             : point value / threshold (if available)
+    """
+    fields = ["age", "legacy_path_type", "legacy_path_name", "victory_category",
+              "action_type", "name", "description_raw", "description_clean", "score"]
+
+    def infer_category(path_type, path_name):
+        """Map raw DB type string to a clean category label."""
+        combined = ((path_type or "") + " " + (path_name or "")).upper()
+        if any(k in combined for k in ("MILIT", "WAR", "COMBAT", "DOMINATION")):
+            return "Military"
+        if any(k in combined for k in ("CULTUR", "CULTURE")):
+            return "Culture"
+        if any(k in combined for k in ("ECON", "GOLD", "TRADE", "COMMERCE")):
+            return "Economic"
+        if any(k in combined for k in ("SCIENCE", "TECH", "RESEARCH")):
+            return "Science"
+        if any(k in combined for k in ("DIPLO", "INFLUENCE", "RELATION")):
+            return "Diplomatic"
+        return path_name or path_type or ""
+
+    rows = []
+    for age, data in triumph_data_by_age.items():
+        paths   = data.get("legacy_paths", {})
+        actions = data.get("actions", [])
+        for action in actions:
+            pt   = action.get("path_type") or ""
+            info = paths.get(pt, {})
+            rows.append({
+                "age":               age,
+                "legacy_path_type":  pt,
+                "legacy_path_name":  info.get("name") or "",
+                "victory_category":  infer_category(pt, info.get("name")),
+                "action_type":       action.get("action_type") or "",
+                "name":              action.get("name") or "",
+                "description_raw":   action.get("description_raw") or "",
+                "description_clean": action.get("description_clean") or "",
+                "score":             action.get("score") if action.get("score") is not None else "",
+            })
+
+    with open(out_path, "w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields)
+        w.writeheader()
+        w.writerows(rows)
+    return len(rows)
+
+
 # ----------------------------------------------------------------------------
 # inspect mode
 # ----------------------------------------------------------------------------
@@ -597,20 +750,26 @@ def inspect(db_path):
         tables = list_tables(con)
         print(f"\n=== {db_path} ===")
         print(f"{len(tables)} tables\n")
-        # Highlight the tables this script cares about and whether they resolved.
         groups = {
-            "Civilizations": CIV_TABLES, "Leaders": LEADER_TABLES,
-            "Traits": TRAIT_TABLES, "CivTraitLinks": CIV_TRAIT_LINKS,
-            "LeaderTraitLinks": LEADER_TRAIT_LINKS, "TraitModifiers": TRAIT_MOD_LINKS,
-            "Modifiers": MODIFIER_TABLES, "ModifierArguments": MOD_ARG_TABLES,
-            "LocalizedText": LOC_TABLES,
+            "Civilizations":   CIV_TABLES,
+            "Leaders":         LEADER_TABLES,
+            "Traits":          TRAIT_TABLES,
+            "CivTraitLinks":   CIV_TRAIT_LINKS,
+            "LeaderTraitLinks":LEADER_TRAIT_LINKS,
+            "TraitModifiers":  TRAIT_MOD_LINKS,
+            "Modifiers":       MODIFIER_TABLES,
+            "ModifierArguments":MOD_ARG_TABLES,
+            "LocalizedText":   LOC_TABLES,
+            "LegacyPaths":     LEGACY_PATH_TABLES,
+            "LegacyActions":   LEGACY_ACTION_TABLES,
+            "LegacyScores":    LEGACY_SCORE_TABLES,
         }
         print("Resolved key tables:")
         for label, cands in groups.items():
             t = resolve_table(con, cands, tables)
             mark = "OK " if t else "-- "
             cols = ", ".join(columns(con, t)) if t else "(not found)"
-            print(f"  [{mark}] {label:<18} -> {t or 'MISSING'}")
+            print(f"  [{mark}] {label:<20} -> {t or 'MISSING'}")
             if t:
                 print(f"        cols: {cols}")
         print("\nAll tables:")
@@ -641,9 +800,13 @@ def main():
     ap = argparse.ArgumentParser(description="Extract Civ VII leader/civ abilities to JSON+CSV.")
     ap.add_argument("inputs", nargs="+", help="SQLite file(s) or a folder of them.")
     ap.add_argument("--out", default="civ7_abilities", help="Output basename (no extension).")
+    ap.add_argument("--triumphs-out", default="civ7_triumphs",
+                    help="Output basename for triumphs CSV (no extension).")
     ap.add_argument("--language", default="en_US", help="Localization language tag.")
     ap.add_argument("--inspect", action="store_true",
                     help="Print schema for each DB and exit (no extraction).")
+    ap.add_argument("--no-triumphs", action="store_true",
+                    help="Skip triumph/legacy-path extraction.")
     args = ap.parse_args()
 
     db_files = collect_db_files(args.inputs)
@@ -656,11 +819,7 @@ def main():
             inspect(db)
         return
 
-    # 1.4.0 splits localized text into its own DB (localization-copy.sqlite),
-    # so build ONE localization map by merging LocalizedText from every input
-    # file. Entities are then extracted from whichever DB holds the trait data
-    # (gameplay-copy.sqlite); files with no civ/leader/trait tables (colors,
-    # images, frontend) contribute nothing and are skipped automatically.
+    # Build one merged localization map from every input file.
     loc = {}
     for db in db_files:
         con = open_db(db)
@@ -675,6 +834,7 @@ def main():
     else:
         print("Warning: no LocalizedText found; names will appear as raw LOC_ tags.")
 
+    # ── Abilities ────────────────────────────────────────────────────────────
     per_age = []
     for db in db_files:
         con = open_db(db)
@@ -686,7 +846,7 @@ def main():
             con.close()
         if not is_entity_db:
             continue
-        print(f"Extracting: {db}")
+        print(f"Extracting abilities: {db}")
         data = extract_one(db, loc)
         if not data["civilizations"] and not data["leaders"]:
             continue
@@ -701,11 +861,43 @@ def main():
 
     merged = merge_ages(per_age)
     json_path, csv_path, n_rows = write_outputs(merged, args.out)
-    print(f"\nDone.")
+    print(f"\nAbilities done.")
     print(f"  civilizations: {len(merged['civilizations'])}")
     print(f"  leaders:       {len(merged['leaders'])}")
     print(f"  JSON -> {json_path}")
-    print(f"  CSV  -> {csv_path} ({n_rows} ability rows)")
+    print(f"  CSV  -> {csv_path} ({n_rows} rows)")
+
+    # ── Triumphs / Legacy Paths ──────────────────────────────────────────────
+    if not args.no_triumphs:
+        triumphs_by_age = {}
+        for db in db_files:
+            con = open_db(db)
+            try:
+                has_triumphs = (
+                    resolve_table(con, LEGACY_PATH_TABLES) is not None
+                    or resolve_table(con, LEGACY_ACTION_TABLES) is not None
+                    or resolve_table(con, LEGACY_SCORE_TABLES) is not None
+                )
+            finally:
+                con.close()
+            if not has_triumphs:
+                continue
+            print(f"Extracting triumphs: {db}")
+            t_data = extract_triumphs(db, loc)
+            age = t_data["age"]
+            if t_data["legacy_paths"] or t_data["actions"]:
+                triumphs_by_age[age] = t_data
+                print(f"  Age '{age}': {len(t_data['legacy_paths'])} paths, "
+                      f"{len(t_data['actions'])} actions")
+
+        if triumphs_by_age:
+            t_csv = f"{args.triumphs_out}.csv"
+            n_t = write_triumphs_csv(triumphs_by_age, t_csv)
+            print(f"\nTriumphs done.")
+            print(f"  CSV  -> {t_csv} ({n_t} rows)")
+        else:
+            print("\nNo triumph/legacy-path tables found. "
+                  "Run with --inspect to check the schema.")
 
 
 if __name__ == "__main__":

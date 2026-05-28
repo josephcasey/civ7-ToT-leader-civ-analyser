@@ -360,6 +360,69 @@
     .legend-swatch { width: 6px; height: 6px; border-radius: 1px; border: 1px solid var(--gold); }
     .sync-star-sm { font-size: 0.58rem; color: var(--gold); }
 
+    /* ─── Triumph Tab ───────────────────────────────────────── */
+    .triumph-filter-bar {
+      display: flex; gap: 4px; padding: 8px 10px 6px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0; flex-wrap: wrap;
+    }
+    .triumph-filter-btn {
+      padding: 4px 11px; border-radius: var(--radius-full);
+      background: transparent; border: 1px solid var(--border-light);
+      color: var(--text-muted); font-family: inherit;
+      font-size: 0.64rem; font-weight: 600; cursor: pointer;
+      transition: all var(--transition);
+    }
+    .triumph-filter-btn.active,
+    .triumph-filter-btn:hover { border-color: var(--purple); color: var(--purple-light); background: var(--purple-bg); }
+
+    .triumph-path-header {
+      display: flex; align-items: center; gap: 9px;
+      padding: 10px 0 5px; margin-top: 8px;
+    }
+    .triumph-path-header:first-child { margin-top: 0; }
+    .triumph-path-icon {
+      width: 28px; height: 28px; border-radius: var(--radius-sm);
+      overflow: hidden; flex-shrink: 0;
+      background: var(--bg-card-hover);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .triumph-path-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .triumph-path-name {
+      font-size: 0.76rem; font-weight: 700;
+      color: var(--text); letter-spacing: 0.02em;
+    }
+
+    .triumph-action {
+      display: flex; align-items: flex-start; gap: 8px;
+      padding: 7px 0; border-bottom: 1px solid var(--border);
+    }
+    .triumph-action:last-child { border-bottom: none; }
+    .triumph-score {
+      flex-shrink: 0; min-width: 28px; height: 20px;
+      border-radius: var(--radius-sm);
+      background: var(--purple-bg); border: 1px solid rgba(139,92,246,0.3);
+      color: var(--purple-light); font-size: 0.58rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      padding: 0 4px; margin-top: 1px; white-space: nowrap;
+    }
+    .triumph-action-body { flex: 1; min-width: 0; }
+    .triumph-action-name { font-size: 0.7rem; font-weight: 700; color: var(--text); margin-bottom: 1px; }
+    .triumph-action-desc { font-size: 0.66rem; font-weight: 600; color: var(--text); line-height: 1.55; white-space: pre-line; }
+
+    /* Inline yield icons in descriptions */
+    .yield-icon { width: 14px; height: 14px; vertical-align: middle; margin: 0 1px; object-fit: contain; }
+
+    .triumph-empty {
+      display: flex; flex-direction: column; align-items: center;
+      padding: 36px 20px; gap: 8px; text-align: center;
+      color: var(--text-dim);
+    }
+    .triumph-empty-icon { font-size: 1.8rem; opacity: 0.25; }
+    .triumph-empty-title { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); }
+    .triumph-empty-sub { font-size: 0.64rem; line-height: 1.5; max-width: 280px; }
+    code { font-size: 0.62rem; background: var(--bg-card); border-radius: 3px; padding: 1px 4px; color: var(--teal-light); }
+
     /* ─── Footer ────────────────────────────────────────────── */
     .scroll-footer {
       border-top: 1px solid var(--border);
@@ -397,8 +460,8 @@
         <span>Civilizations</span>
         <span class="tab-dot teal" id="dot-civ" style="display:none"></span>
       </button>
-      <button class="tab-btn abilities-tab" id="tab-abilities" data-tab="abilities">
-        <span>Abilities</span>
+      <button class="tab-btn abilities-tab" id="tab-triumphs" data-tab="triumphs">
+        <span>Triumphs</span>
       </button>
     </div>
 
@@ -428,10 +491,16 @@
       </div>
     </div>
 
-    <!-- ── Abilities Panel ── -->
-    <div class="tab-panel" id="panel-abilities">
+    <!-- ── Triumphs Panel ── -->
+    <div class="tab-panel" id="panel-triumphs">
+      <div class="triumph-filter-bar" id="triumph-filter-bar">
+        <button class="triumph-filter-btn active" data-age="all">All Ages</button>
+        <button class="triumph-filter-btn" data-age="Antiquity">Antiquity</button>
+        <button class="triumph-filter-btn" data-age="Exploration">Exploration</button>
+        <button class="triumph-filter-btn" data-age="Modern">Modern</button>
+      </div>
       <div class="panel-scroll">
-        <div id="abilities-content"></div>
+        <div id="triumphs-content"></div>
         <div class="scroll-footer">Data extracted from Civ VII 1.4.0 (Test of Time) · Images © 2K Games via Civilization Wiki</div>
       </div>
     </div>
@@ -559,11 +628,39 @@
     return name.split(/\s+/).map(w=>w[0]).join('').slice(0,2).toUpperCase();
   }
 
+  // ─── Legacy Path / Yield Icon Maps ──────────────────────────────────────────
+  const LEGACY_PATH_ICONS = {
+    "Military":   "https://static.wikia.nocookie.net/civilization/images/c/ca/Military_%28Civ7%29.png/revision/latest?cb=20260208070708",
+    "Culture":    "https://static.wikia.nocookie.net/civilization/images/d/d3/Culture_%28Civ7%29.png/revision/latest?cb=20251122035850",
+    "Economic":   "https://static.wikia.nocookie.net/civilization/images/9/9a/Economic_%28Civ7%29.png/revision/latest?cb=20260226114722",
+    "Science":    "https://static.wikia.nocookie.net/civilization/images/c/c2/Science_%28Civ7%29.png/revision/latest?cb=20251122034256",
+    "Diplomatic": "https://static.wikia.nocookie.net/civilization/images/c/c4/Influence_%28Civ7%29.png/revision/latest?cb=20260225214456",
+  };
+  const YIELD_ICON_URLS = {
+    "YIELD_GOLD":       "https://static.wikia.nocookie.net/civilization/images/6/6c/Yield_Gold_%28Civ7%29.png/revision/latest?cb=20251122115630",
+    "YIELD_SCIENCE":    "https://static.wikia.nocookie.net/civilization/images/a/a9/Yield_Science_%28Civ7%29.png/revision/latest?cb=20251122115517",
+    "YIELD_CULTURE":    "https://static.wikia.nocookie.net/civilization/images/b/bd/Yield_Culture_%28Civ7%29.png/revision/latest?cb=20251122115645",
+    "YIELD_PRODUCTION": "https://static.wikia.nocookie.net/civilization/images/8/81/Yield_Production_%28Civ7%29.png/revision/latest?cb=20251122115534",
+    "YIELD_FOOD":       "https://static.wikia.nocookie.net/civilization/images/2/2d/Yield_Food_%28Civ7%29.png/revision/latest?cb=20251122114846",
+    "YIELD_HAPPINESS":  "https://static.wikia.nocookie.net/civilization/images/4/43/Yield_Happiness_%28Civ7%29.png/revision/latest?cb=20251122115606",
+    "YIELD_DIPLOMACY":  "https://static.wikia.nocookie.net/civilization/images/c/c4/Influence_%28Civ7%29.png/revision/latest?cb=20260225214456",
+  };
+  const ICON_TEXT_LABELS = {
+    "YIELD_GOLD":"Gold","YIELD_SCIENCE":"Science","YIELD_CULTURE":"Culture",
+    "YIELD_PRODUCTION":"Production","YIELD_FOOD":"Food","YIELD_HAPPINESS":"Happiness",
+    "YIELD_DIPLOMACY":"Influence","YIELD_POPULATION":"Population",
+    "YIELD_WAREHOUSE":"Warehouse","YIELD_ANGRY":"Unhappiness",
+    "WAR_SUPPORT":"War Support","TRADE_ROUTE":"Trade Route","ESPIONAGE":"Espionage",
+    "CELEBRATION":"Celebration","COMMANDER_RADIUS":"Command Radius",
+  };
+
   // ─── State ───────────────────────────────────────────────────────────────────
-  let allRows=[], leaderSyncRows=[];
+  let allRows=[], leaderSyncRows=[], triumphRows=[];
   let leaders={}, civs={}, leaderSyncMap={};
+  let triumphsByAge={};   // { age: { category: [rows] } }
   let selectedLeader=null, selectedCiv=null;
   let activeTab='leaders';
+  let triumphAgeFilter='all';
 
   // ─── Load & Process ──────────────────────────────────────────────────────────
   async function loadData() {
@@ -572,6 +669,11 @@
       fetch('civ7_leader_syncretism.csv').then(r=>{ if(!r.ok) throw new Error(r.statusText); return r.text(); }),
     ]);
     allRows=parseCSV(u); leaderSyncRows=parseCSV(s);
+    // Triumphs CSV is optional — silently skip if not yet generated
+    try {
+      const t = await fetch('civ7_triumphs.csv');
+      if (t.ok) triumphRows = parseCSV(await t.text());
+    } catch(_) {}
   }
   function processData() {
     for (const row of allRows) {
@@ -594,6 +696,23 @@
     for (const row of leaderSyncRows) {
       if (!leaderSyncMap[row.leader_name]) leaderSyncMap[row.leader_name]=[];
       leaderSyncMap[row.leader_name].push(row.syncretism_civ_name);
+    }
+    // Triumphs: group by age → category
+    const CAT_ORDER = ['Military','Science','Culture','Economic','Diplomatic'];
+    for (const row of triumphRows) {
+      const age = row.age || 'Unknown';
+      const cat = row.victory_category || 'Other';
+      if (!triumphsByAge[age]) triumphsByAge[age] = {};
+      if (!triumphsByAge[age][cat]) triumphsByAge[age][cat] = [];
+      triumphsByAge[age][cat].push(row);
+    }
+    // Sort categories within each age
+    for (const age of Object.keys(triumphsByAge)) {
+      const sorted = {};
+      for (const cat of [...CAT_ORDER, ...Object.keys(triumphsByAge[age]).filter(c=>!CAT_ORDER.includes(c))]) {
+        if (triumphsByAge[age][cat]) sorted[cat] = triumphsByAge[age][cat];
+      }
+      triumphsByAge[age] = sorted;
     }
   }
 
@@ -737,127 +856,85 @@
     }
   }
 
-  // ─── Render: Abilities Tab ────────────────────────────────────────────────────
-  function renderAbilitiesTab() {
-    const area = document.getElementById('abilities-content');
+  // ─── Render: Tag-to-HTML (inline yield icons) ────────────────────────────────
+  function renderTagsToHtml(raw) {
+    if (!raw) return '';
+    let s = raw;
+    // [TIP:...]label[/TIP] → label
+    s = s.replace(/\[TIP:[^\]]*\]([\s\S]*?)\[\/TIP\]/g, '$1');
+    // [LI] → bullet; strip list/bold wrappers
+    s = s.replace(/\[LI\]/g, '\n• ').replace(/\[\/?(BLIST|LIST|B)\]/g, '');
+    // Split on [icon:...] — escape plain text, replace icons with <img>
+    const iconRe = /\[icon:([^\]]+)\]/g;
+    let result = '', last = 0, m;
+    while ((m = iconRe.exec(s)) !== null) {
+      result += escHtml(s.slice(last, m.index).replace(/\[[^\]]+\]/g, ''));
+      const key = m[1];
+      const url = YIELD_ICON_URLS[key];
+      const label = ICON_TEXT_LABELS[key] || '';
+      if (url) result += `<img class="yield-icon" src="${url}" alt="${escHtml(label)}" title="${escHtml(label)}" loading="lazy">`;
+      else if (label) result += escHtml(label);
+      last = m.index + m[0].length;
+    }
+    result += escHtml(s.slice(last).replace(/\[[^\]]+\]/g, ''));
+    return result.replace(/ {2,}/g, ' ')
+      .split('\n').map(l => l.trim()).filter(Boolean).join('\n');
+  }
 
-    if (!selectedLeader && !selectedCiv) {
+  // ─── Render: Triumphs Tab ────────────────────────────────────────────────────
+  const AGE_ORDER_T = ['Antiquity','Exploration','Modern'];
+
+  function renderTriumphsTab() {
+    const area = document.getElementById('triumphs-content');
+    if (!triumphRows.length) {
       area.innerHTML = `
-        <div class="abilities-empty">
-          <div class="abilities-empty-icon">⚔</div>
-          <div class="abilities-empty-title">Nothing selected yet</div>
-          <div class="abilities-empty-sub">Choose a leader and civilization to see their combined abilities here.</div>
-          <button class="abilities-empty-action" onclick="setTab('leaders')">Go to Leaders →</button>
+        <div class="triumph-empty">
+          <div class="triumph-empty-icon">🏆</div>
+          <div class="triumph-empty-title">No triumph data loaded</div>
+          <div class="triumph-empty-sub">
+            Run the extractor against your SQLite dumps to generate<br>
+            <code>civ7_triumphs.csv</code>, then place it alongside this file.
+          </div>
         </div>`;
       return;
     }
 
-    let html = '<div class="abilities-content">';
+    const ages = triumphAgeFilter === 'all'
+      ? AGE_ORDER_T.filter(a => triumphsByAge[a])
+      : [triumphAgeFilter].filter(a => triumphsByAge[a]);
 
-    // ── Leader card ──
-    if (selectedLeader) {
-      const leader = leaders[selectedLeader];
-      const url = PORTRAIT_URLS[selectedLeader];
-      const portraitInner = url
-        ? `<img src="${escHtml(url)}" alt="${escHtml(selectedLeader)}" loading="lazy"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-           <div class="ability-portrait-fallback" style="display:none">${escHtml(initials(selectedLeader))}</div>`
-        : `<div class="ability-portrait-fallback">${escHtml(initials(selectedLeader))}</div>`;
-
-      html += `
-        <div class="ability-card leader-card-ability">
-          <div class="ability-card-header">
-            <div class="ability-portrait">${portraitInner}</div>
-            <div>
-              <div class="ability-entity-name">${escHtml(selectedLeader)}</div>
-              <div class="ability-name">⚡ ${escHtml(leader.abilityName)}</div>
-            </div>
-          </div>
-          <div class="ability-desc">${escHtml(leader.desc)}</div>
-        </div>`;
-    } else {
-      html += `
-        <div class="abilities-empty" style="padding:20px 0 10px">
-          <div class="abilities-empty-sub">No leader selected.</div>
-          <button class="abilities-empty-action" onclick="setTab('leaders')">Choose a Leader →</button>
-        </div>`;
+    let html = '';
+    for (const age of ages) {
+      const catMap = triumphsByAge[age] || {};
+      if (!Object.keys(catMap).length) continue;
+      html += `<div style="margin-bottom:6px"><div class="section-sublabel" style="padding:6px 0 2px;font-size:0.62rem">${ageBadge(age)}</div>`;
+      for (const [cat, rows] of Object.entries(catMap)) {
+        const iconUrl = LEGACY_PATH_ICONS[cat];
+        const iconHtml = iconUrl
+          ? `<div class="triumph-path-icon"><img src="${iconUrl}" alt="${escHtml(cat)}" loading="lazy"></div>`
+          : `<div class="triumph-path-icon" style="font-size:0.7rem;color:var(--purple-light)">${escHtml(cat[0])}</div>`;
+        html += `
+          <div class="triumph-path-header">${iconHtml}<span class="triumph-path-name">${escHtml(cat)}</span></div>
+          <div class="ability-card" style="padding:8px 12px;margin-bottom:8px">`;
+        for (const row of rows) {
+          const descHtml = row.description_raw
+            ? renderTagsToHtml(row.description_raw)
+            : escHtml(row.description_clean || '');
+          const scoreHtml = row.score ? `<div class="triumph-score">${escHtml(String(row.score))}</div>` : '';
+          html += `
+            <div class="triumph-action">
+              ${scoreHtml}
+              <div class="triumph-action-body">
+                ${row.name ? `<div class="triumph-action-name">${escHtml(row.name)}</div>` : ''}
+                <div class="triumph-action-desc">${descHtml}</div>
+              </div>
+            </div>`;
+        }
+        html += `</div>`;
+      }
+      html += `</div>`;
     }
-
-    // ── Civ card ──
-    if (selectedCiv) {
-      const civ = civs[selectedCiv];
-      const url = CIV_PORTRAIT_URLS[selectedCiv];
-      const portraitInner = url
-        ? `<img src="${escHtml(url)}" alt="${escHtml(selectedCiv)}" loading="lazy"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-           <div class="ability-portrait-fallback" style="display:none">${escHtml(initials(selectedCiv))}</div>`
-        : `<div class="ability-portrait-fallback">${escHtml(initials(selectedCiv))}</div>`;
-
-      const traditions = civ.traditions.filter(t => {
-        const a=(t.age||'').toLowerCase();
-        return a!=='apex' && t.desc && t.desc.trim();
-      });
-
-      html += `
-        <div class="ability-card civ-card-ability">
-          <div class="ability-card-header">
-            <div class="ability-portrait civ">${portraitInner}</div>
-            <div>
-              <div class="ability-entity-name">${escHtml(selectedCiv)}</div>
-              <div style="margin-bottom:3px">${ageBadge(civ.apexAge)}</div>
-              <div class="ability-name teal">⚡ ${escHtml(civ.abilityName)}</div>
-            </div>
-          </div>
-          <div class="ability-desc">${escHtml(civ.apexDesc)}</div>
-          ${traditions.length ? `
-            <div class="section-sublabel">Cross-Age Traditions</div>
-            ${traditions.map(t=>`
-              <div class="tradition-row">
-                <div style="padding-top:1px;flex-shrink:0">${ageBadge(t.age)}</div>
-                <div>
-                  <div class="tradition-name">${escHtml(t.name)}</div>
-                  <div class="tradition-desc">${escHtml(t.desc)}</div>
-                </div>
-              </div>`).join('')}` : ''}
-        </div>`;
-    } else {
-      html += `
-        <div class="abilities-empty" style="padding:20px 0 10px">
-          <div class="abilities-empty-sub">No civilization selected.</div>
-          <button class="abilities-empty-action teal" onclick="setTab('civs')">Choose a Civilization →</button>
-        </div>`;
-    }
-
-    // ── Syncretism (both selected) ──
-    if (selectedLeader && selectedCiv) {
-      const civ = civs[selectedCiv];
-      const leaderSyncSet = new Set(leaderSyncMap[selectedLeader]||[]);
-      const civSyncSet    = new Set(civ.civSyncOptions);
-      const allSync = new Set([...leaderSyncSet,...civSyncSet]);
-      allSync.delete(selectedCiv);
-
-      const pills = [...allSync].sort().map(n => {
-        const fl=leaderSyncSet.has(n), fc=civSyncSet.has(n);
-        const cls=fl&&fc?'sync-pill from-both':fl?'sync-pill from-leader':'sync-pill';
-        return `<span class="${cls}">${escHtml(n)}</span>`;
-      }).join('');
-
-      html += `
-        <div class="ability-card">
-          <div class="section-sublabel" style="margin-top:0">Syncretism Options</div>
-          ${allSync.size>0
-            ? `<div class="sync-pills">${pills}</div>
-               <div class="sync-source-note">
-                 <span style="color:var(--gold-light)">Gold</span> = from leader &nbsp;|&nbsp;
-                 <span style="color:var(--teal-light)">Teal</span> = from civilization &nbsp;|&nbsp;
-                 <span style="color:#d4c07a">Mixed</span> = both
-               </div>`
-            : `<div class="empty-state">No syncretism options for this combination.</div>`}
-        </div>`;
-    }
-
-    html += '</div>';
-    area.innerHTML = html;
+    area.innerHTML = html || `<div class="triumph-empty"><div class="triumph-empty-sub">No triumphs for this filter.</div></div>`;
   }
 
   // ─── Update Tab Dots ─────────────────────────────────────────────────────────
@@ -875,7 +952,6 @@
     renderCivGrid();
     renderLeaderStrip();
     renderCivStrip();
-    renderAbilitiesTab();
     updateDots();
   }
 
@@ -884,7 +960,6 @@
     document.querySelectorAll('.tile-card[data-civ]').forEach(c =>
       c.classList.toggle('civ-selected', c.dataset.civ===name));
     renderCivStrip();
-    renderAbilitiesTab();
     updateDots();
   }
 
@@ -894,7 +969,6 @@
     renderCivGrid();
     renderLeaderStrip();
     renderCivStrip();
-    renderAbilitiesTab();
     updateDots();
     setTab('leaders');
   }
@@ -911,9 +985,19 @@
         btn.addEventListener('click', () => setTab(btn.dataset.tab)));
       document.getElementById('btn-reset').addEventListener('click', resetAll);
 
+      // Triumph age-filter buttons
+      document.getElementById('triumph-filter-bar').addEventListener('click', e => {
+        const btn = e.target.closest('.triumph-filter-btn');
+        if (!btn) return;
+        triumphAgeFilter = btn.dataset.age;
+        document.querySelectorAll('.triumph-filter-btn').forEach(b =>
+          b.classList.toggle('active', b.dataset.age === triumphAgeFilter));
+        renderTriumphsTab();
+      });
+
       renderLeaderGrid();
       renderCivGrid();
-      renderAbilitiesTab();
+      renderTriumphsTab();
     } catch(err) {
       document.getElementById('loading').style.display='none';
       const el=document.getElementById('error-msg');
