@@ -383,13 +383,22 @@
     .triumph-set-btn.active,
     .triumph-set-btn:hover { border-color: var(--teal); color: var(--teal-light); background: var(--teal-bg); }
 
+    .triumph-age-sticky {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--bg-panel);
+      margin: 0 -10px; padding: 5px 10px 3px;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    }
     .triumph-section-header {
+      position: sticky; top: 26px; z-index: 9;
+      background: var(--bg-panel);
       font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
       text-transform: uppercase; color: var(--gold);
-      padding: 10px 0 4px; margin-top: 6px;
-      border-top: 1px solid var(--border);
+      padding: 7px 0 4px; margin: 0 -10px; padding-left: 10px; padding-right: 10px;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
     }
-    .triumph-section-header:first-child { border-top: none; margin-top: 0; }
     .triumph-filter-btn:disabled, .triumph-set-btn:disabled {
       opacity: 0.35; cursor: not-allowed; pointer-events: none;
     }
@@ -958,29 +967,30 @@
     };
 
     const renderSection = (label, catMap) => {
-      let s = `<div class="triumph-section-header">${label}</div>`;
-      let anyContent = false;
+      let body = '';
       for (const [cat, allRows] of Object.entries(catMap)) {
         const rows = allRows.filter(inSet);
         if (!rows.length) continue;
-        anyContent = true;
         const iconUrl = LEGACY_PATH_ICONS[cat];
         const iconHtml = iconUrl
           ? `<div class="triumph-path-icon"><img src="${iconUrl}" alt="${escHtml(cat)}" loading="lazy"></div>`
           : `<div class="triumph-path-icon" style="font-size:0.7rem;color:var(--purple-light)">${escHtml(cat[0])}</div>`;
-        s += `<div class="triumph-path-header">${iconHtml}<span class="triumph-path-name">${escHtml(cat)}</span></div>
-              <div class="ability-card" style="padding:8px 12px;margin-bottom:8px">`;
-        for (const row of rows) s += rowHtml(row);
-        s += `</div>`;
+        body += `<div class="triumph-path-header">${iconHtml}<span class="triumph-path-name">${escHtml(cat)}</span></div>
+                 <div class="ability-card" style="padding:8px 12px;margin-bottom:8px">`;
+        for (const row of rows) body += rowHtml(row);
+        body += `</div>`;
       }
-      return anyContent ? s : '';
+      if (!body) return '';
+      return `<div class="triumph-section-block">
+                <div class="triumph-section-header">${label}</div>
+                <div style="padding-top:4px">${body}</div>
+              </div>`;
     };
 
     let html = '';
     for (const age of ages) {
       const catMap = triumphsByAge[age] || {};
       if (!Object.keys(catMap).length) continue;
-      html += `<div style="margin-bottom:6px"><div class="section-sublabel" style="padding:6px 0 4px;font-size:0.62rem">${ageBadge(age)}</div>`;
 
       // Split into Dedication (major_legacy=1) and Minor (major_legacy=0)
       const dedMap = {}, minMap = {};
@@ -990,9 +1000,16 @@
         if (ded.length) dedMap[cat] = ded;
         if (min.length) minMap[cat] = min;
       }
-      html += renderSection('Dedication Triumphs', dedMap);
-      html += renderSection('Minor Triumphs', minMap);
-      html += `</div>`;
+      const dedHtml = renderSection('Dedication Triumphs', dedMap);
+      const minHtml = renderSection('Minor Triumphs', minMap);
+      if (!dedHtml && !minHtml) continue;
+
+      html += `<div class="triumph-age-block">
+                 <div class="triumph-age-sticky">
+                   <div class="section-sublabel" style="font-size:0.62rem">${ageBadge(age)}</div>
+                 </div>
+                 ${dedHtml}${minHtml}
+               </div>`;
     }
     area.innerHTML = html || `<div class="triumph-empty"><div class="triumph-empty-sub">No triumphs for this filter.</div></div>`;
   }
