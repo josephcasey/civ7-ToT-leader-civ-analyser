@@ -360,6 +360,68 @@
     .legend-swatch { width: 6px; height: 6px; border-radius: 1px; border: 1px solid var(--gold); }
     .sync-star-sm { font-size: 0.58rem; color: var(--gold); }
 
+    /* ─── Resources Tab ─────────────────────────────────────── */
+    .tab-btn.res-tab.active { color: var(--teal-light); border-bottom-color: var(--teal); }
+    .res-filter-bar {
+      display: flex; flex-direction: column; gap: 4px;
+      padding: 7px 10px 6px; border-bottom: 1px solid var(--border); flex-shrink: 0;
+    }
+    .res-yield-btn, .res-class-btn {
+      padding: 4px 10px; border-radius: var(--radius-full);
+      background: transparent; border: 1px solid var(--border-light);
+      color: var(--text-muted); font-family: inherit;
+      font-size: 0.64rem; font-weight: 600; cursor: pointer;
+      transition: all var(--transition); display: inline-flex; align-items: center; gap: 4px;
+    }
+    .res-yield-btn.active, .res-yield-btn:hover { border-color: var(--teal); color: var(--teal-light); background: var(--teal-bg); }
+    .res-class-btn.active, .res-class-btn:hover { border-color: var(--gold); color: var(--gold-light); background: var(--gold-bg); }
+    .res-sticky-strip {
+      position: sticky; top: 0; z-index: 10;
+      display: flex; align-items: center; gap: 8px;
+      background: var(--bg-panel);
+      margin: 0 -10px; padding: 6px 10px;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.45);
+    }
+    .res-class-label {
+      font-size: 0.67rem; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; color: var(--teal-light);
+    }
+    .res-card {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 8px 0; border-bottom: 1px solid var(--border);
+    }
+    .res-card:last-child { border-bottom: none; }
+    .res-icon {
+      width: 32px; height: 32px; flex-shrink: 0;
+      border-radius: var(--radius-sm); overflow: hidden;
+      background: var(--bg-card-hover);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .res-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .res-icon-placeholder { font-size: 0.6rem; font-weight: 700; color: var(--text-muted); text-align: center; line-height: 1.2; }
+    .res-info { flex: 1; min-width: 0; }
+    .res-name { font-size: 0.76rem; font-weight: 700; color: var(--text); }
+    .res-yields { display: flex; align-items: center; gap: 6px; margin-top: 3px; flex-wrap: wrap; }
+    .res-yield-badge {
+      display: inline-flex; align-items: center; gap: 3px;
+      font-size: 0.62rem; font-weight: 600; color: var(--text-muted);
+    }
+    .res-yield-badge img { width: 13px; height: 13px; object-fit: contain; }
+    .res-meta { display: flex; gap: 3px; margin-top: 4px; flex-wrap: wrap; align-items: center; }
+    .res-age-chip {
+      font-size: 0.54rem; font-weight: 700; padding: 1px 5px;
+      border-radius: var(--radius-full); letter-spacing: 0.03em;
+    }
+    .res-age-chip.aq { background: rgba(201,168,76,0.15); color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
+    .res-age-chip.ex { background: rgba(76,168,154,0.15); color: var(--teal-light); border: 1px solid rgba(76,168,154,0.3); }
+    .res-age-chip.mo { background: rgba(139,92,246,0.15); color: var(--purple-light); border: 1px solid rgba(139,92,246,0.3); }
+    .res-badge {
+      font-size: 0.54rem; padding: 1px 5px; border-radius: var(--radius-full); font-weight: 600;
+      background: var(--bg-card); color: var(--text-muted); border: 1px solid var(--border-light);
+    }
+    .res-tooltip { font-size: 0.6rem; color: var(--text-muted); margin-top: 3px; line-height: 1.4; }
+
     /* ─── Triumph Tab ───────────────────────────────────────── */
     .triumph-filter-bar {
       display: flex; flex-direction: column; gap: 4px;
@@ -487,6 +549,9 @@
       <button class="tab-btn abilities-tab" id="tab-triumphs" data-tab="triumphs">
         <span>Triumphs</span>
       </button>
+      <button class="tab-btn res-tab" id="tab-resources" data-tab="resources">
+        <span>Resources</span>
+      </button>
     </div>
 
     <!-- ── Leaders Panel ── -->
@@ -535,6 +600,31 @@
       </div>
       <div class="panel-scroll">
         <div id="triumphs-content"></div>
+        <div class="scroll-footer">Data extracted from Civ VII 1.4.0 (Test of Time) · Images © 2K Games via Civilization Wiki</div>
+      </div>
+    </div>
+
+    <!-- ── Resources Panel ── -->
+    <div class="tab-panel" id="panel-resources">
+      <div class="res-filter-bar" id="res-filter-bar">
+        <div class="triumph-filter-row">
+          <button class="res-yield-btn active" data-yield="all">All Yields</button>
+          <button class="res-yield-btn" data-yield="YIELD_PRODUCTION">Production</button>
+          <button class="res-yield-btn" data-yield="YIELD_SCIENCE">Science</button>
+          <button class="res-yield-btn" data-yield="YIELD_GOLD">Gold</button>
+          <button class="res-yield-btn" data-yield="YIELD_CULTURE">Culture</button>
+          <button class="res-yield-btn" data-yield="YIELD_FOOD">Food</button>
+          <button class="res-yield-btn" data-yield="YIELD_HAPPINESS">Happiness</button>
+        </div>
+        <div class="triumph-filter-row">
+          <button class="res-class-btn active" data-class="all">All Classes</button>
+          <button class="res-class-btn" data-class="Bonus">Bonus</button>
+          <button class="res-class-btn" data-class="City">City</button>
+          <button class="res-class-btn" data-class="Empire">Empire</button>
+        </div>
+      </div>
+      <div class="panel-scroll" style="padding-top:0">
+        <div id="resources-content"></div>
         <div class="scroll-footer">Data extracted from Civ VII 1.4.0 (Test of Time) · Images © 2K Games via Civilization Wiki</div>
       </div>
     </div>
@@ -688,13 +778,76 @@
     "CELEBRATION":"Celebration","COMMANDER_RADIUS":"Command Radius",
   };
 
+  // ─── Resource icon map (verified wiki URLs) ─────────────────────────────────
+  const RES_CLASS_ICONS = {
+    "Bonus":  "https://static.wikia.nocookie.net/civilization/images/8/8b/Bonus_Resource_%28Civ7%29.png/revision/latest?cb=20260520005933",
+    "City":   "https://static.wikia.nocookie.net/civilization/images/0/03/City_Resource_%28Civ7%29.png/revision/latest?cb=20260520010010",
+    "Empire": "https://static.wikia.nocookie.net/civilization/images/1/1c/Empire_Resource_%28Civ7%29.png/revision/latest?cb=20260520010143",
+  };
+  const RESOURCE_ICONS = {
+    "RESOURCE_CAMELS":       "https://static.wikia.nocookie.net/civilization/images/0/0f/Camels_%28Civ7%29.png/revision/latest?cb=20251106003128",
+    "RESOURCE_CITRUS":       "https://static.wikia.nocookie.net/civilization/images/2/28/Citrus_%28Civ7%29.png/revision/latest?cb=20251106004009",
+    "RESOURCE_CLAY":         "https://static.wikia.nocookie.net/civilization/images/7/7a/Clay_%28Civ7%29.png/revision/latest?cb=20251106002340",
+    "RESOURCE_CLOVES":       "https://static.wikia.nocookie.net/civilization/images/7/78/Cloves_%28Civ7%29.png/revision/latest?cb=20251106003138",
+    "RESOURCE_COAL":         "https://static.wikia.nocookie.net/civilization/images/8/8f/Coal_%28Civ7%29.png/revision/latest?cb=20260104063738",
+    "RESOURCE_COCOA":        "https://static.wikia.nocookie.net/civilization/images/d/d0/Cocoa_%28Civ7%29.png/revision/latest?cb=20251106003613",
+    "RESOURCE_COFFEE":       "https://static.wikia.nocookie.net/civilization/images/4/4f/Coffee_%28Civ7%29.png/revision/latest?cb=20251106234431",
+    "RESOURCE_COTTON":       "https://static.wikia.nocookie.net/civilization/images/2/25/Cotton_%28Civ7%29.png/revision/latest?cb=20251106002352",
+    "RESOURCE_COWRIE":       "https://static.wikia.nocookie.net/civilization/images/e/ee/Cowrie_%28Civ7%29.png/revision/latest?cb=20251106002156",
+    "RESOURCE_CRABS":        "https://static.wikia.nocookie.net/civilization/images/6/69/Crabs_%28Civ7%29.png/revision/latest?cb=20251106002228",
+    "RESOURCE_DATES":        "https://static.wikia.nocookie.net/civilization/images/e/e6/Dates_%28Civ7%29.png/revision/latest?cb=20251106002401",
+    "RESOURCE_DYES":         "https://static.wikia.nocookie.net/civilization/images/a/a1/Dyes_%28Civ7%29.png/revision/latest?cb=20251106003048",
+    "RESOURCE_FISH":         "https://static.wikia.nocookie.net/civilization/images/a/af/Fish_%28Civ7%29.png/revision/latest?cb=20251211080000",
+    "RESOURCE_FLAX":         "https://static.wikia.nocookie.net/civilization/images/5/5f/Flax_%28Civ7%29.png/revision/latest?cb=20251106002438",
+    "RESOURCE_FURS":         "https://static.wikia.nocookie.net/civilization/images/6/60/Furs_%28Civ7%29.png/revision/latest?cb=20251106003149",
+    "RESOURCE_GOLD":         "https://static.wikia.nocookie.net/civilization/images/a/af/Gold_%28Civ7%29.png/revision/latest?cb=20251106003943",
+    "RESOURCE_GYPSUM":       "https://static.wikia.nocookie.net/civilization/images/e/e2/Gypsum_%28Civ7%29.png/revision/latest?cb=20251106003159",
+    "RESOURCE_HARDWOOD":     "https://static.wikia.nocookie.net/civilization/images/c/c0/Hardwood_%28Civ7%29.png/revision/latest?cb=20251106003622",
+    "RESOURCE_HIDES":        "https://static.wikia.nocookie.net/civilization/images/a/a8/Hides_%28Civ7%29.png/revision/latest?cb=20251106002449",
+    "RESOURCE_HORSES":       "https://static.wikia.nocookie.net/civilization/images/0/06/Horses_%28Civ7%29.png/revision/latest?cb=20251106002458",
+    "RESOURCE_INCENSE":      "https://static.wikia.nocookie.net/civilization/images/7/7c/Incense_%28Civ7%29.png/revision/latest?cb=20251106003207",
+    "RESOURCE_IRON":         "https://static.wikia.nocookie.net/civilization/images/f/f5/Iron_%28Civ7%29.png/revision/latest?cb=20251106003631",
+    "RESOURCE_IVORY":        "https://static.wikia.nocookie.net/civilization/images/8/85/Ivory_%28Civ7%29.png/revision/latest?cb=20251106002511",
+    "RESOURCE_JADE":         "https://static.wikia.nocookie.net/civilization/images/b/b1/Jade_%28Civ7%29.png/revision/latest?cb=20251106003217",
+    "RESOURCE_KAOLIN":       "https://static.wikia.nocookie.net/civilization/images/c/c7/Kaolin_%28Civ7%29.png/revision/latest?cb=20251106003227",
+    "RESOURCE_LAPIS_LAZULI": "https://static.wikia.nocookie.net/civilization/images/9/96/Lapis_Lazuli_%28Civ7%29.png/revision/latest?cb=20251106212639",
+    "RESOURCE_LIMESTONE":    "https://static.wikia.nocookie.net/civilization/images/c/c3/Limestone_%28Civ7%29.png/revision/latest?cb=20251106003641",
+    "RESOURCE_LLAMAS":       "https://static.wikia.nocookie.net/civilization/images/0/09/Llamas_%28Civ7%29.png/revision/latest?cb=20251106002525",
+    "RESOURCE_MANGOS":       "https://static.wikia.nocookie.net/civilization/images/f/fe/Mangoes_%28Civ7%29.png/revision/latest?cb=20251106003238",
+    "RESOURCE_MARBLE":       "https://static.wikia.nocookie.net/civilization/images/4/41/Marble_%28Civ7%29.png/revision/latest?cb=20251106003651",
+    "RESOURCE_NICKEL":       "https://static.wikia.nocookie.net/civilization/images/7/76/Nickel_%28Civ7%29.png/revision/latest?cb=20251106234805",
+    "RESOURCE_NITER":        "https://static.wikia.nocookie.net/civilization/images/d/d2/Niter_%28Civ7%29.png/revision/latest?cb=20251106003701",
+    "RESOURCE_OIL":          "https://static.wikia.nocookie.net/civilization/images/d/d3/Oil_%28Civ7%29.png/revision/latest?cb=20260104063758",
+    "RESOURCE_PEARLS":       "https://static.wikia.nocookie.net/civilization/images/d/d9/Pearls_%28Civ7%29.png/revision/latest?cb=20251106003258",
+    "RESOURCE_PITCH":        "https://static.wikia.nocookie.net/civilization/images/c/c2/Pitch_%28Civ7%29.png/revision/latest?cb=20251106002247",
+    "RESOURCE_QUININE":      "https://static.wikia.nocookie.net/civilization/images/3/30/Quinine_%28Civ7%29.png/revision/latest?cb=20251106003955",
+    "RESOURCE_RICE":         "https://static.wikia.nocookie.net/civilization/images/7/79/Rice_%28Civ7%29.png/revision/latest?cb=20251106003719",
+    "RESOURCE_RUBBER":       "https://static.wikia.nocookie.net/civilization/images/4/41/Rubber_%28Civ7%29.png/revision/latest?cb=20260104063716",
+    "RESOURCE_RUBIES":       "https://static.wikia.nocookie.net/civilization/images/2/23/Rubies_%28Civ7%29.png/revision/latest?cb=20251106002542",
+    "RESOURCE_SALT":         "https://static.wikia.nocookie.net/civilization/images/8/8e/Salt_%28Civ7%29.png/revision/latest?cb=20251106003308",
+    "RESOURCE_SILK":         "https://static.wikia.nocookie.net/civilization/images/b/b6/Silk_%28Civ7%29.png/revision/latest?cb=20251106003318",
+    "RESOURCE_SILVER":       "https://static.wikia.nocookie.net/civilization/images/d/d0/Silver_%28Civ7%29.png/revision/latest?cb=20251106003802",
+    "RESOURCE_SPICES":       "https://static.wikia.nocookie.net/civilization/images/0/0f/Spices_%28Civ7%29.png/revision/latest?cb=20251106002550",
+    "RESOURCE_SUGAR":        "https://static.wikia.nocookie.net/civilization/images/6/6e/Sugar_%28Civ7%29.png/revision/latest?cb=20251106002600",
+    "RESOURCE_TEA":          "https://static.wikia.nocookie.net/civilization/images/5/57/Tea_%28Civ7%29.png/revision/latest?cb=20251106003823",
+    "RESOURCE_TIN":          "https://static.wikia.nocookie.net/civilization/images/a/a9/Tin_%28Civ7%29.png/revision/latest?cb=20251106002609",
+    "RESOURCE_TOBACCO":      "https://static.wikia.nocookie.net/civilization/images/c/ce/Tobacco_%28Civ7%29.png/revision/latest?cb=20251106003327",
+    "RESOURCE_TRUFFLES":     "https://static.wikia.nocookie.net/civilization/images/7/7d/Truffles_%28Civ7%29.png/revision/latest?cb=20251106003335",
+    "RESOURCE_TURTLES":      "https://static.wikia.nocookie.net/civilization/images/e/ef/Turtles_%28Civ7%29.png/revision/latest?cb=20251106002253",
+    "RESOURCE_WHALES":       "https://static.wikia.nocookie.net/civilization/images/8/80/Whales_%28Civ7%29.png/revision/latest?cb=20251106002618",
+    "RESOURCE_WILD_GAME":    "https://static.wikia.nocookie.net/civilization/images/9/99/Wild_Game_%28Civ7%29.png/revision/latest?cb=20251106002627",
+    "RESOURCE_WINE":         "https://static.wikia.nocookie.net/civilization/images/0/0a/Wine_%28Civ7%29.png/revision/latest?cb=20251106002638",
+    "RESOURCE_WOOL":         "https://static.wikia.nocookie.net/civilization/images/4/48/Wool_%28Civ7%29.png/revision/latest?cb=20251106002651",
+  };
+
   // ─── State ───────────────────────────────────────────────────────────────────
-  let allRows=[], leaderSyncRows=[], triumphRows=[];
+  let allRows=[], leaderSyncRows=[], triumphRows=[], resourceRows=[];
   let leaders={}, civs={}, leaderSyncMap={};
-  let triumphsByAge={};   // { age: { category: [rows] } }
+  let triumphsByAge={}, resourcesByClass={};
   let selectedLeader=null, selectedCiv=null;
   let activeTab='leaders';
   let triumphAgeFilter='all', triumphSetFilter='all';
+  let resYieldFilter='all', resClassFilter='all';
 
   // ─── Load & Process ──────────────────────────────────────────────────────────
   async function loadData() {
@@ -703,11 +856,8 @@
       fetch('civ7_leader_syncretism.csv').then(r=>{ if(!r.ok) throw new Error(r.statusText); return r.text(); }),
     ]);
     allRows=parseCSV(u); leaderSyncRows=parseCSV(s);
-    // Triumphs CSV is optional — silently skip if not yet generated
-    try {
-      const t = await fetch('civ7_triumphs.csv');
-      if (t.ok) triumphRows = parseCSV(await t.text());
-    } catch(_) {}
+    try { const t = await fetch('civ7_triumphs.csv');  if (t.ok) triumphRows  = parseCSV(await t.text()); } catch(_) {}
+    try { const r = await fetch('civ7_resources.csv'); if (r.ok) resourceRows = parseCSV(await r.text()); } catch(_) {}
   }
   function processData() {
     for (const row of allRows) {
@@ -747,6 +897,17 @@
         if (triumphsByAge[age][cat]) sorted[cat] = triumphsByAge[age][cat];
       }
       triumphsByAge[age] = sorted;
+    }
+    // Resources: group by class in display order
+    const CLASS_ORDER = ['Bonus', 'City', 'Empire'];
+    for (const cls of CLASS_ORDER) resourcesByClass[cls] = [];
+    for (const row of resourceRows) {
+      const cls = row.resource_class || 'Bonus';
+      if (!resourcesByClass[cls]) resourcesByClass[cls] = [];
+      resourcesByClass[cls].push(row);
+    }
+    for (const cls of CLASS_ORDER) {
+      resourcesByClass[cls].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
     }
   }
 
@@ -1004,6 +1165,96 @@
     area.innerHTML = html || `<div class="triumph-empty"><div class="triumph-empty-sub">No triumphs for this filter.</div></div>`;
   }
 
+  // ─── Render: Resources Tab ───────────────────────────────────────────────────
+  function renderResourcesTab() {
+    const area = document.getElementById('resources-content');
+    if (!resourceRows.length) {
+      area.innerHTML = `<div class="triumph-empty">
+        <div class="triumph-empty-icon">🌾</div>
+        <div class="triumph-empty-title">No resource data loaded</div>
+        <div class="triumph-empty-sub">Place <code>civ7_resources.csv</code> alongside this file.</div>
+      </div>`;
+      return;
+    }
+
+    const CLASS_ORDER = ['Bonus', 'City', 'Empire'];
+    const AGE_SLUG = { Antiquity: 'aq', Exploration: 'ex', Modern: 'mo' };
+
+    let html = '';
+    for (const cls of CLASS_ORDER) {
+      if (resClassFilter !== 'all' && resClassFilter !== cls) continue;
+      const rows = (resourcesByClass[cls] || []).filter(row => {
+        if (resYieldFilter === 'all') return true;
+        return (row.yield_types || '').split('|').includes(resYieldFilter);
+      });
+      if (!rows.length) continue;
+
+      const clsIconUrl = RES_CLASS_ICONS[cls];
+      const clsIconHtml = clsIconUrl
+        ? `<img src="${escHtml(clsIconUrl)}" alt="${escHtml(cls)}" style="width:18px;height:18px;object-fit:contain;flex-shrink:0">`
+        : '';
+
+      let cards = '';
+      for (const row of rows) {
+        const iconUrl = RESOURCE_ICONS[row.resource_type];
+        const iconInner = iconUrl
+          ? `<img src="${escHtml(iconUrl)}" alt="${escHtml(row.name)}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=res-icon-placeholder>${escHtml((row.name||'?').slice(0,3).toUpperCase())}</div>'">`
+          : `<div class="res-icon-placeholder">${escHtml((row.name||'?').slice(0,3).toUpperCase())}</div>`;
+
+        // Yield badges
+        const yieldTypes   = (row.yield_types   || '').split('|').filter(Boolean);
+        const yieldAmounts = (row.yield_amounts  || '').split('|').filter(Boolean);
+        let yieldBadges = '';
+        yieldTypes.forEach((yt, i) => {
+          const amt = yieldAmounts[i] || '';
+          const yIconUrl = YIELD_ICON_URLS[yt];
+          const yLabel   = ICON_TEXT_LABELS[yt] || yt;
+          yieldBadges += `<span class="res-yield-badge">`;
+          if (yIconUrl) yieldBadges += `<img src="${escHtml(yIconUrl)}" alt="${escHtml(yLabel)}">`;
+          yieldBadges += `${escHtml(amt ? `+${amt}` : '')} ${escHtml(yLabel)}</span>`;
+        });
+
+        // Age chips
+        const ages = (row.ages || '').split('|').filter(Boolean);
+        let ageChips = '';
+        for (const age of ages) {
+          const slug = AGE_SLUG[age] || '';
+          ageChips += `<span class="res-age-chip ${slug}">${escHtml(age)}</span>`;
+        }
+
+        // Extra badges
+        let metaBadges = ageChips;
+        if (row.staple === '1' || row.staple === 'true') metaBadges += `<span class="res-badge">Staple</span>`;
+        if (row.tradeable === '1' || row.tradeable === 'true') metaBadges += `<span class="res-badge">Tradeable</span>`;
+        if (row.leader_exclusive && row.leader_exclusive !== '') metaBadges += `<span class="res-badge" style="color:var(--gold-light);border-color:var(--gold)">${escHtml(row.leader_exclusive)}</span>`;
+        if (row.civ_exclusive && row.civ_exclusive !== '') metaBadges += `<span class="res-badge" style="color:var(--teal-light);border-color:var(--teal)">${escHtml(row.civ_exclusive)}</span>`;
+
+        const tooltipHtml = row.tooltip ? `<div class="res-tooltip">${renderTagsToHtml(row.tooltip)}</div>` : '';
+
+        cards += `<div class="res-card">
+          <div class="res-icon">${iconInner}</div>
+          <div class="res-info">
+            <div class="res-name">${escHtml(row.name || row.resource_type)}</div>
+            ${yieldBadges ? `<div class="res-yields">${yieldBadges}</div>` : ''}
+            ${metaBadges  ? `<div class="res-meta">${metaBadges}</div>`   : ''}
+            ${tooltipHtml}
+          </div>
+        </div>`;
+      }
+
+      html += `<div class="triumph-section-block">
+        <div class="res-sticky-strip">
+          ${clsIconHtml}
+          <span class="res-class-label">${escHtml(cls)} Resources</span>
+          <span style="font-size:0.6rem;color:var(--text-dim);margin-left:auto">${rows.length}</span>
+        </div>
+        <div style="padding:0 2px">${cards}</div>
+      </div>`;
+    }
+
+    area.innerHTML = html || `<div class="triumph-empty"><div class="triumph-empty-sub">No resources match this filter.</div></div>`;
+  }
+
   // ─── Update Tab Dots ─────────────────────────────────────────────────────────
   function updateDots() {
     document.getElementById('dot-leader').style.display = selectedLeader ? '' : 'none';
@@ -1077,9 +1328,29 @@
         if (age !== 'all' && !triumphsByAge[age]) btn.disabled = true;
       });
 
+      // Resource filter buttons
+      document.getElementById('res-filter-bar').addEventListener('click', e => {
+        const yieldBtn = e.target.closest('.res-yield-btn');
+        if (yieldBtn) {
+          resYieldFilter = yieldBtn.dataset.yield;
+          document.querySelectorAll('.res-yield-btn').forEach(b =>
+            b.classList.toggle('active', b.dataset.yield === resYieldFilter));
+          renderResourcesTab();
+          return;
+        }
+        const classBtn = e.target.closest('.res-class-btn');
+        if (classBtn) {
+          resClassFilter = classBtn.dataset.class;
+          document.querySelectorAll('.res-class-btn').forEach(b =>
+            b.classList.toggle('active', b.dataset.class === resClassFilter));
+          renderResourcesTab();
+        }
+      });
+
       renderLeaderGrid();
       renderCivGrid();
       renderTriumphsTab();
+      renderResourcesTab();
     } catch(err) {
       document.getElementById('loading').style.display='none';
       const el=document.getElementById('error-msg');
