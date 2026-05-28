@@ -362,11 +362,16 @@
 
     /* ─── Triumph Tab ───────────────────────────────────────── */
     .triumph-filter-bar {
-      display: flex; gap: 4px; padding: 8px 10px 6px;
+      display: flex; flex-direction: column; gap: 4px;
+      padding: 7px 10px 6px;
       border-bottom: 1px solid var(--border);
-      flex-shrink: 0; flex-wrap: wrap;
+      flex-shrink: 0;
     }
-    .triumph-filter-btn {
+    .triumph-filter-row { display: flex; gap: 4px; flex-wrap: wrap; }
+    .triumph-filter-row + .triumph-filter-row {
+      border-top: 1px solid var(--border); padding-top: 5px;
+    }
+    .triumph-filter-btn, .triumph-set-btn {
       padding: 4px 11px; border-radius: var(--radius-full);
       background: transparent; border: 1px solid var(--border-light);
       color: var(--text-muted); font-family: inherit;
@@ -375,6 +380,8 @@
     }
     .triumph-filter-btn.active,
     .triumph-filter-btn:hover { border-color: var(--purple); color: var(--purple-light); background: var(--purple-bg); }
+    .triumph-set-btn.active,
+    .triumph-set-btn:hover { border-color: var(--teal); color: var(--teal-light); background: var(--teal-bg); }
 
     .triumph-path-header {
       display: flex; align-items: center; gap: 9px;
@@ -494,10 +501,20 @@
     <!-- ── Triumphs Panel ── -->
     <div class="tab-panel" id="panel-triumphs">
       <div class="triumph-filter-bar" id="triumph-filter-bar">
-        <button class="triumph-filter-btn active" data-age="all">All Ages</button>
-        <button class="triumph-filter-btn" data-age="Antiquity">Antiquity</button>
-        <button class="triumph-filter-btn" data-age="Exploration">Exploration</button>
-        <button class="triumph-filter-btn" data-age="Modern">Modern</button>
+        <div class="triumph-filter-row">
+          <button class="triumph-filter-btn active" data-age="all">All Ages</button>
+          <button class="triumph-filter-btn" data-age="Antiquity">Antiquity</button>
+          <button class="triumph-filter-btn" data-age="Exploration">Exploration</button>
+          <button class="triumph-filter-btn" data-age="Modern">Modern</button>
+        </div>
+        <div class="triumph-filter-row" id="triumph-set-bar">
+          <button class="triumph-set-btn active" data-set="all">All Sets</button>
+          <button class="triumph-set-btn" data-set="Default">Default</button>
+          <button class="triumph-set-btn" data-set="Trailblazer">Trailblazer</button>
+          <button class="triumph-set-btn" data-set="Classic">Classic</button>
+          <button class="triumph-set-btn" data-set="Conqueror">Conqueror</button>
+          <button class="triumph-set-btn" data-set="Explorer">Explorer</button>
+        </div>
       </div>
       <div class="panel-scroll">
         <div id="triumphs-content"></div>
@@ -660,7 +677,7 @@
   let triumphsByAge={};   // { age: { category: [rows] } }
   let selectedLeader=null, selectedCiv=null;
   let activeTab='leaders';
-  let triumphAgeFilter='all';
+  let triumphAgeFilter='all', triumphSetFilter='all';
 
   // ─── Load & Process ──────────────────────────────────────────────────────────
   async function loadData() {
@@ -903,12 +920,20 @@
       ? AGE_ORDER_T.filter(a => triumphsByAge[a])
       : [triumphAgeFilter].filter(a => triumphsByAge[a]);
 
+    const inSet = row => {
+      if (triumphSetFilter === 'all') return true;
+      const sets = (row.legacy_sets || '').split('|');
+      return sets.includes(triumphSetFilter);
+    };
+
     let html = '';
     for (const age of ages) {
       const catMap = triumphsByAge[age] || {};
       if (!Object.keys(catMap).length) continue;
       html += `<div style="margin-bottom:6px"><div class="section-sublabel" style="padding:6px 0 2px;font-size:0.62rem">${ageBadge(age)}</div>`;
-      for (const [cat, rows] of Object.entries(catMap)) {
+      for (const [cat, allRows] of Object.entries(catMap)) {
+        const rows = allRows.filter(inSet);
+        if (!rows.length) continue;
         const iconUrl = LEGACY_PATH_ICONS[cat];
         const iconHtml = iconUrl
           ? `<div class="triumph-path-icon"><img src="${iconUrl}" alt="${escHtml(cat)}" loading="lazy"></div>`
@@ -994,12 +1019,21 @@
 
       // Triumph age-filter buttons
       document.getElementById('triumph-filter-bar').addEventListener('click', e => {
-        const btn = e.target.closest('.triumph-filter-btn');
-        if (!btn) return;
-        triumphAgeFilter = btn.dataset.age;
-        document.querySelectorAll('.triumph-filter-btn').forEach(b =>
-          b.classList.toggle('active', b.dataset.age === triumphAgeFilter));
-        renderTriumphsTab();
+        const ageBtn = e.target.closest('.triumph-filter-btn');
+        if (ageBtn) {
+          triumphAgeFilter = ageBtn.dataset.age;
+          document.querySelectorAll('.triumph-filter-btn').forEach(b =>
+            b.classList.toggle('active', b.dataset.age === triumphAgeFilter));
+          renderTriumphsTab();
+          return;
+        }
+        const setBtn = e.target.closest('.triumph-set-btn');
+        if (setBtn) {
+          triumphSetFilter = setBtn.dataset.set;
+          document.querySelectorAll('.triumph-set-btn').forEach(b =>
+            b.classList.toggle('active', b.dataset.set === triumphSetFilter));
+          renderTriumphsTab();
+        }
       });
 
       renderLeaderGrid();
