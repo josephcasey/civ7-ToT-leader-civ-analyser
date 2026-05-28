@@ -917,16 +917,23 @@
           <div class="triumph-path-header">${iconHtml}<span class="triumph-path-name">${escHtml(cat)}</span></div>
           <div class="ability-card" style="padding:8px 12px;margin-bottom:8px">`;
         for (const row of rows) {
-          const descHtml = row.description_raw
-            ? renderTagsToHtml(row.description_raw)
-            : escHtml(row.description_clean || '');
-          const scoreHtml = row.score ? `<div class="triumph-score">${escHtml(String(row.score))}</div>` : '';
+          // Support both old (description_raw) and new (trigger/reward) column layouts
+          const trigRaw    = row.trigger_description_raw  || row.description_raw || '';
+          const trigClean  = row.trigger_description_clean|| row.description_clean|| '';
+          const rewRaw     = row.reward_description_raw   || '';
+          const rewClean   = row.reward_description_clean || '';
+          const trigHtml   = trigRaw  ? renderTagsToHtml(trigRaw)  : escHtml(trigClean);
+          const rewHtml    = rewRaw   ? renderTagsToHtml(rewRaw)   : escHtml(rewClean);
+          const raceNote   = row.has_race_variant === '1' || row.has_race_variant === 1
+            ? `<span style="font-size:0.58rem;color:var(--gold);margin-left:4px">★ first-to bonus</span>` : '';
+          const firstNote  = (row.first_player_only === '1' || row.first_player_only === 1) && !raceNote
+            ? `<span style="font-size:0.58rem;color:var(--gold);margin-left:4px">★ first only</span>` : '';
           html += `
             <div class="triumph-action">
-              ${scoreHtml}
               <div class="triumph-action-body">
-                ${row.name ? `<div class="triumph-action-name">${escHtml(row.name)}</div>` : ''}
-                <div class="triumph-action-desc">${descHtml}</div>
+                ${row.name ? `<div class="triumph-action-name">${escHtml(row.name)}${raceNote}${firstNote}</div>` : ''}
+                ${trigHtml ? `<div class="triumph-action-desc" style="margin-bottom:3px">${trigHtml}</div>` : ''}
+                ${rewHtml  ? `<div class="triumph-action-desc" style="color:var(--teal-light);font-size:0.63rem">→ ${rewHtml}</div>` : ''}
               </div>
             </div>`;
         }
