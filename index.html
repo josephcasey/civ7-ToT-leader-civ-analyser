@@ -421,6 +421,14 @@
       background: var(--bg-card); color: var(--text-muted); border: 1px solid var(--border-light);
     }
     .res-tooltip { font-size: 0.6rem; color: var(--text-muted); margin-top: 3px; line-height: 1.4; }
+    .res-age-tooltips { display: flex; flex-direction: column; gap: 3px; margin-top: 4px; }
+    .res-age-tooltip-row { display: flex; gap: 5px; align-items: baseline; font-size: 0.6rem; line-height: 1.4; }
+    .res-age-tooltip-label { font-size: 0.52rem; font-weight: 700; letter-spacing: 0.04em;
+      text-transform: uppercase; flex-shrink: 0; width: 26px; }
+    .res-age-tooltip-label.aq { color: var(--gold); }
+    .res-age-tooltip-label.ex { color: var(--teal-light); }
+    .res-age-tooltip-label.mo { color: var(--purple-light); }
+    .res-age-tooltip-text { color: var(--text-muted); }
 
     /* ─── Triumph Tab ───────────────────────────────────────── */
     .triumph-filter-bar {
@@ -1229,7 +1237,17 @@
         if (row.leader_exclusive && row.leader_exclusive !== '') metaBadges += `<span class="res-badge" style="color:var(--gold-light);border-color:var(--gold)">${escHtml(row.leader_exclusive)}</span>`;
         if (row.civ_exclusive && row.civ_exclusive !== '') metaBadges += `<span class="res-badge" style="color:var(--teal-light);border-color:var(--teal)">${escHtml(row.civ_exclusive)}</span>`;
 
-        const tooltipHtml = row.tooltip ? `<div class="res-tooltip">${renderTagsToHtml(row.tooltip)}</div>` : '';
+        const ttAnt = row.tooltip_antiquity   || '';
+        const ttExp = row.tooltip_exploration  || '';
+        const ttMod = row.tooltip_modern       || '';
+        // Only show age rows where the age is in the resource's age list
+        const resAges = (row.ages || '').split('|');
+        const ttRows = [
+          resAges.includes('Antiquity')   && ttAnt ? `<div class="res-age-tooltip-row"><span class="res-age-tooltip-label aq">AQ</span><span class="res-age-tooltip-text">${escHtml(ttAnt)}</span></div>` : '',
+          resAges.includes('Exploration') && ttExp && ttExp !== ttAnt ? `<div class="res-age-tooltip-row"><span class="res-age-tooltip-label ex">EX</span><span class="res-age-tooltip-text">${escHtml(ttExp)}</span></div>` : '',
+          resAges.includes('Modern')      && ttMod && ttMod !== ttExp ? `<div class="res-age-tooltip-row"><span class="res-age-tooltip-label mo">MO</span><span class="res-age-tooltip-text">${escHtml(ttMod)}</span></div>` : '',
+        ].filter(Boolean).join('');
+        const tooltipHtml = ttRows ? `<div class="res-age-tooltips">${ttRows}</div>` : '';
 
         cards += `<div class="res-card">
           <div class="res-icon">${iconInner}</div>
