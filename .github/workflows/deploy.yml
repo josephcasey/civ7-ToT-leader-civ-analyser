@@ -2,7 +2,7 @@ name: Deploy to Surge
 
 on:
   push:
-    branches: [claude/dreamy-euler-drYW2]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
