@@ -424,6 +424,64 @@
     .res-age-tooltip-row { display: flex; gap: 6px; align-items: center; font-size: 0.6rem; line-height: 1.4; }
     .res-age-tooltip-text { color: var(--text-muted); }
 
+    /* ─── Wonders Tab ───────────────────────────────────────── */
+    .tab-btn.wonder-tab.active { color: var(--gold-light); border-bottom-color: var(--gold); }
+    .wonder-filter-bar {
+      display: flex; flex-direction: column; gap: 4px;
+      padding: 7px 10px 6px; border-bottom: 1px solid var(--border); flex-shrink: 0;
+    }
+    .wonder-age-btn {
+      padding: 4px 10px; border-radius: var(--radius-full); background: transparent;
+      border: 1px solid var(--border-light); color: var(--text-muted);
+      font-family: inherit; font-size: 0.64rem; font-weight: 600; cursor: pointer;
+      transition: all var(--transition);
+    }
+    .wonder-age-btn.active, .wonder-age-btn:hover {
+      border-color: var(--gold); color: var(--gold-light); background: var(--gold-bg);
+    }
+    .wonder-age-btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+    .wonder-sticky-strip {
+      position: sticky; top: 0; z-index: 10;
+      display: flex; align-items: center; gap: 8px;
+      background: var(--bg-panel); margin: 0 -10px; padding: 5px 10px;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.45);
+    }
+    .wonder-section-label {
+      font-size: 0.67rem; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; color: var(--gold);
+    }
+    .wonder-card {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 9px 0; border-bottom: 1px solid var(--border);
+    }
+    .wonder-card:last-child { border-bottom: none; }
+    .wonder-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      border-radius: var(--radius-sm); overflow: hidden;
+      background: var(--bg-card-hover);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .wonder-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .wonder-icon-placeholder {
+      font-size: 0.55rem; font-weight: 700; color: var(--text-muted);
+      text-align: center; line-height: 1.3; padding: 2px;
+    }
+    .wonder-info { flex: 1; min-width: 0; }
+    .wonder-name { font-size: 0.78rem; font-weight: 700; color: var(--text); }
+    .wonder-cost { font-size: 0.58rem; color: var(--text-dim); margin-left: 5px; }
+    .wonder-desc { font-size: 0.61rem; color: var(--text-muted); margin-top: 3px; line-height: 1.45; }
+    .wonder-meta { display: flex; gap: 3px; margin-top: 4px; flex-wrap: wrap; align-items: center; }
+    .wonder-badge {
+      font-size: 0.52rem; padding: 1px 5px; border-radius: var(--radius-full); font-weight: 600;
+      background: var(--bg-card); color: var(--text-muted); border: 1px solid var(--border-light);
+    }
+    .wonder-yield-badge {
+      display: inline-flex; align-items: center; gap: 2px;
+      font-size: 0.58rem; font-weight: 600; color: var(--teal-light);
+    }
+    .wonder-yield-badge img { width: 12px; height: 12px; object-fit: contain; }
+
     /* ─── Triumph Tab ───────────────────────────────────────── */
     .triumph-filter-bar {
       display: flex; flex-direction: column; gap: 4px;
@@ -554,6 +612,9 @@
       <button class="tab-btn res-tab" id="tab-resources" data-tab="resources">
         <span>Resources</span>
       </button>
+      <button class="tab-btn wonder-tab" id="tab-wonders" data-tab="wonders">
+        <span>Wonders</span>
+      </button>
     </div>
 
     <!-- ── Leaders Panel ── -->
@@ -627,6 +688,22 @@
       </div>
       <div class="panel-scroll" style="padding-top:0">
         <div id="resources-content"></div>
+        <div class="scroll-footer">Data extracted from Civ VII 1.4.0 (Test of Time) · Images © 2K Games via Civilization Wiki</div>
+      </div>
+    </div>
+
+    <!-- ── Wonders Panel ── -->
+    <div class="tab-panel" id="panel-wonders">
+      <div class="wonder-filter-bar" id="wonder-filter-bar">
+        <div class="triumph-filter-row">
+          <button class="wonder-age-btn active" data-age="all">All Ages</button>
+          <button class="wonder-age-btn" data-age="Antiquity">Antiquity</button>
+          <button class="wonder-age-btn" data-age="Exploration">Exploration</button>
+          <button class="wonder-age-btn" data-age="Modern">Modern</button>
+        </div>
+      </div>
+      <div class="panel-scroll" style="padding-top:0">
+        <div id="wonders-content"></div>
         <div class="scroll-footer">Data extracted from Civ VII 1.4.0 (Test of Time) · Images © 2K Games via Civilization Wiki</div>
       </div>
     </div>
@@ -843,13 +920,14 @@
   };
 
   // ─── State ───────────────────────────────────────────────────────────────────
-  let allRows=[], leaderSyncRows=[], triumphRows=[], resourceRows=[];
+  let allRows=[], leaderSyncRows=[], triumphRows=[], resourceRows=[], wonderRows=[];
   let leaders={}, civs={}, leaderSyncMap={};
-  let triumphsByAge={}, resourcesByClass={};
+  let triumphsByAge={}, resourcesByClass={}, wondersByAge={};
   let selectedLeader=null, selectedCiv=null;
   let activeTab='leaders';
   let triumphAgeFilter='all', triumphSetFilter='all';
   let resYieldFilter='all', resClassFilter='all';
+  let wonderAgeFilter='all';
 
   // ─── Load & Process ──────────────────────────────────────────────────────────
   async function loadData() {
@@ -860,6 +938,7 @@
     allRows=parseCSV(u); leaderSyncRows=parseCSV(s);
     try { const t = await fetch('civ7_triumphs.csv');  if (t.ok) triumphRows  = parseCSV(await t.text()); } catch(_) {}
     try { const r = await fetch('civ7_resources.csv'); if (r.ok) resourceRows = parseCSV(await r.text()); } catch(_) {}
+    try { const w = await fetch('civ7_wonders.csv');   if (w.ok) wonderRows   = parseCSV(await w.text());  } catch(_) {}
   }
   function processData() {
     for (const row of allRows) {
@@ -910,6 +989,15 @@
     }
     for (const cls of CLASS_ORDER) {
       resourcesByClass[cls].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+    }
+    // Wonders: group by age
+    for (const row of wonderRows) {
+      const age = row.age || 'Unknown';
+      if (!wondersByAge[age]) wondersByAge[age] = [];
+      wondersByAge[age].push(row);
+    }
+    for (const age of Object.keys(wondersByAge)) {
+      wondersByAge[age].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
     }
   }
 
@@ -1259,6 +1347,166 @@
     area.innerHTML = html || `<div class="triumph-empty"><div class="triumph-empty-sub">No resources match this filter.</div></div>`;
   }
 
+  // ─── Render: Wonders Tab ─────────────────────────────────────────────────────
+  const WONDER_ICONS = {
+    // Antiquity
+    "WONDER_ANGKOR_WAT":              "https://static.wikia.nocookie.net/civilization/images/1/1b/Angkor_Wat_%28Civ7%29.png/revision/latest?cb=20251121230334",
+    "WONDER_BYRSA":                   "https://static.wikia.nocookie.net/civilization/images/0/0e/Byrsa_%28Civ7%29.png/revision/latest?cb=20250305003351",
+    "WONDER_COLOSSEUM":               "https://static.wikia.nocookie.net/civilization/images/5/5a/Colosseum_%28Civ7%29.png/revision/latest?cb=20251121231410",
+    "WONDER_COLOSSUS":                "https://static.wikia.nocookie.net/civilization/images/8/8a/Colossus_%28Civ7%29.png/revision/latest?cb=20251121231419",
+    "WONDER_DUR_SHARRUKIN":           "https://static.wikia.nocookie.net/civilization/images/d/d5/Dur-Sharrukin_%28Civ7%29.png/revision/latest?cb=20251121231432",
+    "WONDER_EMILE_BELL":              "https://static.wikia.nocookie.net/civilization/images/5/59/Emile_Bell_%28Civ7%29.png/revision/latest?cb=20251121231449",
+    "WONDER_GATE_OF_ALL_NATIONS":     "https://static.wikia.nocookie.net/civilization/images/3/32/Gate_of_All_Nations_%28Civ7%29.png/revision/latest?cb=20251121231500",
+    "WONDER_GREAT_LIBRARY":           "https://static.wikia.nocookie.net/civilization/images/b/b4/Great_Library_%28Civ7%29.png/revision/latest?cb=20251211074806",
+    "WONDER_GREAT_LIGHTHOUSE":        "https://static.wikia.nocookie.net/civilization/images/f/f2/Great_Lighthouse_%28Civ7%29.png/revision/latest?cb=20251105214124",
+    "WONDER_GREAT_STELE":             "https://static.wikia.nocookie.net/civilization/images/4/42/Great_Stele_%28Civ7%29.png/revision/latest?cb=20251121231527",
+    "WONDER_HAAMONGA_A_MAUI":         "https://static.wikia.nocookie.net/civilization/images/2/2e/Ha%27amonga_%27a_Maui_%28Civ7%29.png/revision/latest?cb=20251121231539",
+    "WONDER_HANGING_GARDENS":         "https://static.wikia.nocookie.net/civilization/images/b/b7/Hanging_Gardens_%28Civ7%29.png/revision/latest?cb=20251121231549",
+    "WONDER_MAUSOLEUM_HALICARNASSUS": "https://static.wikia.nocookie.net/civilization/images/1/16/Mausoleum_at_Halicarnassus_%28Civ7%29.png/revision/latest?cb=20250723061213",
+    "WONDER_MAUSOLEUM_THEODORIC":     "https://static.wikia.nocookie.net/civilization/images/c/c2/Mausoleum_of_Theodoric_%28Civ7%29.png/revision/latest?cb=20251121231622",
+    "WONDER_MONKS_MOUND":             "https://static.wikia.nocookie.net/civilization/images/f/f9/Monks_Mound_%28Civ7%29.png/revision/latest?cb=20251121231631",
+    "WONDER_MUNDO_PERDIDO":           "https://static.wikia.nocookie.net/civilization/images/8/87/Mundo_Perdido_%28Civ7%29.png/revision/latest?cb=20251121231640",
+    "WONDER_NALANDA":                 "https://static.wikia.nocookie.net/civilization/images/8/8c/Nalanda_%28Civ7%29.png/revision/latest?cb=20251121231650",
+    "WONDER_ORACLE":                  "https://static.wikia.nocookie.net/civilization/images/3/37/Oracle_%28Civ7%29.png/revision/latest?cb=20251121231711",
+    "WONDER_PETRA":                   "https://static.wikia.nocookie.net/civilization/images/0/03/Petra_%28Civ7%29.png/revision/latest?cb=20251121231723",
+    "WONDER_PYRAMID_OF_THE_SUN":      "https://static.wikia.nocookie.net/civilization/images/b/b9/Pyramid_Of_The_Sun_%28Civ7%29.png/revision/latest?cb=20251121231734",
+    "WONDER_PYRAMIDS":                "https://static.wikia.nocookie.net/civilization/images/e/ef/Pyramids_%28Civ7%29.png/revision/latest?cb=20260510182136",
+    "WONDER_SANCHI_STUPA":            "https://static.wikia.nocookie.net/civilization/images/f/fd/Sanchi_Stupa_%28Civ7%29.png/revision/latest?cb=20251121231753",
+    "WONDER_TERRACOTTA_ARMY":         "https://static.wikia.nocookie.net/civilization/images/4/4c/Terracotta_Army_%28Civ7%29.png/revision/latest?cb=20251121231802",
+    "WONDER_WEIYANG_PALACE":          "https://static.wikia.nocookie.net/civilization/images/e/ef/Weiyang_Palace_%28Civ7%29.png/revision/latest?cb=20251121231812",
+    // Exploration
+    "WONDER_BOROBUDUR":               "https://static.wikia.nocookie.net/civilization/images/5/5e/Borobudur_%28Civ7%29.png/revision/latest?cb=20251121230444",
+    "WONDER_BRIHADEESWARAR":          "https://static.wikia.nocookie.net/civilization/images/1/12/Brihadeeswarar_Temple_%28Civ7%29.png/revision/latest?cb=20251121232005",
+    "WONDER_EL_ESCORIAL":             "https://static.wikia.nocookie.net/civilization/images/2/24/El_Escorial_%28Civ7%29.png/revision/latest?cb=20251121232021",
+    "WONDER_ERDENE_ZUU":              "https://static.wikia.nocookie.net/civilization/images/9/99/Erdene_Zuu_%28Civ7%29.png/revision/latest?cb=20251121232036",
+    "WONDER_FORBIDDEN_CITY":          "https://static.wikia.nocookie.net/civilization/images/3/3a/Forbidden_City_%28Civ7%29.png/revision/latest?cb=20251121232045",
+    "WONDER_GRAND_BAZAAR":            "https://static.wikia.nocookie.net/civilization/images/0/03/Grand_Bazaar_%28Civ7%29.png/revision/latest?cb=20250723060915",
+    "WONDER_HALE_O_KEAWE":            "https://static.wikia.nocookie.net/civilization/images/7/74/Hale_o_Keawe_%28Civ7%29.png/revision/latest?cb=20251121232118",
+    "WONDER_HAVANA_HARBOR":           "https://static.wikia.nocookie.net/civilization/images/1/17/Havana_Harbor_%28Civ7%29.png/revision/latest?cb=20251105214045",
+    "WONDER_HOUSE_OF_WISDOM":         "https://static.wikia.nocookie.net/civilization/images/5/59/House_of_Wisdom_%28Civ7%29.png/revision/latest?cb=20251121232137",
+    "WONDER_MACHU_PIKCHU":            "https://static.wikia.nocookie.net/civilization/images/8/8e/Machu_Pikchu_%28Civ7%29.png/revision/latest?cb=20251121232146",
+    "WONDER_NAN_MADOL":               "https://static.wikia.nocookie.net/civilization/images/6/61/Nan_Madol_%28Civ7%29.png/revision/latest?cb=20251105214137",
+    "WONDER_NOTRE_DAME":              "https://static.wikia.nocookie.net/civilization/images/9/93/Notre_Dame_%28Civ7%29.png/revision/latest?cb=20251121232221",
+    "WONDER_REYKJAHOLT":              "https://static.wikia.nocookie.net/civilization/images/d/dd/Reykjaholt_%28Civ7%29.png/revision/latest?cb=20251211074307",
+    "WONDER_RILA_MONASTERY":          "https://static.wikia.nocookie.net/civilization/images/c/c8/Rila_Monastery_%28Civ7%29.png/revision/latest?cb=20250305003438",
+    "WONDER_SERPENT_MOUND":           "https://static.wikia.nocookie.net/civilization/images/1/19/Serpent_Mound_%28Civ7%29.png/revision/latest?cb=20251121232344",
+    "WONDER_SHWEDAGON_ZEDI_DAW":      "https://static.wikia.nocookie.net/civilization/images/3/38/Shwedagon_Zedi_Daw_%28Civ7%29.png/revision/latest?cb=20251121232355",
+    "WONDER_THANH_HUE":               "https://static.wikia.nocookie.net/civilization/images/7/7d/Th%C3%A0nh_Hu%E1%BA%BF_%28Civ7%29.png/revision/latest?cb=20250723060752",
+    "WONDER_TOMB_OF_ASKIA":           "https://static.wikia.nocookie.net/civilization/images/f/fa/Tomb_of_Askia_%28Civ7%29.png/revision/latest?cb=20251121232422",
+    "WONDER_WAT_XIENG_THONG":         "https://static.wikia.nocookie.net/civilization/images/5/5c/Wat_Xieng_Thong_%28Civ7%29.png/revision/latest?cb=20250723061037",
+    "WONDER_WHITE_TOWER":             "https://static.wikia.nocookie.net/civilization/images/a/a6/White_Tower_%28Civ7%29.png/revision/latest?cb=20251121232433",
+    // Modern
+    "WONDER_BATTERSEA_POWER_STATION": "https://static.wikia.nocookie.net/civilization/images/e/e8/Battersea_Power_Station_%28Civ7%29.png/revision/latest?cb=20250305003301",
+    "WONDER_BOUDHANATH":              "https://static.wikia.nocookie.net/civilization/images/c/ce/Boudhanath_%28Civ7%29.png/revision/latest?cb=20250305003443",
+    "WONDER_BRANDENBURG_GATE":        "https://static.wikia.nocookie.net/civilization/images/f/f3/Brandenburg_Gate_%28Civ7%29.png/revision/latest?cb=20251121232648",
+    "WONDER_CHENGDE_MOUNTAIN_RESORT": "https://static.wikia.nocookie.net/civilization/images/e/ec/Chengde_Mountain_Resort_%28Civ7%29.png/revision/latest?cb=20251121232658",
+    "WONDER_DOGO_ONSEN":              "https://static.wikia.nocookie.net/civilization/images/e/ef/Dogo_Onsen_%28Civ7%29.png/revision/latest?cb=20251121232708",
+    "WONDER_DOI_SUTHEP":              "https://static.wikia.nocookie.net/civilization/images/1/18/Doi_Suthep_%28Civ7%29.png/revision/latest?cb=20251121232717",
+    "WONDER_EIFFEL_TOWER":            "https://static.wikia.nocookie.net/civilization/images/9/96/Eiffel_Tower_%28Civ7%29.png/revision/latest?cb=20251121232731",
+    "WONDER_ERAM_GARDEN":             "https://static.wikia.nocookie.net/civilization/images/e/e7/Eram_Garden_%28Civ7%29.png/revision/latest?cb=20251001055811",
+    "WONDER_HERMITAGE":               "https://static.wikia.nocookie.net/civilization/images/8/86/Hermitage_%28Civ7%29.png/revision/latest?cb=20251121232759",
+    "WONDER_MANHATTAN_PROJECT":       "https://static.wikia.nocookie.net/civilization/images/e/e2/Manhattan_Project_%28Civ7%29.png/revision/latest?cb=20251121232812",
+    "WONDER_MUZIBU_AZAALA_MPANGA":    "https://static.wikia.nocookie.net/civilization/images/0/06/Muzibu_Azaala_Mpanga_%28Civ7%29.png/revision/latest?cb=20251121232823",
+    "WONDER_OXFORD_UNIVERSITY":       "https://static.wikia.nocookie.net/civilization/images/f/fa/Oxford_University_%28Civ7%29.png/revision/latest?cb=20251121232831",
+    "WONDER_PALACIO_BELLAS_ARTES":    "https://static.wikia.nocookie.net/civilization/images/0/0f/Palacio_de_Bellas_Artes_%28Civ7%29.png/revision/latest?cb=20251121232842",
+    "WONDER_RED_FORT":                "https://static.wikia.nocookie.net/civilization/images/a/a9/Red_Fort_%28Civ7%29.png/revision/latest?cb=20251121232852",
+    "WONDER_STATUE_OF_LIBERTY":       "https://static.wikia.nocookie.net/civilization/images/1/10/Statue_of_Liberty_%28Civ7%29.png/revision/latest?cb=20251121232900",
+    "WONDER_SULTANAHMET_CAMII":       "https://static.wikia.nocookie.net/civilization/images/0/0d/Sultanahmet_Camii_%28Civ7%29.png/revision/latest?cb=20251211074219",
+    "WONDER_TAJ_MAHAL":               "https://static.wikia.nocookie.net/civilization/images/6/6d/Taj_Mahal_%28Civ7%29.png/revision/latest?cb=20251121232915",
+    "WONDER_UBUDIAH_MOSQUE":          "https://static.wikia.nocookie.net/civilization/images/4/42/Ubudiah_Mosque_%28Civ7%29.png/revision/latest?cb=20250723060954",
+    "WONDER_WORLDS_FAIR":             "https://static.wikia.nocookie.net/civilization/images/4/4a/World%27s_Fair_%28Civ7%29.png/revision/latest?cb=20250304232846",
+  };
+
+  function renderWondersTab() {
+    const area = document.getElementById('wonders-content');
+    if (!wonderRows.length) {
+      area.innerHTML = `<div class="triumph-empty">
+        <div class="triumph-empty-icon">🏛</div>
+        <div class="triumph-empty-title">No wonder data loaded</div>
+        <div class="triumph-empty-sub">Place <code>civ7_wonders.csv</code> alongside this file.</div>
+      </div>`;
+      return;
+    }
+
+    const AGE_ORDER_W = ['Antiquity','Exploration','Modern'];
+    const ages = wonderAgeFilter === 'all'
+      ? AGE_ORDER_W.filter(a => wondersByAge[a])
+      : [wonderAgeFilter].filter(a => wondersByAge[a]);
+
+    const CONSTRAINT_LABELS = {
+      adj_river:'Requires river', adj_coast:'Requires coast', adj_mountain:'Requires mountain',
+      adj_lake:'Requires lake', adj_land:'On land', hill:'On hill', flat:'On flat terrain',
+      desert:'In desert', 'no_feature':'No features',
+    };
+
+    let html = '';
+    for (const age of ages) {
+      const rows = wondersByAge[age] || [];
+      if (!rows.length) continue;
+
+      let cards = '';
+      for (const row of rows) {
+        const iconUrl = WONDER_ICONS[row.wonder_type];
+        const abbr = (row.name || '?').split(' ').map(w=>w[0]).join('').slice(0,3).toUpperCase();
+        const iconInner = iconUrl
+          ? `<img src="${escHtml(iconUrl)}" alt="${escHtml(row.name)}" loading="lazy"
+               onerror="this.parentElement.innerHTML='<div class=wonder-icon-placeholder>${escHtml(abbr)}</div>'">`
+          : `<div class="wonder-icon-placeholder">${escHtml(abbr)}</div>`;
+
+        // Yields
+        let yieldBadges = '';
+        if (row.yields) {
+          for (const y of row.yields.split(';')) {
+            const m = y.trim().match(/([+-]?\d+%?)\s+([A-Z_]+)/);
+            if (!m) continue;
+            const [, amt, yt] = m;
+            const iconU = YIELD_ICON_URLS[`YIELD_${yt}`] || YIELD_ICON_URLS[yt];
+            const label = ICON_TEXT_LABELS[`YIELD_${yt}`] || ICON_TEXT_LABELS[yt] || yt;
+            yieldBadges += `<span class="wonder-yield-badge">${iconU ? `<img src="${escHtml(iconU)}" alt="">` : ''} ${escHtml(amt)} ${escHtml(label)}</span>`;
+          }
+        }
+
+        // Placement constraints
+        let constraints = '';
+        if (row.placement_constraints) {
+          for (const c of row.placement_constraints.split(',').map(s=>s.trim()).filter(Boolean)) {
+            const label = CONSTRAINT_LABELS[c] || c.replace(/_/g,' ');
+            constraints += `<span class="wonder-badge">${escHtml(label)}</span>`;
+          }
+        }
+
+        // Production cost
+        const costHtml = row.cost ? `<span class="wonder-cost">⚙ ${escHtml(row.cost)} prod</span>` : '';
+
+        // Description — use raw for icon rendering, clean as fallback
+        const descHtml = row.description_raw
+          ? renderTagsToHtml(row.description_raw)
+          : escHtml(row.description_clean || '');
+
+        cards += `<div class="wonder-card">
+          <div class="wonder-icon">${iconInner}</div>
+          <div class="wonder-info">
+            <div class="wonder-name">${escHtml(row.name || row.wonder_type)}${costHtml}</div>
+            ${yieldBadges ? `<div class="res-yields" style="margin-top:3px">${yieldBadges}</div>` : ''}
+            ${descHtml    ? `<div class="wonder-desc">${descHtml}</div>` : ''}
+            ${constraints ? `<div class="wonder-meta">${constraints}</div>` : ''}
+          </div>
+        </div>`;
+      }
+
+      html += `<div class="triumph-section-block">
+        <div class="wonder-sticky-strip">
+          <div class="section-sublabel" style="font-size:0.62rem;margin:0">${ageBadge(age)}</div>
+          <span class="wonder-section-label">Wonders</span>
+          <span style="font-size:0.6rem;color:var(--text-dim);margin-left:auto">${rows.length}</span>
+        </div>
+        <div style="padding:0 2px">${cards}</div>
+      </div>`;
+    }
+
+    area.innerHTML = html || `<div class="triumph-empty"><div class="triumph-empty-sub">No wonders for this filter.</div></div>`;
+  }
+
   // ─── Update Tab Dots ─────────────────────────────────────────────────────────
   function updateDots() {
     document.getElementById('dot-leader').style.display = selectedLeader ? '' : 'none';
@@ -1351,10 +1599,21 @@
         }
       });
 
+      // Wonder age-filter buttons
+      document.getElementById('wonder-filter-bar').addEventListener('click', e => {
+        const btn = e.target.closest('.wonder-age-btn');
+        if (!btn) return;
+        wonderAgeFilter = btn.dataset.age;
+        document.querySelectorAll('.wonder-age-btn').forEach(b =>
+          b.classList.toggle('active', b.dataset.age === wonderAgeFilter));
+        renderWondersTab();
+      });
+
       renderLeaderGrid();
       renderCivGrid();
       renderTriumphsTab();
       renderResourcesTab();
+      renderWondersTab();
     } catch(err) {
       document.getElementById('loading').style.display='none';
       const el=document.getElementById('error-msg');
