@@ -98,18 +98,12 @@
       position: relative; flex-shrink: 0;
       border-bottom: 1px solid var(--border);
     }
-    /* Edge fade — creates the concertina peek effect */
-    .tab-bar-wrap::before, .tab-bar-wrap::after {
-      content: ''; position: absolute; top: 0; bottom: 0;
-      width: 28px; z-index: 4; pointer-events: none;
-    }
-    .tab-bar-wrap::before {
-      left: 0;
-      background: linear-gradient(to right, var(--bg-panel) 30%, transparent);
-    }
+    /* Right-edge fade only — signals more tabs to the right */
     .tab-bar-wrap::after {
-      right: 0;
-      background: linear-gradient(to left, var(--bg-panel) 30%, transparent);
+      content: ''; position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 32px; z-index: 12; pointer-events: none;
+      background: linear-gradient(to left, var(--bg-panel) 20%, transparent);
     }
     .tab-bar {
       display: flex;
@@ -119,9 +113,12 @@
     }
     .tab-bar::-webkit-scrollbar { display: none; }
     .tab-btn {
-      flex: 1 0 78px; /* grows to fill on wide screens, min 78px on mobile */
+      /* Sticky so tabs stack at the left edge as they scroll off */
+      position: sticky;
+      flex: 1 0 78px;
       padding: 11px 8px 9px;
-      background: transparent; border: none;
+      /* Solid background so overlapping tabs cover each other cleanly */
+      background: var(--bg-panel); border: none;
       border-bottom: 2px solid transparent;
       color: var(--text-muted);
       font-family: inherit; font-size: 0.72rem; font-weight: 600;
@@ -130,11 +127,16 @@
       white-space: nowrap; overflow: hidden;
       transition: color var(--transition), border-color var(--transition), background var(--transition);
     }
-    /* Truncate long labels with ellipsis when concertina'd */
-    .tab-btn > span:first-child {
-      overflow: hidden; text-overflow: ellipsis; min-width: 0;
-    }
-    .tab-btn:hover { color: var(--text); background: rgba(255,255,255,0.03); }
+    /* Each tab sticks at a 30px peek offset from the previous — right tabs slide over left tabs */
+    #tab-leaders   { left:  0px; z-index: 1; }
+    #tab-civs      { left: 30px; z-index: 2; }
+    #tab-triumphs  { left: 60px; z-index: 3; }
+    #tab-resources { left: 90px; z-index: 4; }
+    #tab-wonders   { left:120px; z-index: 5; }
+    #tab-techs     { left:150px; z-index: 6; }
+    /* Active tab floats above its neighbours so the underline is always visible */
+    .tab-btn.active { z-index: 10; background: var(--bg-card); }
+    .tab-btn:hover  { color: var(--text); background: var(--bg-card-hover); }
     .tab-btn.active { color: var(--gold-light); border-bottom-color: var(--gold); }
     .tab-btn.active.teal-tab { color: var(--teal-light); border-bottom-color: var(--teal); }
     .tab-btn.active.abilities-tab { color: var(--purple-light); border-bottom-color: var(--purple); }
