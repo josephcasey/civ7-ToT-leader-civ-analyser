@@ -29,6 +29,9 @@
       --purple:        #8b5cf6;
       --purple-light:  #a78bfa;
       --purple-bg:     rgba(139,92,246,0.12);
+      --amber:         #d97706;
+      --amber-light:   #f59e0b;
+      --amber-bg:      rgba(217,119,6,0.12);
       --radius-sm:   6px;
       --radius-md:   10px;
       --radius-lg:   14px;
@@ -123,14 +126,15 @@
       Each tab has BOTH a left and right sticky boundary (30px peek per step).
       Z-index is a symmetric pyramid — inner tabs are highest so the inner tab
       always wins the overlap whether it's coming from the left or the right.
-        left  → Leaders(1) Civs(2) Triumphs(3) | Resources(3) Wonders(2) Techs(1) ← right
+        left  → Leaders(1) Civs(2) Triumphs(3) Resources(4) Wonders(3) Techs(2) Civics(1) ← right
     */
-    #tab-leaders   { left:  0px; right:150px; z-index: 1; }
-    #tab-civs      { left: 30px; right:120px; z-index: 2; }
-    #tab-triumphs  { left: 60px; right: 90px; z-index: 3; }
-    #tab-resources { left: 90px; right: 60px; z-index: 3; }
-    #tab-wonders   { left:120px; right: 30px; z-index: 2; }
-    #tab-techs     { left:150px; right:  0px; z-index: 1; }
+    #tab-leaders   { left:  0px; right:180px; z-index: 1; }
+    #tab-civs      { left: 30px; right:150px; z-index: 2; }
+    #tab-triumphs  { left: 60px; right:120px; z-index: 3; }
+    #tab-resources { left: 90px; right: 90px; z-index: 4; }
+    #tab-wonders   { left:120px; right: 60px; z-index: 3; }
+    #tab-techs     { left:150px; right: 30px; z-index: 2; }
+    #tab-civics    { left:180px; right:  0px; z-index: 1; }
     /* Active tab floats above all neighbours so its underline is always visible */
     .tab-btn.active { z-index: 10; background: var(--bg-card); }
     .tab-btn:hover  { color: var(--text); background: var(--bg-card-hover); }
@@ -686,6 +690,18 @@
     .tech-unlock-list { list-style: none; padding: 0; margin: 0; }
     .tech-unlock-item { font-size: 0.58rem; color: var(--text-muted); line-height: 1.55; }
     .tech-unlock-item.unique-unit { color: var(--gold-light); }
+
+    /* ─── Civics Tab ─────────────────────────────────────────── */
+    .tab-btn.civic-tab.active { color: var(--amber-light); border-bottom-color: var(--amber); }
+    #panel-civics { flex-direction: column; }
+    #civic-age-bar .tech-age-btn.active, #civic-age-bar .tech-age-btn:hover {
+      border-color: var(--amber); color: var(--amber-light); background: var(--amber-bg);
+    }
+    .civic-node:hover { border-color: var(--amber-light); background: var(--bg-card-hover); }
+    .civic-node.selected {
+      border-color: var(--amber); background: rgba(217,119,6,0.12);
+      box-shadow: 0 0 0 1px var(--amber), var(--shadow-card);
+    }
   </style>
 </head>
 <body>
@@ -729,6 +745,9 @@
       </button>
       <button class="tab-btn tech-tab" id="tab-techs" data-tab="techs">
         <span>Techs</span>
+      </button>
+      <button class="tab-btn civic-tab" id="tab-civics" data-tab="civics">
+        <span>Civics</span>
       </button>
     </div>
     </div>
@@ -837,6 +856,23 @@
         </div>
         <div class="tech-tree-scroll" id="tech-tree-scroll">
           <div class="tech-tree-canvas" id="tech-tree-canvas"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Civics Panel ── -->
+    <div class="tab-panel" id="panel-civics">
+      <div class="tech-detail-pane" id="civic-detail-pane">
+        <div class="tech-detail-empty">Click a civic node in the tree below to see details</div>
+      </div>
+      <div class="tech-tree-pane">
+        <div class="tech-age-bar" id="civic-age-bar">
+          <button class="tech-age-btn active" data-age="AGE_ANTIQUITY">Antiquity</button>
+          <button class="tech-age-btn" data-age="AGE_EXPLORATION">Exploration</button>
+          <button class="tech-age-btn" data-age="AGE_MODERN">Modern</button>
+        </div>
+        <div class="tech-tree-scroll" id="civic-tree-scroll">
+          <div class="tech-tree-canvas" id="civic-tree-canvas"></div>
         </div>
       </div>
     </div>
@@ -1053,16 +1089,18 @@
   };
 
   // ─── State ───────────────────────────────────────────────────────────────────
-  let allRows=[], leaderSyncRows=[], triumphRows=[], resourceRows=[], wonderRows=[], techRows=[];
+  let allRows=[], leaderSyncRows=[], triumphRows=[], resourceRows=[], wonderRows=[], techRows=[], civicRows=[];
   let leaders={}, civs={}, leaderSyncMap={};
   let triumphsByAge={}, resourcesByClass={}, wondersByAge={};
   let techsByAge={}, techMap={};
+  let civicsByAge={}, civicMap={};
   let selectedLeader=null, selectedCiv=null;
   let activeTab='leaders';
   let triumphAgeFilter='all', triumphSetFilter='all';
   let resYieldFilter='all', resClassFilter='all';
   let wonderAgeFilter='all';
   let selectedTech=null, techAgeFilter='AGE_ANTIQUITY';
+  let selectedCivic=null, civicAgeFilter='AGE_ANTIQUITY';
 
   // ─── Load & Process ──────────────────────────────────────────────────────────
   async function loadData() {
@@ -1074,7 +1112,8 @@
     try { const t = await fetch('civ7_triumphs.csv');  if (t.ok) triumphRows  = parseCSV(await t.text()); } catch(_) {}
     try { const r = await fetch('civ7_resources.csv'); if (r.ok) resourceRows = parseCSV(await r.text()); } catch(_) {}
     try { const w = await fetch('civ7_wonders.csv');   if (w.ok) wonderRows   = parseCSV(await w.text());  } catch(_) {}
-    try { const t = await fetch('civ7_techs.csv');    if (t.ok) techRows     = parseCSV(await t.text());   } catch(_) {}
+    try { const t = await fetch('civ7_techs.csv');    if (t.ok) techRows    = parseCSV(await t.text());   } catch(_) {}
+    try { const c = await fetch('civ7_civics.csv');   if (c.ok) civicRows   = parseCSV(await c.text());   } catch(_) {}
   }
   function processData() {
     for (const row of allRows) {
@@ -1141,6 +1180,13 @@
       const age = row.age || 'Unknown';
       if (!techsByAge[age]) techsByAge[age] = [];
       techsByAge[age].push(row);
+    }
+    // Civics: index by node_type; group by age
+    for (const row of civicRows) {
+      civicMap[row.node_type] = row;
+      const age = row.age || 'Unknown';
+      if (!civicsByAge[age]) civicsByAge[age] = [];
+      civicsByAge[age].push(row);
     }
   }
 
@@ -1618,6 +1664,47 @@
     // Computation has no wiki icon — leave out (will show initials fallback)
   };
 
+  // ─── Civic Icons (wiki: civilization.fandom.com) ─────────────────────────────
+  const CIVIC_ICONS = {
+    "NODE_CIVIC_AQ_MAIN_CHIEFDOM":          "https://static.wikia.nocookie.net/civilization/images/8/88/Chiefdom_%28Civ7%29.png/revision/latest?cb=20250224000353",
+    "NODE_CIVIC_AQ_MAIN_MYSTICISM":         "https://static.wikia.nocookie.net/civilization/images/5/5b/Mysticism_%28Civ7%29.png/revision/latest?cb=20250224000311",
+    "NODE_CIVIC_AQ_MAIN_DISCIPLINE":        "https://static.wikia.nocookie.net/civilization/images/a/a7/Discipline_%28Civ7%29.png/revision/latest?cb=20250224000347",
+    "NODE_CIVIC_AQ_MAIN_PUBLIC_LIFE":       "https://static.wikia.nocookie.net/civilization/images/5/57/Public_Life_%28Civ7%29.png/revision/latest?cb=20250224000229",
+    "NODE_CIVIC_AQ_MAIN_CODE_OF_LAWS":      "https://static.wikia.nocookie.net/civilization/images/4/41/Code_of_Laws_%28Civ7%29.png/revision/latest?cb=20250224000339",
+    "NODE_CIVIC_AQ_MAIN_TACTICS":           "https://static.wikia.nocookie.net/civilization/images/7/7d/Tactics_%28Civ7%29.png/revision/latest?cb=20250224000211",
+    "NODE_CIVIC_AQ_MAIN_ENTERTAINMENT":     "https://static.wikia.nocookie.net/civilization/images/5/5e/Entertainment_%28Civ7%29.png/revision/latest?cb=20250224000255",
+    "NODE_CIVIC_AQ_MAIN_CITIZENSHIP":       "https://static.wikia.nocookie.net/civilization/images/7/7c/Citizenship_%28Civ7%29.png/revision/latest?cb=20250224000246",
+    "NODE_CIVIC_AQ_MAIN_ORG_MILITARY":      "https://static.wikia.nocookie.net/civilization/images/9/95/Organized_Military_%28Civ7%29.png/revision/latest?cb=20250224000325",
+    "NODE_CIVIC_AQ_MAIN_LITERACY":          "https://static.wikia.nocookie.net/civilization/images/5/5a/Literacy_%28Civ7%29.png/revision/latest?cb=20250224000304",
+    "NODE_CIVIC_AQ_MAIN_SKILLED_TRADES":    "https://static.wikia.nocookie.net/civilization/images/f/f9/Skilled_Trades_%28Civ7%29.png/revision/latest?cb=20250224000219",
+    "NODE_CIVIC_AQ_MAIN_PHILOSOPHY":        "https://static.wikia.nocookie.net/civilization/images/f/fe/Philosophy_%28Civ7%29.png/revision/latest?cb=20250224000332",
+    "NODE_CIVIC_AQ_MAIN_COMMERCE":          "https://static.wikia.nocookie.net/civilization/images/a/a6/Commerce_%28Civ7%29.png/revision/latest?cb=20250224000238",
+    "NODE_CIVIC_AQ_MAIN_FUTURE_CIVIC":      "https://static.wikia.nocookie.net/civilization/images/7/73/Future_Civic_%28Civ7%29.png/revision/latest?cb=20250224000203",
+    "NODE_CIVIC_EX_MAIN_ECONOMICS":         "https://static.wikia.nocookie.net/civilization/images/5/54/Economics_%28Civ7%29.png/revision/latest?cb=20250223231517",
+    "NODE_CIVIC_EX_MAIN_PIETY":             "https://static.wikia.nocookie.net/civilization/images/0/05/Piety_%28Civ7%29.png/revision/latest?cb=20250223231452",
+    "NODE_CIVIC_EX_MAIN_MERCANTILISM":      "https://static.wikia.nocookie.net/civilization/images/6/6b/Mercantilism_%28Civ7%29.png/revision/latest?cb=20250223231500",
+    "NODE_CIVIC_EX_MAIN_AUTHORITY":         "https://static.wikia.nocookie.net/civilization/images/9/98/Authority_%28Civ7%29.png/revision/latest?cb=20250224000156",
+    "NODE_CIVIC_EX_MAIN_INSPIRATION":       "https://static.wikia.nocookie.net/civilization/images/1/19/Inspiration_%28Civ7%29.png/revision/latest?cb=20250224000118",
+    "NODE_CIVIC_EX_MAIN_COLONIALISM":       "https://static.wikia.nocookie.net/civilization/images/b/ba/Colonialism_%28Civ7%29.png/revision/latest?cb=20250224000124",
+    "NODE_CIVIC_EX_MAIN_BUREAUCRACY":       "https://static.wikia.nocookie.net/civilization/images/d/dc/Bureaucracy_%28Civ7%29.png/revision/latest?cb=20250224000132",
+    "NODE_CIVIC_EX_MAIN_DIPLOMATIC_SERVICE":"https://static.wikia.nocookie.net/civilization/images/4/4f/Diplomatic_Service_%28Civ7%29.png/revision/latest?cb=20250223231525",
+    "NODE_CIVIC_EX_MAIN_SOCIETY":           "https://static.wikia.nocookie.net/civilization/images/7/74/Society_%28Civ7%29.png/revision/latest?cb=20250223231419",
+    "NODE_CIVIC_EX_MAIN_IMPERIALISM":       "https://static.wikia.nocookie.net/civilization/images/1/10/Imperialism_%28Civ7%29.png/revision/latest?cb=20250223231509",
+    "NODE_CIVIC_EX_MAIN_SOVEREIGNTY":       "https://static.wikia.nocookie.net/civilization/images/8/88/Sovereignty_%28Civ7%29.png/revision/latest?cb=20250223231410",
+    "NODE_CIVIC_EX_MAIN_SOCIAL_CLASS":      "https://static.wikia.nocookie.net/civilization/images/2/2f/Social_Class_%28Civ7%29.png/revision/latest?cb=20250223231444",
+    "NODE_CIVIC_EX_MAIN_FUTURE_CIVIC":      "https://static.wikia.nocookie.net/civilization/images/7/73/Future_Civic_%28Civ7%29.png/revision/latest?cb=20250224000203",
+    "NODE_CIVIC_MO_MAIN_MODERNIZATION":     "https://static.wikia.nocookie.net/civilization/images/8/87/Modernization_%28Civ7%29.png/revision/latest?cb=20250224000641",
+    "NODE_CIVIC_MO_MAIN_NATURAL_HISTORY":   "https://static.wikia.nocookie.net/civilization/images/4/42/Natural_History_%28Civ7%29.png/revision/latest?cb=20250224000734",
+    "NODE_CIVIC_MO_MAIN_SOCIAL_QUESTION":   "https://static.wikia.nocookie.net/civilization/images/8/81/Social_Question_%28Civ7%29.png/revision/latest?cb=20250224000754",
+    "NODE_CIVIC_MO_MAIN_POLITICAL_THEORY":  "https://static.wikia.nocookie.net/civilization/images/4/46/Political_Theory_%28Civ7%29.png/revision/latest?cb=20250224000746",
+    "NODE_CIVIC_MO_MAIN_GLOBALISM":         "https://static.wikia.nocookie.net/civilization/images/0/07/Globalism_%28Civ7%29.png/revision/latest?cb=20250224000715",
+    "NODE_CIVIC_MO_MAIN_NATIONALISM":       "https://static.wikia.nocookie.net/civilization/images/4/48/Nationalism_%28Civ7%29.png/revision/latest?cb=20250224000728",
+    "NODE_CIVIC_MO_MAIN_CAPITALISM":        "https://static.wikia.nocookie.net/civilization/images/e/ef/Capitalism_%28Civ7%29.png/revision/latest?cb=20250224000631",
+    "NODE_CIVIC_MO_MAIN_MILITARISM":        "https://static.wikia.nocookie.net/civilization/images/9/93/Militarism_%28Civ7%29.png/revision/latest?cb=20250224000651",
+    "NODE_CIVIC_MO_MAIN_HEGEMONY":          "https://static.wikia.nocookie.net/civilization/images/c/c6/Hegemony_%28Civ7%29.png/revision/latest?cb=20250224000706",
+    "NODE_CIVIC_MO_MAIN_FUTURE_CIVIC":      "https://static.wikia.nocookie.net/civilization/images/7/73/Future_Civic_%28Civ7%29.png/revision/latest?cb=20250224000203",
+  };
+
   // ─── Tech Layout (computed left-to-right via longest-path) ──────────────────
   const TECH_LAYOUT = {
     // Antiquity (7 cols × 3 rows)
@@ -1943,6 +2030,175 @@
     });
   }
 
+  // ─── Civics Tree & Detail ────────────────────────────────────────────────────
+  function civicNodeXY(nt) {
+    const row = civicMap[nt];
+    if (!row) return null;
+    const col = parseInt(row.column_pos) || 0;
+    const r   = parseInt(row.row_pos)    || 0;
+    return {
+      x:  TN_PAD + col * COL_S,
+      y:  TN_PAD + r   * ROW_S,
+      cx: TN_PAD + col * COL_S + TN_W / 2,
+      cy: TN_PAD + r   * ROW_S + TN_H / 2,
+    };
+  }
+
+  function renderCivicDetail() {
+    const pane = document.getElementById('civic-detail-pane');
+    if (!selectedCivic || !civicMap[selectedCivic]) {
+      pane.innerHTML = '<div class="tech-detail-empty">Click a civic node in the tree below to see details</div>';
+      return;
+    }
+    const row    = civicMap[selectedCivic];
+    const iconUrl = CIVIC_ICONS[selectedCivic];
+
+    const prereqNames = (row.prereqs || '').split('|').filter(Boolean)
+      .map(p => civicMap[p] ? civicMap[p].name : p.replace(/^NODE_CIVIC_\w+_/, '').replace(/_/g,' '));
+
+    const groups = {};
+    let modCount = 0;
+    for (const u of (row.unlocks || '').split('|').filter(Boolean)) {
+      const traitM = u.match(/^(.+)\[(.+)\]$/);
+      const raw    = traitM ? traitM[1] : u;
+      const trait  = traitM ? traitM[2].replace(/^TRAIT_/, '').replace(/_/g,' ') : null;
+      const colon  = raw.indexOf(':');
+      if (colon < 0) continue;
+      const kind = raw.slice(0, colon);
+      const type = raw.slice(colon + 1);
+
+      let grp, display;
+      if (kind === 'KIND_TRADITION') {
+        display = type.replace(/^TRADITION_/, '').replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+        grp = 'Traditions';
+      } else if (kind === 'KIND_CONSTRUCTIBLE') {
+        display = type.replace(/^(BUILDING_|WONDER_)/, '').replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+        grp = type.startsWith('WONDER_') ? 'Wonders' : 'Buildings';
+      } else if (kind === 'KIND_UNIT') {
+        display = type.replace(/^UNIT_/, '').replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+        grp = trait ? 'Unique Units' : 'Units';
+      } else if (kind === 'KIND_PROJECT') {
+        display = type.replace(/^PROJECT_/, '').replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+        grp = 'Projects';
+      } else if (kind === 'KIND_DIPLOMATIC_ACTION') {
+        display = type.replace(/^DIPLOMACY_ACTION_(ESPIONAGE_)?/, '').replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+        grp = 'Diplomacy';
+      } else { modCount++; continue; }
+
+      if (!groups[grp]) groups[grp] = [];
+      groups[grp].push({display, trait});
+    }
+
+    const iconInner = iconUrl
+      ? `<img src="${escHtml(iconUrl)}" alt="" loading="lazy">`
+      : `<div style="font-size:0.6rem;font-weight:700;color:var(--text-dim);text-align:center">${escHtml((row.name||'?').slice(0,4).toUpperCase())}</div>`;
+
+    const ageLabel = row.age === 'AGE_ANTIQUITY' ? 'Antiquity' : row.age === 'AGE_EXPLORATION' ? 'Exploration' : 'Modern';
+    const prereqHtml = prereqNames.length
+      ? `<div class="tech-prereq-row"><strong>Requires:</strong> ${prereqNames.map(escHtml).join(', ')}</div>`
+      : '';
+
+    const GRP_ORDER = ['Traditions','Buildings','Wonders','Units','Unique Units','Projects','Diplomacy'];
+    let unlocksHtml = '';
+    for (const g of GRP_ORDER) {
+      if (!groups[g] || !groups[g].length) continue;
+      const items = g === 'Unique Units'
+        ? groups[g].map(i => `<li class="tech-unlock-item unique-unit">${escHtml(i.display)} <span style="font-size:0.48rem;color:var(--text-dim)">(${escHtml(i.trait||'')})</span></li>`).join('')
+        : groups[g].map(i => `<li class="tech-unlock-item">${escHtml(i.display)}</li>`).join('');
+      unlocksHtml += `<div class="tech-unlock-group">
+        <div class="tech-unlock-label">${escHtml(g)}</div>
+        <ul class="tech-unlock-list">${items}</ul>
+      </div>`;
+    }
+    if (modCount) {
+      unlocksHtml += `<div class="tech-unlock-group">
+        <div class="tech-unlock-label">Effects</div>
+        <ul class="tech-unlock-list"><li class="tech-unlock-item">${modCount} bonus effect${modCount>1?'s':''}</li></ul>
+      </div>`;
+    }
+
+    pane.innerHTML = `<div class="tech-detail-layout">
+      <div class="tech-detail-icon">${iconInner}</div>
+      <div style="flex:1;min-width:0">
+        <div class="tech-detail-title">${escHtml(row.name||row.node_type)}</div>
+        <div class="tech-detail-meta">
+          ${ageBadge(ageLabel)}
+          ${row.cost ? `<span class="tech-cost-chip">🎭 ${escHtml(row.cost)}</span>` : ''}
+        </div>
+        ${prereqHtml}
+      </div>
+    </div>
+    ${unlocksHtml ? `<div class="tech-detail-unlocks">${unlocksHtml}</div>` : ''}`;
+  }
+
+  function renderCivicTree() {
+    const canvas  = document.getElementById('civic-tree-canvas');
+    const ageRows = civicsByAge[civicAgeFilter] || [];
+
+    if (!ageRows.length) {
+      canvas.style.width = ''; canvas.style.height = '';
+      canvas.innerHTML = '<div style="padding:20px;color:var(--text-dim);font-size:0.7rem;font-style:italic">No civics data loaded. Place civ7_civics.csv alongside this file.</div>';
+      return;
+    }
+
+    let maxCol = 0, maxRow = 0;
+    for (const row of ageRows) {
+      maxCol = Math.max(maxCol, parseInt(row.column_pos) || 0);
+      maxRow = Math.max(maxRow, parseInt(row.row_pos)    || 0);
+    }
+    const W = TN_PAD + maxCol * COL_S + TN_W + TN_PAD;
+    const H = TN_PAD + maxRow * ROW_S + TN_H + TN_PAD;
+
+    let paths = '';
+    for (const row of ageRows) {
+      const tp = civicNodeXY(row.node_type);
+      if (!tp) continue;
+      for (const prereq of (row.prereqs || '').split('|').filter(Boolean)) {
+        const sp = civicNodeXY(prereq);
+        if (!sp) continue;
+        const sx = sp.x + TN_W, sy = sp.cy;
+        const tx = tp.x,        ty = tp.cy;
+        const bend = Math.abs(tx - sx) * 0.45;
+        paths += `<path d="M${sx},${sy} C${sx+bend},${sy} ${tx-bend},${ty} ${tx},${ty}"
+          fill="none" stroke="rgba(217,119,6,0.5)" stroke-width="1.5" stroke-linecap="round"/>`;
+      }
+    }
+
+    let nodesHtml = '';
+    for (const row of ageRows) {
+      const x    = TN_PAD + (parseInt(row.column_pos) || 0) * COL_S;
+      const y    = TN_PAD + (parseInt(row.row_pos)    || 0) * ROW_S;
+      const iconUrl = CIVIC_ICONS[row.node_type];
+      const abbr    = (row.name||'?').split(' ').map(w=>w[0]).join('').slice(0,3).toUpperCase();
+      const iconInner = iconUrl
+        ? `<img src="${escHtml(iconUrl)}" alt="" loading="lazy" onerror="this.outerHTML='<div class=tech-node-icon-fb>${abbr}</div>'">`
+        : `<div class="tech-node-icon-fb">${escHtml(abbr)}</div>`;
+      const isSel = row.node_type === selectedCivic;
+      nodesHtml += `<div class="tech-node civic-node${isSel?' selected':''}"
+        data-nt="${escHtml(row.node_type)}"
+        style="left:${x}px;top:${y}px">
+        <div class="tech-node-icon">${iconInner}</div>
+        <div class="tech-node-body">
+          <div class="tech-node-name">${escHtml(row.name||row.node_type)}</div>
+          ${row.cost ? `<div class="tech-node-cost">${escHtml(row.cost)} 🎭</div>` : ''}
+        </div>
+      </div>`;
+    }
+
+    canvas.style.width  = W + 'px';
+    canvas.style.height = H + 'px';
+    canvas.innerHTML = `<svg width="${W}" height="${H}" style="position:absolute;top:0;left:0;pointer-events:none;overflow:visible">${paths}</svg>${nodesHtml}`;
+
+    canvas.querySelectorAll('.civic-node').forEach(el => {
+      el.addEventListener('click', () => {
+        selectedCivic = el.dataset.nt;
+        canvas.querySelectorAll('.civic-node').forEach(n =>
+          n.classList.toggle('selected', n.dataset.nt === selectedCivic));
+        renderCivicDetail();
+      });
+    });
+  }
+
   // ─── Update Tab Dots ─────────────────────────────────────────────────────────
   function updateDots() {
     document.getElementById('dot-leader').style.display = selectedLeader ? '' : 'none';
@@ -2051,10 +2307,22 @@
         if (!btn) return;
         techAgeFilter = btn.dataset.age;
         selectedTech = null;
-        document.querySelectorAll('.tech-age-btn').forEach(b =>
+        document.querySelectorAll('#tech-age-bar .tech-age-btn').forEach(b =>
           b.classList.toggle('active', b.dataset.age === techAgeFilter));
         renderTechTree();
         renderTechDetail();
+      });
+
+      // Civic age-filter buttons
+      document.getElementById('civic-age-bar').addEventListener('click', e => {
+        const btn = e.target.closest('.tech-age-btn');
+        if (!btn) return;
+        civicAgeFilter = btn.dataset.age;
+        selectedCivic = null;
+        document.querySelectorAll('#civic-age-bar .tech-age-btn').forEach(b =>
+          b.classList.toggle('active', b.dataset.age === civicAgeFilter));
+        renderCivicTree();
+        renderCivicDetail();
       });
 
       renderLeaderGrid();
@@ -2064,6 +2332,8 @@
       renderWondersTab();
       renderTechTree();
       renderTechDetail();
+      renderCivicTree();
+      renderCivicDetail();
     } catch(err) {
       document.getElementById('loading').style.display='none';
       const el=document.getElementById('error-msg');
