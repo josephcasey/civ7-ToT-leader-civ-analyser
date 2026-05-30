@@ -690,6 +690,38 @@
     .tech-unlock-list { list-style: none; padding: 0; margin: 0; }
     .tech-unlock-item { font-size: 0.58rem; color: var(--text-muted); line-height: 1.55; }
     .tech-unlock-item.unique-unit { color: var(--gold-light); }
+    .tech-effects {
+      margin-top: 10px; padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+    .tech-effect-list { list-style: none; padding: 0; margin: 3px 0 0; }
+    .tech-effect-item {
+      font-size: 0.6rem; color: var(--text); font-weight: 600;
+      line-height: 1.55; padding-left: 12px; position: relative;
+      margin-bottom: 4px; white-space: pre-line;
+    }
+    .tech-effect-item::before {
+      content: '▸'; position: absolute; left: 0; color: var(--gold);
+    }
+    .trad-list { list-style: none; padding: 0; margin: 4px 0 0; }
+    .trad-item { margin-bottom: 9px; }
+    .trad-item:last-child { margin-bottom: 0; }
+    .trad-head { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+    .trad-name { font-size: 0.66rem; font-weight: 700; color: var(--text); }
+    .trad-slot {
+      font-size: 0.46rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.05em; padding: 1px 6px; border-radius: var(--radius-full);
+      background: var(--gold-bg); color: var(--gold-light);
+      border: 1px solid rgba(201,168,76,0.3);
+    }
+    .trad-slot.policy {
+      background: var(--teal-bg); color: var(--teal-light);
+      border-color: rgba(76,168,154,0.3);
+    }
+    .trad-desc {
+      font-size: 0.6rem; color: var(--text-muted); line-height: 1.55;
+      margin-top: 2px; white-space: pre-line;
+    }
 
     /* ─── Civics Tab ─────────────────────────────────────────── */
     .tab-btn.civic-tab.active { color: var(--amber-light); border-bottom-color: var(--amber); }
@@ -1187,11 +1219,12 @@
   };
 
   // ─── State ───────────────────────────────────────────────────────────────────
-  let allRows=[], leaderSyncRows=[], triumphRows=[], resourceRows=[], wonderRows=[], techRows=[], civicRows=[], csBonusRows=[], indepRows=[];
+  let allRows=[], leaderSyncRows=[], triumphRows=[], resourceRows=[], wonderRows=[], techRows=[], civicRows=[], csBonusRows=[], indepRows=[], modifierRows=[], traditionRows=[];
   let leaders={}, civs={}, leaderSyncMap={};
   let triumphsByAge={}, resourcesByClass={}, wondersByAge={};
   let techsByAge={}, techMap={};
   let civicsByAge={}, civicMap={};
+  let modifierMap={}, traditionMap={};
   let csBonusesByAgeType={}, indepsByAgeType={};
   let selectedLeader=null, selectedCiv=null;
   let activeTab='leaders';
@@ -1216,6 +1249,8 @@
     try { const c = await fetch('civ7_civics.csv');     if (c.ok) civicRows    = parseCSV(await c.text()); } catch(_) {}
     try { const b = await fetch('civ7_cs_bonuses.csv'); if (b.ok) csBonusRows  = parseCSV(await b.text()); } catch(_) {}
     try { const i = await fetch('civ7_independents.csv');if(i.ok) indepRows    = parseCSV(await i.text()); } catch(_) {}
+    try { const m = await fetch('civ7_modifiers.csv');  if (m.ok) modifierRows = parseCSV(await m.text());  } catch(_) {}
+    try { const tr = await fetch('civ7_traditions.csv');if(tr.ok) traditionRows= parseCSV(await tr.text()); } catch(_) {}
   }
   function processData() {
     for (const row of allRows) {
@@ -1289,6 +1324,14 @@
       const age = row.age || 'Unknown';
       if (!civicsByAge[age]) civicsByAge[age] = [];
       civicsByAge[age].push(row);
+    }
+    // Modifier effect descriptions (tech & civic bonus effects)
+    for (const row of modifierRows) {
+      if (row.modifier_id) modifierMap[row.modifier_id] = row.description_clean || '';
+    }
+    // Tradition / Policy descriptions (civic unlocks)
+    for (const row of traditionRows) {
+      if (row.tradition_type) traditionMap[row.tradition_type] = row;
     }
     // City-State Bonuses: group by age → type
     for (const row of csBonusRows) {
@@ -1978,6 +2021,30 @@
     };
   }
 
+  // Humanize a modifier id when no localized description is available, e.g.
+  // "MOD_TECH_AQ_TRADE_RANGE_SEA" -> "Trade Range Sea".
+  const MOD_SKIP_TOKENS = new Set(['MOD','AQ','EX','MO','TECH','CIVIC']);
+  function humanizeModifier(id) {
+    return id.split('_')
+      .filter(tok => tok && !MOD_SKIP_TOKENS.has(tok))
+      .join(' ')
+      .toLowerCase()
+      .replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  // Render the "Bonus Effects" block listing what each MODIFIER actually does.
+  function effectsBlock(effects) {
+    if (!effects.length) return '';
+    const items = effects.map(e => {
+      const text = e.desc && e.desc.trim() ? e.desc : humanizeModifier(e.id);
+      return `<li class="tech-effect-item">${escHtml(text)}</li>`;
+    }).join('');
+    return `<div class="tech-effects">
+      <div class="tech-unlock-label">Bonus Effects</div>
+      <ul class="tech-effect-list">${items}</ul>
+    </div>`;
+  }
+
   function renderTechDetail() {
     const pane = document.getElementById('tech-detail-pane');
     if (!selectedTech || !techMap[selectedTech]) {
@@ -1993,7 +2060,7 @@
 
     // Parse unlocks into groups
     const groups = {};
-    let modCount = 0;
+    const effects = [];
     for (const u of (row.unlocks || '').split('|').filter(Boolean)) {
       const traitM = u.match(/^(.+)\[(.+)\]$/);
       const raw   = traitM ? traitM[1] : u;
@@ -2003,7 +2070,7 @@
       const kind = raw.slice(0, colon);
       const type = raw.slice(colon + 1);
 
-      if (kind === 'MODIFIER') { modCount++; continue; }
+      if (kind === 'MODIFIER') { effects.push({id: type, desc: modifierMap[type] || ''}); continue; }
 
       let grp, display;
       if (kind === 'CONSTRUCTIBLE') {
@@ -2050,12 +2117,8 @@
         <ul class="tech-unlock-list">${items}</ul>
       </div>`;
     }
-    if (modCount) {
-      unlocksHtml += `<div class="tech-unlock-group">
-        <div class="tech-unlock-label">Effects</div>
-        <ul class="tech-unlock-list"><li class="tech-unlock-item">${modCount} bonus effect${modCount>1?'s':''}</li></ul>
-      </div>`;
-    }
+
+    const effectsHtml = effectsBlock(effects);
 
     pane.innerHTML = `<div class="tech-detail-layout">
       <div class="tech-detail-icon">${iconInner}</div>
@@ -2068,7 +2131,8 @@
         ${prereqHtml}
       </div>
     </div>
-    ${unlocksHtml ? `<div class="tech-detail-unlocks">${unlocksHtml}</div>` : ''}`;
+    ${unlocksHtml ? `<div class="tech-detail-unlocks">${unlocksHtml}</div>` : ''}
+    ${effectsHtml}`;
   }
 
   function renderTechTree() {
@@ -2171,7 +2235,8 @@
       .map(p => civicMap[p] ? civicMap[p].name : p.replace(/^NODE_CIVIC_\w+_/, '').replace(/_/g,' '));
 
     const groups = {};
-    let modCount = 0;
+    const traditions = [];
+    const effects = [];
     for (const u of (row.unlocks || '').split('|').filter(Boolean)) {
       const traitM = u.match(/^(.+)\[(.+)\]$/);
       const raw    = traitM ? traitM[1] : u;
@@ -2183,8 +2248,8 @@
 
       let grp, display;
       if (kind === 'KIND_TRADITION') {
-        display = type.replace(/^TRADITION_/, '').replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
-        grp = 'Traditions';
+        traditions.push(type);
+        continue;
       } else if (kind === 'KIND_CONSTRUCTIBLE') {
         display = type.replace(/^(BUILDING_|WONDER_)/, '').replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
         grp = type.startsWith('WONDER_') ? 'Wonders' : 'Buildings';
@@ -2197,7 +2262,10 @@
       } else if (kind === 'KIND_DIPLOMATIC_ACTION') {
         display = type.replace(/^DIPLOMACY_ACTION_(ESPIONAGE_)?/, '').replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
         grp = 'Diplomacy';
-      } else { modCount++; continue; }
+      } else if (kind === 'KIND_MODIFIER' || kind === 'MODIFIER') {
+        effects.push({id: type, desc: modifierMap[type] || ''});
+        continue;
+      } else { continue; }
 
       if (!groups[grp]) groups[grp] = [];
       groups[grp].push({display, trait});
@@ -2212,7 +2280,7 @@
       ? `<div class="tech-prereq-row"><strong>Requires:</strong> ${prereqNames.map(escHtml).join(', ')}</div>`
       : '';
 
-    const GRP_ORDER = ['Traditions','Buildings','Wonders','Units','Unique Units','Projects','Diplomacy'];
+    const GRP_ORDER = ['Buildings','Wonders','Units','Unique Units','Projects','Diplomacy'];
     let unlocksHtml = '';
     for (const g of GRP_ORDER) {
       if (!groups[g] || !groups[g].length) continue;
@@ -2224,12 +2292,9 @@
         <ul class="tech-unlock-list">${items}</ul>
       </div>`;
     }
-    if (modCount) {
-      unlocksHtml += `<div class="tech-unlock-group">
-        <div class="tech-unlock-label">Effects</div>
-        <ul class="tech-unlock-list"><li class="tech-unlock-item">${modCount} bonus effect${modCount>1?'s':''}</li></ul>
-      </div>`;
-    }
+
+    const traditionsHtml = traditionsBlock(traditions);
+    const effectsHtml = effectsBlock(effects);
 
     pane.innerHTML = `<div class="tech-detail-layout">
       <div class="tech-detail-icon">${iconInner}</div>
@@ -2242,7 +2307,34 @@
         ${prereqHtml}
       </div>
     </div>
-    ${unlocksHtml ? `<div class="tech-detail-unlocks">${unlocksHtml}</div>` : ''}`;
+    ${traditionsHtml}
+    ${unlocksHtml ? `<div class="tech-detail-unlocks">${unlocksHtml}</div>` : ''}
+    ${effectsHtml}`;
+  }
+
+  // Render civic-unlocked Traditions & Policies, outlining what each one does.
+  function traditionsBlock(types) {
+    if (!types.length) return '';
+    const items = types.map(t => {
+      const info = traditionMap[t];
+      const name = info && info.name
+        ? info.name
+        : t.replace(/^TRADITION_/, '').replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+      const slot = info && info.slot ? info.slot : 'Tradition';
+      const slotCls = slot === 'Policy' ? 'trad-slot policy' : 'trad-slot';
+      const desc = info && info.description_clean ? info.description_clean : '';
+      return `<li class="trad-item">
+        <div class="trad-head">
+          <span class="trad-name">${escHtml(name)}</span>
+          <span class="${slotCls}">${escHtml(slot)}</span>
+        </div>
+        ${desc ? `<div class="trad-desc">${escHtml(desc)}</div>` : ''}
+      </li>`;
+    }).join('');
+    return `<div class="tech-effects">
+      <div class="tech-unlock-label">Traditions &amp; Policies</div>
+      <ul class="trad-list">${items}</ul>
+    </div>`;
   }
 
   function renderCivicTree() {

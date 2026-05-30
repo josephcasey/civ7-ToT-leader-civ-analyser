@@ -31,6 +31,9 @@ Selections persist when you switch tabs, so you can freely compare before commit
 | `civ7_abilities.csv` / `.json` | Raw extractor output before post-processing. |
 | `civ7_civ_syncretism.csv` | Per-civ syncretism options (raw). |
 | `civ7_self_syncretism_traditions.csv` | Cross-age self-syncretism traditions per civ (raw). |
+| `civ7_modifiers.csv` | Plain-English descriptions for the bonus-effect modifiers unlocked by techs and civics (output of `civ7_effects_extractor.py`). |
+| `civ7_traditions.csv` | Name, slot (Tradition/Policy) and description for every tradition/policy unlocked in the Civics tree. |
+| `civ7_effects_extractor.py` | Resolves tech/civic modifier and tradition IDs to readable text from the per-Age `sql/` databases. |
 
 ---
 

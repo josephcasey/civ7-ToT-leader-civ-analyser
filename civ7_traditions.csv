@@ -1,0 +1,501 @@
+tradition_type,name,slot,description_clean
+TRADITION_ABBASID_SYNCRETISM_ANTIQUITY,Rasool I,Tradition,Buildings gain a +1 Happiness Adjacency for the Palace.
+TRADITION_ABBASID_SYNCRETISM_MODERN,Rasool II,Tradition,Buildings gain a +1 Happiness Adjacency for the City Hall and Palace.
+TRADITION_AHUPUA_A_I,Ahupua'a I,Tradition,+4 Food on Culture Buildings.
+TRADITION_AHUPUA_A_II,Ahupua'a II,Tradition,+6 Food on Culture Buildings.
+TRADITION_AKHET_I,Akhet I,Tradition,+2 Food on Improvements and Districts on Navigable Rivers.
+TRADITION_AKHET_II,Akhet II,Tradition,+3 Food on Improvements and Districts on Navigable Rivers.
+TRADITION_AKSUM_SYNCRETISM_EXPLORATION,Incense Road I,Tradition,+1 Production in the Capital for every active Trade Route. Trade Routes gain +2 Sight and cannot be Pillaged.
+TRADITION_AKSUM_SYNCRETISM_MODERN,Incense Road II,Tradition,+2 Production in the Capital for every active Trade Route. Trade Routes gain +2 Sight and cannot be Pillaged.
+TRADITION_AMBASSADORS,Ambassadors,Policy,+6 Influence per turn.
+TRADITION_AMBITIOUS_GOVERNORS,Ambitious Governors,Tradition,-6 Happiness in Cities.
+TRADITION_AMERICA_SYNCRETISM_ANTIQUITY,Land of Opportunity I,Tradition,+1 Food on Resources in Towns.
+TRADITION_AMERICA_SYNCRETISM_EXPLORATION,Land of Opportunity II,Tradition,"+1 Food on Resources in Towns. +1 Production on Mines, Clay Pits, Quarries, Woodcutters, and Oil Rigs in Mining Towns, Warehouse Bonus."
+TRADITION_ANGADI_I,Angadi I,Tradition,+2 Resource Capacity in the Capital. +4 Gold in Settlements other than the Capital if they have a Water Building.
+TRADITION_ANGADI_II,Angadi II,Tradition,+2 Resource Capacity in the Capital. +8 Gold in Settlements other than the Capital if they have a Water Building.
+TRADITION_ANGARIUM,Čāpār-Kāna I,Tradition,"+3 Gold in Towns, doubled in Captured Towns from any Age."
+TRADITION_ANGARIUM_II,Čāpār-Kāna II,Tradition,"+6 Gold in Towns, doubled in Captured Towns from any Age."
+TRADITION_AQ_ATTRIBUTE_CULTURAL_01,Enlightened Rule,Tradition,+15% Production towards constructing Wonders.
+TRADITION_AQ_ATTRIBUTE_DIPLOMATIC_01_HAPPINESS,Priestly Class,Tradition,Happiness Buildings cost no Maintenance in Cities.
+TRADITION_AQ_ATTRIBUTE_DIPLOMATIC_01_INFLUENCE,Emissaries,Tradition,+25% Influence towards initiating Endeavors. +1 Gold from active Endeavors you started or supported.
+TRADITION_AQ_ATTRIBUTE_ECONOMIC_01,Merchant Class,Tradition,+1 Resource Capacity in Settlements with a Gold Building.
+TRADITION_AQ_ATTRIBUTE_EXPANSIONIST_01,Fractal Cities,Tradition,+10% Production towards constructing and +10% Gold towards purchasing Warehouse Buildings.
+TRADITION_AQ_ATTRIBUTE_MILITARISTIC_01,Warrior Class,Tradition,+25% Production towards training all Commanders. +1 Gold for every Unit packed into Commanders.
+TRADITION_AQ_ATTRIBUTE_SCIENTIFIC_01,Experimentation,Tradition,+5% Production towards Buildings for every Tech Mastery completed in an Age.
+TRADITION_ARTHASHASTRA_I,Arthashastra I,Tradition,+1 Science for every 5 excess Happiness in Cities.
+TRADITION_ARTHASHASTRA_II,Arthashastra II,Tradition,+1 Science for every 5 excess Happiness in Cities. +10% Science in Cities while in a Celebration.
+TRADITION_ASSEMBLY_LINE,Assembly Line,Policy,+2 Production from Specialists. -2 Food in Towns.
+TRADITION_ASSYRIA_SYNCRETISM_EXPLORATION,Ashur I,Tradition,+5 Combat Strength for Infantry and Cavalry Units when attacking Fortified Districts.
+TRADITION_ASSYRIA_SYNCRETISM_MODERN,Ashur II,Tradition,+1 Science on Fortification Buildings. +5 Combat Strength for Infantry and Cavalry Units when attacking Fortified Districts.
+TRADITION_ATASSA,Buzzard Cult,Tradition,"+3 Combat Strength for Land Units when defending. When making Peace with another Leader, Relationship with that Leader returns to Neutral and you get a free Merchant in your Capital."
+TRADITION_AUXILIA_I,Auxilia I,Tradition,+3% Production towards Military Units in the Capital for every Town. Training an Infantry Unit grants Culture equal to 25% of its Production cost.
+TRADITION_AUXILIA_II,Auxilia II,Tradition,+5% Production towards Military Units in the Capital for every Town. Training an Infantry Unit grants Culture equal to 50% of its Production cost.
+TRADITION_AVANT_GARDE,Avant Garde,Policy,+2 Culture and Happiness on displayed Great Works.
+TRADITION_AWISAN_DALEM_I,Awisan Dalem I,Tradition,+1 Culture on Marine Terrain in Cities.
+TRADITION_AWISAN_DALEM_II,Awisan Dalem II,Tradition,+1 Culture and +1 Production on Marine Terrain in Cities.
+TRADITION_BAGHATUR_I,Baghatur I,Tradition,+3 Combat Strength for Cavalry Units.
+TRADITION_BAGHATUR_II,Baghatur II,Tradition,+3 Combat Strength and +2 Movement for Cavalry Units.
+TRADITION_BANDITRY,Banditry,Tradition,-5 Gold for each imported Resource.
+TRADITION_BANNER_ARMY,Banner Army II,Tradition,+30% Production towards training Land Units. -2 Gold Maintenance for Land Units.
+TRADITION_BANNER_ARMY_I,Banner Army I,Tradition,+20% Production towards training Land Units. -1 Gold Maintenance for Land Units.
+TRADITION_BAOJIA_I,Baojia I,Tradition,+1 Science for each Resource assigned to a Settlement.
+TRADITION_BAOJIA_II,Baojia II,Tradition,+1Science Science for each Resource assigned to a City. This becomes +2 in Cities other than your Capital.
+TRADITION_BARBARIAN_MERCENARIES,Barbarian Mercenaries,Tradition,+100% Gold Maintenance for Military Units.
+TRADITION_BATAILLON_CARRE,Bataillon-Carré,Tradition,"Infantry Units gain the Swift ability, allowing them to ignore Zone of Control."
+TRADITION_BAYEUX_TAPESTRY_I,Bayeux Tapestry I,Tradition,+4 Culture in Captured Settlements from any Age. Gain a free Fortification purchase in Captured Settlements.
+TRADITION_BAYEUX_TAPESTRY_II,Bayeux Tapestry II,Tradition,+6 Culture in Captured Settlements from any Age. Gain a free Fortification purchase in Captured Settlements.
+TRADITION_BEOPSEONG_I,Beopseong I,Tradition,+2 Happiness on Resources in Towns with a Happiness Building.
+TRADITION_BEOPSEONG_II,Beopseong II,Tradition,+2 Happiness on Resources in Towns.
+TRADITION_BLACK_FLAG_I,Black Flag I,Tradition,+50 Gold (Scales with Game Speed) from Plundering Trade Routes. +50% Yields and Healing from Coastal Raiding with Naval Units.
+TRADITION_BLACK_FLAG_II,Black Flag II,Tradition,+100 Gold (Scales with Game Speed) from Plundering Trade Routes. +100% Yields and Healing from Coastal Raiding with Naval Units. Fleet Commanders and Naval Units gain Stealth on Atolls.
+TRADITION_BON_OM_TOUK,Bon Om Touk,Tradition,Science Buildings in Cities gain an adjacency for Floodplains. +3 Great Work Slots on the Palace.
+TRADITION_BOURGEOISIE,Bourgeoisie,Policy,+4 Culture and Gold in Cities in your Homelands.
+TRADITION_BREAD_DANCE_I,Bread Dance I,Tradition,+4 Culture in Farming Towns and +4 Food in Fishing Towns.
+TRADITION_BREAD_DANCE_II,Bread Dance II,Tradition,+8 Culture in Farming Towns and +8 Food in Fishing Towns.
+TRADITION_BUGANDA_SYNCRETISM_ANTIQUITY,Ebika I,Tradition,+1 Culture and Food on Districts on or adjacent to Lakes.
+TRADITION_BUGANDA_SYNCRETISM_EXPLORATION,Ebika II,Tradition,+2 Culture and Food on Districts on or adjacent to Lakes.
+TRADITION_BULGARIA_SYNCRETISM_ANTIQUITY,Uporitost I,Tradition,+2 Production on displayed Great Works.
+TRADITION_BULGARIA_SYNCRETISM_MODERN,Uporitost II,Tradition,+3 Production on displayed Great Works. Land Units can Pillage for 1 Movement.
+TRADITION_CAM_BINH_I,Cấm Binh I,Tradition,+1 Gold on Fortifications. +50% Production towards constructing Fortification Constructibles.
+TRADITION_CAM_BINH_II,Cấm Binh II,Tradition,+2 Gold on Fortifications. +50% Production towards constructing and Gold towards purchasing Fortification Constructibles.
+TRADITION_CAPITAL_UNHAPPINESS,Independent Nobility,Tradition,-10 Happiness in your Capital.
+TRADITION_CARTHAGE_SYNCRETISM_EXPLORATION,Hannoid Rule I,Tradition,+1 Gold and Production in the Capital for every Resource assigned to it.
+TRADITION_CARTHAGE_SYNCRETISM_MODERN,Hannoid Rule II,Tradition,+2 Gold and Production in the Capital for every Resource assigned to it.
+TRADITION_CASTES,Castes,Policy,+2 Food in all Settlements.
+TRADITION_CERRO_RICO_I,Cerro Rico I,Tradition,+1 Gold on Resources.
+TRADITION_CERRO_RICO_II,Cerro Rico II,Tradition,"+1 Gold on Resources, or +3 Gold in Distant Lands."
+TRADITION_CHARISMATIC_LEADER,Charismatic Leader,Policy,+2 Culture on the Palace.
+TRADITION_CHARTERS,Charters,Policy,+2 Gold from Specialists. +1 Happiness Maintenance on Specialists.
+TRADITION_CHARVAKA_I,Charvaka I,Tradition,+1 Gold for every 5 excess Happiness in Cities.
+TRADITION_CHARVAKA_II,Charvaka II,Tradition,+1 Gold for every 5 excess Happiness in Cities. +10% Production in Cities while in a Celebration.
+TRADITION_CHIVALRY,Chivalry,Policy,+30% Production towards training Cavalry Units.
+TRADITION_CHOLA_SYNCRETISM_ANTIQUITY,Veera Banaju Dharma I,Tradition,+5 Influence if you have 5 or more Trade Routes. +50% Production towards training Merchants.
+TRADITION_CHOLA_SYNCRETISM_MODERN,Veera Banaju Dharma II,Tradition,+10 Influence if you have 5 or more Trade Routes. +100% Production towards training Merchants.
+TRADITION_CITY_GUARD,City Guard,Policy,+3 Combat Strength for Fortified Districts.
+TRADITION_CITY_OF_PEACE,City of Peace Tradition II,Tradition,All Buildings receive a +1 Science Adjacency with the City Hall and Palace.
+TRADITION_CIVIL_ENGINEERING,Civil Engineering,Policy,+30% Production towards Overbuilding.
+TRADITION_CLAN_NETWORKS,Clan Networks,Policy,+20% Growth Rate in Towns with a Growing Focus.
+TRADITION_CLAN_SOCIETY_I,Clan Society I,Tradition,+2 Food in Settlements for each other owned Settlement within 6 tiles.
+TRADITION_CLAN_SOCIETY_II,Clan Society II,Tradition,+2 Food and Happiness in Settlements for each other owned Settlement within 6 tiles.
+TRADITION_COCORICO_I,Cocorico I,Tradition,"When you defeat an enemy Unit, gain Culture equal to 15% of its Combat Strength. +2 Happiness on Military Buildings and Wonders."
+TRADITION_COCORICO_II,Cocorico II,Tradition,"When you defeat an enemy Unit, gain Culture equal to 25% of its Combat Strength. +2 Happiness on Military Buildings and Wonders."
+TRADITION_COHONG_I,Cohong I,Tradition,+1 Influence in the Capital for every 2 Resources assigned to it.
+TRADITION_COHONG_II,Cohong II,Tradition,+1 Influence in Cities for every 2 Resources assigned to them.
+TRADITION_COINAGE,Coinage,Policy,+1 Gold for each imported Resource. +1 Movement for Merchants.
+TRADITION_COKING_I,Coking I,Tradition,+1 Production in the Capital for every Resource assigned to it.
+TRADITION_COKING_II,Coking II,Tradition,+1 Production in Cities for every Resource assigned to them.
+TRADITION_COLLECTIVIZATION,Collectivization,Policy,Towns gain Food equal to your Expansionist Attribute. -5 Happiness in Cities.
+TRADITION_COLONIAL_SURPLUS,Colonial Surplus,Policy,+2 Production from Specialists. +1 Happiness Maintenance on Specialists.
+TRADITION_COMMISSIONED_OFFICERS,Commissioned Officers,Policy,+30% Commander Experience. +1 Movement for Fleets and Armies.
+TRADITION_COMMODITIES,Commodities,Policy,+1 Resource Capacity in Cities.
+TRADITION_COMMUNE,Commune,Policy,+20% Production towards Overbuilding. +3 Combat Strength for Fortified Districts.
+TRADITION_COMMUNISM_UNIQUE,The First International,Tradition,Decrease Relationship with Leaders of the opposing Ideology with the most Factories.
+TRADITION_COMPENDIOUS_BOOK_I,City of Peace Tradition I,Tradition,All Buildings receive a +1 Science Adjacency with the Palace.
+TRADITION_COMPENDIOUS_BOOK_II,Compendious Book Tradition,Tradition,+2 Happiness and Science in Towns.
+TRADITION_CONQUISTA,Conquista,Tradition,"+3 Combat Strength for all Units in Distant Lands, or +5 Combat Strength for Naval Units."
+TRADITION_CONSCRIPTION,Conscription,Policy,-1 Gold Maintenance for Units.
+TRADITION_CONSCRIPTION_RIOTS,Conscription Riots,Tradition,-10 Happiness in all Cities while at War.
+TRADITION_CONSTITUTION,Constitution,Policy,+25% Food and Happiness towards maintaining Specialists.
+TRADITION_CON_KENH,Con Kênh,Tradition,Culture and Food Buildings gain a +1 Culture Adjacency for Tropical Terrain.
+TRADITION_CORDON_SANITAIRE,Cordon Sanitaire,Tradition,"Buildings, Improvements and Districts in Settlements with a stationed Commander are not damaged by Major Outbreaks."
+TRADITION_CORRIDOS,Corridos,Tradition,+4 Happiness in Cities for every Tradition slotted into the Government.
+TRADITION_CRY_OF_DOLORES,Cry of Dolores,Tradition,+1 Combat Strength for Land Units and Naval Units in friendly territory for every Tradition slotted into the Government.
+TRADITION_CULTURAL_IMPERIALISM,Cultural Imperialism,Policy,+6 Culture and Gold for every City-State you are Suzerain of.
+TRADITION_CURSUS_HONORUM,Cursus Honorum,Tradition,"+2 Culture on Diplomacy and Military Buildings, doubled if a Building is both. Army Commanders gain the Bulwark Promotion for free."
+TRADITION_DAI_VIET_SYNCRETISM_ANTIQUITY,Hành Chính Công I,Tradition,+1 Culture on Improvements and Districts on Vegetation in Tropical Terrain.
+TRADITION_DAI_VIET_SYNCRETISM_MODERN,Hành Chính Công II,Tradition,+1 Culture and Food on Improvements and Districts on Vegetation in Tropical Terrain.
+TRADITION_DAR_AL_FONUN_I,Dār al-Fonūn I,Tradition,+3 Culture and +3 Science in the Capital for every Settlement under the Settlement Limit.
+TRADITION_DAR_AL_FONUN_II,Dār al-Fonūn II,Tradition,+10 Science and Culture in the Capital for every Settlement under the Settlement Limit.
+TRADITION_DECENTRALIZATION,Decentralization,Tradition,-75% Gold and Food in Towns with a Specialization.
+TRADITION_DEFENSE_OF_THE_MOTHERLAND,Defense of the Motherland,Policy,+3 Combat Strength for all Land Units in your own territory.
+TRADITION_DELIAN_LEAGUE_I,Delian League I,Tradition,+30% Influence towards initiating Endeavors.
+TRADITION_DELIAN_LEAGUE_II,Delian League II,Tradition,+50% Influence towards initiating and supporting Endeavors.
+TRADITION_DEMAGOGY,Demagogy,Policy,Gain Happiness on the Palace equal to your Cultural Attribute.
+TRADITION_DEMOCRACY_UNIQUE,Perpetual Peace,Tradition,Decrease Relationship with Leaders of the opposing Ideology with the most captured Settlements.
+TRADITION_DESPOTISM_UNHAPPINESS,Zhuhou,Tradition,-6 Happiness in Settlements without Walls.
+TRADITION_DESPOTISM_UNREST,LOC_TRADITION_DESPOTISM_UNREST_NAME,Tradition,
+TRADITION_DEVAKOSHTA_I,Devakoshta I,Tradition,+2 Culture on Gold Buildings.
+TRADITION_DEVAKOSHTA_II,Devakoshta II,Tradition,+3 Culture on Gold Buildings. +50% Influence towards Diplomatic Actions with other Leaders if you have at least 5 Trade Routes.
+TRADITION_DE_FACTO,De Facto,Policy,+3 Combat Strength for all Units in Distant Lands. Units gain +5 Healing.
+TRADITION_DE_JURE,De Jure,Policy,+3 Combat Strength for all Units in Homelands.
+TRADITION_DIRIGISME,Dirigisme,Policy,+4 Gold from Specialists. -3 Happiness in Towns.
+TRADITION_DIVINE_ENGINE_DIVISION,Divine Engine Division,Tradition,+2Science Science in Settlements with a Garrisoned Unit. +3 Ranged Combat Strength to Ranged Units adjacent to another Ranged Unit.
+TRADITION_DIVINE_MERCY,Divine Mercy,Tradition,"Buildings, Improvements, and Districts in Settlements that follow your Religion are not damaged by Minor Outbreaks."
+TRADITION_DIVINE_PUNISHMENT,Divine Punishment,Tradition,+5 Happiness in Infected Settlements that follow your Religion. These Settlements gain a Migrant when Infected.
+TRADITION_DIVINE_RIGHT,Divine Right,Policy,+10 Happiness and +4 Influence on the Palace.
+TRADITION_DRAFT,Draft,Policy,+25% Gold towards purchasing Units and -1 Gold maintenance for Units.
+TRADITION_DRAMA_AND_POETRY,Drama and Poetry,Policy,+2 Culture on Culture Buildings. +20% Production towards constructing Culture Buildings.
+TRADITION_DRILLS,Drills,Policy,+30% Production towards training Infantry and Ranged Units.
+TRADITION_DROTTKVAETT_I,Dróttkvætt I,Tradition,Coastal Raiding and Pillaging with Naval Units grants Culture equal to 25% of Pillage Yields and Healing.
+TRADITION_DROTTKVAETT_II,Dróttkvætt II,Tradition,Coastal Raiding and Pillaging with Naval Units grants Culture equal to 50% of Pillage Yields and Healing.
+TRADITION_DURANI,Dūrāni I,Tradition,+2 Culture in the Capital for every Technology Mastery completed this Age.
+TRADITION_DURANI_II,Dūrāni II,Tradition,+2 Culture in the Capital and in Settlements not founded by you that were conquered in this Age for every Technology Mastery completed this Age.
+TRADITION_EAST_INDIA_COMPANY_I,East India Company I,Tradition,+2 Gold in Towns. +1 Science in Towns adjacent to Coast.
+TRADITION_EAST_INDIA_COMPANY_II,East India Company II,Tradition,+5 Gold in Towns. +3 Science in Towns adjacent to Coast.
+TRADITION_EGYPT_SYNCRETISM_EXPLORATION,Golden Horus I,Tradition,"+1 Culture and Gold on Wonders, doubled on Antiquity Wonders."
+TRADITION_EGYPT_SYNCRETISM_MODERN,Golden Horus II,Tradition,"+2 Culture and Gold on Wonders, doubled on Antiquity Wonders."
+TRADITION_ENLIGHTENMENT,Enlightenment,Policy,+2 Science from Specialists. +1 Happiness Maintenance on Specialists.
+TRADITION_ERKAN_I_HARBIYE_MEKTEBI,Erkân-ı Harbiye Mektebi,Tradition,+25% Production towards Siege and Infantry Units. -2 Gold Maintenance for Land Units.
+TRADITION_ETHICS,Ethics,Policy,+1 Culture from Specialists. +1 Happiness Maintenance on Specialists.
+TRADITION_EVANGELISM,Evangelism,Policy,+1 Movement for Civilian Units. +1 charge for Missionaries.
+TRADITION_EX_ATTRIBUTE_CULTURAL_01,Classical Revival,Tradition,Buildings gain a +1 Happiness Adjacency for Wonders.
+TRADITION_EX_ATTRIBUTE_DIPLOMATIC_01_HAPPINESS,Jubilee,Tradition,+3 to all Yields in your Capital during a Celebration.
+TRADITION_EX_ATTRIBUTE_DIPLOMATIC_01_INFLUENCE,Spy Network,Tradition,+30% Influence towards initiating Espionage Actions. +2 Gold from active Espionage Actions you started.
+TRADITION_EX_ATTRIBUTE_ECONOMIC_01,Supply and Demand,Tradition,+3 Gold for every Empire Resource you have.
+TRADITION_EX_ATTRIBUTE_EXPANSIONIST_01_TALL,Municipal Charters,Tradition,Warehouse Food Warehouse Buildings in Cities gain a +1 Food Adjacency for Districts.
+TRADITION_EX_ATTRIBUTE_EXPANSIONIST_01_WIDE,Yanakuna,Tradition,Warehouse Food Warehouse Buildings in Towns gain a +1 Food Adjacency for Improvements.
+TRADITION_EX_ATTRIBUTE_MILITARISTIC_01,Professional Army,Tradition,"+25% XP for all Commanders, or +50% in Distant Lands."
+TRADITION_EX_ATTRIBUTE_SCIENTIFIC_01,Alchemy,Tradition,"When you Overbuild a Building, gain Science equal to 25% of the new Building's Production cost."
+TRADITION_FALSE_RETREAT,False Retreat,Tradition,Receive Food in all Towns when Pillaging Buildings equal to 50% of the Yield or HP gained. -3 Combat Strength for all Combat Units against Fortified Districts.
+TRADITION_FAMILIA_REGIS,Familia Regis,Tradition,The Palace gains a +1 Happiness Adjacency for Fortification Constructibles.
+TRADITION_FARMLAND_ASSESSMENT,Farmland Assessment,Tradition,+2 Food in Cities for each Resource assigned to them.
+TRADITION_FASCISM_UNIQUE,Supremacy,Tradition,Decrease Relationship with Leaders of the opposing Ideology with the most completed Tech and Civic Masteries.
+TRADITION_FENGHUO,Fenghuo I,Tradition,+1 Movement and +3 Combat Strength for Units on Fortification Buildings and Improvements in your territory. +2 Gold on Fortification Buildings and Improvements.
+TRADITION_FENGHUO_II,Fenghuo II,Tradition,+1 Movement and +5 Combat Strength for Units on Fortification Buildings and Improvements in your territory. +3 Gold on Fortification Buildings and Improvements.
+TRADITION_FIRESIDE_CHATS,Fireside Chats,Policy,+4 Happiness from Specialists. -3 Gold in Towns.
+TRADITION_FREE_PRESS,Free Press,Policy,Towns gain Culture equal to your Cultural Attribute. -5 Science in Cities.
+TRADITION_FREE_SPEECH,Free Speech,Policy,+50% Food and Happiness towards maintaining Specialists.
+TRADITION_FRENCH_EMPIRE_SYNCRETISM_ANTIQUITY,De l'Esprit des Loix I,Tradition,+2 Culture for every Tradition slotted into the Government. +2 Happiness for every Social Policy slotted into the Government.
+TRADITION_FRENCH_EMPIRE_SYNCRETISM_EXPLORATION,De l'Esprit des Loix II,Tradition,+3 Culture for every Tradition slotted into the Government. +3 Happiness for every Social Policy slotted into the Government.
+TRADITION_FUKOKU_KYOHEI_I,Fukoku Kyōhei I,Tradition,"+25% Production towards Naval Units. When you train a Naval Unit, receive Science equal to 25% of its Production cost."
+TRADITION_FUKOKU_KYOHEI_II,Fukoku Kyōhei II,Tradition,"+25% Production towards Naval and Aircraft Units. When you train a Naval or Aircraft Unit, receive Science equal to 25% of its Production cost."
+TRADITION_GAULOS_I,Gaulos I,Tradition,+25% Gold towards purchasing Naval Units and Water Buildings. +1 Gold in the Capital for every Town.
+TRADITION_GAULOS_II,Gaulos II,Tradition,+25% Gold towards purchasing Naval Units and Water Buildings. +3 Gold in the Capital for every Town.
+TRADITION_GENDARMERIE,Gendarmerie,Tradition,-4 Happiness in each Settlement without a Garrisoned Unit.
+TRADITION_GENERAL_MOROZ_I,General Moroz I,Tradition,"+3 Combat Strength for Units in Tundra. Your Units, Buildings, and Improvements are immune to damage from Blizzards."
+TRADITION_GENERAL_MOROZ_II,General Moroz II,Tradition,"+5 Combat Strength for Units in Tundra. Enemy Units in your territory take double damage from Blizzards. Your Units, Buildings, and Improvements are immune to damage from Blizzards."
+TRADITION_GEREGE,Gerege,Tradition,+4 Happiness in Captured Settlements from any Age for each Resource assigned to them.
+TRADITION_GIFT_ECONOMY,Gift Economy I,Tradition,+1 Gold and Happiness for every imported Resource.
+TRADITION_GIFT_ECONOMY_II,Gift Economy II,Tradition,+2 Gold and +2 Happiness from imported Resources.
+TRADITION_GIRRU,Girru I,Tradition,"+5 Combat Strength for Cavalry Units within an Army Commander's Radius. +3 Production, Science, and Food in Captured Settlements from any Age."
+TRADITION_GIRRU_II,Girru II,Tradition,"+5 Combat Strength for Cavalry Units within an Army Commander's Radius. +5 Production, Science, and Food in Captured Settlements from any Age."
+TRADITION_GOLD_RUSH_I,Gold Rush I,Tradition,+1 Gold in Settlements for every Resource assigned to them.
+TRADITION_GOLD_RUSH_II,Gold Rush II,Tradition,+4 Gold in Settlements for every Resource assigned to them.
+TRADITION_GRAND_ALLIANCE,Grand Alliance,Tradition,+10% Production in Cities and -1 Gold Maintenance for Units for every Alliance you ahve.
+TRADITION_GRAND_SECRETARIAT_I,Grand Secretariat I,Tradition,+2 Science on Gold Buildings and +2 Gold on Science buildings.
+TRADITION_GRAND_SECRETARIAT_II,Grand Secretariat II,Tradition,+3 Science on Gold Buildings and +3 Gold on Science Buildings.
+TRADITION_GREAT_AND_MOST_FORTUNATE_NAVY_I,Great and Most Fortunate Navy I,Tradition,+50% Production towards training Naval Units. Fleet Commanders gain the Flotilla Promotion for free.
+TRADITION_GREAT_AND_MOST_FORTUNATE_NAVY_II,Great and Most Fortunate Navy II,Tradition,+100% Production towards training Naval Units. Fleet Commanders gain the Flotilla Promotion for free.
+TRADITION_GREAT_BRITAIN_SYNCRETISM_ANTIQUITY,Royal Society I,Tradition,+1 Science on Culture Buildings adjacent to Coast. +1 Culture on Science Buildings adjacent to Coast.
+TRADITION_GREAT_BRITAIN_SYNCRETISM_EXPLORATION,Royal Society II,Tradition,+2 Science on Culture Buildings adjacent to Coast. +2 Culture on Science Buildings adjacent to Coast.
+TRADITION_GREECE_SYNCRETISM_EXPLORATION,Hellenism I,Tradition,+1 Happiness and Production in Cities for each City-State you are Suzerain of.
+TRADITION_GREECE_SYNCRETISM_MODERN,Hellenism II,Tradition,+2 Happiness and Production in Cities for each City-State you are Suzerain of.
+TRADITION_GUNPOWDER_EMPIRE,Gunpowder Empire,Tradition,+3 Combat Strength for all Units.
+TRADITION_HAAB_I,Haab' I,Tradition,+2 Culture on Happiness Buildings.
+TRADITION_HAAB_II,Haab' II,Tradition,"+2 Culture on Happiness Buildings, doubled while in a Celebration."
+TRADITION_HAN_SYNCRETISM_EXPLORATION,Capable Rule I,Tradition,+1 Science in Cities for every Tradition slotted in the Government.
+TRADITION_HAN_SYNCRETISM_MODERN,Capable Rule II,Tradition,+2 Science in Cities for every Tradition slotted in the Government.
+TRADITION_HAWAII_SYNCRETISM_ANTIQUITY,Hōkūle'a I,Tradition,+1 Culture on Districts and Unique Improvements adjacent to Coast.
+TRADITION_HAWAII_SYNCRETISM_MODERN,Hōkūle'a II,Tradition,+2 Culture on Districts and Unique Improvements adjacent to Coast. +4 Culture on Volcanoes.
+TRADITION_HEALING_CULTS,Healing Cults,Tradition,+5 Happiness on Altars in Infected Settlements but -10 Gold on Altars.
+TRADITION_HELIKHILENAWEWIPE_I,Helikhilenawewipe I,Tradition,+33% Influence towards the initiating and progressing the Befriend Independent Project.
+TRADITION_HELIKHILENAWEWIPE_II,Helikhilenawewipe II,Tradition,+50% Influence towards the initiating and progressing the Befriend Independent Project.
+TRADITION_HEQIN,Heqin,Policy,+5 Culture per Alliance.
+TRADITION_HIMAL,Himāl II,Tradition,"+4 Culture on Mountain Terrain in your Capital, +2 Culture on Mountain Terrain in other Settlements."
+TRADITION_HIMAL_I,Himāl I,Tradition,"+2 Culture on Mountain Terrain in your Capital, +1 Culture on Mountain Terrain in other Settlements."
+TRADITION_HONOR,Honor,Policy,+3 Combat Strength against Independent Powers.
+TRADITION_HOSPITALITY,Hospitality,Policy,+3 Culture for every City-State you are Suzerain of.
+TRADITION_HO_OKUPU_I,Ho'okupu I,Tradition,"+1 Food on Marine Terrain. Improvements, Buildings, and Districts do not get pillaged by Floods, Volcanic Eruptions, and Hurricanes."
+TRADITION_HO_OKUPU_II,Ho'okupu II,Tradition,"+2 Food on Marine Terrain. Improvements, Buildings, and Districts do not get pillaged by Floods, Volcanic Eruptions, and Hurricanes."
+TRADITION_HUMANISM,Humanism,Policy,+3 Culture from Specialists. +1 Food and Happiness Maintenance on Specialists.
+TRADITION_HUMORALISM,Humoralism,Tradition,Gain 100 Science (Scales by Game Speed) when Physicians Treat the Sick on a District with a Hospital.
+TRADITION_ICELAND_SYNCRETISM_ANTIQUITY,Drekahöfuð I,Tradition,Producing a Naval Unit grants Culture equal to 50% of the Unit's Production cost.
+TRADITION_ICELAND_SYNCRETISM_MODERN,Drekahöfuð II,Tradition,Producing a Naval Unit grants Culture equal to 50% of the Unit's Production cost. +1 Combat Strength for Naval Units for each improved Natural Wonder in your empire.
+TRADITION_ICONOLATRY,Iconolatry I,Tradition,+1 Happiness and Gold from Great Works.
+TRADITION_ICONOLATRY_II,Iconolatry II,Tradition,+1 Happiness and Gold from Great Works. +3 Happiness on Hidden Fortresses in Settlements with a Great Work Slotted.
+TRADITION_IMPOVERISHED_NOBILITY,Impoverished Nobility,Tradition,+1 Gold Maintenance for Military Units.
+TRADITION_INCA_SYNCRETISM_ANTIQUITY,Huaca I,Tradition,+10% Food in Settlements with their City Center adjacent to a Mountain or with 3 worked Mountain tiles.
+TRADITION_INCA_SYNCRETISM_MODERN,Huaca II,Tradition,+15% Food in Settlements with their City Center adjacent to a Mountain or with 3 worked Mountain tiles.
+TRADITION_INCOMPETENT_MINISTERS,Incompetent Ministers,Tradition,-1 Influence in Settlements you founded.
+TRADITION_INDENTURE,Indenture,Policy,+2 Food from Specialists. +1 Happiness Maintenance on Specialists.
+TRADITION_INFERIOR_TACTICS,Inferior Tactics,Tradition,-6 Combat Strength against Independent Powers.
+TRADITION_INTERLACUSTRINE_I,Interlacustrine I,Tradition,All Buildings in Cities gain Adjacency from Lakes.
+TRADITION_INTERLACUSTRINE_II,Interlacustrine II,Tradition,All Buildings gain an Adjacency with Lakes based on all the Building's Yields.
+TRADITION_IRON_CROSS,Iron Cross,Tradition,+3 Combat Strength for Units within the Command Radius of a Commander with a Commendation.
+TRADITION_ISA,Isa,Tradition,+5 Combat Strength and +2 Movement for all Units on Navigable Rivers. Minor and Navigable Rivers do not end Unit Movement.
+TRADITION_IUS_REFORMANDI,Ius Reformandi,Tradition,"When you convert a Settlement you own, gain a Migrant and damage 3 Buildings in that Settlement."
+TRADITION_JARLIG_I,Jarlig I,Tradition,+25% Production in Captured Cities from any Age. Captured Towns do not cost double to convert into Cities.
+TRADITION_JARLIG_II,Jarlig II,Tradition,+50% Production in Captured Cities from any Age. Captured Towns do not cost double to convert into Cities.
+TRADITION_JINSI_KAMIL,Jins-i Kamil,Tradition,"+1 Food on Farms for each adjacent Plantation, and on Plantations for each adjacent Farm."
+TRADITION_JURE_I,Juré I,Tradition,+1 Culture in the Capital and +1 Happiness in Cities for every Tradition slotted in the Government.
+TRADITION_JURE_II,Juré II,Tradition,+2 Culture in the Capital and +2 Happiness in Cities for every Tradition slotted in the Government.
+TRADITION_JU_XIAN,Ju Xian I,Tradition,+1 Science from Specialists.
+TRADITION_JU_XIAN_II,Ju Xian II,Tradition,+1 Science from Specialists. +10% Science in the Capital.
+TRADITION_KAMBU_MERA_I,Kambu-Mera I,Tradition,+50% Food and Happiness towards maintaining Specialists.
+TRADITION_KAMBU_MERA_II,Kambu-Mera II,Tradition,+100% Food and Happiness towards maintaining Specialists. +1 Specialist Limit in the Capital.
+TRADITION_KAPA,Kapa,Tradition,+50% Production towards constructing Culture Buildings.
+TRADITION_KARA,Kara I,Tradition,+25% Production towards training Infantry Units. -2 Gold Maintenance for Infantry Units.
+TRADITION_KARA_II,Kara II,Tradition,+25% Production towards training Infantry Units. -3 Gold Maintenance for Infantry Units. Infantry Units heal 15 HP after defeating an enemy Unit.
+TRADITION_KEMET_I,Kemet I,Tradition,+2 Culture on Improvements and Districts on Navigable Rivers.
+TRADITION_KEMET_II,Kemet II,Tradition,+3 Culture on Improvements and Districts on Navigable Rivers.
+TRADITION_KHMER_SYNCRETISM_EXPLORATION,Varna I,Tradition,+1 Gold on Specialists.
+TRADITION_KHMER_SYNCRETISM_MODERN,Varna II,Tradition,+1 Gold and Science on Specialists.
+TRADITION_KOKUTAI,Kōkūtai,Tradition,+6 Combat Strength for Aircraft attacking an enemy Unit adjacent to a Naval Unit.
+TRADITION_KRESTYANSKAYA_REFORMA_I,Krestyanskaya Reforma I,Tradition,"+15% Production, but -15% Growth Rate in Cities."
+TRADITION_KRESTYANSKAYA_REFORMA_II,Krestyanskaya Reforma II,Tradition,"+15% Production in Cities, or +20% Production in Cities in Tundra, but -15% Growth Rate in Cities."
+TRADITION_KSHATRIYA,Kshatriya,Tradition,"+3 Combat Strength for Infantry and Cavalry Units when adjacent to each other, or +5 while in a Celebration."
+TRADITION_LAISSEZ_FAIRE,Laissez-Faire,Policy,+2 Gold and +1 Happiness for every imported Resource.
+TRADITION_LAND_HERITAGE,Land Heritage,Policy,+2 Happiness on Mountains. +6 Culture on Natural Wonders.
+TRADITION_LAST_RESERVES,Last Reserves,Tradition,+10% Production in Cities per Hostile Relationship. +1 Movement for all Military Units.
+TRADITION_LATINITAS_I,Latinitas I,Tradition,"+2 Food and Culture in Towns, doubled in Fort Towns."
+TRADITION_LATINITAS_II,Latinitas II,Tradition,"+2 Food and Culture in Towns, doubled in Fort Towns. These numbers are doubled again in Distant Lands."
+TRADITION_LAZARETTOS,Lazarettos,Tradition,"Buildings, Improvements, and Districts in Coastal Settlements with a Dungeon are not damaged by Major Outbreaks."
+TRADITION_LA_REFORMA_I,La Reforma I,Tradition,+1 Culture in Towns with a Growing Focus for every Tradition slotted into the Government.
+TRADITION_LA_REFORMA_II,La Reforma II,Tradition,+1 Culture in Towns for every Tradition slotted into the Government.
+TRADITION_LEND_LEASE,Lend-Lease,Tradition,"+1 War Support on all Wars, or +2 if joining a War with an Ally. +25% Production towards training Military Units when fighting a War in which your War Support is higher than your opponent."
+TRADITION_LEVIES,Levies,Policy,+25% Gold towards purchasing Military Units. -1 Gold Maintenance for Units.
+TRADITION_LITERATURE,Literature,Policy,+2 Science on Science Buildings. +20% Production towards constructing Science Buildings.
+TRADITION_LITURGICAL_DISPUTES,Liturgical Disputes,Tradition,-4 Happiness in all Settlements following your Religion.
+TRADITION_LIVING_STANDARDS,Living Standards,Policy,+25% Gold and Happiness towards maintaining Buildings.
+TRADITION_LYFSTEINN_I,Lyfsteinn I,Tradition,+10 Healing for Naval Units outside friendly territory.
+TRADITION_LYFSTEINN_II,Lyfsteinn II,Tradition,+20 Healing for Naval Units outside friendly territory.
+TRADITION_MAITRI_SANDHI,Maitri Sandhi II,Tradition,"+50% Influence towards initiating Endeavors if you have the least amount of Settlements, +20% otherwise."
+TRADITION_MAITRI_SANDHI_I,Maitri Sandhi I,Tradition,"+25% Influence towards initiating Endeavors if you have the least amount of Settlements, +10% otherwise."
+TRADITION_MAJAPAHIT_SYNCRETISM_ANTIQUITY,Subak I,Tradition,+2 Food on Quarters on or adjacent to Coast. +10% Growth Rate in Settlements adjacent to Coast.
+TRADITION_MAJAPAHIT_SYNCRETISM_MODERN,Subak II,Tradition,+4 Food on Quarters on or adjacent to Coast. +15% Growth Rate in Settlements adjacent to Coast.
+TRADITION_MARAKKALAM,Marakkalam,Tradition,+1 Combat Strength for Naval Units for every other Civilization with which you have a Trade Route. +1 Movement and Sight for Heavy Naval Units.
+TRADITION_MARITIME_LAW,Maritime Law,Policy,+30% Production towards training Naval Units.
+TRADITION_MARTIAL_LAW,Martial Law,Policy,Towns gain Production equal to your Militaristic Attribute. -5 Happiness in Cities.
+TRADITION_MATERIEL,Materiel,Policy,+10 Healing for Units. +1 Movement for Armies and Fleets.
+TRADITION_MAURYA_SYNCRETISM_EXPLORATION,Chhatrapati I,Tradition,"+2 and Science on the Palace and on City Halls in Captured Settlements from any Age, doubled while in a Celebration."
+TRADITION_MAURYA_SYNCRETISM_MODERN,Chhatrapati II,Tradition,"+3 and Science on the Palace and on City Halls in Captured Settlements from any Age, doubled while in a Celebration."
+TRADITION_MAYA_SYNCRETISM_EXPLORATION,Milpa I,Tradition,+2 Science on Science Buildings placed on Vegetated Terrain.
+TRADITION_MAYA_SYNCRETISM_MODERN,Milpa II,Tradition,+2 Science on Happiness and Science Buildings placed on Vegetated Terrain.
+TRADITION_MAYURASANA_I,Mayūrāsana I,Tradition,"+5% Gold towards purchasing Units, Improvements, Buildings, and Wonders."
+TRADITION_MAYURASANA_II,Mayūrāsana II,Tradition,"+10% Gold towards purchasing Units, Improvements, Buildings, and Wonders."
+TRADITION_MAY_THIS_PLEASE_THE_PEOPLE_I,May This Please The People I,Tradition,+2 Culture on Resources on or adjacent to Coast.
+TRADITION_MAY_THIS_PLEASE_THE_PEOPLE_II,May This Please The People II,Tradition,+3 Culture on Resources on or adjacent to Coast.
+TRADITION_MEDIATIZATION,Mediatization,Tradition,+10% Culture in Captured Settlements from any Age.
+TRADITION_MEDICINE,Medicine,Policy,Units gain +5 Healing.
+TRADITION_MEIJI_SYNCRETISM_ANTIQUITY,Kimi I,Tradition,+1 Science for every Empire Resource.
+TRADITION_MEIJI_SYNCRETISM_EXPLORATION,Kimi II,Tradition,+1 Science for every Empire Resource. +1 Science in Cities adjacent to Coast for every Resource assigned to them.
+TRADITION_MERRY_LIFE_AND_A_SHORT_ONE,Merry Life and a Short One,Tradition,"When you defeat a Support Unit, gain Gold equal to the Unit’s Production cost. When you defeat a Naval Unit, gain Gold equal to 25% of the Unit’s Production cost."
+TRADITION_METROPOLE,Metropole,Policy,+1 Resource Capacity in all Cities in Homelands. +10 Range for all Trade Routes.
+TRADITION_MEXICO_SYNCRETISM_ANTIQUITY,Campesinos I,Tradition,+2 Happiness in the Capital. +5 to all Yields in the Capital during a Celebration.
+TRADITION_MEXICO_SYNCRETISM_EXPLORATION,Campesinos II,Tradition,+4 Happiness in the Capital. +10 to all Yields in the Capital during a Celebration.
+TRADITION_MIASMA,Miasma,Tradition,Gain 1 Migrant when a City is Infected but -25% Growth Rate in Cities.
+TRADITION_MIHISTU,Miḫiṣtu I,Tradition,+25% Production towards constructing Buildings and Wonders with a Great Work slot.
+TRADITION_MIHISTU_II,Miḫiṣtu II,Tradition,+25% Production towards constructing Buildings and Wonders with a Great Work slot. +2 Science on displayed Great Works.
+TRADITION_MILITARY_INDUSTRIAL_COMPLEX,Military-Industrial Complex,Policy,"+50% Production towards training all Military Units, but +1 Gold Maintenance for all Units."
+TRADITION_MING_SYNCRETISM_ANTIQUITY,Chaogong I,Tradition,+1 Influence for each Resource slotted into your Capital.
+TRADITION_MING_SYNCRETISM_MODERN,Chaogong II,Tradition,+2 Influence for each Resource slotted into your Capital.
+TRADITION_MIRACLES_OF_THE_TWINS_I,Miracles of the Twins I,Tradition,"All Units gain the Poison ability, +3 Combat Strength against Wounded Units. Scouts and Ranged Units gain Stealth in Vegetated Terrain."
+TRADITION_MIRACLES_OF_THE_TWINS_II,Miracles of the Twins II,Tradition,"All Units gain the Poison ability, +3 Combat Strength against Wounded Units. Scouts and Ranged Units gain Stealth in Vegetated Terrain. Ranged Units ignore Vegetation for Movement."
+TRADITION_MISSISSIPPIAN_SYNCRETISM_EXPLORATION,Sacrificial Effigies I,Tradition,Ranged Units apply the Burning status to tiles for 2 turns when attacking.
+TRADITION_MISSISSIPPIAN_SYNCRETISM_MODERN,Sacrificial Effigies II,Tradition,Ranged Units apply the Burning status to tiles for 2 turns when attacking. +50 Gold per Resource on Trade Route creation. Scales by Gamespeed.
+TRADITION_MONGOLIA_SYNCRETISM_ANTIQUITY,Jarugachi I,Tradition,"+1 Influence and Production on Horse Resources, doubled in Captured Settlements from any Age."
+TRADITION_MONGOLIA_SYNCRETISM_MODERN,Jarugachi II,Tradition,"+2 Influence and Production on Horse Resources, doubled in Captured Settlements from any Age. +50% Combat Strength from Flanking for Cavalry Units."
+TRADITION_MONOPOLIES,Monopolies,Policy,+5 Gold and +1 Resource Capacity in Settlements with a Factory.
+TRADITION_MONTHON_I,Monthon I,Tradition,+3 Gold on the Palace for each City-State you are Suzerain of.
+TRADITION_MONTHON_II,Monthon II,Tradition,+5 Gold and +3 Culture on the Palace for each City-State you are Suzerain of.
+TRADITION_MO_ATTRIBUTE_CULTURAL_01,Romanticism,Tradition,+2 Culture on Appealing Terrain.
+TRADITION_MO_ATTRIBUTE_DIPLOMATIC_01_HAPPINESS,Vaudeville,Tradition,Double the base yield of Happiness Buildings.
+TRADITION_MO_ATTRIBUTE_DIPLOMATIC_01_INFLUENCE,The Great Game,Tradition,+40% Influence towards initiating Sanctions. +3 Gold from active Sanctions you started.
+TRADITION_MO_ATTRIBUTE_ECONOMIC_01,Gold Standard,Tradition,Double the base yield of Gold Buildings.
+TRADITION_MO_ATTRIBUTE_EXPANSIONIST_01_TALL,Developmentalism,Tradition,Warehouse Production Warehouse Buildings in Cities gain a +1 Production Adjacency for Districts.
+TRADITION_MO_ATTRIBUTE_EXPANSIONIST_01_WIDE,Industrial Agriculture,Tradition,Warehouse Production Warehouse Buildings in Towns gain a +1 Production Adjacency for Improvements.
+TRADITION_MO_ATTRIBUTE_MILITARISTIC_01,Force Structuring,Tradition,+25% Production towards constructing Military Buildings.
+TRADITION_MO_ATTRIBUTE_SCIENTIFIC_01,Location Theory,Tradition,+5% Production towards Projects for every Tech Mastery completed in an Age.
+TRADITION_MUD_BRICK_I,Mud Brick I,Tradition,+1 Production on the Caravanserai in Settlements with a Gold Building and in Mining Towns and Trade Outposts.
+TRADITION_MUD_BRICK_II,Mud Brick II,Tradition,+2 Production on the Caravanserai in Settlements with a Gold Building and in Mining Towns and Trade Outposts.
+TRADITION_MUGHAL_SYNCRETISM_ANTIQUITY,Karkhanas I,Tradition,"+1 Gold on Farms in Towns, Warehouse Bonus."
+TRADITION_MUGHAL_SYNCRETISM_EXPLORATION,Karkhanas II,Tradition,"+2 Gold on Farms in Towns, Warehouse Bonus."
+TRADITION_NATIONAL_PRESTIGE,National Prestige,Tradition,+10% Influence towards initiating Diplomatic Actions per displayed Artifact while at War with a Leader with an opposing Ideology.
+TRADITION_NAUKOGRAD,Naukograd,Policy,Towns gain Science equal to your Scientific Attribute. -5 Culture in Cities.
+TRADITION_NEGARAKERTAGAMA_I,Negarakertagama I,Tradition,+33% Food towards maintaining Specialists.
+TRADITION_NEGARAKERTAGAMA_II,Negarakertagama II,Tradition,+33% Food towards maintaining Specialists. +4 Culture on Quarters on or adjacent to Coast.
+TRADITION_NEPAL_SYNCRETISM_ANTIQUITY,Kumar and Kumari I,Tradition,+1 Culture on Warehouse Buildings. +1 Influence on Mountains.
+TRADITION_NEPAL_SYNCRETISM_EXPLORATION,Kumar and Kumari II,Tradition,+2 Culture on Warehouse Buildings. +1 Influence on Mountains.
+TRADITION_NEW_DEAL,New Deal,Policy,+30% Production towards constructing Wonders.
+TRADITION_NGATU_I,Ngatu I,Tradition,"+100% Influence towards the initiating and supporting the Befriend Independent Project, if the Independent Power is in Distant Lands."
+TRADITION_NGATU_II,Ngatu II,Tradition,"+100% Influence towards the initiating and supporting the Befriend Independent Project, if the Independent Power is in Distant Lands. +100% Influence towards all City-State Actions if the City-State is in Distant Lands."
+TRADITION_NG_OMA_I,Ng'oma I,Tradition,+4 Combat Strength for Units that are on or adjacent to a Lake. +1 Movement for embarked Units.
+TRADITION_NG_OMA_II,Ng'oma II,Tradition,+8 Combat Strength for Units that are on or adjacent to a Lake. +1 Movement for embarked Units.
+TRADITION_NIWIITIKEEMEKONAAKI,Niwiitikeemekonaaki I,Tradition,+1 Culture in Cities on the Mawaskawe Skote for every City-State you are Suzerain of.
+TRADITION_NIWIITIKEEMEKONAAKI_II,Niwiitikeemekonaaki II,Tradition,+2 Culture in Cities on the Mawaskawe Skote for every City-State you are Suzerain of.
+TRADITION_NORMAN_SYNCRETISM_ANTIQUITY,Sauveté I,Tradition,"+1 Culture and Gold on Fortified Districts, doubled in Captured Settlements from any Age. +25 HP on Fortified Districts."
+TRADITION_NORMAN_SYNCRETISM_MODERN,Sauveté II,Tradition,"+2 Culture and Gold on Fortified Districts, doubled in Captured Settlements from any Age. +25 HP on Fortified Districts."
+TRADITION_NOUVEAU_RICHE,Nouveau Riche,Tradition,+50% Food and Happiness Maintenance for Specialists.
+TRADITION_NO_ETERNAL_ALLIES_I,No Eternal Allies I,Tradition,"+5% Food and Gold in Towns, but -5% Gold in the Capital for every Alliance."
+TRADITION_NO_ETERNAL_ALLIES_II,No Eternal Allies II,Tradition,"+10% Food and Gold in Towns, but -5% Gold in the Capital for every Alliance."
+TRADITION_OLIGARCHY_UNHAPPINESS,Decadence,Tradition,-6 Happiness in Settlements with unfilled Resource Capacity.
+TRADITION_OLIGARCHY_UNREST,LOC_TRADITION_OLIGARCHY_UNREST_NAME,Tradition,
+TRADITION_OPPRESSIVE_TARIFFS,Oppressive Tariffs,Tradition,-1 Gold per Specialist.
+TRADITION_ORATORY,Oratory,Policy,+2 Influence per turn.
+TRADITION_ORDER_AND_PROGRESS_I,Order and Progress I,Tradition,+2 Science in Cities for every Tradition slotted into the Government.
+TRADITION_ORDER_AND_PROGRESS_II,Order and Progress II,Tradition,+4 Science in Cities for every Tradition slotted into the Government.
+TRADITION_OSMANLI_BAROK_I,Osmanlı Barok I,Tradition,+2Happiness Happiness from displayed Great Works.
+TRADITION_OSMANLI_BAROK_II,Osmanlı Barok II,Tradition,+3Happiness Happiness from displayed Great Works. +15% Production towards constructing Museums.
+TRADITION_OTTOMANS_SYNCRETISM_ANTIQUITY,Mehterân I,Tradition,+5 Combat Strength for Siege Units. +1 Movement for Siege and Support Units.
+TRADITION_OTTOMANS_SYNCRETISM_EXPLORATION,Mehterân II,Tradition,+5 Combat Strength for Siege Units. +1 Movement for Siege and Support Units. Training a Siege Unit grants Happiness towards Celebrations equal to 50% of the Unit’s Production cost.
+TRADITION_O_YATOI_GAIKOKUJIN_I,O-yatoi Gaikokujin I,Tradition,+1 Production and Science from Specialists in the Capital.
+TRADITION_O_YATOI_GAIKOKUJIN_II,O-yatoi Gaikokujin II,Tradition,+1 Production and Science from Specialists.
+TRADITION_PALISADING_I,Palisading I,Tradition,+50% Production towards constructing Fortification Constructibles.
+TRADITION_PALISADING_II,Palisading II,Tradition,+50% Production towards constructing Fortification Constructibles. +1 Happiness and Production on Fortified Districts.
+TRADITION_PANJI,Panji,Tradition,+1 Culture from Specialists on or adjacent to Coast.
+TRADITION_PATRONAGE,Patronage,Policy,+2 Culture from Specialists. +1 Happiness Maintenance on Specialists.
+TRADITION_PELOPONNESIAN_LEAGUE_I,Peloponnesian League I,Tradition,+30% Influence towards initiating Sanctions.
+TRADITION_PELOPONNESIAN_LEAGUE_II,Peloponnesian League II,Tradition,+50% Influence towards initiating Sanctions and Espionage Actions.
+TRADITION_PEOPLES_ARMY,People's Army,Policy,"+25% Production towards training Land Military Units, but +1 Gold Maintenance for Land Military Units."
+TRADITION_PERSIA_SYNCRETISM_EXPLORATION,Fractal Rule I,Tradition,+1 Culture on Unique Improvements. +1 Gold on Unique Improvements and Buildings in Captured Settlements from any Age.
+TRADITION_PERSIA_SYNCRETISM_MODERN,Fractal Rule II,Tradition,+2 Culture on Unique Improvements. +2 Gold on Unique Improvements and Buildings in Captured Settlements from any Age.
+TRADITION_PET_KOT,Pet Kot,Tradition,+1 Science on Improvements in Vegetated Terrain in Cities.
+TRADITION_PIRATE_REPUBLIC_SYNCRETISM_ANTIQUITY,Brethren of the Coast I,Tradition,+2 Production on Districts on or adjacent to Coast. -1 Happiness on Districts not on or adjacent to Coast.
+TRADITION_PIRATE_REPUBLIC_SYNCRETISM_MODERN,Brethren of the Coast II,Tradition,+3 Production on Districts on or adjacent to Coast. -2 Happiness on Districts not on or adjacent to Coast.
+TRADITION_PITHI_CHRAT_I,Pithi Chrat I,Tradition,"+1 Food on Floodplains in Towns, but -5 Food in Cities other than your Capital."
+TRADITION_PITHI_CHRAT_II,Pithi Chrat II,Tradition,"+2 Food on Floodplains in Towns, but -10 Food in Cities other than your Capital."
+TRADITION_PLAGUE_CULTS,Plague Cults,Tradition,Gain 100 Culture (Scales by Game Speed) when Physicians Treat the Sick on a District with a Temple.
+TRADITION_POLICE_STATE,Police State,Policy,+8 Happiness in Cities while at War.
+TRADITION_PORT_OF_NATIONS_I,Port of Nations I,Tradition,+2 Culture and Gold for every active Trade Route. +100% Trade Income in Settlements adjacent to Coast.
+TRADITION_PORT_OF_NATIONS_II,Port of Nations II,Tradition,+3 Culture and Gold for every active Trade Route. +200% Trade Income in Settlements adjacent to Coast.
+TRADITION_PRATHETSARAT,Prathetsarat,Tradition,+20% Influence towards initiating Diplomatic Actions with City-States.
+TRADITION_PRESERVATION_SOCIETIES,Preservation Societies,Policy,+3 Science from displayed Great Works.
+TRADITION_PRESS_GANGS_I,Press Gangs I,Tradition,+100% Production and Gold towards training Light Naval Units. Fleet Commander gain the Looting Promotion for free.
+TRADITION_PRESS_GANGS_II,Press Gangs II,Tradition,+150% Production and Gold towards training Light Naval Units. Fleet Commander gain the Looting Promotion for free.
+TRADITION_PRIESTHOOD,Priesthood,Policy,+2 Gold in all Settlements.
+TRADITION_PRINCEPS_CIVITATIS_I,Princeps Civitatis I,Tradition,+1 Production on Districts in your Capital.
+TRADITION_PRINCEPS_CIVITATIS_II,Princeps Civitatis II,Tradition,+2 Production on Districts in your Capital.
+TRADITION_PROCEEDINGS,Proceedings,Tradition,+4 Culture and Science in Cities with both a Great Work and a Resource slotted. Settlements receive +3 Production for each Factory Resource assigned to them.
+TRADITION_PRODUCTIVE_FORCES_DETERMINISM,Productive Forces Determinism,Policy,+3 Science from Specialists. -3 Gold in Towns.
+TRADITION_PROGNOSIS,Prognosis,Tradition,+2 Science on Science Buildings in Infected Settlements but -4 Gold on Science Buildings.
+TRADITION_PROJECTION_OF_FORCE,Projection of Force,Policy,"+50% Production towards training Naval Units, but +1 Gold Maintenance for Naval Units."
+TRADITION_PROLETARIAT,Proletariat,Policy,+4 Food from Specialists. -3 Happiness in Towns.
+TRADITION_PROPAGANDA,Propaganda,Policy,Towns gain Gold equal to your Economic Attribute. -5 Culture in Cities.
+TRADITION_PROSECUTE_APOSTATES,Prosecute Apostates,Tradition,+5 Happiness in Infected Settlements with a Commander stationed but -5 Happiness in Settlements with no Altar.
+TRADITION_PROVINCIAL_SCORN,Provincial Scorn,Tradition,-6 Happiness in Towns.
+TRADITION_PRUSSIA_SYNCRETISM_ANTIQUITY,Tugenden I,Tradition,+2 Science from active Sanctions you started.
+TRADITION_PRUSSIA_SYNCRETISM_EXPLORATION,Tugenden II,Tradition,+3 Science from active Sanctions you started.
+TRADITION_PUBLIC_WORKS,Public Works,Policy,+30% Production towards completing Projects.
+TRADITION_PURGED_OFFICER_CORP,Purged Officer Corp,Tradition,-6 Combat Strength on all Military Units.
+TRADITION_QAJAR_SYNCRETISM_ANTIQUITY,Waqāye'-e Ettefāqiya I,Tradition,+1 Influence in the Capital for every Settlement under the Settlement Limit.
+TRADITION_QAJAR_SYNCRETISM_EXPLORATION,Waqāye'-e Ettefāqiya II,Tradition,+1 Happiness and Influence in the Capital for every Settlement under the Settlement Limit.
+TRADITION_QILACHAS_I,Qilachas I,Tradition,+1 Gold on Fortified Districts.
+TRADITION_QILACHAS_II,Qilachas II,Tradition,+2 Gold on Fortified Districts.
+TRADITION_QING_SYNCRETISM_ANTIQUITY,Ethnic Stratification I,Tradition,+2 Resource Capacity in the Capital.
+TRADITION_QING_SYNCRETISM_EXPLORATION,Ethnic Stratification II,Tradition,+2 Resource Capacity in Cities founded by you.
+TRADITION_QUINQUEREME_I,Quinquereme I,Tradition,+1 Range for Heavy Naval Units. -1 Gold Maintenance for Naval Units.
+TRADITION_QUINQUEREME_II,Quinquereme II,Tradition,+1 Range for Heavy Naval Units. -2 Gold Maintenance for Naval Units. +1 Combat Strength for Naval Units for each Unique City Resource assigned to your Capital.
+TRADITION_QUIPU,Quipu,Tradition,Settlements gain +0.5 Gold for every Urban Population and +0.5 Production for every Rural Population.
+TRADITION_QULLARAQASI,Qullarāqāsi,Tradition,+1 Combat Strength for Land Military Units for every 2 Settlements under the Settlement Limit.
+TRADITION_QULLQA_I,Qullqa I,Tradition,Cities receive +1 Food for each active Trade Route you started.
+TRADITION_QULLQA_II,Qullqa II,Tradition,Cities receive +2 Food for each active Trade Route you started.
+TRADITION_RATIONALISM,Rationalism,Policy,+15% Gold and Science in your own Cities that are converted to your Religion.
+TRADITION_REALPOLITIK_I,Realpolitik I,Tradition,+1 Production in Cities for every Unfriendly or Hostile Relationship with another Leader.
+TRADITION_REALPOLITIK_II,Realpolitik II,Tradition,+2 Production in Cities for every Unfriendly or Hostile Relationship with another Leader.
+TRADITION_REBELLIOUS_COMMANDERS,Rebellious Commanders,Tradition,-1 Happiness in all Cities for each Commander Promotion.
+TRADITION_RECRUITMENT_SHORTFALLS,Recruitment Shortfalls,Tradition,+2 Food in Towns but -15 Healing on all Units.
+TRADITION_REGULARS,Regulars,Policy,+30% Production towards training Infantry and Ranged Units.
+TRADITION_REIDI_GUDANNA,Reiði Guðanna,Tradition,All Buildings gain a +1 Culture Cultural and Production Adjacency from Volcanoes and Natural Wonders. (Natural Wonder Volcanoes do not count twice) +25% Gold towards purchasing Repairs.
+TRADITION_RELIGIOUS_ESPIONAGE,Schism,Tradition,+50% Influence towards Espionage Convert Settlement Espionage actions. -4 Happiness in Homelands Settlements.
+TRADITION_RELIGIOUS_EXEMPTIONS,Religious Tax Exemptions,Tradition,-2 Gold per displayed Relic.
+TRADITION_RELIGIOUS_MERCHANTS,Jizya,Tradition,+4 Gold in Settlements not following your Religion. -4 Happiness in Distant Lands Settlements.
+TRADITION_RELIGIOUS_MOVEMENT,Bhanaka,Tradition,All Missionaries in your territory gain +1 Movement.
+TRADITION_RELIGIOUS_ORDERS,Religious Orders,Policy,+15% Culture and Happiness in your own Cities that are converted to your Religion.
+TRADITION_RELIGIOUS_TOLERANCE,Religious Tolerance,Tradition,+8 Happiness in Settlements that do not follow your Religion. -2 Charges on new Missionaries.
+TRADITION_RELIGIOUS_ZEAL,Religious Zeal,Tradition,-8 Happiness in Settlements that do not follow your Religion. +2 Charges on new Missionaries.
+TRADITION_RENAISSANCE,Renaissance,Policy,+10% Production towards constructing Wonders. +2 Culture on displayed Great Works.
+TRADITION_REPUBLIC_UNHAPPINESS,Poleis,Tradition,-6 Happiness in Settlements more than 9 tiles away from your Palace.
+TRADITION_REPUBLIC_UNREST,LOC_TRADITION_REPUBLIC_UNREST_NAME,Tradition,
+TRADITION_REVOLUTIONARY_TRIBUNAL,Revolutionary Tribunal,Tradition,-2 Settlement Limit.
+TRADITION_RICHES_OF_THE_DUAT,Riches of the Duat,Tradition,"+10% Production towards constructing Wonders, doubled when constructed in Cities with City Centers in Desert Terrain. +2 Production on Wonders on Desert."
+TRADITION_RITES_AND_RITUALS,Rites and Rituals,Policy,+2 Happiness in all Settlements.
+TRADITION_ROBBER_BARON_I,Robber Baron I,Tradition,+1 Influence in the Capital for every Resource assigned to it.
+TRADITION_ROBBER_BARON_II,Robber Baron II,Tradition,+1 Influence in Cities for every Resource assigned to them.
+TRADITION_ROBESPIERRE_REIGN_OF_TERROR,Reign of Terror,Tradition,"+3 Culture on Quarters, but -25% Growth Rate in Cities."
+TRADITION_ROME_SYNCRETISM_EXPLORATION,Limitanei I,Tradition,+1 Combat Strength for Infantry Units for every Tradition slotted in the Government.
+TRADITION_ROME_SYNCRETISM_MODERN,Limitanei II,Tradition,+1 Combat Strength for Infantry Units for every Tradition slotted in the Government. +3 Culture in the Capital for every Town.
+TRADITION_RUONG_LANG_XA_I,Ruộng Làng Xã I,Tradition,"+1 Food on Farms, Plantations, and Fortifications in Towns in Tropical Terrain. +5 Combat Strength for Fortified Districts and Land Units in friendly territory."
+TRADITION_RUONG_LANG_XA_II,Ruộng Làng Xã II,Tradition,"+2 Food on Farms, Plantations, and Fortifications in Towns in Tropical Terrain. +5 Combat Strength for Fortified Districts and Land Units in friendly territory."
+TRADITION_RUSSIA_SYNCRETISM_ANTIQUITY,Skazki I,Tradition,+2 Culture on Wonders. +2 Science on Wonders in Tundra.
+TRADITION_RUSSIA_SYNCRETISM_EXPLORATION,Skazki II,Tradition,+3 Culture on Wonders. +3 Science on Wonders in Tundra.
+TRADITION_SAGARMATHA,Sagarmatha,Tradition,Food and Science Buildings receive an Adjacency from Mountains.
+TRADITION_SAKDINA,Sakdina,Tradition,+2 Happiness and +2 Influence in Cities for each City-State you are Suzerain of.
+TRADITION_SALES_AND_TRADE_I,Sales and Trade I,Tradition,+1 Gold and Science for each Resource assigned to Cities with at least 5 Specialists.
+TRADITION_SALES_AND_TRADE_II,Sales and Trade II,Tradition,+2 Gold and Science for each Resource assigned to Cities with at least 5 Specialists.
+TRADITION_SAN_LAK_MUEANG_I,San Lak Mueang I,Tradition,+1 Influence from Gold Buildings.
+TRADITION_SAN_LAK_MUEANG_II,San Lak Mueang II,Tradition,+2 Influence from Gold Buildings.
+TRADITION_SCHOLARS,Scholars,Policy,+1 Science from Specialists. +1 Happiness Maintenance on Specialists.
+TRADITION_SCORCHED_EARTH,Scorched Earth,Policy,+3 Combat Strength for all Units when attacking. Land Units gain +25% yields and HP from Pillaging.
+TRADITION_SEDEF_KAKMA_I,Sedef Kakma I,Tradition,+3 Culture on Quarters with at least 1 Happiness Building. +3 Happiness on Quarters with at least 1 Culture Building.
+TRADITION_SEDEF_KAKMA_II,Sedef Kakma II,Tradition,+5 Culture on Quarters with at least 1 Happiness Building. +5 Happiness on Quarters with at least 1 Culture Building.
+TRADITION_SEORABEOL_I,Seorabeol I,Tradition,+1 Gold and Influence on Resources assigned to Trade Outpost Towns.
+TRADITION_SEORABEOL_II,Seorabeol II,Tradition,+2 Gold and Influence on Resources assigned to Trade Outpost Towns.
+TRADITION_SERVITIUM_DEBITUM,Servitium Debitum,Tradition,+1 Combat Strength for Cavalry Units for every Tradition slotted in the Government. -2 Gold Maintenance for Cavalry Units.
+TRADITION_SHAHANSHAH,Shahanshah I,Tradition,+3 Combat Strength for Units in enemy territory. +5 Culture and Gold for every different Civilization you have captured a Settlement from.
+TRADITION_SHAHANSHAH_II,Shahanshah II,Tradition,+3 Combat Strength for Units fighting in enemy territory. +10 Culture and Gold for every different Civilization you have captured a Settlement from.
+TRADITION_SHAWNEE_SYNCRETISM_ANTIQUITY,Strategic Gifts I,Tradition,+1 Influence in Cities adjacent to Navigable Rivers. +2 Gold per City-State you are Suzerain of.
+TRADITION_SHAWNEE_SYNCRETISM_MODERN,Strategic Gifts II,Tradition,+2 Influence in Cities adjacent to Navigable Rivers. +4 Gold per City-State you are Suzerain of.
+TRADITION_SHELL_TEMPERED_POTTERY,Shell-Tempered Pottery I,Tradition,"Food, Gold, and Warehouse Buildings receive a +1 Gold Adjacency for Resources."
+TRADITION_SHELL_TEMPERED_POTTERY_II,Shell Tempered Pottery II,Tradition,All Buildings receive a +1 Gold adjacency for Resources.
+TRADITION_SHUSEI_KOKUBO_I,Shusei Kokubō I,Tradition,+50% Production towards Military and Science Buildings.
+TRADITION_SHUSEI_KOKUBO_II,Shusei Kokubō II,Tradition,+50% Production towards Military and Science Buildings. Military and Science Buildings receive an adjacency for Coast.
+TRADITION_SIAM_SYNCRETISM_ANTIQUITY,Chatusadom I,Tradition,+1 Culture and Influence on the Palace for each City-State you are Suzerain of.
+TRADITION_SIAM_SYNCRETISM_EXPLORATION,Chatusadom II,Tradition,+2 Culture and Influence on the Palace for each City-State you are Suzerain of.
+TRADITION_SIEGE_TRAIN,Siege Train,Tradition,"When a unit destroys a Fortified District's defenses, all other Land Siege and Infantry Units have their Movement restored."
+TRADITION_SILLA_SYNCRETISM_EXPLORATION,Revised Bone-Rank I,Tradition,+1 Culture and Science for each imported Resource.
+TRADITION_SILLA_SYNCRETISM_MODERN,Revised Bone-Rank II,Tradition,+2 Culture and Science for each imported Resource.
+TRADITION_SOCIAL_SCIENCE,Social Science,Policy,+3 Science from Specialists. +1 Food and Happiness Maintenance on Specialists.
+TRADITION_SOLEYMANIYEH_PALACE_I,Soleymaniyeh Palace I,Tradition,+0.25 Influence for every Population in the Capital.
+TRADITION_SOLEYMANIYEH_PALACE_II,Soleymaniyeh Palace II,Tradition,+0.5 Influence for every Population in the Capital.
+TRADITION_SONGHAI_SYNCRETISM_ANTIQUITY,Charismatic Kingship I,Tradition,"+1 Gold on Improvements on Desert Terrain, doubled on Unique Improvements."
+TRADITION_SONGHAI_SYNCRETISM_MODERN,Charismatic Kingship II,Tradition,"+2 Gold on Improvements on Desert Terrain, doubled on Unique Improvements."
+TRADITION_SPAIN_SYNCRETISM_ANTIQUITY,Corregidor I,Tradition,+2 Gold on Districts on or adjacent to Coast.
+TRADITION_SPAIN_SYNCRETISM_MODERN,Corregidor II,Tradition,+2 Gold on Districts on or adjacent to Coast. +10% Food and Production in Cities in Distant Lands.
+TRADITION_SPHERE_OF_INFLUENCE,Sphere of Influence,Policy,Gain Culture equal to your Diplomatic Attribute for every Alliance you have.
+TRADITION_STRANDHOGG,Strandhögg,Tradition,Naval Units can Pillage and Coastal Raid tiles within 2 tiles. Naval Units can disperse Independent Powers or Coastal Raid for 1 Movement when in Distant Lands. Does not apply to Discoveries.
+TRADITION_STRATAGEMS,Stratagems II,Tradition,+50% Yield and HP from Pillaging. +5 Combat Strength for Infantry and Cavalry against other Land Units when you have at least 8 Great Works on display.
+TRADITION_STRATAGEMS_I,Stratagems I,Tradition,+25% Yield and HP from Pillaging. +3 Combat Strength for Infantry and Cavalry against other Land Units when you have at least 4 Great Works on display.
+TRADITION_STRATEGIC_ALLIES,Strategic Allies,Tradition,All Trade Routes between you and your Allies grant Food and Production to both players equal to the route's Trade Income.
+TRADITION_STRATEGIC_RAILWAYS,Strategic Railways,Policy,+20% Production towards constructing Buildings and Improvements in Cities with a Rail Station.
+TRADITION_STRATEGOI,Strategoi,Tradition,+1 Combat Strength for Infantry Units for each City-State you are Suzerain of.
+TRADITION_STRICT_CENSORSHIP,Strict Censorship,Tradition,-10 Culture and Science in Cities.
+TRADITION_STYLE_EMPIRE_I,Style Empire I,Tradition,Constructing a Building grants Culture equal to 15% of its Production cost. +2 Culture on Happiness Buildings and Wonders.
+TRADITION_STYLE_EMPIRE_II,Style Empire II,Tradition,Constructing a Building grants Culture equal to 25% of its Production cost. +2 Culture on Happiness Buildings and Wonders.
+TRADITION_SUFFETES,Suffetes,Tradition,+20% Gold in Mining Towns. +20% Food in Fishing or Farming Towns. +1 Trade Route Naval Trade Route Range for every Town with a Trade Outpost Focus.
+TRADITION_SUFFRAGE,Suffrage,Policy,+3 Culture from Specialists. -3 Production in Towns.
+TRADITION_SUPPRESS_LOCAL_TRADITIONS,Suppress Local Traditions,Tradition,-3 Happiness in Settlements you did not found.
+TRADITION_SURVEY,Survey,Policy,Scouts gain +1 Movement and Sight.
+TRADITION_SYSTEM_OF_IDEAS,System of Ideas,Tradition,+50% Culture towards researching Civics that unlock an Ideology but -50% Happiness towards Celebrations.
+TRADITION_TAKESIYAKE_YEPEPOKI,Takesiyake Yepepoki,Tradition,"+2 Production on Improvements on Tundra, Desert, and Plains Terrain in Cities. These numbers are doubled if the tile is also Navigable River Terrain."
+TRADITION_TAKUAKA,Takuaka,Tradition,+1 Production on Fishing Boats in Cities. +2 Science on Fishing Boats on Reefs in all Settlements.
+TRADITION_TARIFFS,Tariffs,Policy,"+50% Trade Income, but -3 Happiness in Cities."
+TRADITION_TAX_FARMING,Tax Farming,Tradition,-50% Gold in Towns.
+TRADITION_THEIR_FINEST_HOUR,Their Finest Hour,Policy,+25% Production towards training Air Units. +5 Combat Strength for Air Units in your own territory.
+TRADITION_THE_GOLDEN_ROAD_I,The Golden Road I,Tradition,All Trade Routes between you and your Allies grant Science and Culture to both players equal to 50% of the route's Trade Income.
+TRADITION_THE_GOLDEN_ROAD_II,The Golden Road II,Tradition,All Trade Routes between you and your Allies grant Science and Culture to both players Culture equal to the route's Trade Income.
+TRADITION_THRONE_OF_MY_FATHERS,Throne Of My Fathers,Tradition,+15% Gold in Cities adjacent to Coast. Gain Culture equal to 25% of your Trade Income.
+TRADITION_TIMBUKTU_I,Timbuktu I,Tradition,+2 Gold on Rough Terrain and Mines on Resources if there is at least 1 Gold Building in that Settlement.
+TRADITION_TIMBUKTU_II,Timbuktu II,Tradition,+3 Gold on Rough Terrain and Mines on Resources if there is at least 1 Gold Building in that Settlement.
+TRADITION_TIRAKUNA_I,Tirakuna I,Tradition,Food Buildings receive an Adjacency for Mountains. Rough Terrain does not end Unit Movement.
+TRADITION_TIRAKUNA_II,Tirakuna II,Tradition,Food and Gold Buildings receive an Adjacency for Mountains. Rough Terrain does not end Unit Movement.
+TRADITION_TONGA_SYNCRETISM_EXPLORATION,T’ui Ha’atakalaua I,Tradition,+3 Culture and Gold in the Capital for every Trade Route with a City-State.
+TRADITION_TONGA_SYNCRETISM_MODERN,T’ui Ha’atakalaua II,Tradition,+4 Culture and Gold in the Capital for every Trade Route with a City-State.
+TRADITION_TONGIAKI_I,Tongiaki I,Tradition,+10 Trade Route Naval Trade Route Range.
+TRADITION_TONGIAKI_II,Tongiaki II,Tradition,+10 Trade Route Naval Trade Route Range. +3 Gold and Science from Naval Trade Routes.
+TRADITION_TOOL_MAKING,Tool Making,Policy,+1 Production and Science on the Palace.
+TRADITION_TRADE_WINDS,Trade Winds,Policy,+1 Gold and Happiness for every imported Resource. +1 Movement for Merchants.
+TRADITION_TRADITION_LOYALTY_SETTLEMENT_CAP,Stagnation,Tradition,-1 Settlement Limit.
+TRADITION_TRENCHWORKS,Trenchworks,Policy,+3 Combat Strength for Fortified Units and Districts.
+TRADITION_TRIAL_OF_TIME,Test of Valor,Tradition,"-1 Science, Culture, Gold, Food, Production, Influence, and Happiness per Age in all Settlements. -2 Combat Strength for all Units."
+TRADITION_TRIBUTE,Tribute,Tradition,-10 Gold for each City-State you are Suzerain of.
+TRADITION_TUNDIKHEL,Tundikhel,Tradition,+3 Combat Strength for all Units adjacent to Mountains. This is doubled if the Unit is also in your territory. Units complete Fortifications in 1 turn if adjacent to a Mountain.
+TRADITION_TUN_KEN_I,Tun Ken I,Tradition,+25% Growth Rate in Towns with a Resource assigned to them.
+TRADITION_TUN_KEN_II,Tun Ken II,Tradition,+50% Growth Rate in Towns with a Resource assigned to them.
+TRADITION_TZOLKIN_I,Tzolk'in I,Tradition,+2 Science on Happiness Buildings.
+TRADITION_TZOLKIN_II,Tzolk'in II,Tradition,"+2 Science on Happiness Buildings, doubled while in a Celebration."
+TRADITION_UPOSATHA,Uposatha,Policy,+2 Happiness from Specialists. +1 Food Maintenance on Specialists.
+TRADITION_VASSALAGE,Vassalage,Policy,+3 Culture and Gold for every City-State you are Suzerain of.
+TRADITION_WAKIA_I,Wakia I,Tradition,+2 Gold for every active Trade Route.
+TRADITION_WAKIA_II,Wakia II,Tradition,+3 Gold for every active Trade Route.
+TRADITION_WARTIME_ECONOMY,Wartime Economy,Tradition,+100% Gold towards purchasing Factories and Rail Stations while at War with a Leader with an opposing Ideology.
+TRADITION_WARTIME_INNOVATION,Wartime Innovation,Tradition,Training a Military Unit grants Science equal to 25% of the Unit's cost while at War with a Leader with an opposing Ideology.
+TRADITION_WAR_HEROES,War Heroes,Tradition,+5 Culture per Commander Level in the Capital while at War with a Leader with an opposing Ideology.
+TRADITION_WEAK_BUREAUCRACY,Weak Bureaucracy,Tradition,-8 Influence per turn.
+TRADITION_WELFARE_STATE,Welfare State,Policy,Towns gain Happiness equal to your Diplomatic Attribute. -5 Production in Cities.
+TRADITION_XENIA_I,Xenia I,Tradition,+50% Influence towards initiating and progressing the Befriend Independent Project.
+TRADITION_XENIA_II,Xenia II,Tradition,+50% Influence towards initiating and progressing the Befriend Independent Project. +4 Culture for each City-State you are Suzerain of.
+TRADITION_XIU_TAIXUE,Xiu Taixue,Tradition,Science Buildings gain a +1 Science Adjacency for Quarters.
+TRADITION_XUMIN_ZHAO,Xumin Zhao,Tradition,+2 Food on Happiness Buildings. +1 Influence for every Tradition slotted in the Government.
+TRADITION_YEOMANRY,Yeomanry,Policy,+4 Food and Production in Towns in Distant Lands.
+TRADITION_ZAPADNICHESTVO_I,Západnichestvo I,Tradition,+15% Science but -15% Culture in Cities.
+TRADITION_ZAPADNICHESTVO_II,Západnichestvo II,Tradition,"+15% Science in Cities, or +20% Science in Cities in Tundra, but -15% Culture in Cities."

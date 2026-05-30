@@ -1,0 +1,706 @@
+modifier_id,description_clean
+ABILITY_DIPLOMACY_PIONEERING_MOVEMENT,+{1_Amount} Pioneering Ability Bonus
+ABILITY_NARRATIVE_MOVEMENT,+{1_Amount} Agile
+ABILITY_NARRATIVE_MOVEMENT_PENALTY,-{1_Amount} Sluggish
+ADA_LOVELACE_MOD_CIVIC_MASTERY,"• Cities receive +2Science Science per Age when you complete a Civic Mastery. This resets at the start of each Age.
+• Gain Culture equal to 100% of your total Science per turn when you complete a Technology Mastery."
+ADA_LOVELACE_MOD_TECH_MASTERY,"• Cities receive +2Science Science per Age when you complete a Civic Mastery. This resets at the start of each Age.
+• Gain Culture equal to 100% of your total Science per turn when you complete a Technology Mastery."
+AHUPUA_A_MOD_CULTURE_BUILDING_FOOD,+4 Food on Culture Buildings.
+AMBITIOUS_GOVERNORS_MOD_UNHAPPINESS,-6 Happiness in Cities.
+ANGARIUM_II_MOD_GOLD_PER_TOWN,"+6 Gold in Towns, doubled in Captured Towns from any Age."
+ANGARIUM_MOD_GOLD_PER_TOWN,"+3 Gold in Towns, doubled in Captured Towns from any Age."
+ASSEMBLY_LINE_MOD_MILITARY_ATTRIBUTE_PRODUCTION,+2 Production from Specialists. -2 Food in Towns.
+ATTACH_CS_GOLD_PER_TRADE_AND_SUZERAIN,+1 GoldGold on active Trade RouteTrade Routes for each Economic City-State you are Suzerain of.
+ATTACH_LAND_TRADE_ROUTE_RANGE_SUZERAIN,+5 Trade RouteTrade Route range for every Economic City-State you are Suzerain of.
+ATTACH_SCIENCE_BUILDINGS_PRODUCTION_SUZERAIN,+5%Production towards constructing Buildings for every Scientific City-State you are Suzerain of.
+AVANT_GARDE_MOD_CULTURE_HAPPINESS_PER_GREAT_WORK,+2 Culture and Happiness on displayed Great Works.
+BANDITRY_MOD_GOLD,-5 Gold for each imported Resource.
+BANNER_ARMY_I_TOT_MOD_MAINTENANCE_DISCOUNT,+20% Production towards training Land Units. -1 Gold Maintenance for Land Units.
+BANNER_ARMY_TOT_MOD_MAINTENANCE_DISCOUNT,+30% Production towards training Land Units. -2 Gold Maintenance for Land Units.
+BAOJIA_I_MOD_RESOURCE_SCIENCE,+1 Science for each Resource assigned to a Settlement.
+BAOJIA_MOD_CITY_RESOURCE_SCIENCE,+1Science Science for each Resource assigned to a City. This becomes +2 in Cities other than your Capital.
+BARBARIAN_MERCENARIES_MOD_UNIT_MAINTENANCE,+100% Gold Maintenance for Military Units.
+BARRIER_REEF_ADJACENT_RURAL_SEA_YIELDS,Great Barrier Reef
+BLUE_HOLE_ADJACENT_RURAL_SEA_YIELDS,Great Blue Hole
+BOURGEOISIE_MOD_CULTURE_GOLD_CITIES,+4 Culture and Gold in Cities in your Homelands.
+BREAD_DANCE_FARM_TOWNS_CULTURE,+4 Culture in Farming Towns and +4 Food in Fishing Towns.
+BREAD_DANCE_II_FARM_TOWNS_CULTURE,+8 Culture in Farming Towns and +8 Food in Fishing Towns.
+BUZZARD_CULT_MOD_FREE_MERCHANT,"+3 Combat Strength for Land Units when defending. When making Peace with another Leader, Relationship with that Leader returns to Neutral and you get a free Merchant in your Capital."
+CAPITAL_MOD_UNHAPPINESS,-10 Happiness in your Capital.
+CARD_MOD_AT_EX_CONQUEROR_3,+6 Happiness in newly Conquered Settlements.
+CARD_MOD_AT_MO_CONQUEROR_3,+10 Happiness in newly Conquered Settlements.
+CARD_MOD_AT_MO_EXPANSIONIST_1,+5 Combat Strength for Units in your Settlements in Distant Lands.
+CARD_MOD_AT_MO_MILITARISTIC_1,+3 Combat Strength against Fortified Districts.
+CASTES_MOD_TOWN_FOOD,+2 Food in all Settlements.
+CHARISMATIC_LEADER_MOD_PALACE_CULTURE,+2 Culture on the Palace.
+CHIVALRY_MOD_MOUNTED_PRODUCTION,+30% Production towards training Cavalry Units.
+CITY_GUARD_MOD_FORTIFIED_COMBAT_STRENGTH,+3 Combat Strength for Fortified Districts.
+CITY_OF_PEACE_MOD_ADJACENT_CITY_CENTER,All Buildings receive a +1 Science Adjacency with the City Hall and Palace.
+CIVIL_ENGINEERING_MOD_OVERBUILDING_PRODUCTION_RATE,+30% Production towards Overbuilding.
+COCORICO_MOD_CULTURE_ON_UNIT_DEFEAT,"When you defeat an enemy Unit, gain Culture equal to 25% of its Combat Strength. +2 Happiness on Military Buildings and Wonders."
+COCORICO_MOD_I_CULTURE_ON_UNIT_DEFEAT,"When you defeat an enemy Unit, gain Culture equal to 15% of its Combat Strength. +2 Happiness on Military Buildings and Wonders."
+COINAGE_MOD_IMPORTED_RESOURCE_GOLD,+1 Gold for each imported Resource. +1 Movement for Merchants.
+COLLECTIVIZATION_MOD_TOWN_FOOD_EQUAL_TO_EXPANSIONIST_ATTRIBUTE,Towns gain Food equal to your Expansionist Attribute. -5 Happiness in Cities.
+COMMISSIONED_OFFICERS_MOD_COMMANDER_XP,+30% Commander Experience. +1 Movement for Fleets and Armies.
+COMMODITIES_MOD_RESOURCE_CAP,+1 Resource Capacity in Cities.
+COMMUNE_MOD_OVERBUILDING_PRODUCTION,+20% Production towards Overbuilding. +3 Combat Strength for Fortified Districts.
+COMMUNISM_MOD_AGENDA,Decrease Relationship with Leaders of the opposing Ideology with the most Factories.
+COMPENDIOUS_BOOK_I_MOD_TOWN_YIELDS,All Buildings receive a +1 Science Adjacency with the Palace.
+CONSCRIPTION_MOD_UNIT_MAINTENANCE,-1 Gold Maintenance for Units.
+CONSCRIPTION_RIOTS_MOD_HAPPINESS,-10 Happiness in all Cities while at War.
+CONSTITUTION_MOD_WORKER_MAINTENANCE,+25% Food and Happiness towards maintaining Specialists.
+CORDON_SANITAIRE_MOD_MAJOR_IMMUNITY,"Buildings, Improvements and Districts in Settlements with a stationed Commander are not damaged by Major Outbreaks."
+CULTURAL_IMPERIALISM_MOD_SUZERAINS_CULTURE,+6 Culture and Gold for every City-State you are Suzerain of.
+DECENTRALIZATION_MOD_TOWN_YIELDS,-75% Gold and Food in Towns with a Specialization.
+DEFENSE_OF_THE_MOTHERLAND_COMBAT_STRENGTH_IN_TERRITORY,+3 Combat Strength for all Land Units in your own territory.
+DEMAGOGY_MOD_PALACE_HAPPINESS,Gain Happiness on the Palace equal to your Cultural Attribute.
+DEMOCRACY_MOD_AGENDA,Decrease Relationship with Leaders of the opposing Ideology with the most captured Settlements.
+DESPOTISM_MOD_UNHAPPINESS,-6 Happiness in Settlements without Walls.
+DE_FACTO_MOD_UNIT_COMBAT_STRENGTH_DISTANT_LANDS,+3 Combat Strength for all Units in Distant Lands. Units gain +5 Healing.
+DE_JURE_MOD_COMBAT_STRENGTH_HOMELANDS,+3 Combat Strength for all Units in Homelands.
+DIRIGISME_MOD_GOLD_FROM_SPECAILIST_PER_ECON_ATTRIBUTES,+4 Gold from Specialists. -3 Happiness in Towns.
+DIVINE_ENGINE_DIVISION_MOD_GARRISONED_SCIENCE,+2Science Science in Settlements with a Garrisoned Unit. +3 Ranged Combat Strength to Ranged Units adjacent to another Ranged Unit.
+DIVINE_MERCY_MOD_MINOR_IMMUNITY,"Buildings, Improvements, and Districts in Settlements that follow your Religion are not damaged by Minor Outbreaks."
+DIVINE_PUNISHMENT_MOD_HAPPINESS,+5 Happiness in Infected Settlements that follow your Religion. These Settlements gain a Migrant when Infected.
+DIVINE_PUNISHMENT_MOD_MIGRANT,+5 Happiness in Infected Settlements that follow your Religion. These Settlements gain a Migrant when Infected.
+DIVINE_RIGHT_MOD_PALACE_HAPPINESS,+10 Happiness and +4 Influence on the Palace.
+DRAFT_MOD_UNIT_PURCHASE_COST,+25% Gold towards purchasing Units and -1 Gold maintenance for Units.
+DRAMA_AND_POETRY_MOD_CULTURE_BUILDING_RATE,+2 Culture on Culture Buildings. +20% Production towards constructing Culture Buildings.
+DRILLS_MOD_RANGED_PRODUCTION,+30% Production towards training Infantry and Ranged Units.
+EAST_INDIA_COMPANY_GOLD_TOWN_BUILDINGS,+5 Gold in Towns. +3 Science in Towns adjacent to Coast.
+EAST_INDIA_COMPANY_I_GOLD_TOWN_BUILDINGS,+2 Gold in Towns. +1 Science in Towns adjacent to Coast.
+ENEMY_OF_ALL_NATIONS_MOD_TREASURE_FLEET_CS,+15 Combat Strength for all Military Units against Treasure Convoys.
+ENEMY_OF_ALL_NATIONS_MOD_TREASURE_FLEET_EXTRA_VP,+2 Cargo from captured Treasure Convoys.
+ETHICS_MOD_WORKER_CULTURE,+1 Culture from Specialists. +1 Happiness Maintenance on Specialists.
+EVANGELISM_MOD_CIVILIAN_MOVEMENT,+1 Movement for Civilian Units. +1 charge for Missionaries.
+FALSE_RETREAT_FOOD_PILLAGE_BUILDING,Receive Food in all Towns when Pillaging Buildings equal to 50% of the Yield or HP gained. -3 Combat Strength for all Combat Units against Fortified Districts.
+FASCISM_MOD_AGENDA,Decrease Relationship with Leaders of the opposing Ideology with the most completed Tech and Civic Masteries.
+FIRESIDE_CHATS_MOD_HAPPINESS_PER_POL_ATTRIBUTES,+4 Happiness from Specialists. -3 Gold in Towns.
+FRANKLIN_MOD_DIPLO_EVENT_SCIENCE,The First American
+FRANKLIN_MOD_PRODUCTION_BUILDING_SCIENCE,The First American
+FRANKLIN_MOD_SCIENCE_BUILDING_SCIENCE,The First American
+FREE_PRESS_MOD_TOWN_CULTURE_CULTURAL_ATTRIBUTE,Towns gain Culture equal to your Cultural Attribute. -5 Science in Cities.
+FREE_SPEECH_MOD_SPECIALIST_HAPPINESS_MAINTENANCE,+50% Food and Happiness towards maintaining Specialists.
+GENDARMERIE_MOD_UNHAPPINESS,-4 Happiness in each Settlement without a Garrisoned Unit.
+GENERAL_MOROZ_II_MOD_ADJUST_COMBAT_STRENGTH_IN_TUNDRA,+{1_Amount} Combat Strength in Tundra
+GIFT_ECONOMY_II_MOD_IMPORTED_RESOURCE_GOLD,+2 Gold and +2 Happiness from imported Resources.
+GIFT_ECONOMY_MOD_IMPORTED_RESOURCE_GOLD,+1 Gold and Happiness for every imported Resource.
+GRAND_ALLIANCE_MOD_UNIT_MAINTENANCE,+10% Production in Cities and -1 Gold Maintenance for Units for every Alliance you ahve.
+GRAND_SECRETARIAT_II_MOD_SCIENCE_BUILDING_GOLD,+3 Science on Gold Buildings and +3 Gold on Science Buildings.
+GRAND_SECRETARIAT_MOD_GOLD_BUILDING_SCIENCE,+2 Science on Gold Buildings and +2 Gold on Science buildings.
+GREATPERSON_HAPPINESS,Activate on a Happiness building. +10%Happiness in this Settlement.
+GULLFOSS_ADJACENT_YIELDS,Gullfoss
+HATSHEPSUT_MOD_BUILDING_PRODUCTION_RIVER,God's Wife of Amun
+HEALING_CULTS_MOD_ALTAR_GOLD,+5 Happiness on Altars in Infected Settlements but -10 Gold on Altars.
+HEALING_CULTS_MOD_ALTAR_PLAGUE_HAPPINESS,+5 Happiness on Altars in Infected Settlements but -10 Gold on Altars.
+HELIKHILENAWEWIPE_I_MOD_ADJUST_ENDEAVOR,+33% Influence towards the initiating and progressing the Befriend Independent Project.
+HELIKHILENAWEWIPE_MOD_ADJUST_ENDEAVOR,+50% Influence towards the initiating and progressing the Befriend Independent Project.
+HEQIN_MOD_CULTURE_ALLIANCES,+5 Culture per Alliance.
+HIMIKO_ALT_MOD_CULTURE_BOOST,Miko of Amaterasu
+HIMIKO_ALT_MOD_CULTURE_BOOST_CELEBRATION,Miko of Amaterasu
+HIMIKO_ALT_MOD_DIPLOMACY_BUILDING_HAPPINESS,Miko of Amaterasu
+HIMIKO_ALT_MOD_DIPLOMACY_BUILDING_PRODUCTION_RATE,Miko of Amaterasu
+HIMIKO_ALT_MOD_HAPPINESS_BUILDING_HAPPINESS,Miko of Amaterasu
+HIMIKO_ALT_MOD_HAPPINESS_BUILDING_PRODUCTION_RATE,Miko of Amaterasu
+HIMIKO_ALT_MOD_SCIENCE_PENALTY,Miko of Amaterasu
+HIMIKO_ALT_MOD_SCIENCE_PENALTY_CELEBRATION,Miko of Amaterasu
+HOERIKWAGGO_ADJACENT_URBAN_YIELDS,Hoerikwaggo
+HONOR_MOD_INDEPENDENT_COMBAT,+3 Combat Strength against Independent Powers.
+HOSPITALITY_MOD_SUZERAINS,+3 Culture for every City-State you are Suzerain of.
+HO_OKUPU_II_MOD_CULTURE_MARINE,"+2 Food on Marine Terrain. Improvements, Buildings, and Districts do not get pillaged by Floods, Volcanic Eruptions, and Hurricanes."
+HO_OKUPU_II_MOD_CULTURE_MARINE_UPGRADED,"+2 Food on Marine Terrain. Improvements, Buildings, and Districts do not get pillaged by Floods, Volcanic Eruptions, and Hurricanes."
+HO_OKUPU_I_MOD_CULTURE_MARINE,"+1 Food on Marine Terrain. Improvements, Buildings, and Districts do not get pillaged by Floods, Volcanic Eruptions, and Hurricanes."
+HUMANISM_MOD_CULTURE_PER_SPECIALIST,+3 Culture from Specialists. +1 Food and Happiness Maintenance on Specialists.
+IBN_BATTUTA_MOD_WILDCARD_ATTRIBUTE,+2 Wildcard Attribute Points.
+ICONOLATRY_GREAT_WORKS_HAPPINESS,+1 Happiness and Gold from Great Works.
+ICONOLATRY_II_GREAT_WORKS_HAPPINESS,+1 Happiness and Gold from Great Works.
+ICONOLATRY_II_HIDDEN_FORTRESS_HAPPINESS,+3 Happiness on Hidden Fortresses in Settlements with a Great Work Slot.
+IGUAZU_FALLS_ADJACENT_URBAN_YIELDS,Iguazú Falls
+IMPOVERISHED_NOBILITY_MOD_COST,+1 Gold Maintenance for Military Units.
+INCOMPETENT_MINISTERS_MOD_SETTLEMENT_CAP,-1 Influence in Settlements you founded.
+INFERIOR_TACTICS_MOD_INDEPENDENT_COMBAT,-6 Combat Strength against Independent Powers.
+INFLUENCE_INDEPENDENT_FRIENDLY_FIRST_GIFT,Independent Power will be friendly with you.
+INFLUENCE_INDEPENDENT_FRIENDLY_INVESTMENT,Independent Power will be friendly with you.
+INFLUENCE_INDEPENDENT_SUZERAIN_INVESTMENT,"Independent Power will become a City-State, with you as its Suzerain."
+INFLUENCE_INDEPENDENT_VERY_HOSTILE_INVESTMENT,Independent Power will be very hostile toward you.
+ISA_MOD_RIVER_COMBAT,+5 Combat Strength and +2 Movement for all Units on Navigable Rivers. Minor and Navigable Rivers do not end Unit Movement.
+IUS_REFORMANDI_MOD_MIGRANT,"When you convert a Settlement you own, gain a Migrant and damage 3 Buildings in that Settlement."
+JINSI_KAMIL_MOD_FARM_FOOD,"+1 Food on Farms for each adjacent Plantation, and on Plantations for each adjacent Farm."
+KAKAWFE_PAFKOTAWETA_CULTURE_DISASTERS,"+1 Culture and +2 Gold for every time a Storm, Flood, or Volcanic Eruption has provided Fertility this Age. Improvements, Buildings, and Districts do not get damaged by Storms."
+KAPA_MOD_CULTURE_BUILDING_PRODUCTION,+50% Production towards constructing Culture Buildings.
+KARA_II_MOD_CLASS_INFANTRY_PRODUCTION,+25% Production towards training Infantry Units. -3 Gold Maintenance for Infantry Units. Infantry Units heal 15 HP after defeating an enemy Unit.
+KARA_MOD_CLASS_INFANTRY_PRODUCTION,+25% Production towards training Infantry Units. -2 Gold Maintenance for Infantry Units.
+LAISSEZ_FAIRE_MOD_IMPORTED_RESOURCE_GOLD,+2 Gold and +1 Happiness for every imported Resource.
+LAND_CLAIM_COMPLETE,Establish a Town at this location.
+LAND_HERTIAGE_MOD_MOUNTAIN_HAPPINESS,+2 Happiness on Mountains. +6 Culture on Natural Wonders.
+LAST_RESERVES_MOD_UNIT_MOVEMENT,+10% Production in Cities per Hostile Relationship. +1 Movement for all Military Units.
+LAZARETTOS_MOD_MAJOR_IMMUNITY,"Buildings, Improvements, and Districts in Coastal Settlements with a Dungeon are not damaged by Major Outbreaks."
+LEND_LEASE_MOD_FAVOR_ON_ACTION_SUPPORT,"+1 War Support on all Wars, or +2 if joining a War with an Ally. +25% Production towards training Military Units when fighting a War in which your War Support is higher than your opponent."
+LEVIES_MOD_REDUCED_MAINTENANCE,+25% Gold towards purchasing Military Units. -1 Gold Maintenance for Units.
+LITERATURE_MOD_SCIENCE_BUILDING_RATE,+2 Science on Science Buildings. +20% Production towards constructing Science Buildings.
+LITURGICAL_DISPUTES_MOD_HAPPINESS,-4 Happiness in all Settlements following your Religion.
+LIVING_STANDARDS_MOD_BUILDING_MAINTENANCE,+25% Gold and Happiness towards maintaining Buildings.
+MARAKKALAM_MOD_HEAVY_NAVAL_MOVEMENT,+1 Combat Strength for Naval Units for every other Civilization with which you have a Trade Route. +1 Movement and Sight for Heavy Naval Units.
+MARITAL_LAW_MOD_TOWN_PRODUCTION_PER_MILITARY_ATTRIBUTE,Towns gain Production equal to your Militaristic Attribute. -5 Happiness in Cities.
+MARITIME_LAW_MOD_NAVAL_PRODUCTION,+30% Production towards training Naval Units.
+MATERIEL_MOD_UNIT_HEALING_RATE,+10 Healing for Units. +1 Movement for Armies and Fleets.
+MAYURASANA_I_MOD_PURCHASE_RATE_BUILDINGS,"+5% Gold towards purchasing Units, Improvements, Buildings, and Wonders."
+MAYURASANA_MOD_PURCHASE_RATE_BUILDINGS,"+10% Gold towards purchasing Units, Improvements, Buildings, and Wonders."
+MEDICINE_MOD_UNIT_HEAL,Units gain +5 Healing.
+MEMENTO_ADA_LOVELACE_PIANO_MODIFIER,+10% Culture towards studying Civic Masteries.
+MEMENTO_ADA_LOVELACE_PUNCH_CARDS_MODIFIER,Gain 20 Science per Age for every Science Building constructed.
+MEMENTO_ALEXANDER_BRIDLE_OF_BUCEPHALUS_MODIFIER_CS,Turn him toward the sun.
+MEMENTO_ALEXANDER_DIADEM_MODIFIER_SETTLEMENT_LIMIT,Destined to rule.
+MEMENTO_ALEXANDER_ILIAD_MODIFIER,To be a hero.
+MEMENTO_AMINA_KWALKWALI_MODIFIER,+1 Gold per Age for each Resource assigned to Cities.
+MEMENTO_ASHOKA_RENOUNCER_CHAKRA_MODIFIER,+1 Food in your Capital for every 5 excess Happiness.
+MEMENTO_BATTUTA_MERCHANTS_SADDLE_MODIFIER_1,"+1 Movement for Scouts, Merchants, Settlers, and Explorers."
+MEMENTO_BATTUTA_MERCHANTS_SADDLE_MODIFIER_2,"+1 Movement for Scouts, Merchants, Settlers, and Explorers."
+MEMENTO_BATTUTA_MERCHANTS_SADDLE_MODIFIER_3,"+1 Movement for Scouts, Merchants, Settlers, and Explorers."
+MEMENTO_BATTUTA_MERCHANTS_SADDLE_MODIFIER_4,"+1 Movement for Scouts, Merchants, Settlers, and Explorers."
+MEMENTO_BOLIVAR_DAVALOS_MEDAL_MODIFIER,+1 Happiness per Age on Military Buildings.
+MEMENTO_BOLIVAR_GOLD_SNUFF_BOX_MODIFIER,+20 Food per Age in Cities when in only one Alliance.
+MEMENTO_CATHERINE_EAGLE_BANNER_MODIFIER,Cities gain 2% Science per Great Work on display. (Max 20%)
+MEMENTO_CATHERINE_GREAT_IMPERIAL_CROWN_MODIFIER,+2 Science per Age in Towns in Tundra.
+MEMENTO_CATHERINE_POTEMKINS_SWORD_KNOT_MODIFIER,+1 Movement for Commanders.
+MEMENTO_CHARLEMAGNE_JOYEUSE_MODIFIER,+1 Happiness per Age on Cavalry Units Stationed on a Palace or City Hall.
+MEMENTO_CHARLEMAGNE_TENCENDUR_MODIFIER,+1 Movement for Cavalry Units.
+MEMENTO_EDWARD_TEACH_BRACE_OF_PISTOLS_MODIFIER,+2 Combat Strength for Naval Units while attacking.
+MEMENTO_EDWARD_TEACH_FIGUREHEAD_OF_QUEEN_ANNES_REVENGE_MODIFIER,Defeating any Naval Unit grants Gold equal to 25% of its Combat Strength.
+MEMENTO_EDWARD_TEACH_MEDICINE_CHEST_MODIFIER,+5 Healing for Naval Units.
+MEMENTO_FOUNDATION_AGINCOURT_ARROWHEAD_MODIFIER,+1 Movement for Ranged Units.
+MEMENTO_FOUNDATION_CORPUS_JURIS_CIVILIS_MODIFIER,Start with one extra Social Policy Slot.
+MEMENTO_FRIEDRICH_BAROQUE_FLUTE_MODIFIER,+1 Culture per Age on Military Buildings.
+MEMENTO_FRIEDRICH_OBLIQUE_WALKING_STICK_MODIFIER,+1 Science per Age on Military Buildings.
+MEMENTO_GENGHIS_KHAN_PAIZA_MODIFIER,-1 Gold Maintenance on Cavalry Units
+MEMENTO_GENGHIS_KHAN_SADDLE_MODIFIER,+1 Food per Age on Cavalry Units Stationed on a Palace or City Hall.
+MEMENTO_GENGHIS_KHAN_SULDE_MODIFIER,+1 Culture per Age on Cavalry Units Stationed on a Palace or City Hall.
+MEMENTO_GILGAMESH_MIKKU_MODIFIER,+1 Influence in all Settlements while you have exactly one Ally.
+MEMENTO_GILGAMESH_PUKKU_MODIFIER,+2 Happiness in all Settlements while you have exactly one Ally.
+MEMENTO_HATSHEPSUT_ROYAL_MACE_MODIFIER,+1 Gold per Age for each imported Resource.
+MEMENTO_HATSHEPSUT_URAEUS_MODIFIER,+10 Culture per Age in Cities with at least 1 Wonder.
+MEMENTO_HIMIKO_QUEEN_GOLDEN_SEAL_STONE_MODIFIER,+1 Influence per Age on Science Buildings.
+MEMENTO_HIMIKO_QUEEN_YASAKANI_NO_MAGATAMA_MODIFIER,+2 Science per Age for every Technology Mastery completed.
+MEMENTO_HIMIKO_SHAMAN_KUSANAGI_NO_TSURUGI_MODIFIER_1,+3 Culture per Age on Happiness Buildings BUT -1 Science per Age on Happiness Buildings.
+MEMENTO_HIMIKO_SHAMAN_KUSANAGI_NO_TSURUGI_MODIFIER_2,+3 Culture per Age on Happiness Buildings BUT -1 Science per Age on Happiness Buildings.
+MEMENTO_ISABELLA_PADRON_REAL_MODIFIER,+2 Happiness per Age on Natural Wonders.
+MEMENTO_ISABELLA_QUEENS_JEWELRY_MODIFIER,+2 Gold per Age on Natural Wonders.
+MEMENTO_LAFAYETTE_HERMIONE_MODEL_MODIFIER_1,+1 Movement for Cavalry Units.
+MEMENTO_LAFAYETTE_LETTER_ADRIENNE_MODIFIER_1,+2 Happiness per Age for each Social Policy slotted in your Government.
+MEMENTO_LAFAYETTE_LETTER_ADRIENNE_MODIFIER_2,+2 Happiness per Age for each Social Policy slotted in your Government.
+MEMENTO_LAKSHMIBAI_BAADALS_REINS_MODIFIER,+1 Influence per Age per Pasture Improvement.
+MEMENTO_MACHIAVELLI_DISCORSI_SOPRA_LIVIO_MODIFIER,Costs opponents 50% more Influence to reject your Diplomatic Actions.
+MEMENTO_NAPOLEON_EMPEROR_GREEN_COLONEL_JACKET_MODIFIER_1,"+1 Gold per Age per Trade Route, doubled if you have the highest number of Trade Routes."
+MEMENTO_NAPOLEON_EMPEROR_GREEN_COLONEL_JACKET_MODIFIER_2,"+1 Gold per Age per Trade Route, doubled if you have the highest number of Trade Routes."
+MEMENTO_NAPOLEON_REVOLUTIONARY_BICORNE_HAT_MODIFIER,+1 Movement for Infantry Units.
+MEMENTO_PACHACUTI_TOPAYAURI_MODIFIER,+1 Food per Age on Districts adjacent to Mountains.
+MEMENTO_SAYYIDA_AL_HURRA_GAZELLE_VASE_MODIFIER,Gain 25 Culture per Age for every Diplomatic Action accepted by another Leader.
+MEMENTO_SAYYIDA_AL_HURRA_MITHQAL_MODIFIER,+2 Gold per Age in Settlements with a Naval Unit Stationed on a District.
+MEMENTO_SAYYIDA_AL_HURRA_NIMCHA_MODIFIER,-1 Gold Maintenance on Naval Units.
+MEMENTO_TECUMSEH_POTESKWATE_MODIFIER,+1 Food per Age in Towns for each City-State you are Suzerain of.
+MEMENTO_TECUMSEH_WAMPUM_BELT_MODIFIER,+1 Production per Age in Cities for each City-State you are Suzerain of.
+MEMENTO_XERXES_ACHAEMENID_INCENSE_CENSER_MODIFIER,+2 Culture per Age for every active Trade Route.
+MEMENTO_XERXES_KING_GOLDEN_SCEPTRE_MODIFIER,Extends favor.
+METROPOLE_MOD_RESOURCE_CAPACITY,+1 Resource Capacity in all Cities in Homelands. +10 Range for all Trade Routes.
+MIASMA_MOD_CITY_GROWTH,Gain 1 Migrant when a City is Infected but -25% Growth Rate in Cities.
+MIASMA_MOD_GRANT_MIGRANTS,Gain 1 Migrant when a City is Infected but -25% Growth Rate in Cities.
+MILITARY_INDUSTRIAL_COMPLEX_MOD_UNIT_PRODUCTION_RATE,"+50% Production towards training all Military Units, but +1 Gold Maintenance for all Units."
+MOD_ABILITY_ARMY_SERVICE,+1 Movement for Land Units within the Command Radius.
+MOD_ABILITY_FLEET_SERVICE,+1 Movement for Naval Units within the Command Radius.
+MOD_ABILITY_SQUADRON_SERVICE,+2 Movement for packed Air Units.
+MOD_ACHARYA_PANTHEON,"Unlocks founding a Pantheon, or grants an additional belief if you have already founded one."
+MOD_AMBASSADORS_DIPLOMACY,+6 Influence per turn.
+MOD_AQ_CITY_RESOURCE_GDP,+1 GDP per turn for Resources assigned to Cities (not Towns).
+MOD_AQ_CODEX_CIVIC,Gain 1 Codex.
+MOD_AQ_CODEX_REDUX,Gain 1 Codex.
+MOD_AQ_ENTERTAINMENT_CELEBRATION_VP,+2 Tourism for Celebrations.
+MOD_AQ_FREE_MERCHANT,Gain a free Merchant.
+MOD_AQ_FUTURE_CIVIC_AGE_PROGRESS,+10 Age Progress.
+MOD_AQ_FUTURE_CIVIC_ATTRIBUTE,+1 Random Attribute Point.
+MOD_AQ_FUTURE_CIVIC_BOOST,A boost for a non-Civilization-unique starting Civic in the next age.
+MOD_AQ_FUTURE_CIVIC_CULTURE_VP,Grants 5 Tourism
+MOD_AQ_FUTURE_TECH_AGE_PROGRESS,+10 Age Progress.
+MOD_AQ_FUTURE_TECH_ATTRIBUTE,+1 Random Attribute Point.
+MOD_AQ_FUTURE_TECH_BOOST,A boost for a starting Tech in the next Age.
+MOD_AQ_FUTURE_TECH_SCIENCE_VP,Grants 2 Innovation
+MOD_AQ_GOLD_BUILDING_GDP,+2 GDP per turn from Gold Buildings.
+MOD_AQ_LITERACY_SCIENCE_VP,Grants 2 Innovation.
+MOD_AQ_MATHEMATICS_CODEX_REDUX,Gain 2 Codices.
+MOD_AQ_QING_FREE_MERCHANT,Gain a free Merchant.
+MOD_AQ_SETTLEMENT_CAP_INCREASE,+1 Settlement Limit.
+MOD_AQ_SKILLED_TRADE_GDP,+1 GDP per turn for imported Resources assigned to Cities (not Towns).
+MOD_AQ_SPECIALIST_CAP_INCREASE,+1 Specialist Limit in all Cities.
+MOD_AQ_TECH_CULTURE_BUILDING,+1 Culture on Culture Buildings.
+MOD_AQ_TECH_FOOD_BUILDING,+1 Food on Food Buildings.
+MOD_AQ_TECH_GOLD_BUILDING,+1 Gold on Gold Buildings.
+MOD_AQ_TECH_HAPPINESS_BUILDING,+1 Happiness on Happiness Buildings.
+MOD_AQ_TECH_INFANTRY_STRENGTH,+3 Combat Strength for Infantry Units.
+MOD_AQ_TECH_MILITARY_BUILDING,+2 Production on Military Buildings.
+MOD_AQ_TECH_NAVAL_STRENGTH,+3 Combat Strength for Naval Units.
+MOD_AQ_TECH_PRODUCTION_BUILDING,+1 Production on Production Buildings.
+MOD_AQ_TECH_RANGED_STRENGTH,+3 Combat Strength for Ranged and Siege Units.
+MOD_AQ_TECH_SCIENCE_BUILDING,+1 Science on Science Buildings.
+MOD_AQ_TECH_SIEGE_MOVEMENT,+1 Movement for Siege Units.
+MOD_AQ_TECH_UNLOCK_UNIT_FLANKING,Unlocks Unit Flanking.
+MOD_AQ_TECH_WALL_STRENGTH,+3 Combat Strength for Fortified Districts.
+MOD_AQ_TRADITION_SLOT,+1 Social Policy slot.
+MOD_ASSYRIAN_CODEX,Gain 1 Codex.
+MOD_ATTRIBUTE_CULTURAL_01_A,+1Culture Culture per Age on the Palace and City Halls.
+MOD_ATTRIBUTE_CULTURAL_02,+10% Production towards constructing Wonders.
+MOD_ATTRIBUTE_CULTURAL_03,+25% Culture towards studying Civic Masteries.
+MOD_ATTRIBUTE_CULTURAL_04,+5 Culture per Age in Cities with at least 1 Wonder.
+MOD_ATTRIBUTE_CULTURAL_05,+1 Culture in Settlements for each Resource assigned to them.
+MOD_ATTRIBUTE_CULTURAL_06,+1 Culture per Age from Great Works on display.
+MOD_ATTRIBUTE_CULTURAL_07_A,"+1 Culture from Specialists, or +2 if you have 3 or fewer Cities."
+MOD_ATTRIBUTE_CULTURAL_08,+10 Culture per Age for every Alliance you have.
+MOD_ATTRIBUTE_CULTURAL_09_A,"+1 Culture per Age in Towns, or +2 in Distant Lands."
+MOD_ATTRIBUTE_CULTURAL_10,+5 Culture per Age. Repeatable.
+MOD_ATTRIBUTE_CULTURAL_LEGEND_ADA_LOVELACE_L2,Legend Unlock. +15% Production towards constructing Buildings and Wonders with Great Works slots.
+MOD_ATTRIBUTE_CULTURAL_LEGEND_ALEXANDER_L1,Legend Unlock. +15% Production towards constructing Buildings and Wonders with Great Works slots.
+MOD_ATTRIBUTE_CULTURAL_LEGEND_AUGUSTUS_L1,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_CULTURAL_LEGEND_AUGUSTUS_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_CULTURAL_LEGEND_CATHERINE_L1,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_CULTURAL_LEGEND_CATHERINE_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_CULTURAL_LEGEND_FRIEDRICH_ALT_L1_01,Legend Unlock. +15% Production towards constructing Buildings and Wonders with Great Works slots.
+MOD_ATTRIBUTE_CULTURAL_LEGEND_HATSHEPSUT_L1,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_CULTURAL_LEGEND_HATSHEPSUT_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_CULTURAL_LEGEND_HIMIKO_ALT_L1,Legend Unlock. +15% Production towards constructing Buildings and Wonders with Great Works slots.
+MOD_ATTRIBUTE_CULTURAL_LEGEND_JOSE_RIZAL_L1,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_CULTURAL_LEGEND_JOSE_RIZAL_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_CULTURAL_LEGEND_LAFAYETTE_L1,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_CULTURAL_LEGEND_LAFAYETTE_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_CULTURAL_LEGEND_NAPOLEON_ALT_L1,Legend Unlock. +15% Production towards constructing Buildings and Wonders with Great Works slots.
+MOD_ATTRIBUTE_CULTURAL_LEGEND_XERXES_ALT_L1_01,Legend Unlock. +15% Production towards constructing Buildings and Wonders with Great Works slots.
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_ASHOKA_ALT_L1_01,Legend Unlock. +25% Relationship from starting or supporting Endeavors. -25% Relationship from starting Sanctions or rejecting Endeavors.
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_ASHOKA_L1_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_ASHOKA_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_BENJAMIN_FRANKLIN_L1_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_BENJAMIN_FRANKLIN_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_GILGAMESH_L1_01,Legend Unlock. +25% Relationship from starting or supporting Endeavors. -25% Relationship from starting Sanctions or rejecting Endeavors.
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_HARRIET_TUBMAN_L1_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_HARRIET_TUBMAN_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_HIMIKO_ALT_L2_01,Legend Unlock. +25% Relationship from starting or supporting Endeavors. -25% Relationship from starting Sanctions or rejecting Endeavors.
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_HIMIKO_L1_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_HIMIKO_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_JOSE_RIZAL_L2_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_JOSE_RIZAL_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_LAFAYETTE_L2_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_LAFAYETTE_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_LAKSHMIBAI_L1_01,Legend Unlock. +25% Relationship from starting or supporting Endeavors. -25% Relationship from starting Sanctions or rejecting Endeavors.
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_MACHIAVELLI_L1_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_MACHIAVELLI_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_NAPOLEON_L1_01,Legend Unlock. +25% Relationship from starting or supporting Endeavors. -25% Relationship from starting Sanctions or rejecting Endeavors.
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_SAYYIDA_L1_01,Legend Unlock. +25% Relationship from starting or supporting Endeavors. -25% Relationship from starting Sanctions or rejecting Endeavors.
+MOD_ATTRIBUTE_DIPLOMATIC_LEGEND_TECUMSEH_L2_01,Legend Unlock. +25% Relationship from starting or supporting Endeavors. -25% Relationship from starting Sanctions or rejecting Endeavors.
+MOD_ATTRIBUTE_ECONOMIC_01_A,+1Gold Gold per Age on the Palace and City Halls.
+MOD_ATTRIBUTE_ECONOMIC_02,+2 Gold per Age for every active Trade Route.
+MOD_ATTRIBUTE_ECONOMIC_03_A,+2 Gold for every Tech and Civic Mastery completed in an Age.
+MOD_ATTRIBUTE_ECONOMIC_04,+1 Gold for every imported Resource.
+MOD_ATTRIBUTE_ECONOMIC_05_A,+15%Gold towards purchasing in all Settlements.
+MOD_ATTRIBUTE_ECONOMIC_06_A,"+1 Gold on Resources in Towns, or +2 in Towns in Distant Lands."
+MOD_ATTRIBUTE_ECONOMIC_07_A,"+1 Resource Capacity in Cities, or +2 if you have 3 or fewer Cities."
+MOD_ATTRIBUTE_ECONOMIC_08,+10 Gold per Age for every Alliance you have.
+MOD_ATTRIBUTE_ECONOMIC_09,+1 Resource Capacity in Towns.
+MOD_ATTRIBUTE_ECONOMIC_10,+5 Gold per Age. Repeatable.
+MOD_ATTRIBUTE_ECONOMIC_LEGEND_AMINA_L1_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK}{LOC_MOD_ATTRIBUTE_ECONOMIC_LEGEND_AMINA_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_ECONOMIC_LEGEND_EDWARD_TEACH_L2_01,Legend Unlock.+25% Gold from Trade Income and Treasure Convoys.
+MOD_ATTRIBUTE_ECONOMIC_LEGEND_HATSHEPSUT_L2_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK}{LOC_MOD_ATTRIBUTE_ECONOMIC_LEGEND_HATSHEPSUT_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_ECONOMIC_LEGEND_IBN_BATTUTA_L1_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK}{LOC_MOD_ATTRIBUTE_ECONOMIC_LEGEND_IBN_BATTUTA_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_ECONOMIC_LEGEND_ISABELLA_L1_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK}{LOC_MOD_ATTRIBUTE_ECONOMIC_LEGEND_ISABELLA_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_ECONOMIC_LEGEND_MACHIAVELLI_L2_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK}{LOC_MOD_ATTRIBUTE_ECONOMIC_LEGEND_MACHIAVELLI_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_ECONOMIC_LEGEND_NAPOLEON_L2_01,Legend Unlock.+25% Gold from Trade Income and Treasure Convoys.
+MOD_ATTRIBUTE_ECONOMIC_LEGEND_PACHACUTI_L1_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK}{LOC_MOD_ATTRIBUTE_ECONOMIC_LEGEND_PACHACUTI_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_ECONOMIC_LEGEND_XERXES_ALT_L2_01,Legend Unlock.+25% Gold from Trade Income and Treasure Convoys.
+MOD_ATTRIBUTE_ECONOMIC_LEGEND_XERXES_L1_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK}{LOC_MOD_ATTRIBUTE_ECONOMIC_LEGEND_XERXES_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_EXPANSIONIST_01,+25% Production towards training Settlers.
+MOD_ATTRIBUTE_EXPANSIONIST_02,+5% Growth Rate in Cities.
+MOD_ATTRIBUTE_EXPANSIONIST_03,+1 Food per Age on Warehouse Buildings.
+MOD_ATTRIBUTE_EXPANSIONIST_04,15% of Food is refunded when a City grows by adding a Specialist.
+MOD_ATTRIBUTE_EXPANSIONIST_05_A,Gain +1 Population in Towns. New Towns start with an additional Population.
+MOD_ATTRIBUTE_EXPANSIONIST_06_A,"+10% Food and Happiness towards maintaining Specialists, or +20% if you have 3 or fewer Cities."
+MOD_ATTRIBUTE_EXPANSIONIST_07_A,"+15% Yields in Towns with a Specialization, or +30% in Distant Lands."
+MOD_ATTRIBUTE_EXPANSIONIST_08_A,"+1 Specialist Limit in all Cities, -1 Settlement Limit."
+MOD_ATTRIBUTE_EXPANSIONIST_09,+1 Settlement Limit.
+MOD_ATTRIBUTE_EXPANSIONIST_10,+1 Food in Cities per Town you own. Repeatable.
+MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_ASHOKA_L2,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_ASHOKA_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_AUGUSTUS_L2,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_AUGUSTUS_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_BOLIVAR_L1,Legend Unlock. +50% Gold towards converting a Town to a City.
+MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_CONFUCIUS_L1,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_CONFUCIUS_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_GENGHIS_KHAN_L1,Legend Unlock. +50% Gold towards converting a Town to a City.
+MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_IBN_BATTUTA_L2,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_IBN_BATTUTA_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_ISABELLA_L2,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_ISABELLA_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_PACHACUTI_L2,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_EXPANSIONIST_LEGEND_PACHACUTI_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_MILITARISTIC_01,+5 Combat Strength against Independent Powers and City-States.
+MOD_ATTRIBUTE_MILITARISTIC_02,Gain 1 War Support on all your Wars.
+MOD_ATTRIBUTE_MILITARISTIC_03,+50% Influence towards Levying Units from City-States.
+MOD_ATTRIBUTE_MILITARISTIC_04,+15%Production towards training Military Units.
+MOD_ATTRIBUTE_MILITARISTIC_05,Ignore the Happiness penalty from Unhappiness Unrest in captured Settlements.
+MOD_ATTRIBUTE_MILITARISTIC_06,Garrisoned Commanders reduce Happiness penalties by an additional 10%.
+MOD_ATTRIBUTE_MILITARISTIC_07,-1 Gold Maintenance for all Units.
+MOD_ATTRIBUTE_MILITARISTIC_08,+1 Settlement Limit.
+MOD_ATTRIBUTE_MILITARISTIC_09,Commanders gain a free Promotion. New Commanders start with a free Promotion.
+MOD_ATTRIBUTE_MILITARISTIC_10,Units gain +2 Healing. Repeatable.
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_ALEXANDER_L2,Legend Unlock. +5 Combat Strength for all Units against Fortified Districts.
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_AMINA_L2,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_MILITARISTIC_LEGEND_AMINA_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_ASHOKA_ALT_L2,Legend Unlock. +5 Combat Strength for all Units against Fortified Districts.
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_BOLIVAR_L2,Legend Unlock. +5 Combat Strength for all Units against Fortified Districts.
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_CHARLEMAGNE_L1,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_MILITARISTIC_LEGEND_CHARLEMAGNE_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_EDWARD_TEACH_L1,Legend Unlock. +5 Combat Strength for all Units against Fortified Districts.
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_FRIEDRICH_ALT_L2,Legend Unlock. +5 Combat Strength for all Units against Fortified Districts.
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_FRIEDRICH_L1,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_MILITARISTIC_LEGEND_FRIEDRICH_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_GENGHIS_KHAN_L2,Legend Unlock. +5 Combat Strength for all Units against Fortified Districts.
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_GILGAMESH_L2,Legend Unlock. +5 Combat Strength for all Units against Fortified Districts.
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_HARRIET_TUBMAN_L2,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_MILITARISTIC_LEGEND_HARRIET_TUBMAN_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_LAKSHMIBAI_L2,Legend Unlock. +5 Combat Strength for all Units against Fortified Districts.
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_NAPOLEON_ALT_L2,Legend Unlock. +5 Combat Strength for all Units against Fortified Districts.
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_SAYYIDA_L2,Legend Unlock. +5 Combat Strength for all Units against Fortified Districts.
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_TECUMSEH_L1,Legend Unlock. +5 Combat Strength for all Units against Fortified Districts.
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_TRUNG_TRAC_L1,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_MILITARISTIC_LEGEND_TRUNG_TRAC_L1_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_MILITARISTIC_LEGEND_XERXES_L2,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_MILITARISTIC_LEGEND_XERXES_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_POLITICAL_01_A,+1Happiness Happiness per Age on the Palace and City Halls.
+MOD_ATTRIBUTE_POLITICAL_02,+1Influence Influence per Age on the Palace.
+MOD_ATTRIBUTE_POLITICAL_03,+1Happiness Happiness in Settlements for each Resource assigned to them.
+MOD_ATTRIBUTE_POLITICAL_04,+50% Influence towards initiating and progressing the Befriend Independent Project.
+MOD_ATTRIBUTE_POLITICAL_05,+25% Influence towards supporting or rejecting Diplomatic Actions.
+MOD_ATTRIBUTE_POLITICAL_06,+50% Celebration length.
+MOD_ATTRIBUTE_POLITICAL_07_A,+2 Culture and Science per Age for each City-State you are Suzerain of.
+MOD_ATTRIBUTE_POLITICAL_08,+1 Tradition slot.
+MOD_ATTRIBUTE_POLITICAL_09,Unlock the Espionage Military Sabotage Espionage Action.
+MOD_ATTRIBUTE_POLITICAL_10_A,+3Influence Influence and +5Happiness Happiness per Age. Repeatable.
+MOD_ATTRIBUTE_SCIENTIFIC_01_A,+1Science Science per Age on the Palace and City Halls.
+MOD_ATTRIBUTE_SCIENTIFIC_02,+15% Production towards constructing Buildings.
+MOD_ATTRIBUTE_SCIENTIFIC_03,+25% Science towards researching Tech Masteries.
+MOD_ATTRIBUTE_SCIENTIFIC_04,+20% Gold and Happiness towards maintaining Buildings.
+MOD_ATTRIBUTE_SCIENTIFIC_05,+1 Science in Settlements for each Resource assigned to them.
+MOD_ATTRIBUTE_SCIENTIFIC_06,+1 Science on each Quarter.
+MOD_ATTRIBUTE_SCIENTIFIC_07_A,"+1 Science on Specialists, or +2 if you have 3 or fewer Cities."
+MOD_ATTRIBUTE_SCIENTIFIC_08,+10Science Science per Age for every Alliance you have.
+MOD_ATTRIBUTE_SCIENTIFIC_09_A,"+1 Science per Age in Towns, or +2 in Distant Lands."
+MOD_ATTRIBUTE_SCIENTIFIC_10,+5 Science per Age. Repeatable.
+MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_ADA_LOVELACE_L1,"Legend Unlock. +1 to the adjacencies of standard GoldGold, ProductionProduction, and ScienceScience Buildings."
+MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_BENJAMIN_FRANKLIN_L2_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_BENJAMIN_FRANKLIN_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_CATHERINE_L2_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_CATHERINE_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_CHARLEMAGNE_L2_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_CHARLEMAGNE_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_CONFUCIUS_L2_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_CONFUCIUS_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_FRIEDRICH_L2_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_FRIEDRICH_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_HIMIKO_L2_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_HIMIKO_L2_DESCRIPTION_BASE}
+MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_TRUNG_TRAC_L2_01,{LOC_MOD_ATTRIBUTE_LEGEND_UNLOCK} {LOC_MOD_ATTRIBUTE_SCIENTIFIC_LEGEND_TRUNG_TRAC_L2_DESCRIPTION_BASE}
+MOD_CIVIC_AQ_ATTRIBUTE_EXPANSIONIST_SETTLEMENT_CAP_INCREASE,+1 Settlement Limit.
+MOD_CIVIC_AQ_ATTRIBUTE_EXPANSIONIST_SPECIALIST_CAP_INCREASE,+1 Specialist Limit in the Capital for this Age.
+MOD_CIVIC_AQ_ATTRIBUTE_MILITARISTIC_EXPANSIONIST_SETTLEMENT_CAP_INCREASE,+2 Settlement Limit.
+MOD_CIVIC_EX_ATTRIBUTE_EXPANSIONIST_SETTLEMENT_CAP_INCREASE,+1 Settlement Limit.
+MOD_CIVIC_EX_ATTRIBUTE_EXPANSIONIST_SPECIALIST_CAP_INCREASE,+1 Specialist Limit in the Capital for this Age.
+MOD_CIVIC_MO_ATTRIBUTE_EXPANSIONIST_SETTLEMENT_CAP_INCREASE,+1 Settlement Limit.
+MOD_CIVIC_MO_ATTRIBUTE_EXPANSIONIST_SPECIALIST_CAP_INCREASE,+1 Specialist Limit in the Capital for this Age.
+MOD_CIVIC_MO_ATTRIBUTE_MILITARISTIC_EXPANSIONIST_SETTLEMENT_CAP_INCREASE,+2 Settlement Limit.
+MOD_CIV_QAJAR_DIPLOMACY,+25% Influence towards supporting or rejecting Diplomatic Actions.
+MOD_CODE_OF_LAWS_REVEAL_CIV_CULTURE_TREE,Unlocks Civilization Unique Civics Tree.
+MOD_COMMUNISM_AT_GUNS,+3 Ranged Units in your Capital.
+MOD_COMMUNISM_EXPANSIONIST_ATTRIBUTE,Gain 1 Expansionist Attribute Point
+MOD_COMMUNISM_SCIENTIFIC_ATTRIBUTE,Gain 1 Scientific Attribute Point
+MOD_DEMOCRACY_CULTURAL_ATTRIBUTE,Gain 1 Cultural Attribute Point
+MOD_DEMOCRACY_POLITICAL_ATTRIBUTE,Gain 1 Diplomatic Attribute Point
+MOD_DEMOCRACY_RIFLEMEN,+4 Infantry Units in your Capital.
+MOD_DISCIPLINE_FREE_COMMANDER,Gain a free Army Commander.
+MOD_DROTTKVAETT_COASTAL_RAID_CULTURE,Coastal Raiding and Pillaging with Naval Units grants Culture equal to 50% of Pillage Yields and Healing.
+MOD_EX_FUTURE_CIVIC_AGE_PROGRESS,+10 Age Progress.
+MOD_EX_FUTURE_CIVIC_ATTRIBUTE,+1 Random Attribute Point.
+MOD_EX_FUTURE_CIVIC_BOOST,A boost for a non-Civilization unique starting Civic in the next Age.
+MOD_EX_FUTURE_CIVIC_CULTURE_VP,Grants 7 Tourism
+MOD_EX_FUTURE_TECH_AGE_PROGRESS,+10 Age Progress.
+MOD_EX_FUTURE_TECH_ATTRIBUTE,+1 Random Attribute Point.
+MOD_EX_FUTURE_TECH_BOOST,A boost for a starting Technology in the next Age.
+MOD_EX_FUTURE_TECH_SCIENCE_VP,Grants 3 Innovation
+MOD_EX_RELIC,Gain 1 Relic.
+MOD_EX_RELIC_REDUX,Gain 1 Relic.
+MOD_EX_RESOURCE_INSTANCE_COUNT_IMPERIALISM,Tea and Spices Resources are worth +1 Cargo for Treasure Convoys.
+MOD_EX_RESOURCE_INSTANCE_COUNT_SOCIAL_CLASS,Furs and Cocoa Resources are worth +1 Cargo for Treasure Convoys.
+MOD_EX_SETTLEMENT_CAP_INCREASE,+1 Settlement Limit.
+MOD_EX_SETTLEMENT_CAP_INCREASE_MORE,+2 Settlement Limit.
+MOD_EX_SOCIAL_CLASS_SCIENCE_VP,Grants 2 Innovation.
+MOD_EX_SPECIALIST_CAP_INCREASE,+1 Specialist Limit in all Cities.
+MOD_EX_TECH_CAVALRY_STRENGTH,+3 Combat Strength for Cavalry Units.
+MOD_EX_TECH_CULTURE_BUILDING,+1 Culture on Culture Buildings.
+MOD_EX_TECH_FOOD_BUILDING,+1 Food on Food Buildings.
+MOD_EX_TECH_GOLD_BUILDING,+1 Gold on Gold Buildings.
+MOD_EX_TECH_HAPPINESS_BUILDING,+1 Happiness on Happiness Buildings.
+MOD_EX_TECH_INFANTRY_STRENGTH,+3 Combat Strength for Infantry Units.
+MOD_EX_TECH_MILITARY_BUILDING,+2 Production on Military Buildings.
+MOD_EX_TECH_NAVAL_STRENGTH,+3 Combat Strength for Naval Units.
+MOD_EX_TECH_PRODUCTION_BUILDING,+1Production Production on Production Buildings.
+MOD_EX_TECH_RANGED_STRENGTH,+3 Combat Strength for Ranged and Siege Units.
+MOD_EX_TECH_SCIENCE_BUILDING,+1 Science on Science Buildings.
+MOD_EX_TECH_WALL_STRENGTH,+3 Combat Strength for Fortified Districts.
+MOD_EX_TRADITION_SLOT,+1 Social Policy slot.
+MOD_FASCISM_ECONOMIC_ATTRIBUTE,Gain 1 Economic Attribute Point
+MOD_FASCISM_LANDSHIP,+3 Cavalry Units in your Capital.
+MOD_FASCISM_MILITARISTIC_ATTRIBUTE,Gain 1 Militaristic Attribute Point
+MOD_GIFT_GURKHA,Unlocks the Gift Gurkha Action which grants a Gurkha Unit to another Civilization. Nepal receives a +10 Relationship with them and 5 Culture (Scales by Gamespeed) for the current Relationship Level with them. Can only be done with Friendly or Helpful Civilizations.
+MOD_HE_E_NALU_TWO_RELICS,+2 Relics.
+MOD_KANTA_AUTO_TREASURE_FLEET,Cities in Homelands on Navigable Rivers generate Treasure Convoys worth 2 Cargo each.
+MOD_LEGACY_AQ_EXPANSIONIST_5,+1 Food on Breathtaking tiles.
+MOD_LEGACY_EX_EXPANSIONIST_4,+1 Food on Breathtaking tiles.
+MOD_LEGACY_MO_ECONOMIC_1,Score 500 GDP by assigning Factory Resources.
+MOD_LYFSTEINN_HEAL_NAVAL,+10 Healing for Naval Units outside friendly territory.
+MOD_MEXICO_ORIGINS_GOLDEN_AGE,"Unlock an additional Celebration effect, +50% Growth Rate in the Capital for 10 Turns."
+MOD_MEXICO_RENAISSANCE_GOLDEN_AGE,"Unlock an additional Celebration effect, +100% Production towards training and Gold towards purchasing Missionaries and +2 Charges and Movement for Missionaries for 10 Turns."
+MOD_MO_ARTIFACT,Gain 1 Artifact.
+MOD_MO_CAPITALISM_RESOURCE_VP,+4 GDP per turn on worked Coal and Oil Resources.
+MOD_MO_CAPITALISM_TOURISM_VP,+10 Tourism for each player you have started at least 2 Trade Routes with.
+MOD_MO_EXPLORER_SIGHT,+1 Sight for Explorers.
+MOD_MO_FACTORY_RESOURCE_GDP,+3 GDP per turn for Slotted Factory Resources.
+MOD_MO_FUTURE_CIVIC_AGE_PROGRESS,+10 Age Progress.
+MOD_MO_FUTURE_CIVIC_ATTRIBUTE,+1 Random Attribute Point.
+MOD_MO_FUTURE_CIVIC_CULTURE_VP,Grants 10 Tourism
+MOD_MO_FUTURE_TECH_AGE_PROGRESS,+10 Age Progress.
+MOD_MO_FUTURE_TECH_ATTRIBUTE,+1 Random Attribute Point.
+MOD_MO_FUTURE_TECH_SCIENCE_VP,Grants 3 Innovation
+MOD_MO_MILITARISM_GDP,+6 GDP per turn for each conquered Settlement.
+MOD_MO_NATURAL_WONDER_ARCHAEOLOGY,Explorers can use the Excavate Artifacts action on or adjacent to Natural Wonders. Each player can do this once per Natural Wonder.
+MOD_MO_NATURAL_WONDER_ARCHAEOLOGY_REDUX,Explorers can use the Excavate Artifacts action on or adjacent to Natural Wonders. Each player can do this once per Natural Wonder.
+MOD_MO_OPEN_ANTIQUITY_ARCHAEOLOGY,Explorers can Research Artifacts buried since the Antiquity Age. Gain a free Artifact when Researching Artifacts.
+MOD_MO_OPEN_EXPLORATION_ARCHAEOLOGY,Explorers can Research Artifacts buried since the Exploration Age.
+MOD_MO_RESORT_TOWN_VP,+4 Tourism on improved Breathtaking tiles in Resort Towns when you have at least 7 improved Breathtaking tiles.
+MOD_MO_SETTLEMENT_CAP_INCREASE,+1 Settlement Limit.
+MOD_MO_SPECIALIST_CAP_INCREASE,+1 Specialist Limit in all Cities.
+MOD_MO_TECH_AIRCRAFT_STRENGTH,+3 Combat Strength for Air Units.
+MOD_MO_TECH_CAVALRY_STRENGTH,+3 Combat Strength for Cavalry Units.
+MOD_MO_TECH_CULTURE_BUILDING,+1 Culture on Culture Buildings.
+MOD_MO_TECH_FOOD_BUILDING,+1 Food on Food Buildings.
+MOD_MO_TECH_GOLD_BUILDING,+1 Gold on Gold Buildings.
+MOD_MO_TECH_HAPPINESS_BUILDING,+1 Happiness on Happiness Buildings.
+MOD_MO_TECH_INFANTRY_STRENGTH,+3 Combat Strength for Infantry Units.
+MOD_MO_TECH_INTERCEPT_RANGE,+1 Intercept Range for Fighter Units.
+MOD_MO_TECH_MILITARY_BUILDING,+2 Production on Military Buildings.
+MOD_MO_TECH_NAVAL_STRENGTH,+3 Combat Strength for Naval Units.
+MOD_MO_TECH_PRODUCTION_BUILDING,+1 Production on Production Buildings.
+MOD_MO_TECH_RANGED_STRENGTH,+3 Combat Strength for Ranged and Siege Units.
+MOD_MO_TECH_SCIENCE_BUILDING,+1 Science on Science Buildings.
+MOD_MO_TRADITION_SLOT,+1 Social Policy slot.
+MOD_MO_UNLOCK_IDEOLOGIES,Unlocks Ideology Trees.
+MOD_NEW_WORLD_RICHES_TREASURE_FLEET_MOVEMENT,+1 Movement for Treasure Convoys. Gold and Silver Resources are worth +1 Cargo for Treasure Convoys.
+MOD_NGATU_II_CULTURE_WAREHOUSE_BUILDINGS,"+100% Influence towards the initiating and supporting the Befriend Independent Project, if the Independent Power is in Distant Lands. +100% Influence towards all City-State Actions if the City-State is in Distant Lands."
+MOD_OCEAN_COMMAND,All Civilian and Support Units may enter deep Ocean Terrain.
+MOD_PANTHEON_UNLOCK,Unlocks founding a Pantheon.
+MOD_PLANES_POLITICOS_TRADITION_SLOT,+1 Tradition slot.
+MOD_PLAN_OF_AYUTLA_GOLDEN_AGE,"Unlock an additional Celebration effect, +50% Influence towards initiating all Diplomatic Actions for 10 Turns."
+MOD_PLAN_OF_IGUALA_GOLDEN_AGE,"Unlock an additional Celebration effect, +40% Production towards training Military Units for 10 Turns."
+MOD_PLAN_OF_TUXTEPEC_GOLDEN_AGE,"Unlock an additional Celebration effect, +30% Science for 10 Turns."
+MOD_PROMOTION_ARMY_TRUNG_NHI_ATTACK_DAMAGE,+3 Damage for Heroic Assault.
+MOD_PROMOTION_ARMY_TRUNG_NHI_ATTACK_DAMAGE_FINAL,+10 Damage for Heroic Assault.
+MOD_PROMOTION_COMMENDATION_MERIT,+1 Command Radius range.
+MOD_QHAPAQ_NAN_AUTO_TREASURE_FLEET,Cities in Homelands with 3 Worked Mountains generate Treasure Convoys worth 2 Cargo each.
+MOD_REFORMATION_BELIEF,Receive 1 additional Enhancer Belief.
+MOD_ROUTE_STAATSEISENBAHN_GOLD,+2Gold Gold andProduction Production on Rural tiles with a Staatseisenbahn in your territory.
+MOD_SAILING_EMBARKATION,Allows all standard Land Units to traverse Coast Terrain.
+MOD_SAILING_EMBARKATION_NOT_TEHINA,Allows all standard Land Units to traverse Coast Terrain.
+MOD_SENATUS_POPULUSQUE_ROMANUS_TRADITION_SLOTS,+1 Tradition slot.
+MOD_SHERPA_MOUNTAIN_CLAIM,Sherpas can activate on a Mountain Te within 5 tiles of one of your Settlements' Palace or City Hall once every 5 turns. A path of tiles is claimed back to the Settlement and the Mountain Terrain is Improved immediately with a Highland Power Station.
+MOD_SICILIAN_WARS_SETTLEMENT_CAP,+2 Settlement Limit.
+MOD_SYNCRETISM,"Select an associated Civ's Units or Infrastructure, or Affirm your own Traditions."
+MOD_TECH_AQ_CAMP_PRODUCTION,+1Production Production on Camps and Woodcutters.
+MOD_TECH_AQ_FISHING_BOAT_FOOD,+1Food Food on Fishing Boats.
+MOD_TECH_AQ_FLAT_FOOD,+1Food Food on Farms.
+MOD_TECH_AQ_MINE_PRODUCTION,+1Production Production on Mines and Quarries.
+MOD_TECH_AQ_PASTURE_FOOD,+1Food Food on Pastures.
+MOD_TECH_AQ_PLANTATION_FOOD,+1Food Food on Plantations.
+MOD_TECH_AQ_TRADE_RANGE_LAND,+5 Trade Range
+MOD_TECH_AQ_WET_PRODUCTION,+1Production Production on Clay Pits.
+MOD_TECH_EX_ARCHITECTURE_SCIENCE_VP,Grants 2 Innovation.
+MOD_TECH_EX_ASTRONOMY_SCIENCE_VP,Grants 2 Innovation.
+MOD_TECH_EX_CAMP_PRODUCTION,+1Production Production on Camps and Woodcutters.
+MOD_TECH_EX_FISHING_BOAT_FOOD,+1Food Food on Fishing Boats.
+MOD_TECH_EX_FOOD_FARM_FARMING,"+1 Food on Farms and Plantations in Farming Towns, Fishing Towns, and Fort Towns."
+MOD_TECH_EX_GUNPOWDER_SCIENCE_VP,Grants 5 Innovation.
+MOD_TECH_EX_METALLURGY_SCIENCE_VP,Grants 2 Innovation.
+MOD_TECH_EX_METAL_CASTING_SCIENCE_VP,Grants 2 Innovation.
+MOD_TECH_EX_MINE_PRODUCTION,+1Production Production on Clay Pits and Mines.
+MOD_TECH_EX_NAVAL_AUTO_EXPLORE,All Tier 2 and Tier 3 Naval Units can use the Automate Exploration Action.
+MOD_TECH_EX_NO_OCEAN_DAMAGE,All Naval Units can safely travel across deep Ocean Terrain without taking Damage.
+MOD_TECH_EX_NO_OCEAN_DAMAGE_CIVILLIAN_SUPPORT,All Civilian and Support Units can safely travel across deep Ocean Terrain without taking Damage.
+MOD_TECH_EX_NO_OCEAN_OBSTACLE,All Units ignore Movement penalties from deep Ocean Terrain.
+MOD_TECH_EX_PASTURE_FOOD,"+1Food Food on Farms, Pastures, and Plantations."
+MOD_TECH_EX_QUARRY_PRODUCTION,+1Production Production on Quarries.
+MOD_TECH_EX_RELIC_SLOT_PAVILION,+1 Relic Slot on Pavilions
+MOD_TECH_EX_SHIPBUILDING_SCIENCE_VP,Grants 2 Innovation.
+MOD_TECH_EX_TRADE_RANGE_LAND,+5 Trade Range
+MOD_TECH_MO_AERODYNAMICS_SCIENCE_VP,Grants 5 Innovation.
+MOD_TECH_MO_ARMOR_SCIENCE_VP,Grants 2 Innovation.
+MOD_TECH_MO_CAMP_PRODUCTION,+1Production Production on Camps.
+MOD_TECH_MO_COMBUSTION_SCIENCE_VP,Grants 2 Innovation.
+MOD_TECH_MO_ELECTRICITY_SCIENCE_VP,Grants 2 Innovation.
+MOD_TECH_MO_EMBARKATION,Trade Units can enter deep Ocean Terrain. Settlements across deep Ocean can now serve as origin Settlements for Trade Routes.
+MOD_TECH_MO_FISHING_BOAT_RESOURCE_FOOD,+1Food Food on Fishing Boats and Pastures.
+MOD_TECH_MO_FLIGHT_CULTURE_VP,Settlements with an Aerodrome gain +3 Tourism on Unique Buildings.
+MOD_TECH_MO_INDUSTRIALIZATION_CULTURE_VP_UI,Settlements connected by Rail gain +3 Tourism for each type of Unique Improvement in the Settlement.
+MOD_TECH_MO_INDUSTRIALIZATION_SCIENCE_VP,Grants 2 Innovation.
+MOD_TECH_MO_MINE_PRODUCTION,+1Production Production on Mines and Woodcutters.
+MOD_TECH_MO_OIL_PRODUCTION,+1Production Production on Oil Rigs.
+MOD_TECH_MO_PLANTATION_FOOD,+1Food Food on Farms and Plantations.
+MOD_TECH_MO_QUARRY_PRODUCTION,+1Production Production on Clay Pits and Quarries.
+MOD_TECH_MO_RADIO_SCIENCE_VP,Grants 2 Innovation.
+MOD_TECH_MO_ROCKETRY_SCIENCE_VP,Grants 5 Innovation.
+MOD_TECH_MO_SPECIALIST_HAPPINESS_MAINTENANCE,-1 Happiness Maintenance on Specialists.
+MOD_TECH_MO_URBANIZATION_CITY_POP,+1 Population in every City
+MOD_TECH_OCEAN_TRAVEL,All Naval Units may enter deep Ocean Terrain.
+MOD_TECH_OCEAN_TRAVEL_EMBARKED,All Embarked Land Units may enter deep Ocean Terrain.
+MOD_THJODVELDID_RELIC,Gain 2 Relics.
+MOD_TONGIAKI_II_TRADE_ROUTE_RANGE,+10 Trade Route Naval Trade Route Range. +3 Gold and Science from Naval Trade Routes.
+MOD_TOT_TRADITION_SLOT,+1 Tradition slot.
+MOD_TOT_TRADITION_SLOT_TWO,+2 Tradition slots.
+MOD_TRADITION_ABILITY_DE_FACTO_COMBAT,+3 Combat Strength for all Units in Distant Lands. Units gain +5 Healing.
+MOD_TRADITION_ABILITY_DE_JURE_COMBAT,+3 Combat Strength for all Units in Homelands.
+MONOPOLIES_MOD_RESOURCE_GOLD,+5 Gold and +1 Resource Capacity in Settlements with a Factory.
+MONTHON_I_MOD_GOLD_PER_CITY_STATE,+3 Gold on the Palace for each City-State you are Suzerain of.
+MONTHON_MOD_GOLD_PER_CITY_STATE,+5 Gold and +3 Culture on the Palace for each City-State you are Suzerain of.
+MUD_BRICK_II_MOD_CARAVANSERAI_PRODUCTION,+2 Production on the Caravanserai in Settlements with a Gold Building and in Mining Towns and Trade Outposts.
+MUD_BRICK_MOD_CARAVANSERAI_PRODUCTION,+1 Production on the Caravanserai in Settlements with a Gold Building and in Mining Towns and Trade Outposts.
+NAPOLEON_ALT_MOD_CULTURE_ON_UNIT_DEFEAT,Enemy of the Coalitions
+NAPOLEON_ALT_MOD_LAND_UNIT_MOVEMENT,Enemy of the Coalitions
+NATIONAL_PRESTIGE_MOD_INFLUENCE_ENDEAVORS,+10% Influence towards initiating Diplomatic Actions per displayed Artifact while at War with a Leader with an opposing Ideology.
+NAUKOGRAD_MOD_TOWN_SCIENCE_PER_SCIENCE_ATTRIBUTE,Towns gain Science equal to your Scientific Attribute. -5 Culture in Cities.
+NEW_DEAL_MOD_CITY_GOLD_PENALTY,+30% Production towards constructing Wonders.
+NEW_DEAL_MOD_WONDER_PRODUCTION_RATE,+30% Production towards constructing Wonders.
+NGATU_MOD_CULTURE_WAREHOUSE_BUILDINGS,"+100% Influence towards the initiating and supporting the Befriend Independent Project, if the Independent Power is in Distant Lands."
+NG_OMA_MOD_LAKE_AJACENT_UNIT_COMBAT_STRENGTH,+8 Combat Strength for Units that are on or adjacent to a Lake. +1 Movement for embarked Units.
+NOUVEAU_RICHE_MOD_COST,+50% Food and Happiness Maintenance for Specialists.
+NO_ETERNAL_ALLIES_I_NEGATIVE_GOLD,"+5% Food and Gold in Towns, but -5% Gold in the Capital for every Alliance."
+NO_ETERNAL_ALLIES_NEGATIVE_GOLD,"+10% Food and Gold in Towns, but -5% Gold in the Capital for every Alliance."
+OLIGARCHY_MOD_UNHAPPINESS,-6 Happiness in Settlements with unfilled Resource Capacity.
+OPPRESSIVE_TARIFFS_MOD_GOLD,-1 Gold per Specialist.
+ORATORY_MOD_DIPLOMACY_YIELD,+2 Influence per turn.
+PEOPLES_ARMY_MOD_UNIT_PRODUCTION_RATE,"+25% Production towards training Land Military Units, but +1 Gold Maintenance for Land Military Units."
+PIRATE_AQ_MOD_FREE_SETTLER,Gain 1 Settler for free.
+PLAYER_DIPLOMACY_FARMERS_MARKET_INITIAL_PLAYER_ACCEPT,Share agricultural goods with another Leader.
+PLAYER_DIPLOMACY_FARMERS_MARKET_SUPPORT,Share agricultural goods with another Leader.
+PLAYER_DIPLOMACY_FARMERS_MARKET_TARGET_PLAYER_ACCEPT,Share agricultural goods with another Leader.
+PLAYER_DIPLOMACY_FAVOR_ACCRUE_MOD,Increased the Relationship gained for supporting Diplomatic Actions by 25%.
+PLAYER_DIPLOMACY_GINSING_AGREEMENT_INITIAL_PLAYER_ACCEPT,Ginseng Agreement
+PLAYER_DIPLOMACY_GINSING_AGREEMENT_SUPPORT,Ginseng Agreement
+PLAYER_DIPLOMACY_GINSING_AGREEMENT_TARGET_PLAYER_ACCEPT,Ginseng Agreement
+POLICE_STATE_MOD_HAPPINESS_AT_WAR_IN_CITIES,+8 Happiness in Cities while at War.
+PRATHETSARAT_MOD_CITY_STATE_PROJECT_EFFICIENCY,+20% Influence towards initiating Diplomatic Actions with City-States.
+PRESERVATION_SOCIETIES_MOD_SCIENCE_PER_EPIC_GREAT_WORK,+3 Science from displayed Great Works.
+PRIESTHOOD_MOD_CITY_TOWN_GOLD,+2 Gold in all Settlements.
+PROCEEDINGS_RESOURCE_AND_GREATWORK_CITY_CULTURE_AND_SCIENCE,+4 Culture and Science in Cities with both a Great Work and a Resource slotted. Settlements receive +3 Production for each Factory Resource assigned to them.
+PRODUCTIVE_FORCES_DETERMINISM_MOD_SCIENCE_PER_SCIENTIFIC_ATTRIBUTES,+3 Science from Specialists. -3 Gold in Towns.
+PROGNOSIS_MOD_GOLD,+2 Science on Science Buildings in Infected Settlements but -4 Gold on Science Buildings.
+PROGNOSIS_MOD_SCIENCE,+2 Science on Science Buildings in Infected Settlements but -4 Gold on Science Buildings.
+PROJECTION_OF_FORCE_MOD_NAVAL_PRODUCTION,"+50% Production towards training Naval Units, but +1 Gold Maintenance for Naval Units."
+PROLETARIAT_MOD_SPECIALIST_FOOD_PER_EXPANSIONIST_ATTRIBUTE,+4 Food from Specialists. -3 Happiness in Towns.
+PROPAGANDA_MOD_GOLD_EQUAL_TO_ECON_ATTRIBUTE,Towns gain Gold equal to your Economic Attribute. -5 Culture in Cities.
+PROSECUTE_APOSTATES_MOD_NO_ALTAR_HAPPINESS,+5 Happiness in Infected Settlements with a Commander stationed but -5 Happiness in Settlements with no Altar.
+PROSECUTE_APOSTATES_MOD_PLAGUE_HAPPINESS,+5 Happiness in Infected Settlements with a Commander stationed but -5 Happiness in Settlements with no Altar.
+PROVINCIAL_SCORN_MOD_UNHAPPINESS,-6 Happiness in Towns.
+PUBLIC_WORKS_MOD_PROJECT_PRODUCTION,+30% Production towards completing Projects.
+PURGED_OFFICER_CORP_COMBAT_PENALTY,-6 Combat Strength on all Military Units.
+QAJAR_SYNCRETISM_HAPPINESS_UNDER_CAP,Waqāye'-e Ettefāqiya
+QAJAR_SYNCRETISM_INLFLUENCE_UNDER_CAP,Waqāye'-e Ettefāqiya
+RATIONALISM_MOD_CITY_FOLLOWS_RELIGION_GOLD,+15% Gold and Science in your own Cities that are converted to your Religion.
+REBELLIOUS_COMMANDERS_MOD_HAPPINESS,-1 Happiness in all Cities for each Commander Promotion.
+RECRUITMENT_SHORTFALLS_MOD_TOWN_FOOD,+2 Food in Towns but -15 Healing on all Units.
+RECRUITMENT_SHORTFALLS_MOD_UNIT_HEALING,+2 Food in Towns but -15 Healing on all Units.
+REGULARS_MOD_MELEE_PRODUCTION,+30% Production towards training Infantry and Ranged Units.
+REIDI_GUDANNA_MOD_VOLCANO_ADJACENCY,All Buildings gain a +1 Culture Cultural and Production Adjacency from Volcanoes and Natural Wonders. (Natural Wonder Volcanoes do not count twice) +25% Gold towards purchasing Repairs.
+REIGN_OF_TERROR_CULTURE_DISTRICTS,"+3 Culture on Quarters, but -25% Growth Rate in Cities."
+RELIGIOUS_ESPIONAGE_MOD_HAPPINESS,+50% Influence towards Espionage Convert Settlement Espionage actions. -4 Happiness in Homelands Settlements.
+RELIGIOUS_EXEMPTIONS_MOD_GOLD,-2 Gold per displayed Relic.
+RELIGIOUS_MERCHANTS_MOD_HAPPINESS,+4 Gold in Settlements not following your Religion. -4 Happiness in Distant Lands Settlements.
+RELIGIOUS_MOVEMENT_MOD_MISSIONARY_MOVEMENT,All Missionaries in your territory gain +1 Movement.
+RELIGIOUS_ORDERS_MOD_CITY_FOLLOWS_RELIGION_CULTURE,+15% Culture and Happiness in your own Cities that are converted to your Religion.
+RELIGIOUS_TOLERANCE_MOD_HAPPINESS,+8 Happiness in Settlements that do not follow your Religion. -2 Charges on new Missionaries.
+RELIGIOUS_ZEAL_MOD_HAPPINESS,-8 Happiness in Settlements that do not follow your Religion. +2 Charges on new Missionaries.
+RENAISSANCE_MOD_GREAT_WORK_CULTURE,+10% Production towards constructing Wonders. +2 Culture on displayed Great Works.
+REPUBLIC_MOD_UNHAPPINESS,-6 Happiness in Settlements more than 9 tiles away from your Palace.
+REVOLUTIONARY_TRIBUNAL_MOD_SC,-2 Settlement Limit.
+RITES_AND_RITUALS_MOD_CITY_TOWN_HAPPINESS,+2 Happiness in all Settlements.
+RIZAL_MOD_CELEBRATION_LENGTH,+50% Celebration duration.
+SAHANSAH_II_MOD_UNIT_ABILITY,+3 Combat Strength for Units fighting in enemy territory. +10 Culture and Gold for every different Civilization you have captured a Settlement from.
+SAHANSAH_MOD_UNIT_ABILITY,+3 Combat Strength for Units in enemy territory. +5 Culture and Gold for every different Civilization you have captured a Settlement from.
+SAKDINA_MOD_HAPPINESS_PER_ALLIED_CITY_STATE,+2 Happiness and +2 Influence in Cities for each City-State you are Suzerain of.
+SALES_AND_TRADE_II_MOD_RESOURCE_GOLD,+2 Gold and Science for each Resource assigned to Cities with at least 5 Specialists.
+SALES_AND_TRADE_MOD_RESOURCE_GOLD,+1 Gold and Science for each Resource assigned to Cities with at least 5 Specialists.
+SAN_LAK_MUEANG_I_MOD_INFLUENCE_PER_GOLD_BUILDING,+1 Influence from Gold Buildings.
+SAN_LAK_MUEANG_MOD_INFLUENCE_PER_GOLD_BUILDING,+2 Influence from Gold Buildings.
+SCHOLARS_MOD_WORKER_SCIENCE,+1 Science from Specialists. +1 Happiness Maintenance on Specialists.
+SCORCHED_EARTH_MOD_PILLAGING_YIELDS_BUILDINGS,+3 Combat Strength for all Units when attacking. Land Units gain +25% yields and HP from Pillaging.
+SEDEF_KAKMA_I_MOD_CULTURE_HAPPINESS_QUARTERS,+3 Culture on Quarters with at least 1 Happiness Building. +3 Happiness on Quarters with at least 1 Culture Building.
+SEDEF_KAKMA_MOD_CULTURE_HAPPINESS_QUARTERS,+5 Culture on Quarters with at least 1 Happiness Building. +5 Happiness on Quarters with at least 1 Culture Building.
+SHELL_TEMPERED_POTTERY_II_MOD_BUILDING_GOLD,All Buildings receive a +1 Gold adjacency for Resources.
+SHELL_TEMPERED_POTTERY_MOD_BUILDING_GOLD_FOOD,"Food, Gold, and Warehouse Buildings receive a +1 Gold Adjacency for Resources."
+SHUSEI_KOKUBO_II_MOD_MILITARY_BUILDING_COAST_ADJACENCY,+50% Production towards Military and Science Buildings. Military and Science Buildings receive an adjacency for Coast.
+SIEGE_TRAIN_RESTORE_MOVEMENT,"When a unit destroys a Fortified District's defenses, all other Land Siege and Infantry Units have their Movement restored."
+SOCIAL_SCIENCE_MOD_SCIENCE_PER_SPECIALIST,+3 Science from Specialists. +1 Food and Happiness Maintenance on Specialists.
+SOLEYMANIYEH_PALACE_YIELD_CAPITAL_POP,+0.5 Influence for every Population in the Capital.
+SPHERE_OF_INFLUENCE_MOD_CULTURE_ALLIANCES,Gain Culture equal to your Diplomatic Attribute for every Alliance you have.
+STRATAGEMS_GREAT_WORKS_COMBAT,+5 Combat Strength for Infantry and Cavalry against other Land Units when you have at least 8 Great Works on display.
+STRATAGEMS_I_GREAT_WORKS_COMBAT,+3 Combat Strength for Infantry and Cavalry against other Land Units when you have at least 4 Great Works on display.
+STRATAGEMS_I_PILLAGE_IMPROVEMENTS_MODIFIER,+25% Yield and HP from Pillaging.
+STRATAGEMS_PILLAGE_IMPROVEMENTS_MODIFIER,+50% Yield and HP from Pillaging.
+STRATEGIC_RAILWAYS_MOD_CITY_PRODUCTION_RAILROAD,+20% Production towards constructing Buildings and Improvements in Cities with a Rail Station.
+STRICT_CENSORSHIP_MOD_CULTURE,-10 Culture and Science in Cities.
+STYLE_EMPIRE_I_MOD_CULTURE_ON_BUILDING_CREATED,Constructing a Building grants Culture equal to 15% of its Production cost. +2 Culture on Happiness Buildings and Wonders.
+STYLE_EMPIRE_MOD_CULTURE_ON_BUILDING_CREATED,Constructing a Building grants Culture equal to 25% of its Production cost. +2 Culture on Happiness Buildings and Wonders.
+SUFFRAGE_MOD_CULTURE_ON_SPECIALISTS_PER_CULTURAL_ATTRIBUTE,+3 Culture from Specialists. -3 Production in Towns.
+SUPPRESS_LOCAL_TRADITIONS_MOD_UNHAPPINESS,-3 Happiness in Settlements you did not found.
+SURVEY_MOD_RECON_MOVEMENT,Scouts gain +1 Movement and Sight.
+SYSTEM_OF_IDEAS_MOD_CULTURE,+50% Culture towards researching Civics that unlock an Ideology but -50% Happiness towards Celebrations.
+TAKUAKA_MOD_CITY_WAREHOUSE_BONUS,+1 Production on Fishing Boats in Cities. +2 Science on Fishing Boats on Reefs in all Settlements.
+TARIFFS_MOD_TRADE_INCOME,"+50% Trade Income, but -3 Happiness in Cities."
+TAX_FARMING_MOD_GOLD,-50% Gold in Towns.
+THEIR_FINEST_HOUR_MOD_AIR_UNIT_PRODUCTION,+25% Production towards training Air Units. +5 Combat Strength for Air Units in your own territory.
+TIMBUKTU_II_MOD_TRADE_BUILDING_WAREHOUSE_MINES,+3 Gold on Rough Terrain and Mines on Resources if there is at least 1 Gold Building in that Settlement.
+TIMBUKTU_MOD_TRADE_BUILDING_WAREHOUSE_MINES,+2 Gold on Rough Terrain and Mines on Resources if there is at least 1 Gold Building in that Settlement.
+TONGIAKI_MOD_TRADE_ROUTE_RANGE,+10 Trade Route Naval Trade Route Range.
+TOOL_MAKING_MOD_PALACE_PRODUCTION,+1 Production and Science on the Palace.
+TRADE_WINDS_IMPORTED_RESOURCE_GOLD,+1 Gold and Happiness for every imported Resource. +1 Movement for Merchants.
+TRADITION_MO_ATTRIBUTE_CULTURAL_01_MOD_CULTURE_ON_APPEAL,+2 Culture on Appealing Terrain.
+TRADITION_TRIAL_OF_TIME_YIELDS,"-1 Science, Culture, Gold, Food, Production, Influence, and Happiness per Age in all Settlements. -2 Combat Strength for all Units."
+TRAIT_GB_MOD_BUILDING_CHEAPER_PURCHASE,"• +25%Gold towards purchasing Buildings and +25% Production towards constructing Buildings.
+• It costs 50% more to convert Towns into Cities.
+• +3 Science on Active Buildings adjacent to Coast.
+• +30%Production towards constructing Battersea Power Station."
+TRAIT_GB_MOD_BUILDING_PRODUCTION,"• +25%Gold towards purchasing Buildings and +25% Production towards constructing Buildings.
+• It costs 50% more to convert Towns into Cities.
+• +3 Science on Active Buildings adjacent to Coast.
+• +30%Production towards constructing Battersea Power Station."
+TRAIT_MOD_AQ_SHENGSHI_CULTURE_PER_IMPORTED_RESOURCE,"• +1 Gold and +1 Culture for every imported Resource, but -2 Science for every Trade Route.
+• +1 Combat Strength for Land Units for every other Civilization you have a Trade Route with."
+TRAIT_MOD_AQ_SHENGSHI_GOLD_PER_IMPORTED_RESOURCE,"• +1 Gold and +1 Culture for every imported Resource, but -2 Science for every Trade Route.
+• +1 Combat Strength for Land Units for every other Civilization you have a Trade Route with."
+TRAIT_MOD_AQ_SHENGSHI_SCIENCE_MALUS_PER_TRADE_ROUTE,"• +1 Gold and +1 Culture for every imported Resource, but -2 Science for every Trade Route.
+• +1 Combat Strength for Land Units for every other Civilization you have a Trade Route with."
+TRAIT_MOD_CITY_PROJECT_MORE_EXPENSIVE,"• +25%Gold towards purchasing Buildings and +25% Production towards constructing Buildings.
+• It costs 50% more to convert Towns into Cities.
+• +3 Science on Active Buildings adjacent to Coast.
+• +30%Production towards constructing Battersea Power Station."
+TRAIT_MOD_EX_SHENGSHI_CULTURE_PER_IMPORTED_RESOURCE,"• +2 Gold and +2 Culture for every imported Resource, but -4 Science for every Trade Route.
+• +1 Combat Strength for Land Units for every other Civilization you have a Trade Route with."
+TRAIT_MOD_EX_SHENGSHI_GOLD_PER_IMPORTED_RESOURCE,"• +2 Gold and +2 Culture for every imported Resource, but -4 Science for every Trade Route.
+• +1 Combat Strength for Land Units for every other Civilization you have a Trade Route with."
+TRAIT_MOD_EX_SHENGSHI_SCIENCE_MALUS_PER_TRADE_ROUTE,"• +2 Gold and +2 Culture for every imported Resource, but -4 Science for every Trade Route.
+• +1 Combat Strength for Land Units for every other Civilization you have a Trade Route with."
+TRAIT_MOD_NAVIGABLE_RIVER_RESOURCE_CAP,"• +2 Resource Capacity in Cities on Navigable Rivers.
+• +1 Production in Cities on Navigable Rivers for every Resource assigned to them.
+• Can generate Homelands Treasure Convoys on Navigable Rivers after completing the Kanta Civic.
+• +30% Production towards constructing the Tomb of Askia."
+TRAIT_MOD_SHENGSHI_COMBAT_STRENGTH,+1 Combat Strength for Land Units for every other Civilization you have a Trade Route with.
+TRAIT_MOD_SHENGSHI_CULTURE_PER_IMPORTED_RESOURCE,"• +3 Gold and +3 Culture for every imported Resource, but -6 Science for every Trade Route.
+• +1 GDP per turn for imported Resources assigned to Cities.
+• +1 Combat Strength for Land Units for every other Civilization you have a Trade Route with.
+• +30% Production towards constructing Chengde Mountain Resort."
+TRAIT_MOD_SHENGSHI_GOLD_PER_IMPORTED_RESOURCE,"• +3 Gold and +3 Culture for every imported Resource, but -6 Science for every Trade Route.
+• +1 GDP per turn for imported Resources assigned to Cities.
+• +1 Combat Strength for Land Units for every other Civilization you have a Trade Route with.
+• +30% Production towards constructing Chengde Mountain Resort."
+TRAIT_MOD_SHENGSHI_SCIENCE_MALUS_PER_TRADE_ROUTE,"• +3 Gold and +3 Culture for every imported Resource, but -6 Science for every Trade Route.
+• +1 GDP per turn for imported Resources assigned to Cities.
+• +1 Combat Strength for Land Units for every other Civilization you have a Trade Route with.
+• +30% Production towards constructing Chengde Mountain Resort."
+TRAIT_MOD_SONGHAI_TOT_AQ_NAVIGABLE_RIVER_RESOURCE_CAP,"• +2 Resource Capacity in Cities on Navigable Rivers.
+• +1 Production in Cities on Navigable Rivers for every Resource assigned to them.
+• Can generate Homelands Treasure Convoys on Navigable Rivers after completing the Kanta Civic.
+• +30% Production towards constructing the Tomb of Askia."
+TRAIT_MOD_TOT_MING_TRADITION_SLOT,+1 Tradition Slot.
+TRENCHWORKS_MOD_FORTIFIED_DISTRICT,+3 Combat Strength for Fortified Units and Districts.
+TRIBUTE_MOD_GOLD,-10 Gold for each City-State you are Suzerain of.
+TZOLKIN_I_MOD_HAPPINESS_BUILDING_SCIENCE,+2 Science on Happiness Buildings.
+VASSALAGE_MOD_SUZERAINS_CULTURE,+3 Culture and Gold for every City-State you are Suzerain of.
+VINICUNCA_ADJACENT_YIELDS,Vinicunca
+WAKIA_I_MOD_GOLD_ON_TRADE_ROUTES,+2 Gold for every active Trade Route.
+WAKIA_MOD_GOLD_ON_TRADE_ROUTES,+3 Gold for every active Trade Route.
+WARTIME_ECONOMY_MOD_FACTORY_PURCHASE,+100% Gold towards purchasing Factories and Rail Stations while at War with a Leader with an opposing Ideology.
+WARTIME_INNOVATION_MOD_SCIENCE,Training a Military Unit grants Science equal to 25% of the Unit's cost while at War with a Leader with an opposing Ideology.
+WAR_HEROES_MOD_CULTURE,+5 Culture per Commander Level in the Capital while at War with a Leader with an opposing Ideology.
+WEAK_BUREAUCRACY_MOD_YIELD,-8 Influence per turn.
+WELFARE_STATE_MOD_TOWN_HAPPINESS_PER_POL_ATTRIBUTE,Towns gain Happiness equal to your Diplomatic Attribute. -5 Production in Cities.
+YEOMANRY_MOD_FOOD_PRODUCTION_TOWNS,+4 Food and Production in Towns in Distant Lands.
