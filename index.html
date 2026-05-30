@@ -110,6 +110,13 @@
       position: relative; flex-shrink: 0;
       border-bottom: 1px solid var(--border);
     }
+    /* Fade-out edges so scrollable tabs look polished */
+    .tab-bar-wrap::before, .tab-bar-wrap::after {
+      content: ''; position: absolute; top: 0; bottom: 0; width: 28px;
+      pointer-events: none; z-index: 10;
+    }
+    .tab-bar-wrap::before { left: 0;  background: linear-gradient(to right, var(--bg-panel), transparent); }
+    .tab-bar-wrap::after  { right: 0; background: linear-gradient(to left,  var(--bg-panel), transparent); }
     .tab-bar {
       display: flex;
       overflow-x: auto; scroll-behavior: smooth;
@@ -118,10 +125,8 @@
     }
     .tab-bar::-webkit-scrollbar { display: none; }
     .tab-btn {
-      position: sticky;
       flex: 1 0 78px;
       padding: 11px 8px 9px;
-      /* Solid bg so overlapping tabs cover each other cleanly */
       background: var(--bg-panel); border: none;
       border-bottom: 2px solid transparent;
       color: var(--text-muted);
@@ -131,22 +136,7 @@
       white-space: nowrap; overflow: hidden;
       transition: color var(--transition), border-color var(--transition), background var(--transition);
     }
-    /*
-      Each tab has BOTH a left and right sticky boundary (30px peek per step).
-      Z-index is a symmetric pyramid — inner tabs are highest so the inner tab
-      always wins the overlap whether it's coming from the left or the right.
-        left  → Leaders(1) Civs(2) Triumphs(3) Resources(4) Wonders(4) Techs(3) Civics(2) Indeps(1) ← right
-    */
-    #tab-leaders      { left:  0px; right:210px; z-index: 1; }
-    #tab-civs         { left: 30px; right:180px; z-index: 2; }
-    #tab-triumphs     { left: 60px; right:150px; z-index: 3; }
-    #tab-resources    { left: 90px; right:120px; z-index: 4; }
-    #tab-wonders      { left:120px; right: 90px; z-index: 4; }
-    #tab-techs        { left:150px; right: 60px; z-index: 3; }
-    #tab-civics       { left:180px; right: 30px; z-index: 2; }
-    #tab-independents { left:210px; right:  0px; z-index: 1; }
-    /* Active tab floats above all neighbours so its underline is always visible */
-    .tab-btn.active { z-index: 10; background: var(--bg-card); }
+    .tab-btn.active { background: var(--bg-card); }
     .tab-btn:hover  { color: var(--text); background: var(--bg-card-hover); }
     .tab-btn.active { color: var(--gold-light); border-bottom-color: var(--gold); }
     .tab-btn.active.teal-tab { color: var(--teal-light); border-bottom-color: var(--teal); }
