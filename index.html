@@ -2118,7 +2118,16 @@
       </div>`;
     }
 
-    const effectsHtml = effectsBlock(effects);
+    if (effects.length) {
+      const effectItems = effects.map(e => {
+        const text = e.desc && e.desc.trim() ? e.desc : humanizeModifier(e.id);
+        return `<li class="tech-effect-item">${escHtml(text)}</li>`;
+      }).join('');
+      unlocksHtml += `<div class="tech-unlock-group tech-effects-inline">
+        <div class="tech-unlock-label">Effects</div>
+        <ul class="tech-effect-list">${effectItems}</ul>
+      </div>`;
+    }
 
     pane.innerHTML = `<div class="tech-detail-layout">
       <div class="tech-detail-icon">${iconInner}</div>
@@ -2131,8 +2140,7 @@
         ${prereqHtml}
       </div>
     </div>
-    ${unlocksHtml ? `<div class="tech-detail-unlocks">${unlocksHtml}</div>` : ''}
-    ${effectsHtml}`;
+    ${unlocksHtml ? `<div class="tech-detail-unlocks">${unlocksHtml}</div>` : ''}`;
   }
 
   function renderTechTree() {
