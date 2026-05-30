@@ -575,6 +575,93 @@
       margin-top: 12px; padding: 8px 16px;
       text-align: center; font-size: 0.58rem; color: var(--text-dim);
     }
+
+    /* ─── Techs Tab ──────────────────────────────────────────── */
+    .tab-btn.tech-tab.active { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+    #panel-techs { flex-direction: column; }
+
+    .tech-detail-pane {
+      flex-shrink: 0; min-height: 110px; max-height: 220px;
+      border-bottom: 2px solid var(--border); overflow-y: auto;
+      padding: 10px 14px; background: var(--bg-panel);
+    }
+    .tech-detail-pane::-webkit-scrollbar { width: 3px; }
+    .tech-detail-pane::-webkit-scrollbar-track { background: transparent; }
+    .tech-detail-pane::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
+
+    .tech-tree-pane {
+      display: flex; flex-direction: column; flex: 1; min-height: 0;
+    }
+    .tech-age-bar {
+      display: flex; gap: 4px; padding: 6px 10px;
+      border-bottom: 1px solid var(--border); flex-shrink: 0;
+    }
+    .tech-age-btn {
+      padding: 4px 12px; border-radius: var(--radius-full);
+      background: transparent; border: 1px solid var(--border-light);
+      color: var(--text-muted); font-family: inherit;
+      font-size: 0.64rem; font-weight: 600; cursor: pointer;
+      transition: all var(--transition);
+    }
+    .tech-age-btn.active, .tech-age-btn:hover {
+      border-color: var(--gold); color: var(--gold-light); background: var(--gold-bg);
+    }
+    .tech-tree-scroll { flex: 1; overflow: auto; }
+    .tech-tree-canvas { position: relative; flex-shrink: 0; }
+
+    .tech-node {
+      position: absolute; width: 128px; height: 50px;
+      border-radius: var(--radius-md); background: var(--bg-card);
+      border: 1.5px solid var(--border-light); cursor: pointer;
+      display: flex; align-items: center; gap: 7px; padding: 6px 8px;
+      transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+      box-sizing: border-box; user-select: none;
+    }
+    .tech-node:hover { border-color: var(--gold); background: var(--bg-card-hover); }
+    .tech-node.selected {
+      border-color: var(--gold); background: rgba(201,168,76,0.12);
+      box-shadow: 0 0 0 1px var(--gold), var(--shadow-card);
+    }
+    .tech-node-icon {
+      width: 30px; height: 30px; border-radius: 5px; flex-shrink: 0;
+      background: var(--bg-card-hover);
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
+    }
+    .tech-node-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .tech-node-icon-fb { font-size: 0.5rem; font-weight: 700; color: var(--text-dim); text-align: center; line-height: 1.2; }
+    .tech-node-body { flex: 1; min-width: 0; }
+    .tech-node-name { font-size: 0.56rem; font-weight: 700; color: var(--text); line-height: 1.3; }
+    .tech-node-cost { font-size: 0.48rem; color: var(--text-dim); margin-top: 1px; }
+
+    .tech-detail-empty {
+      height: 80px; display: flex; align-items: center; justify-content: center;
+      color: var(--text-dim); font-size: 0.68rem; font-style: italic;
+    }
+    .tech-detail-layout { display: flex; gap: 11px; align-items: flex-start; }
+    .tech-detail-icon {
+      width: 50px; height: 50px; border-radius: var(--radius-md); flex-shrink: 0;
+      background: var(--bg-card-hover); overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .tech-detail-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .tech-detail-title { font-size: 0.85rem; font-weight: 700; color: var(--text); }
+    .tech-detail-meta { display: flex; align-items: center; gap: 5px; margin-top: 3px; flex-wrap: wrap; }
+    .tech-cost-chip {
+      font-size: 0.55rem; color: var(--text-muted); background: var(--bg-card);
+      border: 1px solid var(--border-light); border-radius: var(--radius-full); padding: 1px 6px;
+    }
+    .tech-prereq-row { margin-top: 4px; font-size: 0.59rem; color: var(--text-dim); }
+    .tech-prereq-row strong { color: var(--text-muted); font-weight: 600; }
+    .tech-detail-unlocks { margin-top: 8px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .tech-unlock-group { min-width: 70px; }
+    .tech-unlock-label {
+      font-size: 0.5rem; font-weight: 700; text-transform: uppercase;
+      color: var(--text-dim); letter-spacing: 0.05em; margin-bottom: 3px;
+    }
+    .tech-unlock-list { list-style: none; padding: 0; margin: 0; }
+    .tech-unlock-item { font-size: 0.58rem; color: var(--text-muted); line-height: 1.55; }
+    .tech-unlock-item.unique-unit { color: var(--gold-light); }
   </style>
 </head>
 <body>
@@ -614,6 +701,9 @@
       </button>
       <button class="tab-btn wonder-tab" id="tab-wonders" data-tab="wonders">
         <span>Wonders</span>
+      </button>
+      <button class="tab-btn tech-tab" id="tab-techs" data-tab="techs">
+        <span>Techs</span>
       </button>
     </div>
 
@@ -705,6 +795,23 @@
       <div class="panel-scroll" style="padding-top:0">
         <div id="wonders-content"></div>
         <div class="scroll-footer">Data extracted from Civ VII 1.4.0 (Test of Time) · Images © 2K Games via Civilization Wiki</div>
+      </div>
+    </div>
+
+    <!-- ── Techs Panel ── -->
+    <div class="tab-panel" id="panel-techs">
+      <div class="tech-detail-pane" id="tech-detail-pane">
+        <div class="tech-detail-empty">Click a tech node in the tree below to see details</div>
+      </div>
+      <div class="tech-tree-pane">
+        <div class="tech-age-bar" id="tech-age-bar">
+          <button class="tech-age-btn active" data-age="AGE_ANTIQUITY">Antiquity</button>
+          <button class="tech-age-btn" data-age="AGE_EXPLORATION">Exploration</button>
+          <button class="tech-age-btn" data-age="AGE_MODERN">Modern</button>
+        </div>
+        <div class="tech-tree-scroll" id="tech-tree-scroll">
+          <div class="tech-tree-canvas" id="tech-tree-canvas"></div>
+        </div>
       </div>
     </div>
 
@@ -920,14 +1027,16 @@
   };
 
   // ─── State ───────────────────────────────────────────────────────────────────
-  let allRows=[], leaderSyncRows=[], triumphRows=[], resourceRows=[], wonderRows=[];
+  let allRows=[], leaderSyncRows=[], triumphRows=[], resourceRows=[], wonderRows=[], techRows=[];
   let leaders={}, civs={}, leaderSyncMap={};
   let triumphsByAge={}, resourcesByClass={}, wondersByAge={};
+  let techsByAge={}, techMap={};
   let selectedLeader=null, selectedCiv=null;
   let activeTab='leaders';
   let triumphAgeFilter='all', triumphSetFilter='all';
   let resYieldFilter='all', resClassFilter='all';
   let wonderAgeFilter='all';
+  let selectedTech=null, techAgeFilter='AGE_ANTIQUITY';
 
   // ─── Load & Process ──────────────────────────────────────────────────────────
   async function loadData() {
@@ -939,6 +1048,7 @@
     try { const t = await fetch('civ7_triumphs.csv');  if (t.ok) triumphRows  = parseCSV(await t.text()); } catch(_) {}
     try { const r = await fetch('civ7_resources.csv'); if (r.ok) resourceRows = parseCSV(await r.text()); } catch(_) {}
     try { const w = await fetch('civ7_wonders.csv');   if (w.ok) wonderRows   = parseCSV(await w.text());  } catch(_) {}
+    try { const t = await fetch('civ7_techs.csv');    if (t.ok) techRows     = parseCSV(await t.text());   } catch(_) {}
   }
   function processData() {
     for (const row of allRows) {
@@ -998,6 +1108,13 @@
     }
     for (const age of Object.keys(wondersByAge)) {
       wondersByAge[age].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+    }
+    // Techs: index by node_type; group by age
+    for (const row of techRows) {
+      techMap[row.node_type] = row;
+      const age = row.age || 'Unknown';
+      if (!techsByAge[age]) techsByAge[age] = [];
+      techsByAge[age].push(row);
     }
   }
 
@@ -1417,6 +1534,116 @@
     "WONDER_WORLDS_FAIR":             "https://static.wikia.nocookie.net/civilization/images/4/4a/World%27s_Fair_%28Civ7%29.png/revision/latest?cb=20250304232846",
   };
 
+  // ─── Tech Icons (verified wiki URLs) ─────────────────────────────────────────
+  const TECH_ICONS = {
+    // Antiquity
+    "NODE_TECH_AQ_AGRICULTURE":       "https://static.wikia.nocookie.net/civilization/images/2/2a/Agriculture_%28Civ7%29.png/revision/latest?cb=20251122113400",
+    "NODE_TECH_AQ_ANIMAL_HUSBANDRY":  "https://static.wikia.nocookie.net/civilization/images/c/c4/Animal_Husbandry_%28Civ7%29.png/revision/latest?cb=20251122113507",
+    "NODE_TECH_AQ_BRONZE_WORKING":    "https://static.wikia.nocookie.net/civilization/images/2/21/Bronze_Working_%28Civ7%29.png/revision/latest?cb=20251122113516",
+    "NODE_TECH_AQ_CURRENCY":          "https://static.wikia.nocookie.net/civilization/images/1/1c/Currency_%28Civ7%29.png/revision/latest?cb=20251122113525",
+    "NODE_TECH_AQ_ENGINEERING":       "https://static.wikia.nocookie.net/civilization/images/b/b6/Engineering_%28Civ7%29.png/revision/latest?cb=20251122113534",
+    "NODE_TECH_AQ_FUTURE_TECH":       "https://static.wikia.nocookie.net/civilization/images/c/c7/Future_Tech_%28Civ7%29.png/revision/latest?cb=20251122113746",
+    "NODE_TECH_AQ_IRON_WORKING":      "https://static.wikia.nocookie.net/civilization/images/c/cd/Iron_Working_%28Civ7%29.png/revision/latest?cb=20251122113543",
+    "NODE_TECH_AQ_IRRIGATION":        "https://static.wikia.nocookie.net/civilization/images/e/e7/Irrigation_%28Civ7%29.png/revision/latest?cb=20251122113552",
+    "NODE_TECH_AQ_MASONRY":           "https://static.wikia.nocookie.net/civilization/images/d/d9/Masonry_%28Civ7%29.png/revision/latest?cb=20251122113601",
+    "NODE_TECH_AQ_MATHEMATICS":       "https://static.wikia.nocookie.net/civilization/images/5/5b/Mathematics_%28Civ7%29.png/revision/latest?cb=20251122113609",
+    "NODE_TECH_AQ_MILITARY_TRAINING": "https://static.wikia.nocookie.net/civilization/images/f/f7/Military_Training_%28Civ7%29.png/revision/latest?cb=20251122113637",
+    "NODE_TECH_AQ_NAVIGATION":        "https://static.wikia.nocookie.net/civilization/images/6/6b/Navigation_%28Civ7%29.png/revision/latest?cb=20251122113645",
+    "NODE_TECH_AQ_POTTERY":           "https://static.wikia.nocookie.net/civilization/images/c/c3/Pottery_%28Civ7%29.png/revision/latest?cb=20251122113652",
+    "NODE_TECH_AQ_SAILING":           "https://static.wikia.nocookie.net/civilization/images/f/f3/Sailing_%28Civ7%29.png/revision/latest?cb=20251122113712",
+    "NODE_TECH_AQ_WHEEL":             "https://static.wikia.nocookie.net/civilization/images/a/aa/The_Wheel_%28Civ7%29.png/revision/latest?cb=20251122113726",
+    "NODE_TECH_AQ_WRITING":           "https://static.wikia.nocookie.net/civilization/images/6/6c/Writing_%28Civ7%29.png/revision/latest?cb=20251122113734",
+    // Exploration
+    "NODE_TECH_EX_ARCHITECTURE":      "https://static.wikia.nocookie.net/civilization/images/9/98/Architecture_%28Civ7%29.png/revision/latest?cb=20251122113933",
+    "NODE_TECH_EX_ASTRONOMY":         "https://static.wikia.nocookie.net/civilization/images/0/0d/Astronomy_%28Civ7%29.png/revision/latest?cb=20251122114003",
+    "NODE_TECH_EX_CARTOGRAPHY":       "https://static.wikia.nocookie.net/civilization/images/7/70/Cartography_%28Civ7%29.png/revision/latest?cb=20251122114013",
+    "NODE_TECH_EX_CASTLES":           "https://static.wikia.nocookie.net/civilization/images/8/82/Castles_%28Civ7%29.png/revision/latest?cb=20251122114022",
+    "NODE_TECH_EX_EDUCATION":         "https://static.wikia.nocookie.net/civilization/images/5/57/Education_%28Civ7%29.png/revision/latest?cb=20260205223917",
+    "NODE_TECH_EX_FEUDALISM":         "https://static.wikia.nocookie.net/civilization/images/4/4b/Feudalism_%28Civ7%29.png/revision/latest?cb=20251122114037",
+    "NODE_TECH_EX_FUTURE_TECH":       "https://static.wikia.nocookie.net/civilization/images/c/c7/Future_Tech_%28Civ7%29.png/revision/latest?cb=20251122113746",
+    "NODE_TECH_EX_GUNPOWDER":         "https://static.wikia.nocookie.net/civilization/images/0/04/Gunpowder_%28Civ7%29.png/revision/latest?cb=20251122114056",
+    "NODE_TECH_EX_GUILDS":            "https://static.wikia.nocookie.net/civilization/images/d/d8/Guilds_%28Civ7%29.png/revision/latest?cb=20251122114046",
+    "NODE_TECH_EX_HERALDRY":          "https://static.wikia.nocookie.net/civilization/images/d/d0/Heraldry_%28Civ7%29.png/revision/latest?cb=20251122114111",
+    "NODE_TECH_EX_MACHINERY":         "https://static.wikia.nocookie.net/civilization/images/c/cb/Machinery_%28Civ7%29.png/revision/latest?cb=20251122114119",
+    "NODE_TECH_EX_METAL_CASTING":     "https://static.wikia.nocookie.net/civilization/images/9/98/Metal_Casting_%28Civ7%29.png/revision/latest?cb=20251122114144",
+    "NODE_TECH_EX_METALLURGY":        "https://static.wikia.nocookie.net/civilization/images/8/85/Metallurgy_%28Civ7%29.png/revision/latest?cb=20251122114134",
+    "NODE_TECH_EX_SHIPBUILDING":      "https://static.wikia.nocookie.net/civilization/images/2/21/Shipbuilding_%28Civ7%29.png/revision/latest?cb=20251122114153",
+    "NODE_TECH_EX_URBAN_PLANNING":    "https://static.wikia.nocookie.net/civilization/images/7/7a/Urban_Planning_%28Civ7%29.png/revision/latest?cb=20251122114200",
+    // Modern
+    "NODE_TECH_MO_ACADEMICS":         "https://static.wikia.nocookie.net/civilization/images/4/4d/Academics_%28Civ7%29.png/revision/latest?cb=20251122114337",
+    "NODE_TECH_MO_AERODYNAMICS":      "https://static.wikia.nocookie.net/civilization/images/8/88/Aerodynamics_%28Civ7%29.png/revision/latest?cb=20251122114345",
+    "NODE_TECH_MO_ARMOR":             "https://static.wikia.nocookie.net/civilization/images/0/0a/Armor_%28Civ7%29.png/revision/latest?cb=20251122114353",
+    "NODE_TECH_MO_COMBUSTION":        "https://static.wikia.nocookie.net/civilization/images/4/49/Combustion_%28Civ7%29.png/revision/latest?cb=20251122114401",
+    "NODE_TECH_MO_ELECTRICITY":       "https://static.wikia.nocookie.net/civilization/images/d/df/Electricity_%28Civ7%29.png/revision/latest?cb=20251122114408",
+    "NODE_TECH_MO_FLIGHT":            "https://static.wikia.nocookie.net/civilization/images/5/57/Flight_%28Civ7%29.png/revision/latest?cb=20251122114419",
+    "NODE_TECH_MO_FUTURE_TECH":       "https://static.wikia.nocookie.net/civilization/images/c/c7/Future_Tech_%28Civ7%29.png/revision/latest?cb=20251122113746",
+    "NODE_TECH_MO_INDUSTRIALIZATION": "https://static.wikia.nocookie.net/civilization/images/7/70/Industrialization_%28Civ7%29.png/revision/latest?cb=20251122114428",
+    "NODE_TECH_MO_MASS_PRODUCTION":   "https://static.wikia.nocookie.net/civilization/images/f/f1/Mass_Production_%28Civ7%29.png/revision/latest?cb=20251122114437",
+    "NODE_TECH_MO_MILITARY_SCIENCE":  "https://static.wikia.nocookie.net/civilization/images/8/85/Military_Science_%28Civ7%29.png/revision/latest?cb=20251122114447",
+    "NODE_TECH_MO_MOBILIZATION":      "https://static.wikia.nocookie.net/civilization/images/e/e7/Mobilization_%28Civ7%29.png/revision/latest?cb=20251122114454",
+    "NODE_TECH_MO_NUCLEAR_FISSION":   "https://static.wikia.nocookie.net/civilization/images/4/4f/Nuclear_Fission_%28Civ7%29.png/revision/latest?cb=20251122114503",
+    "NODE_TECH_MO_RADIO":             "https://static.wikia.nocookie.net/civilization/images/8/85/Radio_%28Civ7%29.png/revision/latest?cb=20251122114511",
+    "NODE_TECH_MO_ROCKETRY":          "https://static.wikia.nocookie.net/civilization/images/c/c4/Rocketry_%28Civ7%29.png/revision/latest?cb=20251122114519",
+    "NODE_TECH_MO_STEAM_ENGINE":      "https://static.wikia.nocookie.net/civilization/images/2/2f/Steam_Engine_%28Civ7%29.png/revision/latest?cb=20251122114525",
+    "NODE_TECH_MO_URBANIZATION":      "https://static.wikia.nocookie.net/civilization/images/6/6a/Urbanization_%28Civ7%29.png/revision/latest?cb=20251122114532",
+    // Computation has no wiki icon — leave out (will show initials fallback)
+  };
+
+  // ─── Tech Layout (computed left-to-right via longest-path) ──────────────────
+  const TECH_LAYOUT = {
+    // Antiquity (7 cols × 3 rows)
+    "NODE_TECH_AQ_AGRICULTURE":       {col:0, row:0},
+    "NODE_TECH_AQ_POTTERY":           {col:1, row:0},
+    "NODE_TECH_AQ_SAILING":           {col:1, row:1},
+    "NODE_TECH_AQ_ANIMAL_HUSBANDRY":  {col:1, row:2},
+    "NODE_TECH_AQ_WRITING":           {col:2, row:0},
+    "NODE_TECH_AQ_IRRIGATION":        {col:2, row:1},
+    "NODE_TECH_AQ_MASONRY":           {col:2, row:2},
+    "NODE_TECH_AQ_BRONZE_WORKING":    {col:3, row:0},
+    "NODE_TECH_AQ_CURRENCY":          {col:3, row:1},
+    "NODE_TECH_AQ_WHEEL":             {col:3, row:2},
+    "NODE_TECH_AQ_ENGINEERING":       {col:4, row:0},
+    "NODE_TECH_AQ_MILITARY_TRAINING": {col:4, row:1},
+    "NODE_TECH_AQ_NAVIGATION":        {col:4, row:2},
+    "NODE_TECH_AQ_MATHEMATICS":       {col:5, row:0},
+    "NODE_TECH_AQ_IRON_WORKING":      {col:5, row:1},
+    "NODE_TECH_AQ_FUTURE_TECH":       {col:6, row:0},
+    // Exploration (6 cols × 4 rows)
+    "NODE_TECH_EX_ASTRONOMY":         {col:0, row:0},
+    "NODE_TECH_EX_CARTOGRAPHY":       {col:0, row:1},
+    "NODE_TECH_EX_MACHINERY":         {col:0, row:2},
+    "NODE_TECH_EX_FEUDALISM":         {col:1, row:0},
+    "NODE_TECH_EX_GUILDS":            {col:1, row:1},
+    "NODE_TECH_EX_HERALDRY":          {col:1, row:2},
+    "NODE_TECH_EX_CASTLES":           {col:1, row:3},
+    "NODE_TECH_EX_EDUCATION":         {col:2, row:0},
+    "NODE_TECH_EX_SHIPBUILDING":      {col:2, row:1},
+    "NODE_TECH_EX_METALLURGY":        {col:2, row:2},
+    "NODE_TECH_EX_ARCHITECTURE":      {col:3, row:0},
+    "NODE_TECH_EX_METAL_CASTING":     {col:3, row:1},
+    "NODE_TECH_EX_URBAN_PLANNING":    {col:4, row:0},
+    "NODE_TECH_EX_GUNPOWDER":         {col:4, row:1},
+    "NODE_TECH_EX_FUTURE_TECH":       {col:5, row:0},
+    // Modern (7 cols × 4 rows)
+    "NODE_TECH_MO_ACADEMICS":         {col:0, row:0},
+    "NODE_TECH_MO_MILITARY_SCIENCE":  {col:0, row:1},
+    "NODE_TECH_MO_STEAM_ENGINE":      {col:0, row:2},
+    "NODE_TECH_MO_ELECTRICITY":       {col:1, row:0},
+    "NODE_TECH_MO_INDUSTRIALIZATION": {col:1, row:1},
+    "NODE_TECH_MO_URBANIZATION":      {col:1, row:2},
+    "NODE_TECH_MO_COMBUSTION":        {col:1, row:3},
+    "NODE_TECH_MO_RADIO":             {col:2, row:0},
+    "NODE_TECH_MO_MASS_PRODUCTION":   {col:2, row:1},
+    "NODE_TECH_MO_FLIGHT":            {col:2, row:2},
+    "NODE_TECH_MO_COMPUTATION":       {col:3, row:0},
+    "NODE_TECH_MO_ARMOR":             {col:3, row:1},
+    "NODE_TECH_MO_MOBILIZATION":      {col:3, row:2},
+    "NODE_TECH_MO_AERODYNAMICS":      {col:4, row:0},
+    "NODE_TECH_MO_NUCLEAR_FISSION":   {col:5, row:0},
+    "NODE_TECH_MO_ROCKETRY":          {col:5, row:1},
+    "NODE_TECH_MO_FUTURE_TECH":       {col:6, row:0},
+  };
+
   function renderWondersTab() {
     const area = document.getElementById('wonders-content');
     if (!wonderRows.length) {
@@ -1505,6 +1732,186 @@
     }
 
     area.innerHTML = html || `<div class="triumph-empty"><div class="triumph-empty-sub">No wonders for this filter.</div></div>`;
+  }
+
+  // ─── Render: Techs Tab ──────────────────────────────────────────────────────
+  const TN_W = 128, TN_H = 50, COL_S = 182, ROW_S = 68, TN_PAD = 22;
+
+  function techNodeXY(nt) {
+    const pos = TECH_LAYOUT[nt];
+    if (!pos) return null;
+    return {
+      x:  TN_PAD + pos.col * COL_S,
+      y:  TN_PAD + pos.row * ROW_S,
+      cx: TN_PAD + pos.col * COL_S + TN_W / 2,
+      cy: TN_PAD + pos.row * ROW_S + TN_H / 2,
+    };
+  }
+
+  function renderTechDetail() {
+    const pane = document.getElementById('tech-detail-pane');
+    if (!selectedTech || !techMap[selectedTech]) {
+      pane.innerHTML = '<div class="tech-detail-empty">Click a tech node in the tree below to see details</div>';
+      return;
+    }
+    const row = techMap[selectedTech];
+    const iconUrl = TECH_ICONS[selectedTech];
+
+    // Prereqs
+    const prereqNames = (row.prereqs || '').split('|').filter(Boolean)
+      .map(p => techMap[p] ? techMap[p].name : p.replace(/^NODE_TECH_\w+_/, '').replace(/_/g,' '));
+
+    // Parse unlocks into groups
+    const groups = {};
+    let modCount = 0;
+    for (const u of (row.unlocks || '').split('|').filter(Boolean)) {
+      const traitM = u.match(/^(.+)\[(.+)\]$/);
+      const raw   = traitM ? traitM[1] : u;
+      const trait = traitM ? traitM[2].replace(/^TRAIT_/, '').replace(/_/g,' ') : null;
+      const colon = raw.indexOf(':');
+      if (colon < 0) continue;
+      const kind = raw.slice(0, colon);
+      const type = raw.slice(colon + 1);
+
+      if (kind === 'MODIFIER') { modCount++; continue; }
+
+      let grp, display;
+      if (kind === 'CONSTRUCTIBLE') {
+        display = type.replace(/^(BUILDING_|WONDER_)/, '').replace(/_/g,' ')
+          .replace(/\b\w/g, c => c.toUpperCase());
+        grp = type.startsWith('WONDER_') ? 'Wonders' : 'Buildings';
+      } else if (kind === 'UNIT') {
+        display = type.replace(/^UNIT_/, '').replace(/_/g,' ')
+          .replace(/\b\w/g, c => c.toUpperCase());
+        grp = trait ? 'Unique Units' : 'Units';
+      } else if (kind === 'PROJECT') {
+        display = type.replace(/^PROJECT_/, '').replace(/_/g,' ')
+          .replace(/\b\w/g, c => c.toUpperCase());
+        grp = 'Projects';
+      } else if (kind === 'DIPLOMATIC_ACTION') {
+        display = type.replace(/^DIPLOMACY_ACTION_(ESPIONAGE_)?/, '').replace(/_/g,' ')
+          .replace(/\b\w/g, c => c.toUpperCase());
+        grp = 'Diplomacy';
+      } else { continue; }
+
+      if (!groups[grp]) groups[grp] = [];
+      groups[grp].push({display, trait, isUnique: grp === 'Unique Units'});
+    }
+
+    const iconInner = iconUrl
+      ? `<img src="${escHtml(iconUrl)}" alt="" loading="lazy">`
+      : `<div style="font-size:0.6rem;font-weight:700;color:var(--text-dim);text-align:center">${escHtml((row.name||'?').slice(0,4).toUpperCase())}</div>`;
+
+    const ageLabel = row.age === 'AGE_ANTIQUITY' ? 'Antiquity' : row.age === 'AGE_EXPLORATION' ? 'Exploration' : 'Modern';
+
+    const prereqHtml = prereqNames.length
+      ? `<div class="tech-prereq-row"><strong>Requires:</strong> ${prereqNames.map(escHtml).join(', ')}</div>`
+      : '';
+
+    const GRP_ORDER = ['Buildings','Wonders','Units','Unique Units','Projects','Diplomacy'];
+    let unlocksHtml = '';
+    for (const g of GRP_ORDER) {
+      if (!groups[g] || !groups[g].length) continue;
+      const items = g === 'Unique Units'
+        ? groups[g].map(i => `<li class="tech-unlock-item unique-unit">${escHtml(i.display)} <span style="font-size:0.48rem;color:var(--text-dim)">(${escHtml(i.trait||'')})</span></li>`).join('')
+        : groups[g].map(i => `<li class="tech-unlock-item">${escHtml(i.display)}</li>`).join('');
+      unlocksHtml += `<div class="tech-unlock-group">
+        <div class="tech-unlock-label">${escHtml(g)}</div>
+        <ul class="tech-unlock-list">${items}</ul>
+      </div>`;
+    }
+    if (modCount) {
+      unlocksHtml += `<div class="tech-unlock-group">
+        <div class="tech-unlock-label">Effects</div>
+        <ul class="tech-unlock-list"><li class="tech-unlock-item">${modCount} bonus effect${modCount>1?'s':''}</li></ul>
+      </div>`;
+    }
+
+    pane.innerHTML = `<div class="tech-detail-layout">
+      <div class="tech-detail-icon">${iconInner}</div>
+      <div style="flex:1;min-width:0">
+        <div class="tech-detail-title">${escHtml(row.name||row.node_type)}</div>
+        <div class="tech-detail-meta">
+          ${ageBadge(ageLabel)}
+          ${row.cost ? `<span class="tech-cost-chip">⚗ ${escHtml(row.cost)}</span>` : ''}
+        </div>
+        ${prereqHtml}
+      </div>
+    </div>
+    ${unlocksHtml ? `<div class="tech-detail-unlocks">${unlocksHtml}</div>` : ''}`;
+  }
+
+  function renderTechTree() {
+    const canvas = document.getElementById('tech-tree-canvas');
+    const ageRows = techsByAge[techAgeFilter] || [];
+
+    if (!ageRows.length) {
+      canvas.style.width = ''; canvas.style.height = '';
+      canvas.innerHTML = '<div style="padding:20px;color:var(--text-dim);font-size:0.7rem;font-style:italic">No tech data loaded. Place civ7_techs.csv alongside this file.</div>';
+      return;
+    }
+
+    // Canvas dimensions from layout extents
+    let maxCol = 0, maxRow = 0;
+    for (const row of ageRows) {
+      const pos = TECH_LAYOUT[row.node_type];
+      if (pos) { maxCol = Math.max(maxCol, pos.col); maxRow = Math.max(maxRow, pos.row); }
+    }
+    const W = TN_PAD + maxCol * COL_S + TN_W + TN_PAD;
+    const H = TN_PAD + maxRow * ROW_S + TN_H + TN_PAD;
+
+    // SVG edges
+    let paths = '';
+    for (const row of ageRows) {
+      const tp = techNodeXY(row.node_type);
+      if (!tp) continue;
+      for (const prereq of (row.prereqs || '').split('|').filter(Boolean)) {
+        const sp = techNodeXY(prereq);
+        if (!sp) continue;
+        const sx = sp.x + TN_W, sy = sp.cy;
+        const tx = tp.x,        ty = tp.cy;
+        const bend = Math.abs(tx - sx) * 0.45;
+        paths += `<path d="M${sx},${sy} C${sx+bend},${sy} ${tx-bend},${ty} ${tx},${ty}"
+          fill="none" stroke="rgba(94,116,168,0.55)" stroke-width="1.5" stroke-linecap="round"/>`;
+      }
+    }
+
+    // Nodes
+    let nodesHtml = '';
+    for (const row of ageRows) {
+      const pos = TECH_LAYOUT[row.node_type];
+      if (!pos) continue;
+      const x = TN_PAD + pos.col * COL_S;
+      const y = TN_PAD + pos.row * ROW_S;
+      const iconUrl = TECH_ICONS[row.node_type];
+      const abbr = (row.name||'?').split(' ').map(w=>w[0]).join('').slice(0,3).toUpperCase();
+      const iconInner = iconUrl
+        ? `<img src="${escHtml(iconUrl)}" alt="" loading="lazy" onerror="this.outerHTML='<div class=tech-node-icon-fb>${abbr}</div>'">`
+        : `<div class="tech-node-icon-fb">${escHtml(abbr)}</div>`;
+      const isSel = row.node_type === selectedTech;
+      nodesHtml += `<div class="tech-node${isSel?' selected':''}"
+        data-nt="${escHtml(row.node_type)}"
+        style="left:${x}px;top:${y}px">
+        <div class="tech-node-icon">${iconInner}</div>
+        <div class="tech-node-body">
+          <div class="tech-node-name">${escHtml(row.name||row.node_type)}</div>
+          ${row.cost ? `<div class="tech-node-cost">${escHtml(row.cost)} ⚗</div>` : ''}
+        </div>
+      </div>`;
+    }
+
+    canvas.style.width  = W + 'px';
+    canvas.style.height = H + 'px';
+    canvas.innerHTML = `<svg width="${W}" height="${H}" style="position:absolute;top:0;left:0;pointer-events:none;overflow:visible">${paths}</svg>${nodesHtml}`;
+
+    canvas.querySelectorAll('.tech-node').forEach(el => {
+      el.addEventListener('click', () => {
+        selectedTech = el.dataset.nt;
+        canvas.querySelectorAll('.tech-node').forEach(n =>
+          n.classList.toggle('selected', n.dataset.nt === selectedTech));
+        renderTechDetail();
+      });
+    });
   }
 
   // ─── Update Tab Dots ─────────────────────────────────────────────────────────
@@ -1609,11 +2016,25 @@
         renderWondersTab();
       });
 
+      // Tech age-filter buttons
+      document.getElementById('tech-age-bar').addEventListener('click', e => {
+        const btn = e.target.closest('.tech-age-btn');
+        if (!btn) return;
+        techAgeFilter = btn.dataset.age;
+        selectedTech = null;
+        document.querySelectorAll('.tech-age-btn').forEach(b =>
+          b.classList.toggle('active', b.dataset.age === techAgeFilter));
+        renderTechTree();
+        renderTechDetail();
+      });
+
       renderLeaderGrid();
       renderCivGrid();
       renderTriumphsTab();
       renderResourcesTab();
       renderWondersTab();
+      renderTechTree();
+      renderTechDetail();
     } catch(err) {
       document.getElementById('loading').style.display='none';
       const el=document.getElementById('error-msg');
