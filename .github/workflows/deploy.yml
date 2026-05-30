@@ -17,4 +17,4 @@ jobs:
 
       - run: npm install -g surge
 
-      - run: surge . civ7-tot-leader-analyser.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      - run: surge . civ7-abilities.surge.sh --token ${{ secrets.SURGE_TOKEN }}
