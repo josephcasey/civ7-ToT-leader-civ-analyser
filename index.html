@@ -94,20 +94,45 @@
     .btn-reset svg { width: 10px; height: 10px; }
 
     /* ─── Tab Bar ────────────────────────────────────────────── */
-    .tab-bar {
-      display: flex; flex-shrink: 0;
+    .tab-bar-wrap {
+      position: relative; flex-shrink: 0;
       border-bottom: 1px solid var(--border);
+    }
+    /* Edge fade — creates the concertina peek effect */
+    .tab-bar-wrap::before, .tab-bar-wrap::after {
+      content: ''; position: absolute; top: 0; bottom: 0;
+      width: 28px; z-index: 4; pointer-events: none;
+    }
+    .tab-bar-wrap::before {
+      left: 0;
+      background: linear-gradient(to right, var(--bg-panel) 30%, transparent);
+    }
+    .tab-bar-wrap::after {
+      right: 0;
+      background: linear-gradient(to left, var(--bg-panel) 30%, transparent);
+    }
+    .tab-bar {
+      display: flex;
+      overflow-x: auto; scroll-behavior: smooth;
+      scrollbar-width: none; -webkit-overflow-scrolling: touch;
       background: var(--bg-panel);
     }
+    .tab-bar::-webkit-scrollbar { display: none; }
     .tab-btn {
-      flex: 1; padding: 11px 4px 9px;
+      flex: 1 0 78px; /* grows to fill on wide screens, min 78px on mobile */
+      padding: 11px 8px 9px;
       background: transparent; border: none;
       border-bottom: 2px solid transparent;
       color: var(--text-muted);
       font-family: inherit; font-size: 0.72rem; font-weight: 600;
       letter-spacing: 0.03em; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; gap: 6px;
+      display: flex; align-items: center; justify-content: center; gap: 5px;
+      white-space: nowrap; overflow: hidden;
       transition: color var(--transition), border-color var(--transition), background var(--transition);
+    }
+    /* Truncate long labels with ellipsis when concertina'd */
+    .tab-btn > span:first-child {
+      overflow: hidden; text-overflow: ellipsis; min-width: 0;
     }
     .tab-btn:hover { color: var(--text); background: rgba(255,255,255,0.03); }
     .tab-btn.active { color: var(--gold-light); border-bottom-color: var(--gold); }
@@ -684,6 +709,7 @@
     </header>
 
     <!-- ── Tab Bar ── -->
+    <div class="tab-bar-wrap">
     <div class="tab-bar">
       <button class="tab-btn active" id="tab-leaders" data-tab="leaders">
         <span>Leaders</span>
@@ -705,6 +731,7 @@
       <button class="tab-btn tech-tab" id="tab-techs" data-tab="techs">
         <span>Techs</span>
       </button>
+    </div>
     </div>
 
     <!-- ── Leaders Panel ── -->
@@ -1121,7 +1148,10 @@
   // ─── Tab Switching ───────────────────────────────────────────────────────────
   function setTab(name) {
     activeTab = name;
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab===name));
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.tab === name);
+      if (b.dataset.tab === name) b.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+    });
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id===`panel-${name}`));
   }
 
