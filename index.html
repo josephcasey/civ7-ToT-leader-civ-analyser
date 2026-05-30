@@ -1493,6 +1493,14 @@
   }
 
   // ─── Render: Tag-to-HTML (inline yield icons) ────────────────────────────────
+  // Standard game yield icon for tech/civic costs (Science / Culture).
+  function costIcon(yieldKey, px) {
+    const url = YIELD_ICON_URLS[yieldKey];
+    return url
+      ? `<img src="${url}" alt="" style="width:${px}px;height:${px}px;vertical-align:middle;object-fit:contain" loading="lazy">`
+      : '';
+  }
+
   function renderTagsToHtml(raw) {
     if (!raw) return '';
     let s = raw;
@@ -2141,7 +2149,7 @@
         <div class="tech-detail-title">${escHtml(row.name||row.node_type)}</div>
         <div class="tech-detail-meta">
           ${ageBadge(ageLabel)}
-          ${row.cost ? `<span class="tech-cost-chip">⚗ ${escHtml(row.cost)}</span>` : ''}
+          ${row.cost ? `<span class="tech-cost-chip">${costIcon('YIELD_SCIENCE',12)} ${escHtml(row.cost)}</span>` : ''}
         </div>
         ${prereqHtml}
       </div>
@@ -2203,7 +2211,7 @@
         <div class="tech-node-icon">${iconInner}</div>
         <div class="tech-node-body">
           <div class="tech-node-name">${escHtml(row.name||row.node_type)}</div>
-          ${row.cost ? `<div class="tech-node-cost">${escHtml(row.cost)} ⚗</div>` : ''}
+          ${row.cost ? `<div class="tech-node-cost">${escHtml(row.cost)} ${costIcon('YIELD_SCIENCE',10)}</div>` : ''}
         </div>
       </div>`;
     }
@@ -2316,7 +2324,7 @@
         <div class="tech-detail-title">${escHtml(row.name||row.node_type)}</div>
         <div class="tech-detail-meta">
           ${ageBadge(ageLabel)}
-          ${row.cost ? `<span class="tech-cost-chip">🎭 ${escHtml(row.cost)}</span>` : ''}
+          ${row.cost ? `<span class="tech-cost-chip">${costIcon('YIELD_CULTURE',12)} ${escHtml(row.cost)}</span>` : ''}
         </div>
         ${prereqHtml}
       </div>
@@ -2402,7 +2410,7 @@
         <div class="tech-node-icon">${iconInner}</div>
         <div class="tech-node-body">
           <div class="tech-node-name">${escHtml(row.name||row.node_type)}</div>
-          ${row.cost ? `<div class="tech-node-cost">${escHtml(row.cost)} 🎭</div>` : ''}
+          ${row.cost ? `<div class="tech-node-cost">${escHtml(row.cost)} ${costIcon('YIELD_CULTURE',10)}</div>` : ''}
         </div>
       </div>`;
     }
