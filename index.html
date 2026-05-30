@@ -32,6 +32,15 @@
       --amber:         #d97706;
       --amber-light:   #f59e0b;
       --amber-bg:      rgba(217,119,6,0.12);
+      --silver:        #94a3b8;
+      --silver-light:  #cbd5e1;
+      --silver-bg:     rgba(148,163,184,0.12);
+      --cs-cultural:   #a78bfa;
+      --cs-diplomatic: #60a5fa;
+      --cs-economic:   #fcd34d;
+      --cs-expansionist:#4ade80;
+      --cs-militaristic:#f87171;
+      --cs-scientific: #4ca89a;
       --radius-sm:   6px;
       --radius-md:   10px;
       --radius-lg:   14px;
@@ -126,15 +135,16 @@
       Each tab has BOTH a left and right sticky boundary (30px peek per step).
       Z-index is a symmetric pyramid — inner tabs are highest so the inner tab
       always wins the overlap whether it's coming from the left or the right.
-        left  → Leaders(1) Civs(2) Triumphs(3) Resources(4) Wonders(3) Techs(2) Civics(1) ← right
+        left  → Leaders(1) Civs(2) Triumphs(3) Resources(4) Wonders(4) Techs(3) Civics(2) Indeps(1) ← right
     */
-    #tab-leaders   { left:  0px; right:180px; z-index: 1; }
-    #tab-civs      { left: 30px; right:150px; z-index: 2; }
-    #tab-triumphs  { left: 60px; right:120px; z-index: 3; }
-    #tab-resources { left: 90px; right: 90px; z-index: 4; }
-    #tab-wonders   { left:120px; right: 60px; z-index: 3; }
-    #tab-techs     { left:150px; right: 30px; z-index: 2; }
-    #tab-civics    { left:180px; right:  0px; z-index: 1; }
+    #tab-leaders      { left:  0px; right:210px; z-index: 1; }
+    #tab-civs         { left: 30px; right:180px; z-index: 2; }
+    #tab-triumphs     { left: 60px; right:150px; z-index: 3; }
+    #tab-resources    { left: 90px; right:120px; z-index: 4; }
+    #tab-wonders      { left:120px; right: 90px; z-index: 4; }
+    #tab-techs        { left:150px; right: 60px; z-index: 3; }
+    #tab-civics       { left:180px; right: 30px; z-index: 2; }
+    #tab-independents { left:210px; right:  0px; z-index: 1; }
     /* Active tab floats above all neighbours so its underline is always visible */
     .tab-btn.active { z-index: 10; background: var(--bg-card); }
     .tab-btn:hover  { color: var(--text); background: var(--bg-card-hover); }
@@ -702,6 +712,80 @@
       border-color: var(--amber); background: rgba(217,119,6,0.12);
       box-shadow: 0 0 0 1px var(--amber), var(--shadow-card);
     }
+
+    /* ─── Independents Tab ───────────────────────────────────────── */
+    .tab-btn.indep-tab.active { color: var(--silver-light); border-bottom-color: var(--silver); }
+    #panel-independents { flex-direction: column; overflow: hidden; }
+
+    .indep-filter-wrap { flex-shrink: 0; border-bottom: 1px solid var(--border); background: var(--bg-panel); }
+    .indep-age-bar, .indep-type-bar {
+      display: flex; gap: 4px; padding: 5px 10px; flex-wrap: nowrap; overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .indep-age-bar::-webkit-scrollbar, .indep-type-bar::-webkit-scrollbar { display: none; }
+    .indep-age-bar { padding-bottom: 3px; border-bottom: 1px solid var(--border); }
+    .indep-filter-btn {
+      padding: 3px 10px; border-radius: var(--radius-full); white-space: nowrap;
+      background: transparent; border: 1px solid var(--border-light);
+      color: var(--text-muted); font-family: inherit; font-size: 0.62rem; font-weight: 600;
+      cursor: pointer; transition: all var(--transition); flex-shrink: 0;
+    }
+    .indep-filter-btn.active, .indep-filter-btn:hover {
+      border-color: var(--silver); color: var(--silver-light); background: var(--silver-bg);
+    }
+    /* Type-specific active colours */
+    .indep-type-btn[data-type="CULTURAL"].active    { border-color:var(--cs-cultural);    color:var(--cs-cultural);    background:rgba(167,139,250,0.12); }
+    .indep-type-btn[data-type="DIPLOMATIC"].active  { border-color:var(--cs-diplomatic);  color:var(--cs-diplomatic);  background:rgba(96,165,250,0.12);  }
+    .indep-type-btn[data-type="ECONOMIC"].active    { border-color:var(--cs-economic);    color:var(--cs-economic);    background:rgba(252,211,77,0.12);  }
+    .indep-type-btn[data-type="EXPANSIONIST"].active{ border-color:var(--cs-expansionist);color:var(--cs-expansionist);background:rgba(74,222,128,0.12);  }
+    .indep-type-btn[data-type="MILITARISTIC"].active{ border-color:var(--cs-militaristic);color:var(--cs-militaristic);background:rgba(248,113,113,0.12); }
+    .indep-type-btn[data-type="SCIENTIFIC"].active  { border-color:var(--cs-scientific);  color:var(--cs-scientific);  background:rgba(76,168,154,0.12);  }
+
+    .indep-scroll { flex: 1; overflow-y: auto; padding: 10px; }
+    .indep-scroll::-webkit-scrollbar { width: 4px; }
+    .indep-scroll::-webkit-scrollbar-track { background: transparent; }
+    .indep-scroll::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
+
+    .indep-type-section { margin-bottom: 18px; }
+    .indep-type-header {
+      display: flex; align-items: center; gap: 7px; margin-bottom: 8px;
+      padding-bottom: 5px; border-bottom: 1px solid var(--border);
+    }
+    .indep-type-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .indep-type-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .indep-type-count { font-size: 0.58rem; color: var(--text-dim); margin-left: auto; }
+
+    .indep-bonus-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 6px; margin-bottom: 10px; }
+    .indep-bonus-card {
+      background: var(--bg-card); border: 1.5px solid var(--border);
+      border-radius: var(--radius-md); padding: 8px 10px;
+    }
+    .indep-bonus-name {
+      font-size: 0.65rem; font-weight: 700; color: var(--text);
+      display: flex; align-items: center; gap: 5px; margin-bottom: 3px;
+    }
+    .indep-bonus-desc { font-size: 0.58rem; color: var(--text-muted); line-height: 1.5; }
+    .indep-shared-badge {
+      font-size: 0.44rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+      background: var(--bg-card-hover); border: 1px solid var(--border-light);
+      border-radius: var(--radius-full); padding: 1px 5px; color: var(--text-dim);
+      flex-shrink: 0;
+    }
+
+    .indep-powers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 5px; }
+    .indep-power-card {
+      background: var(--bg-card); border: 1.5px solid var(--border);
+      border-radius: var(--radius-md); padding: 7px 9px;
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .indep-power-city { font-size: 0.63rem; font-weight: 700; color: var(--text); }
+    .indep-power-tribe { font-size: 0.55rem; color: var(--text-muted); }
+    .indep-power-meta { display: flex; align-items: center; gap: 5px; margin-top: 3px; }
+    .indep-affinity-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .affinity-friendly  { background: #4ade80; }
+    .affinity-neutral   { background: #94a3b8; }
+    .affinity-hostile   { background: #f87171; }
+    .indep-affinity-label { font-size: 0.5rem; color: var(--text-dim); }
   </style>
 </head>
 <body>
@@ -748,6 +832,9 @@
       </button>
       <button class="tab-btn civic-tab" id="tab-civics" data-tab="civics">
         <span>Civics</span>
+      </button>
+      <button class="tab-btn indep-tab" id="tab-independents" data-tab="independents">
+        <span>Indep.</span>
       </button>
     </div>
     </div>
@@ -875,6 +962,27 @@
           <div class="tech-tree-canvas" id="civic-tree-canvas"></div>
         </div>
       </div>
+    </div>
+
+    <!-- ── Independents Panel ── -->
+    <div class="tab-panel" id="panel-independents">
+      <div class="indep-filter-wrap">
+        <div class="indep-age-bar" id="indep-age-bar">
+          <button class="indep-filter-btn active" data-age="AGE_ANTIQUITY">Antiquity</button>
+          <button class="indep-filter-btn" data-age="AGE_EXPLORATION">Exploration</button>
+          <button class="indep-filter-btn" data-age="AGE_MODERN">Modern</button>
+        </div>
+        <div class="indep-type-bar" id="indep-type-bar">
+          <button class="indep-filter-btn active" data-type="ALL">All Types</button>
+          <button class="indep-filter-btn indep-type-btn" data-type="CULTURAL">Cultural</button>
+          <button class="indep-filter-btn indep-type-btn" data-type="DIPLOMATIC">Diplomatic</button>
+          <button class="indep-filter-btn indep-type-btn" data-type="ECONOMIC">Economic</button>
+          <button class="indep-filter-btn indep-type-btn" data-type="EXPANSIONIST">Expansionist</button>
+          <button class="indep-filter-btn indep-type-btn" data-type="MILITARISTIC">Militaristic</button>
+          <button class="indep-filter-btn indep-type-btn" data-type="SCIENTIFIC">Scientific</button>
+        </div>
+      </div>
+      <div class="indep-scroll" id="indep-content"></div>
     </div>
 
   </div>
@@ -1089,11 +1197,12 @@
   };
 
   // ─── State ───────────────────────────────────────────────────────────────────
-  let allRows=[], leaderSyncRows=[], triumphRows=[], resourceRows=[], wonderRows=[], techRows=[], civicRows=[];
+  let allRows=[], leaderSyncRows=[], triumphRows=[], resourceRows=[], wonderRows=[], techRows=[], civicRows=[], csBonusRows=[], indepRows=[];
   let leaders={}, civs={}, leaderSyncMap={};
   let triumphsByAge={}, resourcesByClass={}, wondersByAge={};
   let techsByAge={}, techMap={};
   let civicsByAge={}, civicMap={};
+  let csBonusesByAgeType={}, indepsByAgeType={};
   let selectedLeader=null, selectedCiv=null;
   let activeTab='leaders';
   let triumphAgeFilter='all', triumphSetFilter='all';
@@ -1101,6 +1210,7 @@
   let wonderAgeFilter='all';
   let selectedTech=null, techAgeFilter='AGE_ANTIQUITY';
   let selectedCivic=null, civicAgeFilter='AGE_ANTIQUITY';
+  let indepAgeFilter='AGE_ANTIQUITY', indepTypeFilter='ALL';
 
   // ─── Load & Process ──────────────────────────────────────────────────────────
   async function loadData() {
@@ -1113,7 +1223,9 @@
     try { const r = await fetch('civ7_resources.csv'); if (r.ok) resourceRows = parseCSV(await r.text()); } catch(_) {}
     try { const w = await fetch('civ7_wonders.csv');   if (w.ok) wonderRows   = parseCSV(await w.text());  } catch(_) {}
     try { const t = await fetch('civ7_techs.csv');    if (t.ok) techRows    = parseCSV(await t.text());   } catch(_) {}
-    try { const c = await fetch('civ7_civics.csv');   if (c.ok) civicRows   = parseCSV(await c.text());   } catch(_) {}
+    try { const c = await fetch('civ7_civics.csv');     if (c.ok) civicRows    = parseCSV(await c.text()); } catch(_) {}
+    try { const b = await fetch('civ7_cs_bonuses.csv'); if (b.ok) csBonusRows  = parseCSV(await b.text()); } catch(_) {}
+    try { const i = await fetch('civ7_independents.csv');if(i.ok) indepRows    = parseCSV(await i.text()); } catch(_) {}
   }
   function processData() {
     for (const row of allRows) {
@@ -1187,6 +1299,18 @@
       const age = row.age || 'Unknown';
       if (!civicsByAge[age]) civicsByAge[age] = [];
       civicsByAge[age].push(row);
+    }
+    // City-State Bonuses: group by age → type
+    for (const row of csBonusRows) {
+      const key = `${row.age}|${row.city_state_type}`;
+      if (!csBonusesByAgeType[key]) csBonusesByAgeType[key] = [];
+      csBonusesByAgeType[key].push(row);
+    }
+    // Independents: group by age → type
+    for (const row of indepRows) {
+      const key = `${row.age}|${row.city_state_type}`;
+      if (!indepsByAgeType[key]) indepsByAgeType[key] = [];
+      indepsByAgeType[key].push(row);
     }
   }
 
@@ -2199,6 +2323,70 @@
     });
   }
 
+  // ─── Independents Tab ────────────────────────────────────────────────────────
+  const CS_TYPE_META = {
+    CULTURAL:    { label:'Cultural',    color:'var(--cs-cultural)',    dot:'#a78bfa' },
+    DIPLOMATIC:  { label:'Diplomatic',  color:'var(--cs-diplomatic)',  dot:'#60a5fa' },
+    ECONOMIC:    { label:'Economic',    color:'var(--cs-economic)',    dot:'#fcd34d' },
+    EXPANSIONIST:{ label:'Expansionist',color:'var(--cs-expansionist)',dot:'#4ade80' },
+    MILITARISTIC:{ label:'Militaristic',color:'var(--cs-militaristic)',dot:'#f87171' },
+    SCIENTIFIC:  { label:'Scientific',  color:'var(--cs-scientific)',  dot:'#4ca89a' },
+  };
+  const CS_TYPE_ORDER = ['CULTURAL','DIPLOMATIC','ECONOMIC','EXPANSIONIST','MILITARISTIC','SCIENTIFIC'];
+
+  function renderIndependentsTab() {
+    const content = document.getElementById('indep-content');
+    const types = indepTypeFilter === 'ALL' ? CS_TYPE_ORDER : [indepTypeFilter];
+    let html = '';
+
+    for (const cst of types) {
+      const meta   = CS_TYPE_META[cst];
+      const bonuses = csBonusesByAgeType[`${indepAgeFilter}|${cst}`] || [];
+      const powers  = indepsByAgeType[`${indepAgeFilter}|${cst}`] || [];
+      if (!bonuses.length && !powers.length) continue;
+
+      // Bonus cards
+      let bonusHtml = '';
+      for (const b of bonuses) {
+        const sharedBadge = b.shareable === '1' ? `<span class="indep-shared-badge">shared</span>` : '';
+        bonusHtml += `<div class="indep-bonus-card" style="border-color:${meta.dot}30">
+          <div class="indep-bonus-name" style="color:${meta.color}">
+            ${escHtml(b.name)}${sharedBadge}
+          </div>
+          <div class="indep-bonus-desc">${escHtml(b.description_clean)}</div>
+        </div>`;
+      }
+
+      // Power cards
+      let powerHtml = '';
+      for (const p of powers) {
+        const afClass = p.affinity === 'Friendly' ? 'affinity-friendly'
+                      : p.affinity === 'Hostile'  ? 'affinity-hostile'
+                      : 'affinity-neutral';
+        powerHtml += `<div class="indep-power-card">
+          <div class="indep-power-city">${escHtml(p.city_name)}</div>
+          <div class="indep-power-tribe">${escHtml(p.tribe_name)}</div>
+          <div class="indep-power-meta">
+            <div class="indep-affinity-dot ${afClass}"></div>
+            <span class="indep-affinity-label">${escHtml(p.affinity)}</span>
+          </div>
+        </div>`;
+      }
+
+      html += `<div class="indep-type-section">
+        <div class="indep-type-header">
+          <div class="indep-type-dot" style="background:${meta.dot}"></div>
+          <div class="indep-type-title" style="color:${meta.color}">${escHtml(meta.label)}</div>
+          <div class="indep-type-count">${powers.length} power${powers.length!==1?'s':''} · ${bonuses.length} bonus${bonuses.length!==1?'es':''}</div>
+        </div>
+        <div class="indep-bonus-grid">${bonusHtml}</div>
+        <div class="indep-powers-grid">${powerHtml}</div>
+      </div>`;
+    }
+
+    content.innerHTML = html || `<div style="padding:20px;color:var(--text-dim);font-size:0.7rem;font-style:italic">No data loaded. Place civ7_cs_bonuses.csv and civ7_independents.csv alongside this file.</div>`;
+  }
+
   // ─── Update Tab Dots ─────────────────────────────────────────────────────────
   function updateDots() {
     document.getElementById('dot-leader').style.display = selectedLeader ? '' : 'none';
@@ -2325,6 +2513,26 @@
         renderCivicDetail();
       });
 
+      // Independents age filter
+      document.getElementById('indep-age-bar').addEventListener('click', e => {
+        const btn = e.target.closest('.indep-filter-btn');
+        if (!btn) return;
+        indepAgeFilter = btn.dataset.age;
+        document.querySelectorAll('#indep-age-bar .indep-filter-btn').forEach(b =>
+          b.classList.toggle('active', b.dataset.age === indepAgeFilter));
+        renderIndependentsTab();
+      });
+
+      // Independents type filter
+      document.getElementById('indep-type-bar').addEventListener('click', e => {
+        const btn = e.target.closest('.indep-filter-btn');
+        if (!btn) return;
+        indepTypeFilter = btn.dataset.type;
+        document.querySelectorAll('#indep-type-bar .indep-filter-btn').forEach(b =>
+          b.classList.toggle('active', b.dataset.type === indepTypeFilter));
+        renderIndependentsTab();
+      });
+
       renderLeaderGrid();
       renderCivGrid();
       renderTriumphsTab();
@@ -2334,6 +2542,7 @@
       renderTechDetail();
       renderCivicTree();
       renderCivicDetail();
+      renderIndependentsTab();
     } catch(err) {
       document.getElementById('loading').style.display='none';
       const el=document.getElementById('error-msg');
