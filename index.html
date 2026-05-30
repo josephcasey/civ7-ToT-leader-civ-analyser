@@ -1255,17 +1255,18 @@
   function processData() {
     for (const row of allRows) {
       if (row.kind!=='leader'||row.row_type!=='Unique Ability') continue;
-      leaders[row.name]={ abilityName:row.ability_or_tradition_name, desc:row.description_clean, syncretismOptions:splitList(row.syncretism_options) };
+      leaders[row.name]={ abilityName:row.ability_or_tradition_name, desc:row.description_clean, descRaw:row.description_raw, syncretismOptions:splitList(row.syncretism_options) };
     }
     for (const row of allRows) {
       if (row.kind!=='civilization') continue;
-      if (!civs[row.name]) civs[row.name]={ abilityName:'', apexDesc:'', apexAge:APEX_AGES[row.name]||'', traditions:[], civSyncOptions:[] };
+      if (!civs[row.name]) civs[row.name]={ abilityName:'', apexDesc:'', apexDescRaw:'', apexAge:APEX_AGES[row.name]||'', traditions:[], civSyncOptions:[] };
       if (row.row_type==='Unique Ability') {
         civs[row.name].abilityName=row.ability_or_tradition_name;
         civs[row.name].apexDesc=row.description_clean;
+        civs[row.name].apexDescRaw=row.description_raw;
         civs[row.name].civSyncOptions=splitList(row.syncretism_options);
       } else if (row.row_type==='Self-Syncretism Tradition') {
-        civs[row.name].traditions.push({ name:row.ability_or_tradition_name, age:row.age, desc:row.description_clean });
+        civs[row.name].traditions.push({ name:row.ability_or_tradition_name, age:row.age, desc:row.description_clean, descRaw:row.description_raw });
       }
     }
     const AGE_ORDER={Antiquity:0,Exploration:1,Apex:2,Modern:3};
@@ -1325,9 +1326,10 @@
       if (!civicsByAge[age]) civicsByAge[age] = [];
       civicsByAge[age].push(row);
     }
-    // Modifier effect descriptions (tech & civic bonus effects)
+    // Modifier effect descriptions (tech & civic bonus effects). Keep the raw
+    // markup so yield icons render the same way they do in the Triumphs tab.
     for (const row of modifierRows) {
-      if (row.modifier_id) modifierMap[row.modifier_id] = row.description_clean || '';
+      if (row.modifier_id) modifierMap[row.modifier_id] = { raw: row.description_raw || '', clean: row.description_clean || '' };
     }
     // Tradition / Policy descriptions (civic unlocks)
     for (const row of traditionRows) {
@@ -1379,7 +1381,7 @@
           <div class="ability-name">⚡ ${escHtml(leader.abilityName)}</div>
         </div>
       </div>
-      <div class="ability-desc">${escHtml(leader.desc)}</div>
+      <div class="ability-desc">${leader.descRaw ? renderTagsToHtml(leader.descRaw) : escHtml(leader.desc)}</div>
     </div>`;
   }
 
@@ -1409,7 +1411,7 @@
           <div class="ability-name teal">⚡ ${escHtml(civ.abilityName)}</div>
         </div>
       </div>
-      <div class="ability-desc">${escHtml(civ.apexDesc)}</div>
+      <div class="ability-desc">${civ.apexDescRaw ? renderTagsToHtml(civ.apexDescRaw) : escHtml(civ.apexDesc)}</div>
       ${traditions.length ? `
         <div class="section-sublabel">Cross-Age Traditions</div>
         ${traditions.map(t=>`
@@ -1417,7 +1419,7 @@
             <div style="padding-top:1px;flex-shrink:0">${ageBadge(t.age)}</div>
             <div>
               <div class="tradition-name">${escHtml(t.name)}</div>
-              <div class="tradition-desc">${escHtml(t.desc)}</div>
+              <div class="tradition-desc">${t.descRaw ? renderTagsToHtml(t.descRaw) : escHtml(t.desc)}</div>
             </div>
           </div>`).join('')}` : ''}
     </div>`;
@@ -2032,13 +2034,20 @@
       .replace(/\b\w/g, c => c.toUpperCase());
   }
 
+  // One bonus-effect <li>: render the raw markup (so yield icons show, like the
+  // Triumphs tab), falling back to the clean text, then a humanized id.
+  function effectItem(e) {
+    const mod = e.mod;
+    const html = mod && mod.raw && mod.raw.trim()
+      ? renderTagsToHtml(mod.raw)
+      : escHtml((mod && mod.clean && mod.clean.trim()) ? mod.clean : humanizeModifier(e.id));
+    return `<li class="tech-effect-item">${html}</li>`;
+  }
+
   // Render the "Bonus Effects" block listing what each MODIFIER actually does.
   function effectsBlock(effects) {
     if (!effects.length) return '';
-    const items = effects.map(e => {
-      const text = e.desc && e.desc.trim() ? e.desc : humanizeModifier(e.id);
-      return `<li class="tech-effect-item">${escHtml(text)}</li>`;
-    }).join('');
+    const items = effects.map(effectItem).join('');
     return `<div class="tech-effects">
       <div class="tech-unlock-label">Bonus Effects</div>
       <ul class="tech-effect-list">${items}</ul>
@@ -2070,7 +2079,7 @@
       const kind = raw.slice(0, colon);
       const type = raw.slice(colon + 1);
 
-      if (kind === 'MODIFIER') { effects.push({id: type, desc: modifierMap[type] || ''}); continue; }
+      if (kind === 'MODIFIER') { effects.push({id: type, mod: modifierMap[type]}); continue; }
 
       let grp, display;
       if (kind === 'CONSTRUCTIBLE') {
@@ -2119,10 +2128,7 @@
     }
 
     if (effects.length) {
-      const effectItems = effects.map(e => {
-        const text = e.desc && e.desc.trim() ? e.desc : humanizeModifier(e.id);
-        return `<li class="tech-effect-item">${escHtml(text)}</li>`;
-      }).join('');
+      const effectItems = effects.map(effectItem).join('');
       unlocksHtml += `<div class="tech-unlock-group tech-effects-inline">
         <div class="tech-unlock-label">Effects</div>
         <ul class="tech-effect-list">${effectItems}</ul>
@@ -2271,7 +2277,7 @@
         display = type.replace(/^DIPLOMACY_ACTION_(ESPIONAGE_)?/, '').replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
         grp = 'Diplomacy';
       } else if (kind === 'KIND_MODIFIER' || kind === 'MODIFIER') {
-        effects.push({id: type, desc: modifierMap[type] || ''});
+        effects.push({id: type, mod: modifierMap[type]});
         continue;
       } else { continue; }
 
@@ -2330,13 +2336,15 @@
         : t.replace(/^TRADITION_/, '').replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
       const slot = info && info.slot ? info.slot : 'Tradition';
       const slotCls = slot === 'Policy' ? 'trad-slot policy' : 'trad-slot';
-      const desc = info && info.description_clean ? info.description_clean : '';
+      const descHtml = info && info.description_raw && info.description_raw.trim()
+        ? renderTagsToHtml(info.description_raw)
+        : escHtml((info && info.description_clean) || '');
       return `<li class="trad-item">
         <div class="trad-head">
           <span class="trad-name">${escHtml(name)}</span>
           <span class="${slotCls}">${escHtml(slot)}</span>
         </div>
-        ${desc ? `<div class="trad-desc">${escHtml(desc)}</div>` : ''}
+        ${descHtml ? `<div class="trad-desc">${descHtml}</div>` : ''}
       </li>`;
     }).join('');
     return `<div class="tech-effects">
@@ -2443,7 +2451,7 @@
           <div class="indep-bonus-name" style="color:${meta.color}">
             ${escHtml(b.name)}${sharedBadge}
           </div>
-          <div class="indep-bonus-desc">${escHtml(b.description_clean)}</div>
+          <div class="indep-bonus-desc">${b.description_raw ? renderTagsToHtml(b.description_raw) : escHtml(b.description_clean)}</div>
         </div>`;
       }
 

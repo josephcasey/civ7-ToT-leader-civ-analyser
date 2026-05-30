@@ -60,7 +60,9 @@ def extract():
         con = sqlite3.connect(gameplay)
 
         # Modifier descriptions: ModifierStrings holds a 'Description' context
-        # pointing at a localization tag for most gameplay modifiers.
+        # pointing at a localization tag for most gameplay modifiers. Keep both
+        # the raw [icon:...] markup (for live icon rendering, like the Triumphs
+        # tab) and a plain-text fallback.
         for mid, text_tag in con.execute(
             "SELECT ModifierId, Text FROM ModifierStrings WHERE Context='Description'"
         ):
@@ -68,7 +70,10 @@ def extract():
                 continue
             raw = loc.get(text_tag)
             if raw:
-                mods[mid] = clean_description(raw)
+                mods[mid] = {
+                    "description_raw": raw,
+                    "description_clean": clean_description(raw),
+                }
 
         # Traditions + Policies: the Traditions table carries a localized Name,
         # Description and the culture-slot type that distinguishes the two.
@@ -81,6 +86,7 @@ def extract():
             traditions[tt] = {
                 "name": loc.get(name_tag, name_tag),
                 "slot": SLOT_LABELS.get(slot, "Tradition"),
+                "description_raw": desc,
                 "description_clean": clean_description(desc),
             }
         con.close()
@@ -91,16 +97,19 @@ def extract():
 def write_csvs(mods, traditions):
     with open("civ7_modifiers.csv", "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["modifier_id", "description_clean"])
+        w.writerow(["modifier_id", "description_raw", "description_clean"])
         for mid in sorted(mods):
-            w.writerow([mid, mods[mid]])
+            m = mods[mid]
+            w.writerow([mid, m["description_raw"], m["description_clean"]])
 
     with open("civ7_traditions.csv", "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["tradition_type", "name", "slot", "description_clean"])
+        w.writerow(["tradition_type", "name", "slot",
+                    "description_raw", "description_clean"])
         for tt in sorted(traditions):
             t = traditions[tt]
-            w.writerow([tt, t["name"], t["slot"], t["description_clean"]])
+            w.writerow([tt, t["name"], t["slot"],
+                        t["description_raw"], t["description_clean"]])
 
 
 def main():
